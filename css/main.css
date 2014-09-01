@@ -1636,14 +1636,60 @@ footer .icon-wrapper .icons {
   height: auto;
 }
 
+/* line 868, ../_internal/sass/sass/main.sass */
+.page h1 {
+  font-size: 2em;
+}
+/* line 870, ../_internal/sass/sass/main.sass */
+.page h2 {
+  font-size: 1.5em;
+}
+/* line 872, ../_internal/sass/sass/main.sass */
+.page h3 {
+  font-size: 1.17em;
+}
+/* line 874, ../_internal/sass/sass/main.sass */
+.page h4 {
+  font-size: 1em;
+}
+/* line 876, ../_internal/sass/sass/main.sass */
+.page h5 {
+  font-size: 0.83em;
+}
+/* line 878, ../_internal/sass/sass/main.sass */
+.page h6 {
+  font-size: 0.75em;
+}
+/* line 880, ../_internal/sass/sass/main.sass */
+.page p {
+  line-height: 1.2;
+  margin-bottom: 0.4em;
+}
+/* line 883, ../_internal/sass/sass/main.sass */
+.page .x04 {
+  font-size: 0.6em;
+}
+/* line 885, ../_internal/sass/sass/main.sass */
+.page .x02 {
+  font-size: 0.8em;
+}
+/* line 887, ../_internal/sass/sass/main.sass */
+.page .x2 {
+  font-size: 2em;
+}
+/* line 889, ../_internal/sass/sass/main.sass */
+.page .x4 {
+  font-size: 4em;
+}
+
 @media only screen and (min-width: 40.063em) {
-  /* line 868, ../_internal/sass/sass/main.sass */
+  /* line 892, ../_internal/sass/sass/main.sass */
   .medium-6-gutter {
     height: 224px;
     width: 49.5%;
     margin-left: 0.5%;
   }
-  /* line 873, ../_internal/sass/sass/main.sass */
+  /* line 897, ../_internal/sass/sass/main.sass */
   .medium-6-gutter:first-child {
     margin-left: 0;
     margin-right: 0.5%;
@@ -1651,7 +1697,7 @@ footer .icon-wrapper .icons {
     margin-bottom: 0.5%;
   }
 
-  /* line 878, ../_internal/sass/sass/main.sass */
+  /* line 902, ../_internal/sass/sass/main.sass */
   .medium-4-custom {
     width: 30%;
   }
