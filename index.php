@@ -6,83 +6,101 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <?php require 'inc/layouts/head-tag.php';?>
-        <link rel="stylesheet" href="<?php echo __css__; ?>/fractionslider.css">
         <link rel="stylesheet" href="<?php echo __css__; ?>/owl.carousel.css">
-
-
-        <title>Shanntaaa</title>
-
+        <!-- <link rel="stylesheet" href="css/layout.css">        -->
+        <link rel='stylesheet' href='wp-content/themes/carbontree/public/css/style1.css' type='text/css' media='all' />
+        <title>Shannta</title>
     </head>
     <body>
-    
         <?php require "inc/layouts/browserhappy.php"; ?>
         <?php require "inc/layouts/topcartmenu.php"; ?>
         <div class="headSlider row show-for-medium-up">
-            <div class="fs_loader"></div>
-            <div class="slide one" data-in="scrollLeft">
-                <p data-in="right" data-position="220,20" data-delay="500"  data-time="1250">Slide transitions</p>
-                <p data-in="right" data-position="260,20" data-delay="1500" data-time="2250">set individual animation per slide</p>
-                <p data-in="right" data-position="300,20" data-delay="2000" data-time="2750">or just set it global</p>
-                <img data-in="bottomLeft" data-time="1000" data-position="0,470" src="http://lorempixel.com/g/400/200/">
-                <img data-in="bottomLeft" data-time="1500" data-delay="750" data-position="100,340" src="http://lorempixel.com/g/400/200/">
-                <img data-fixed src="http://lorempixel.com/g/400/200/" width="1000" height="500">
-            </div>
-            <div class="slide two" data-in="fade">
-                <p data-in="fade"   data-position="20,20" data-delay="500"  data-time="1250">scroll 'em</p>
-                <p data-in="fade"   data-position="20,110"  data-delay="1500" data-time="2250">blend 'em</p>
-                <p data-in="fade"   data-position="20,200"  data-delay="2500" data-time="3250">fade 'em</p>
-                <img data-in="topRight" data-time="1000" data-position="80,70" src="http://lorempixel.com/g/400/200/">
-                <img data-in="bottomRight" data-time="1500" data-delay="750" data-position="180,140" src="http://lorempixel.com/g/400/200/">
-                <img data-fixed src="http://lorempixel.com/g/400/200/" width="1000" height="500">
+            <div class="site-container">
+                <section class="m-hero m-slider">
+                    <ul class="slides">
+                    <!---------- ADD CONTENTS TO THE SLIDER ---------->
+                        <li>
+                            <!---------- ADD IMAGE ---------->
+                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
+                            <div class="container">
+                                <div class="slide-caption">
+                                    <!---------- ADD OPTIONAL HEADING ---------->
+                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
+                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
+                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
+                                    <!---------- ADD OPTIONAL LINK ---------->
+                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <!---------- ADD IMAGE ---------->
+                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
+                            <div class="container">
+                                <div class="slide-caption">
+                                    <!---------- ADD OPTIONAL HEADING ---------->
+                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
+                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
+                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
+                                    <!---------- ADD OPTIONAL LINK ---------->
+                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <!---------- ADD IMAGE ---------->
+                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
+                            <div class="container">
+                                <div class="slide-caption">
+                                    <!---------- ADD OPTIONAL HEADING ---------->
+                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
+                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
+                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
+                                    <!---------- ADD OPTIONAL LINK ---------->
+                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul> 
+                    <!---------- SLIDER CONTROLS ---------->
+                    <div class="m-slider-controls-container">
+                        <div class="container">
+                            <div class="m-slider-controls"></div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div><!-- headSlider -->
         <?php require "inc/layouts/topmenu.php"; ?>
         <div class="headSlider show-for-small-only">
-            <!-- <div class="slide"><img src="http://lorempixel.com/g/400/200/" alt="" data-position="100,100"></div> -->
-            <!-- <div class="slide"><img src="http://lorempixel.com/g/400/200/" alt="" data-position="100,200"></div> -->
-            <div class="fs_loader"></div>
-            <div class="slide one" data-in="scrollLeft">
-                <p data-in="right" data-position="220,20" data-delay="500"  data-time="1250">Slide transitions</p>
-                <p data-in="right" data-position="260,20" data-delay="1500" data-time="2250">set individual animation per slide</p>
-                <p data-in="right" data-position="300,20" data-delay="2000" data-time="2750">or just set it global</p>
-                <img data-in="bottomLeft" data-time="1000" data-position="0,470" src="http://lorempixel.com/g/400/200/">
-                <img data-in="bottomLeft" data-time="1500" data-delay="750" data-position="100,340" src="http://lorempixel.com/g/400/200/">
-                <img data-fixed src="http://lorempixel.com/g/400/200/" width="1000" height="500">
-            </div>
-            <div class="slide two" data-in="fade">
-                <p data-in="fade"   data-position="20,20" data-delay="500"  data-time="1250">scroll 'em</p>
-                <p data-in="fade"   data-position="20,110"  data-delay="1500" data-time="2250">blend 'em</p>
-                <p data-in="fade"   data-position="20,200"  data-delay="2500" data-time="3250">fade 'em</p>
-                <img data-in="topRight" data-time="1000" data-position="80,70" src="http://lorempixel.com/g/400/200/">
-                <img data-in="bottomRight" data-time="1500" data-delay="750" data-position="180,140" src="http://lorempixel.com/g/400/200/">
-                <img data-fixed src="http://lorempixel.com/g/400/200/" width="1000" height="500">
-            </div>
+            
         </div><!-- headSlider -->
         <div id="content" class="row">
             <section class="small-12 medium-6-gutter columns catagories">
                 <article class="innerCatagorie">
-                    <section class="small-7 medium-7 large-8 columns details">
+                    <section class="small-7 medium-7 large-6 columns details">
                         <h1>COLLECTION</h1>
                         <section>
-                            <h2>ORGANIC CIRCLES GOLD CUPS</h2>
-                            and our crane systems are professional designed
+                            <h2>ORGANIC CIRCLES<br> GOLD CUPS</h2>
+                            <p>and our crane systems areprofessional<br>  designed<br></p>
+                            <a href="#" class="button">See More</a>
                         </section>
                     </section><!-- details -->
-                    <section class="small-5 medium-5 large-4 columns rightImage">
+                    <section class="small-5 medium-5 large-6 columns rightImage">
                         <img src="<?php echo __images__;?>/demo/product1.png" alt="">
                     </section><!-- rightImage -->
                 </article><!-- innerProduct -->
             </section><!-- catagories -->
             <section class="small-12 medium-6-gutter columns catagories">
                 <article class="innerCatagorie">
-                    <section class="small-7 medium-7 large-8 columns details">
+                    <section class="small-7 medium-7 large-6 columns details">
                         <h1>JEWELRY D.I.Y</h1>
                         <section>
                             <strong>Rellable suppllers in Europe.</strong><br>
-                            and our crene systems are professional design and manufactured...
+                            <p>and our crene systems are professional design and manufactured...</p>
                         </section>
                     </section><!-- details -->
-                    <section class="small-5 medium-5 large-4 columns rightImage">
+                    <section class="small-5 medium-5 large-6 columns rightImage">
                         <img src="<?php echo __images__;?>/demo/product2.png" alt="">
                     </section><!-- rightImage -->
                 </article><!-- innerProduct -->
@@ -98,10 +116,10 @@
                 </nav>
                 <div class="catagorieSlider">
                     <article class="item">
-                        <section class="small-12 medium-6 medium-push-6 columns">
+                        <section class="small-12 medium-7 medium-push-5 columns">
                             <img src="<?php echo __images__;?>/demo/product3.png" alt="">
                         </section>
-                        <section class="small-12 medium-6 medium-pull-6 columns details">
+                        <section class="small-12 medium-5 medium-pull-7 columns details">
                             <h1>EARRINGS</h1>
                             <p><strong>Sterling silver, 14k gold. two-tone and an abundance of beautiful gemstones make up the PANDORA</strong></p>
                             <a href="#" class="button">See all Errings</a>
@@ -109,10 +127,10 @@
                         <div class="clearfix"></div>
                     </article>
                     <article class="item">
-                        <section class="small-12 medium-6 medium-push-6 columns">
+                        <section class="small-12 medium-7 medium-push-5 columns">
                             <img src="<?php echo __images__;?>/demo/product3.png" alt="">
                         </section>
-                        <section class="small-12 medium-6 medium-pull-6 columns details">
+                        <section class="small-12 medium-5 medium-pull-7 columns details">
                             <h1>EARRINGS</h1>
                             <p><strong>Sterling silver, 14k gold. two-tone and an abundance of beautiful gemstones make up the PANDORA</strong></p>
                             <a href="#" class="button">See all Errings</a>
@@ -120,10 +138,10 @@
                         <div class="clearfix"></div>
                     </article>
                     <article class="item">
-                        <section class="small-12 medium-6 medium-push-6 columns">
+                        <section class="small-12 medium-7 medium-push-5 columns">
                             <img src="<?php echo __images__;?>/demo/product3.png" alt="">
                         </section>
-                        <section class="small-12 medium-6 medium-pull-6 columns details">
+                        <section class="small-12 medium-5 medium-pull-7 columns details">
                             <h1>EARRINGS</h1>
                             <p><strong>Sterling silver, 14k gold. two-tone and an abundance of beautiful gemstones make up the PANDORA</strong></p>
                             <a href="#" class="button">See all Errings</a>
@@ -131,10 +149,10 @@
                         <div class="clearfix"></div>
                     </article>
                     <article class="item">
-                        <section class="small-12 medium-6 medium-push-6 columns">
+                        <section class="small-12 medium-7 medium-push-5 columns">
                             <img src="<?php echo __images__;?>/demo/product3.png" alt="">
                         </section>
-                        <section class="small-12 medium-6 medium-pull-6 columns details">
+                        <section class="small-12 medium-5 medium-pull-7 columns details">
                             <h1>EARRINGS</h1>
                             <p><strong>Sterling silver, 14k gold. two-tone and an abundance of beautiful gemstones make up the PANDORA</strong></p>
                             <a href="#" class="button">See all Errings</a>
@@ -142,10 +160,10 @@
                         <div class="clearfix"></div>
                     </article>
                     <article class="item">
-                        <section class="small-12 medium-6 medium-push-6 columns">
+                        <section class="small-12 medium-7 medium-push-5 columns">
                             <img src="<?php echo __images__;?>/demo/product3.png" alt="">
                         </section>
-                        <section class="small-12 medium-6 medium-pull-6 columns details">
+                        <section class="small-12 medium-5 medium-pull-7 columns details">
                             <h1>EARRINGS</h1>
                             <p><strong>Sterling silver, 14k gold. two-tone and an abundance of beautiful gemstones make up the PANDORA</strong></p>
                             <a href="#" class="button">See all Errings</a>
@@ -158,18 +176,9 @@
         </div><!-- row -->
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
-        <script type="text/javascript" src="<?php echo __js__; ?>/jquery.fractionslider.min.js"></script>
         <script type="text/javascript" src="<?php echo __js__; ?>/owl.carousel.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-                $('.headSlider').fractionSlider({
-                    'fullWidth':            false,
-                    'controls':             false, 
-                    'pager':                true,
-                    'fullWidth':            true,
-                    'responsive':           true,
-                    'dimensions':           '1000,500',
-                });
                 var sync1 = $(".catagorieSlider");
                 var sync2 = $(".paginationCatagorieSlider");
                 var flag = false;
@@ -177,16 +186,12 @@
                     loop: true,
                     items: 1,
                     autoplay: true,
-                    autoplayTimeout: 3000,
                     autoplayHoverPause: true,
-
                     onInitialized: function(e){
                         if (sync2.children().hasClass("active")) {
                             sync1.trigger('to.owl.carousel', [sync2.children(".active").index(), 300, true]);
-                            // alert(sync2.children(".active").index());
                         };
-                    // alert(1);
-                  }
+                      }
                 }).on('change.owl.carousel', function(e) {
                     sync2.children().removeClass("active");
                     sync2.children().eq(e.relatedTarget.relative(e.property.value)).addClass("active");
@@ -199,5 +204,20 @@
                 }).data('owl.carousel');
             });
         </script>
+        <script type='text/javascript' src='http://www.thecarbontree.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.45.0-2013.10.17'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.thecarbontree.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scripts3.5.4.js'></script>
+<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/modernizr.min.js?ver=2.7.1'></script>
+<script type='text/javascript' src='wp-content/themes/carbontree/public/js/script.js?ver=1.0.0'></script>
+<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/snap.svg-0.0.1.min.js?ver=0.0.1'></script>
+<script type='text/javascript' src='wp-content/themes/carbontree/public/js/svg-animations.js?ver=1.0.0'></script>
+<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/jquery.flexslider-2.2.0.min.js?ver=2.2.0'></script>
+<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/waypoints.min.js?ver=2.0.3'></script>
+<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/twenty-twenty/jquery.event.move.js?ver=1.3.6'></script>
+<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/twenty-twenty/jquery.twentytwenty.js?ver=1.0.0'></script>
     </body>
 </html>

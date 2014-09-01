@@ -1,6 +1,6 @@
 <div id="topcartmenu" class="show-for-medium-up sticky">
 	<div class="row" data-topbar data-options="sticky_on: ['medium','large']">
-		<div class="medium-2 columns">
+		<div class="medium-3 large-2 columns">
 			LANGUAGE : <a href="#">TH</a> | <a href="#">EN</a> | <a href="#">CN</a> 
 		</div>
 		<div class="medium-3 columns ta-center">
@@ -10,21 +10,9 @@
 		</div>
 		<div class="medium-6 columns ta-right">
 			<ul>
-				<li class="medium-4 columns">
-					<a href="#"><i class="fa fa-user icon"></i> CHARINTIP</a>
-					<div class="sub profile">
-						<div class="medium-4 columns">
-							<img src="img/profile.png" alt="none profile picture">
-						</div>
-						<div class="medium-8 columns">
-							<h5>Charintip Bumrungsak</h5>
-							<span>Bangkok, Thailand</span>
-							<a href="#" class="button">View Profile</a>
-						</div>
-					</div><!-- sub profile -->
-				</li>
-				<li class="medium-4 columns">
-					<a href="#" class=""><i class="fa fa-shopping-cart icon"></i> MY Cart [5]</a>
+				<li class="medium-4 large-3 columns right"><a href="#"><i class="fa fa-ban icon"></i> CHECKOUT</a></li>
+				<li class="medium-4 large-3 columns right">
+					<a href="#" class=""><i class="fa fa-shopping-cart icon"></i> MY CART [5]</a>
 					<div class="sub selection">
 						<div class="medium-7 columns head">Item</div>
 						<div class="medium-2 columns head">Unit Price</div>
@@ -86,7 +74,21 @@
 						</div>
 					</div><!-- sub selection -->
 				</li>
-				<li class="medium-4 columns"><a href="#"><i class="fa fa-ban icon"></i> CHECKOUT</a></li>
+				<li class="medium-4 large-3 columns right">
+					<a href="#"><i class="fa fa-user icon"></i> CHARINTIP</a>
+					<div class="sub profile">
+						<div class="medium-4 columns">
+							<img src="img/profile.png" alt="none profile picture">
+						</div>
+						<div class="medium-8 columns">
+							<h5>Charintip Bumrungsak</h5>
+							<span>Bangkok, Thailand</span>
+							<a href="#" class="button">View Profile</a>
+						</div>
+					</div><!-- sub profile -->
+				</li>
+				
+				
 			</ul>
 	    </div>
     </div>
