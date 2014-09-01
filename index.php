@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="<?php echo __css__; ?>/owl.carousel.css">
 
 
-        <title>Shanntaaa</title>
+        <title>Shannta</title>
 
     </head>
     <body>
