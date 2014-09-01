@@ -4,12 +4,300 @@
 		"selected_items":
 		[
 			[
-				"owl",
-				"owl-carousel"
+				"me",
+				"media"
+			],
+			[
+				"al",
+				"alpha"
+			],
+			[
+				"ap",
+				"alpha-ie"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"col",
+				"columns"
+			],
+			[
+				"head",
+				"header	Tag"
 			],
 			[
 				"mar",
 				"margin"
+			],
+			[
+				"base",
+				"baseFour"
+			],
+			[
+				"med",
+				"medium"
+			],
+			[
+				"px",
+				"px-to-em"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"sy",
+				"sync2"
+			],
+			[
+				"syn",
+				"sync2"
+			],
+			[
+				"tr",
+				"trigger"
+			],
+			[
+				"s",
+				"set"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"nam",
+				"namespace"
+			],
+			[
+				"sync",
+				"sync2"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"h",
+				"h5	Tag"
+			],
+			[
+				"nor",
+				"nowrap"
+			],
+			[
+				"la",
+				"large"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"add",
+				"addToCart"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"fit",
+				"first-child"
+			],
+			[
+				"scr",
+				"script	Tag"
+			],
+			[
+				"scrip",
+				"SCRIPT	Tag"
+			],
+			[
+				"medi",
+				"medium-up"
+			],
+			[
+				"medium",
+				"medium-up"
+			],
+			[
+				"bo",
+				"border-top"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"po",
+				"pos:r	position:relative"
+			],
+			[
+				"fir",
+				"first-child"
+			],
+			[
+				"smal",
+				"small-only"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"im",
+				"img"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"u",
+				"u	Tag"
+			],
+			[
+				"t",
+				"text"
+			],
+			[
+				"na",
+				"navigator"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"pd",
+				"padding"
+			],
+			[
+				"ne",
+				"negative"
+			],
+			[
+				"top",
+				"top"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"pxto",
+				"px-to-em"
+			],
+			[
+				"bas",
+				"baseTwo"
+			],
+			[
+				"fot",
+				"font"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"mr",
+				"margin-right"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"get",
+				"getColor"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"td",
+				"td:u	text-decoration:underline"
+			],
+			[
+				"da",
+				"darken"
+			],
+			[
+				"small",
+				"small-only"
+			],
+			[
+				"vi",
+				"visibility"
+			],
+			[
+				"g",
+				"getColor"
+			],
+			[
+				"pr",
+				"priceTag"
+			],
+			[
+				"boder",
+				"border-left"
+			],
+			[
+				"pos",
+				"pos	position"
+			],
+			[
+				"boe",
+				"border-bottom"
+			],
+			[
+				"OWL",
+				"owlCarousel"
+			],
+			[
+				"no",
+				"noBorder"
+			],
+			[
+				"li",
+				"li"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"com",
+				"command"
+			],
+			[
+				"owl",
+				"owl-carousel"
 			],
 			[
 				"Owl",
@@ -24,10 +312,6 @@
 				"_SITE_TITLE_"
 			],
 			[
-				"margin",
-				"margin-left"
-			],
-			[
 				"slo",
 				"slideDown"
 			],
@@ -40,16 +324,8 @@
 				"slide"
 			],
 			[
-				"co",
-				"condo"
-			],
-			[
 				"slide",
 				"slideUp"
-			],
-			[
-				"bor",
-				"border-bottom"
 			],
 			[
 				"b",
@@ -72,36 +348,12 @@
 				"carousel"
 			],
 			[
-				"bo",
-				"bottom"
-			],
-			[
 				"menu",
 				"menu-details"
 			],
 			[
-				"text",
-				"text-align"
-			],
-			[
 				"inline",
 				"inline-block"
-			],
-			[
-				"ba",
-				"background"
-			],
-			[
-				"im",
-				"important"
-			],
-			[
-				"top",
-				"topmenu"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"te",
@@ -110,10 +362,6 @@
 			[
 				"list",
 				"list:n	list-style-type:none"
-			],
-			[
-				"fo",
-				"font-weight"
 			],
 			[
 				"I",
@@ -140,10 +388,6 @@
 				"outline"
 			],
 			[
-				"pad",
-				"padding"
-			],
-			[
 				"bg",
 				"bg	background: #${1:000};"
 			],
@@ -154,14 +398,6 @@
 			[
 				"op",
 				"option	Tag"
-			],
-			[
-				"in",
-				"input	Tag"
-			],
-			[
-				"no",
-				"no-repeat"
 			],
 			[
 				"a",
@@ -184,10 +420,6 @@
 				"footer-details"
 			],
 			[
-				"fon",
-				"font-family"
-			],
-			[
 				"rig",
 				"right"
 			],
@@ -202,10 +434,6 @@
 			[
 				"foo",
 				"footer-details"
-			],
-			[
-				"pos",
-				"position"
 			],
 			[
 				"ov",
@@ -228,10 +456,6 @@
 				"margin"
 			],
 			[
-				"h",
-				"height"
-			],
-			[
 				"ban",
 				"background"
 			],
@@ -250,10 +474,6 @@
 			[
 				"mysql_re",
 				"mysql_real_escape_string"
-			],
-			[
-				"me",
-				"medium-range"
 			],
 			[
 				"sl",
@@ -280,32 +500,12 @@
 				"display"
 			],
 			[
-				"border",
-				"border"
-			],
-			[
-				"u",
-				"ul	Tag"
-			],
-			[
 				"margi",
 				"margin"
 			],
 			[
-				"pa",
-				"padding"
-			],
-			[
-				"li",
-				"li	Tag"
-			],
-			[
 				"ar",
 				"article	Tag"
-			],
-			[
-				"s",
-				"section  (element)"
 			],
 			[
 				"try",
@@ -314,157 +514,17 @@
 			[
 				"f",
 				"flush  (function)"
-			],
-			[
-				"std",
-				"stdout  (variable)"
-			],
-			[
-				"fin",
-				"finditer  (function)"
-			],
-			[
-				"url",
-				"urlencode"
-			],
-			[
-				"for",
-				"forCur"
-			],
-			[
-				"fw",
-				"fw:lr	font-weight:lighter"
-			],
-			[
-				"backgr",
-				"background-image:   (property)"
-			],
-			[
-				"bgs",
-				"background-size:   (property)"
-			],
-			[
-				"ex",
-				"extend"
-			],
-			[
-				"back",
-				"background-image:   (property)"
-			],
-			[
-				"tac",
-				"ta:c	text-align:center"
-			],
-			[
-				"db",
-				"d:b	display:block"
-			],
-			[
-				"box",
-				"box"
-			],
-			[
-				"rad",
-				"radius-8"
-			],
-			[
-				"page",
-				"page-break-inside:   (property)"
-			],
-			[
-				"tab",
-				"table-header-group"
-			],
-			[
-				"page-b",
-				"page-break-inside"
-			],
-			[
-				"tr",
-				"transparent"
-			],
-			[
-				"4px",
-				"40px"
-			],
-			[
-				"bsh",
-				"box-shadow:   (property)"
-			],
-			[
-				"on",
-				"one-in-thirds"
-			],
-			[
-				"wi",
-				"width"
-			],
-			[
-				"w",
-				"width"
-			],
-			[
-				"d",
-				"d:b	display:block"
-			],
-			[
-				"ta",
-				"ta:c	text-align:center"
-			],
-			[
-				"ri",
-				"right"
-			],
-			[
-				"wrap",
-				"wrapper"
-			],
-			[
-				"req",
-				"require"
-			],
-			[
-				"si",
-				"siwapov"
-			],
-			[
-				"fun",
-				"function"
-			],
-			[
-				"file",
-				"fileReader"
-			],
-			[
-				"read",
-				"readAsDataURL"
-			],
-			[
-				"reader",
-				"reader"
-			],
-			[
-				"fu",
-				"function"
-			],
-			[
-				"fil",
-				"fileReader"
-			],
-			[
-				"mo",
-				"Modernizr"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/index.php",
+			"file": "/C/Users/lenovo/Dropbox/Private/myscript/php/shanntadev/contactus.php",
 			"settings":
 			{
-				"buffer_size": 4993,
-				"line_ending": "Unix"
+				"buffer_size": 1672,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -476,7 +536,7 @@
 		[
 			[
 				"Package Control: ",
-				"Package Control: List Packages"
+				"Package Control: Install Package"
 			],
 			[
 				"",
@@ -536,6 +596,70 @@
 	},
 	"file_history":
 	[
+		"/C/Users/lenovo/Documents/GitHub/shanntadev/contactus.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/cart0.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/inc/layouts/topmenu.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_var.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_mixin.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/_def.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/contactus.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/main.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/Gruntfile.js",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-1/products.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-1/index.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/shipping.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-1/cart1.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/cart1.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/_bk/_def.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/cart5.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-1/topcartmenu.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/index.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/_bk/main.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/_bk/inc/_var.scss",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-1/main.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/inc/layouts/topcartmenu.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_fonts.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/css/font-awesome.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/css/main.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/js/main.js",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/products.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/cart4.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/css/colorbox.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/inc/layouts/javascript.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/inc/layouts/head-tag.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/js/foundation/foundation.topbar.js",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/cart3.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/inc/layouts/browserhappy.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/cart2.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_func.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_res.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/inc/layouts/footer-tag.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-1/about.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/js/respond.min.js",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/inc/topmenu.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/css/fractionslider.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/inc/init.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_init.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/inc/bottom-tag.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/css/foundation.css",
+		"/C/Users/lenovo/Downloads/Compressed/fractionslider/css/fractionslider.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-6/main.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-6/product.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-6/news.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-6/product 2.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-6/style.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-6/own-theme.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-6/core.js",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-6/topmenu.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/internal/sass/sass/main.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/internal/Gruntfile.js",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/internal/package.json",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/js/min/plugins.min.js",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/js/min/main.min.js",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/internal/sass/sass/screen.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/internal/sass/sass/ie.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/internal/sass/sass/print.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/internal/sass/config.rb",
 		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/metatag.php",
 		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/style.css",
 		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/Backup_outer/index.php",
@@ -599,75 +723,11 @@
 		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-4/functions.php",
 		"/C/Users/lenovo/Downloads/themeforest-7973960-sapphire-responsive-business-wordpress-theme/01.sapphire-wp/sapphire-wp/framework/modules/ewf-header/includes/resize/jquery.resize.js",
 		"/C/Users/lenovo/Downloads/themeforest-7973960-sapphire-responsive-business-wordpress-theme/01.sapphire-wp/sapphire-wp/framework/admin/admin-options.php",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/service.php",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/service.sass",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/sass/about.sass",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/include/footer.php",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/css/main.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/product.php",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/conn.php",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe6.html",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe5.html",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe4.html",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe3.html",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe2-5.html",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe2.html",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe1.html",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/index.php",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/css/main.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/js/main.js",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/success.php",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/main.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe7.html",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe.html",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/js/mai2.js",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/css/popupiframe.css",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/colorbox.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/index.php",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/popupiframe.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/js/plugins/colorbox/example4/colorbox.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/404.html",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/js/plugins/colorbox/jquery.colorbox-min.js",
-		"/C/Users/lenovo/Downloads/DBAdmanX-Bold/styles.css",
-		"/C/xampp/apache/conf/extra/httpd-xampp.conf",
-		"/C/xampp/apache/conf/httpd.conf",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/sirayooth.sql",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/sass/main.scss",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/sass/screen.scss",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/sass/include/_mixin.sass",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/sass/print.scss",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/stylesheets/print.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/stylesheets/screen.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/config.rb",
-		"/C/Ruby200/lib/ruby/gems/2.0.0/gems/compass-import-once-1.0.4/lib/compass/import-once/importer.rb",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/css/service.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/stylesheets/main.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/config.rb",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/config.rb.bk",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/sass/_func.scss",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/stylesheets/style.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/sass/screen.scss",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/sass/ie.scss",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/sass/print.scss",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/config.rb",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/stylesheets/normalize.css",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/sirayooth.sublime-project",
-		"/C/Users/lenovo/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/news.sass",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/library.php",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/program.php",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/panel-discussion-library.php",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/speakers-library.php",
-		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/spouse-program.php",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/mixin.sass",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/news.php",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/reference.php",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/product.sass",
-		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/include/_res.scss"
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/service.php"
 	],
 	"find":
 	{
-		"height": 37.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -678,9 +738,66 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"#D7D2D6",
+			"18px",
+			"lookbook",
+			"0",
+			"footer",
+			"header",
+			"h1",
+			"price",
+			"cart",
+			"sliderPaginationHover",
+			"#582F3D",
+			"border-left-color",
+			"prev",
+			".nav",
+			"nav",
+			"53px",
+			"hr",
+			"nav",
+			"14px",
+			"p",
+			"addto",
+			"sub",
+			"5",
+			"head",
+			"total",
+			"cart",
+			"medium",
+			"red",
+			"table",
+			"hr",
+			"add",
+			"#00",
+			"productDetailTrack",
+			"tracking",
+			"productDetailTrack",
+			"details",
+			"h1",
+			"details",
+			"product",
+			"table",
+			"sub",
+			"fa-search",
+			"fa-pen",
+			"padding",
+			"arrow",
+			"navi",
+			"large",
+			"5",
+			"7",
+			"columns",
+			"content",
+			"	\n",
+			"9000",
+			"9999",
+			"z-index",
+			"9999",
+			"topMenu",
 			"topmenu",
 			"owl-theme",
 			"active",
@@ -751,64 +868,7 @@
 			"b",
 			"checked",
 			"active",
-			"close",
-			"left-side",
-			"left",
-			"close",
-			": ",
-			"jobDetails",
-			"Country",
-			"country",
-			"form",
-			"none",
-			"menu-wrapper",
-			"hightlignt",
-			"h1",
-			"r_16",
-			"100",
-			"<option value=\"(\\d{3})\">(\\w+.+)",
-			"<option value=\"(\\d{3})\">(\\w+)",
-			"Panel",
-			"</span><a href=\"#\">",
-			"h3",
-			"clear",
-			"three",
-			"<p>(.*)</p>",
-			"h2",
-			"active",
-			"%;\n",
-			"ICON/TUSCANYSTONE",
-			"ICON/ITALIAN",
-			"ICON/HARMONY",
-			"ICON/GRANITOTILE",
-			"ICON/extrudedtile",
-			"../elements/imgs/LIVING_ROOM-1/floor",
-			"../elements/imgs/livingroom/",
-			"../elements/imgs/LIVING_ROOM-1/wall",
-			"../elements/imgs/Livingroom/",
-			"(class=\"iceburg_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
-			"(class=\"GRANITO_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
-			"(class=\"florencetile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
-			"(class=\"extrudedtile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
-			"(class=\"armstone_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
-			"(class=\"tuscany_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
-			"(class=\"marina_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
-			"(class=\"italian_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
-			"(class=\"harmony_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
-			"(class=\"granito_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
-			"(class=\"extrudedtile_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
-			"(class=\"(armstone)_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
-			"changeWall_\\w+_floor_\\d+\\('floor'\\)",
-			"changeWall_\\w+_\\d+\\('wall'\\)",
-			"FLOOR/ICON/GRANITOTILE",
-			"FLOOR/ICON/FLORENCETILE",
-			"FLOOR/ICON/ARMSTONE",
-			"WALL/ICON/ROCKY",
-			"WALL/ICON/OlDCOUNTRY",
-			"WALL/ICON/LAVASTONE",
-			"WALL/ICON/italian",
-			"WALL/ICON/GRINITOTILE",
-			"ICON/EXTRUDEDTILE"
+			"close"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -945,7 +1005,7 @@
 			"$1/elements/imgs/BED_ROOM-2/WALL/armstone/BED_ROOM_$2-01.png$3",
 			"$1@#%&*$2$3"
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
@@ -959,18 +1019,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/index.php",
+					"file": "/C/Users/lenovo/Dropbox/Private/myscript/php/shanntadev/contactus.php",
 					"settings":
 					{
-						"buffer_size": 4993,
+						"buffer_size": 1672,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								428,
+								428
 							]
 						],
 						"settings":
