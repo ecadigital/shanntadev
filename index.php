@@ -16,6 +16,7 @@
 >>>>>>> origin/dev
     </head>
     <body>
+    <div>sdsdsjkdjs</div>
         <?php require "inc/layouts/browserhappy.php"; ?>
         <?php require "inc/layouts/topcartmenu.php"; ?>
         <div class="headSlider row show-for-medium-up">
