@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.1.0');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "\f0c9";
+}
+.fa-user:before {
+  content: "\f007";
+}
+.fa-shopping-cart:before {
+  content: "\f07a";
+}
+.fa-ban:before {
+  content: "\f05e";
+}
+.fa-envelope:before {
+  content: "\f0e0";
+}
+.fa-envelope-o:before {
+  content: "\f003";
+}
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-facebook:before {
+  content: "\f09a";
+}
+.fa-twitter-square:before {
+  content: "\f081";
+}
+.fa-facebook-square:before {
+  content: "\f082";
+}
+.fa-instagram:before {
+  content: "\f16d";
+}
+.fa-pencil:before {
+  content: "\f040";
+}
+.fa-search-plus:before {
+  content: "\f00e";
+}
+.fa-search-minus:before {
+  content: "\f010";
+}
+.fa-search:before {
+  content: "\f002";
+}
+.fa-print:before {
+  content: "\f02f";
+}
+
+
+
+
+// .arrow_box {
+//   position: relative;
+//   background: #b7a6ac;
+//   border-bottom: 2px solid #ffffff;
+  
+// }
+// // .arrow_box.active:after{
+// //   border-top-color: getColor("sliderPaginationHover");
+// // }
+// .arrow_box.active:after, .arrow_box.active:before {
+//   top: 100%;
+//   left: 50%;
+//   border: solid transparent;
+//   content: " ";
+//   height: 0;
+//   width: 0;
+//   position: absolute;
+//   pointer-events: none;
+// }
+// .arrow_box.active:after {
+//   border-color: rgba(183, 166, 172, 0);
+//   // border-top-color: #b7a6ac;
+//   border-top-color: getColor("sliderPaginationHover");
+//   border-width: 16px;
+//   margin-left: -16px;
+// }
+// .arrow_box.active:before {
+//   border-color: rgba(255, 255, 255, 0);
+//   border-top-color: #ffffff;
+//   border-width: 19px;
+//   margin-left: -19px;
+// }
+// .arrow_box {
+//   position: relative;
+//   background: #5b484e;
+//   border: 4px solid #fff;
+// }
+// .arrow_box:after, .arrow_box:before {
+//   right: 100%;
+//   top: 50%;
+//   border: solid transparent;
+//   content: " ";
+//   height: 0;
+//   width: 0;
+//   position: absolute;
+//   pointer-events: none;
+// }
+
+// .arrow_box:after {
+//   border-color: rgba(91, 72, 78, 0);
+//   border-right-color: #5b484e;
+//   border-width: 16px;
+//   margin-top: -16px;
+// }
+// .arrow_box:before {
+//   border-color: rgba(255, 255, 255, 0);
+//   border-right-color: #fff;
+//   border-width: 19px;
+//   margin-top: -19px;
+// }

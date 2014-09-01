@@ -1,0 +1,1780 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"px",
+				"px-to-em"
+			],
+			[
+				"wid",
+				"width:   (property)"
+			],
+			[
+				"large",
+				"large-up"
+			],
+			[
+				"small",
+				"small-only"
+			],
+			[
+				"tex",
+				"text-align:   (property)"
+			],
+			[
+				"col",
+				"columns"
+			],
+			[
+				"medi",
+				"medium-up"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"fl",
+				"fl:l	float:left"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"px-",
+				"px-to-rem"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"lar",
+				"large-up"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"button",
+				"buttonGray"
+			],
+			[
+				"border-top",
+				"border-left:   (property)"
+			],
+			[
+				"me",
+				"media"
+			],
+			[
+				"get",
+				"getColor"
+			],
+			[
+				"i",
+				"I	Tag"
+			],
+			[
+				"in",
+				"INPUT	Tag"
+			],
+			[
+				"inline",
+				"inline-list"
+			],
+			[
+				"top",
+				"top"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"g",
+				"getFontSize"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"whol",
+				"wholeMenus"
+			],
+			[
+				"re",
+				"removeClass"
+			],
+			[
+				"men",
+				"menus"
+			],
+			[
+				"slid",
+				"slideDown"
+			],
+			[
+				"icon",
+				"iconHover"
+			],
+			[
+				"borde",
+				"border-bottom"
+			],
+			[
+				"no",
+				"noBorder"
+			],
+			[
+				"ha",
+				"hasClass  (function)"
+			],
+			[
+				"pro",
+				"productSlider"
+			],
+			[
+				"pos",
+				"pos:a	position:absolute"
+			],
+			[
+				"he",
+				"height:   (property)"
+			],
+			[
+				"listy",
+				"list-style"
+			],
+			[
+				"back",
+				"background-color:   (property)"
+			],
+			[
+				"fo",
+				"form	Tag"
+			],
+			[
+				"ar",
+				"article  (element)"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"bo",
+				"border-left"
+			],
+			[
+				"one",
+				"one-in-3"
+			],
+			[
+				"a",
+				"after"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"lef",
+				"leftmenu-wrapper"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"s",
+				"section  (element)"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"f",
+				"flush  (function)"
+			],
+			[
+				"std",
+				"stdout  (variable)"
+			],
+			[
+				"fin",
+				"finditer  (function)"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"for",
+				"forCur"
+			],
+			[
+				"fw",
+				"fw:lr	font-weight:lighter"
+			],
+			[
+				"backgr",
+				"background-image:   (property)"
+			],
+			[
+				"bgs",
+				"background-size:   (property)"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"tac",
+				"ta:c	text-align:center"
+			],
+			[
+				"db",
+				"d:b	display:block"
+			],
+			[
+				"box",
+				"box"
+			],
+			[
+				"rad",
+				"radius-8"
+			],
+			[
+				"page",
+				"page-break-inside:   (property)"
+			],
+			[
+				"tab",
+				"table-header-group"
+			],
+			[
+				"page-b",
+				"page-break-inside"
+			],
+			[
+				"bg",
+				"bg	background"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"4px",
+				"40px"
+			],
+			[
+				"bsh",
+				"box-shadow:   (property)"
+			],
+			[
+				"b",
+				"bg+	background+"
+			],
+			[
+				"on",
+				"one-in-thirds"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"d",
+				"d:b	display:block"
+			],
+			[
+				"ta",
+				"ta:c	text-align:center"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"wrap",
+				"wrapper"
+			],
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"se",
+				"select  (element)"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"si",
+				"siwapov"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"file",
+				"fileReader"
+			],
+			[
+				"read",
+				"readAsDataURL"
+			],
+			[
+				"reader",
+				"reader"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"fil",
+				"fileReader"
+			],
+			[
+				"mo",
+				"Modernizr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/Jame/Dropbox/Private/myscript/php/shannta/products.php",
+			"settings":
+			{
+				"buffer_size": 6184,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Jame/Dropbox/Private/myscript/php/shannta/cart1.php",
+			"settings":
+			{
+				"buffer_size": 4620,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/sass/main.sass",
+			"settings":
+			{
+				"buffer_size": 9687,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sass/sass/_def.sass",
+			"settings":
+			{
+				"buffer_size": 1640,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sass/sass/inc/_res.scss",
+			"settings":
+			{
+				"buffer_size": 1526,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Jame/Dropbox/Private/myscript/php/shannta/inc/layouts/browserhappy.php",
+			"settings":
+			{
+				"buffer_size": 374,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/SASS Build/SASS.sublime-build",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"",
+				"BracketHighlighter: Swap Brackets"
+			],
+			[
+				"t",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"trimmer",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"trimmer: Delete empty lines",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Add Repository"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"sub",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 181.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/G/1.txt",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_var.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/index.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/cart0.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/inc/layouts/footer-tag.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/inc/layouts/topmenu.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/js/main.js",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/inc/layouts/head-tag.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_fonts.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/css/main.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/inc/topmenu.php",
+		"/C/Users/Jame/AppData/Local/Temp/Rar$DRa0.263/font-awesome-4.1.0/css/font-awesome.css",
+		"/C/Users/Jame/AppData/Local/Temp/Rar$DRa0.431/font-awesome-4.1.0/css/font-awesome.css",
+		"/C/Users/Jame/AppData/Local/Temp/Rar$DRa0.431/font-awesome-4.1.0/css/font-awesome.min.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/_def.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_func.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/inc/init.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/Gruntfile.js",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/inc/bottom-tag.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/inc/head-tag.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_var.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/main.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/js/foundation/foundation.js",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/config.rb",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_init.sass",
+		"/C/Users/Jame/AppData/Local/Temp/Rar$DRa0.653/font-awesome-4.1.0/css/font-awesome.css",
+		"/C/Users/Jame/AppData/Local/Temp/Rar$DRa0.901/font-awesome-4.1.0/css/font-awesome.css",
+		"/C/Users/Jame/AppData/Local/Temp/Rar$DRa0.658/font-awesome-4.1.0/scss/_stacked.scss",
+		"/C/Users/Jame/AppData/Local/Temp/Rar$DRa0.170/font-awesome-4.1.0/scss/_variables.scss",
+		"/C/Users/Jame/AppData/Local/Temp/Rar$DRa0.703/font-awesome-4.1.0/scss/font-awesome.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_mixin.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/css/main.css.map",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/_watch.bat",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_settings.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/foundation/_settings.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/foundation/_functions.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/css/foundation.min.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/css/foundation.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/sass/sass/inc/_res.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/include/_func.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/css/main.min.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/_clean.bat",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/_build.bat",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/_internal/run.bat",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/internal/package.json",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/internal/shannta.sublime-project",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/shannta/internal/shannta.sublime-workspace",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/js/plugins/owl-carousel/owl.theme.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/casestudy.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/casestudy.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/js/plugins/owl-carousel/owl.theme_custom4refdepage.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/reference_details.php",
+		"/C/Users/Jame/AppData/Local/Temp/fz3temp-1/reference_details.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/news.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/product.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/product.php",
+		"/C/Users/Jame/AppData/Local/Temp/fz3temp-1/product.php",
+		"/C/Users/Jame/AppData/Local/Temp/fz3temp-1/index.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/product_details.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/js/plugins/owl-carousel/owl.theme_custom4refpage.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/index.php",
+		"/C/Users/Jame/AppData/Local/Temp/fz3temp-1/index 2.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/about.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/about.php",
+		"/C/xampp/apache/conf/extra/httpd-xampp.conf",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/bkkk/sass/main.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/index.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/include/_init.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/bkkk/sass/include/_new.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/main.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/css/main.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/config.rb",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/config.rb",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/css/about.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/bkkk/sass/include/_mixin.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/include/_useful.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/include/_object.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/bkkk/sass/include/_var.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/bkkk/sass/index.scss",
+		"/C/Users/Jame/AppData/Roaming/Sublime Text 2/Packages/Sass/Syntaxes/Sass.tmLanguage",
+		"/C/Users/Jame/AppData/Roaming/Sublime Text 2/Packages/Sass/package-metadata.json",
+		"/C/Users/Jame/AppData/Roaming/Sublime Text 2/Packages/Sass/Preferences/Comments.tmPreferences",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/nan.sasd",
+		"/C/Users/Jame/AppData/Roaming/Sublime Text 2/Packages/Sass/Preferences/Symbol List - Selectors.tmPreferences",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/nan.scss",
+		"/C/Users/Jame/AppData/Roaming/Sublime Text 2/Packages/Sass/Completions/Sass - Properties.sublime-completions",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/include/_init.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/compass.bat",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/contact.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/sass/career.sass",
+		"/C/rubydevkit/config.yml",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/css/main.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/css/layout.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/index.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/DelegateList-registration.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/program.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/speaker-program.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/documentation-program.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/program-leftmenu.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/inc-footer.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/inc-header.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/main.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/include/_useful.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/css/glide-style.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/product_details.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/js/plugins/owl-carousel/owl.theme_custom4index.css",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/index.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/index.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/conference-program.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/ASF/asf/js/vendor/._jquery-1.10.2.min.js",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/js/main.js",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/include/prefix-head-tag.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/include/_header-footer.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/_index.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/include/_var.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/include/prefix-header.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/news.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/news.php",
+		"/C/Users/Jame/Dropbox/kenzai_javascript/byjame/css/livingroom_1.css",
+		"/C/Users/Jame/Dropbox/kenzai_javascript/byjame/livingroom1_th.php",
+		"/C/Users/Jame/Dropbox/kenzai_javascript/byjame/mydesign.html",
+		"/C/Users/Jame/Dropbox/kenzai_javascript/byjame/css/mydesign.css",
+		"/C/Users/Jame/Dropbox/kenzai_javascript/byjame/livingroom2_th.php",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/service.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/useful.scss",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/mixin.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/less/object.sass",
+		"/C/Users/Jame/Dropbox/Private/myscript/php/Sirayooth/template.php"
+	],
+	"find":
+	{
+		"height": 46.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"medium-3",
+			"medium-2",
+			"large",
+			"large-9",
+			"large-3",
+			"large-8",
+			"large-4",
+			"details",
+			"catagorieSlider",
+			"Product",
+			"product",
+			"Product",
+			"product",
+			",\n",
+			"product",
+			"productHeadline",
+			"product",
+			"product\n",
+			"-->\n",
+			"products",
+			"35",
+			"content",
+			"fa-instagram",
+			"faceb",
+			"envel",
+			"article",
+			"10",
+			"font-size",
+			"user",
+			"div",
+			"fil",
+			"\";\n",
+			"about-wwd",
+			"clearfix:after",
+			"line 88",
+			"line 88, ../less",
+			"line 88, ../less/sass/",
+			"line 88, ../less/sass/about.sass",
+			"about-wwd .container .logo-container",
+			"scss",
+			"clea",
+			".line",
+			".clearfix",
+			"hightlignt",
+			"h1",
+			"r_16",
+			"100",
+			"<option value=\"(\\d{3})\">(\\w+.+)",
+			"<option value=\"(\\d{3})\">(\\w+)",
+			"Panel",
+			"</span><a href=\"#\">",
+			"h3",
+			"clear",
+			"three",
+			"<p>(.*)</p>",
+			"h2",
+			"active",
+			"%;\n",
+			"ICON/TUSCANYSTONE",
+			"ICON/ITALIAN",
+			"ICON/HARMONY",
+			"ICON/GRANITOTILE",
+			"ICON/extrudedtile",
+			"../elements/imgs/LIVING_ROOM-1/floor",
+			"../elements/imgs/livingroom/",
+			"../elements/imgs/LIVING_ROOM-1/wall",
+			"../elements/imgs/Livingroom/",
+			"(class=\"iceburg_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"GRANITO_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"florencetile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"extrudedtile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"armstone_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"tuscany_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"marina_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"italian_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"harmony_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"granito_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"extrudedtile_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"(armstone)_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"changeWall_\\w+_floor_\\d+\\('floor'\\)",
+			"changeWall_\\w+_\\d+\\('wall'\\)",
+			"FLOOR/ICON/GRANITOTILE",
+			"FLOOR/ICON/FLORENCETILE",
+			"FLOOR/ICON/ARMSTONE",
+			"WALL/ICON/ROCKY",
+			"WALL/ICON/OlDCOUNTRY",
+			"WALL/ICON/LAVASTONE",
+			"WALL/ICON/italian",
+			"WALL/ICON/GRINITOTILE",
+			"ICON/EXTRUDEDTILE",
+			"/elements/imgs/KITCHEN-1/floor",
+			"/elements/imgs/KITCHEN-1/wall",
+			"/elements/imgs/Kitchenroom/",
+			"element/imgs",
+			"elementss",
+			"element",
+			"element/imgs/KITCHEN-1/([^F])",
+			"element/imgs/KITCHEN-1/(?!FLOOR)+/",
+			"(class=\"ICEBURG_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"granito_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"florencetile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"extrudedtile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"armstone_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"ROCKY_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"oldcountry_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"lava_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"italian_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"harmony_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"granito_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"extrudedtile_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"armstone_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"changeWall_\\w+_floor_\\d+\\('floor'\\)",
+			"changeWall_\\w+_\\d+\\('wall'\\)",
+			"(class=\"iceburg_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"granito_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"florencetile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"extrudedtile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"armstone_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"\\w+_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"armstone_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"\\w+_floor_(\\d{1,3})\" onclick=\")changeWall_\\w+_floor_\\d+\\('floor('\\))",
+			"(class=\"oldcountry_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"lava_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"granito_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"extrudedtile_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"changeWall_(\\d+)\\(''\\)",
+			"changeWall_\\w+_(\\d+)\\('wall'\\)",
+			"/ICON/iceburg"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<option value=\"$1\">$2</option>",
+			"</span><a href=\"javascript:void(0);\">",
+			"two",
+			"<div>$1</div>",
+			"ICON/TUSCANY_STONE",
+			"ICON/ITALIAN_MODERN_DESIGN",
+			"ICON/HARMONY",
+			"ICON/GRANITO_TILE",
+			"ICON/EXTRUDED_TILE",
+			"../elements/imgs/LIVING_ROOM-1/FLOOR",
+			"../elements/imgs/LIVING_ROOM-1/WALL",
+			"../elements/imgs/LIVING_ROOM-1/",
+			"$1element/imgs/KITCHEN-1/WALL/ICEBURG/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/GRANITO/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/FLORENCE_TILE/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/EXTRUDED_TILE/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/ARMSTONE/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/tuscany/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/marina/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/italian_modern_design/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/harmony/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/granito/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/extruded_tile/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/$2/pic-$3-01.png$4",
+			"changeFloor('')",
+			"changeWall('')",
+			"FLOOR/ICON/GRANITO_TILE",
+			"FLOOR/ICON/FLORENCE_TILE",
+			"FLOOR/ICON/ARMSTONE",
+			"WALL/ICON/ROCKY",
+			"WALL/ICON/OlD_COUNTRY",
+			"WALL/ICON/LAVA_STONE",
+			"WALL/ICON/ITALIAN_MODERN_DESIGN",
+			"WALL/ICON/GRINITO_TILE",
+			"ICON/EXTRUDED_TILE",
+			"/elements/imgs/KITCHEN-1/FLOOR",
+			"/elements/imgs/KITCHEN-1/WALL",
+			"/elements/imgs/KITCHEN-1/",
+			"elements/imgs",
+			"elements",
+			"element/imgs/KITCHEN-1/WALL/$1",
+			"$1element/imgs/KITCHEN-1/FLOOR/ICEBURG/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/FLOOR/GRANITO/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/FLOOR/FLORENCE_TILE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/FLOOR/EXTRUDED_TILE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/ARMSTONE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/ROCKY/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/OLDCOUNTRY/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/LAVA_STONE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/ITALIAN_MODERN_DESIGN/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/HARMONY/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/GRANITO/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/EXTRUDED_TILE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/ARMSTONE/PIC-$2-01.png$3",
+			"changeFloor('')",
+			"changeWall('')",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/ICEBURG/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/GRANITO/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/FLORENCE_TILE/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/EXTRUDED_TILE/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/ARMSTONE/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/pic-$2-01.png$3",
+			"$1changeFloor('')",
+			"$1elements/imgs/DINING_ROOM-1/WALL/OLDCOUTRY/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/WALL/LAVA_STONE/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/WALL/GRANITO/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/WALL/EXTRUDED_TILE/pic-$2-01.png$3",
+			"$1/elements/imgs/DINING_ROOM-1/WALL/EXTRUDED_TILE/pic-$2-01.png$3",
+			"changeWall('')",
+			"changeWall_$1('')",
+			"/ICON/ICEBERG",
+			"/ICON/FLORENCE_TILE",
+			"/ICON/OLD_COUNTY",
+			"/ICON/LAVA_STONE",
+			"/ICON/GRANITO_TILE",
+			"/ICON/EXTRUDED_TILE",
+			"../elements/imgs/DINING_ROOM-1",
+			"../elements/imgs/DINING_ROOM-1/FLOOR",
+			"../elements/imgs/DINING_ROOM-1/WALL",
+			"ICON/GRANITO_TILE",
+			"ICON/FLORENCE_TILE",
+			"ICON/ARMSTONE",
+			"/elements/imgs/BED_ROOM-2/FLOOR/ICON",
+			"/elements/imgs/BED_ROOM-2/FLOOR",
+			"ICON/ROCKY",
+			"_",
+			"/ICON/ITALIAN_MODERN_DESIGN",
+			"/ICON/HARMONY",
+			"../elements/imgs/BED_ROOM-2",
+			"ICON/EXTRUDED_TILE",
+			"../ICON/EXTRUDED_TILE",
+			"../elements/imgs/BED_ROOM-2/WALL/ICON",
+			"/WALL/ICON/GRANITO/",
+			"/OLD_COUNTRY",
+			"/GY-101",
+			"/GRANITOTILE",
+			"GRANITOTILE",
+			"_",
+			"../elements/imgs/BATHROOM-1/",
+			"_../elements/imgs/BATHROOM-1/FLOOR",
+			"_../elements/imgs/BATHROOM-1/WALL",
+			"_",
+			"../elements/imgs/BATHROOM-1/",
+			"'elements/",
+			"'elements",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/ICEBURG/BED_ROOM_$2-01.png$3",
+			"changeFloor('')",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/ICEBURG/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/granito/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/florence_tile/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/extruded_tile/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/ARMSTONE/BED_ROOM_$2-01.png$3",
+			"changeFloor('')",
+			"changeWall('')",
+			"$1/elements/imgs/BED_ROOM-2/WALL/tuscany/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/rocky/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/oldcoutry/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/lavastone/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/italian_moderm_design/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/harmony/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/granito/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/extruded_tile/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/armstone/BED_ROOM_$2-01.png$3",
+			"$1@#%&*$2$3",
+			"changeWall('')",
+			"elements/imgs/BED_ROOM-1/WALL",
+			"_",
+			"../elements/imgs/BATHROOM-1/FLOOR/ICON/OLD_COUNTRY"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/Jame/Dropbox/Private/myscript/php/shannta/products.php",
+					"settings":
+					{
+						"buffer_size": 6184,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								846,
+								834
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 406.0,
+						"translation.y": 144.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Jame/Dropbox/Private/myscript/php/shannta/cart1.php",
+					"settings":
+					{
+						"buffer_size": 4620,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4298,
+								4298
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1662.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/sass/main.sass",
+					"settings":
+					{
+						"buffer_size": 9687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8808,
+								8808
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 70.0,
+						"translation.y": 7260.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/sass/_def.sass",
+					"settings":
+					{
+						"buffer_size": 1640,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								700,
+								700
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 10.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sass/sass/inc/_res.scss",
+					"settings":
+					{
+						"buffer_size": 1526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								694,
+								694
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/Jame/Dropbox/Private/myscript/php/shannta/inc/layouts/browserhappy.php",
+					"settings":
+					{
+						"buffer_size": 374,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								327,
+								327
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 321.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 154.0
+	},
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Users/Jame/Dropbox/Private/myscript/project/meme.in.th/meme.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

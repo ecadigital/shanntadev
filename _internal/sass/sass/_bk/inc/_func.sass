@@ -1,0 +1,25 @@
+@function px-to-em($pixel,$defaultEMSize: 16)
+	@return #{(($pixel)/$defaultEMSize)+em}
+@function px-to-rem($pixel,$defaultREMSize: 16)
+	@return #{(($pixel)/$defaultREMSize)+rem}
+@function px-to-percen($pixel,$def: 16)
+	@return #{percentage($pixel/$def)}
+@function lower-bound($range)
+	@if length($range) <= 0
+		@return 0
+	@return nth($range, 1)
+@function upper-bound($range)
+	@if length($range) < 2
+		@return 999999999999
+	@return nth($range, 2)
+@function negative($number)
+	@return $number*-1
+
+
+// gettttttttttttttttttt
+@function getFontSize($size,$font-size: $font-size)
+	@return map-get($font-size,$size)
+@function getColor($elem,$color: $color)
+	@return map-get($color,$elem)
+@function getPath($elem,$path: $path)
+	@return map-get($path,$elem)

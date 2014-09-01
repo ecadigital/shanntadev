@@ -1,0 +1,30 @@
+=remFont($font-size)
+	font-size: $font-size+px
+	font-size: px-to-rem($font-size)
+=cursorClick()
+	cursor: hand
+	cursor: pointer
+=opacity($alpha)
+	/* Required for IE 5, 6, 7 */
+	/* ...or something to trigger hasLayout, like zoom: 1; */
+	// width: 100%; 
+	$alpha-ie: $alpha*100	
+	/* Theoretically for IE 8 & 9 (more valid) */	
+	/* ...but not required as filter works too */
+	/* should come BEFORE filter */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha-ie})"
+	
+	/* This works in IE 8 & 9 too */
+	/* ... but also 5, 6, 7 */
+	filter: alpha(opacity=$alpha-ie)
+	
+	/* Older than Firefox 0.9 */
+	-moz-opacity: $alpha
+	
+	/* Safari 1.x (pre WebKit!) */
+	-khtml-opacity: $alpha
+    
+	/* Modern!
+	/* Firefox 0.9+, Safari 2?, Chrome any?
+	/* Opera 9+, IE 9+ */
+	opacity: $alpha

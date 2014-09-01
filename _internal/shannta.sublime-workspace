@@ -1,0 +1,1057 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"owl",
+				"owl-carousel"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"Owl",
+				"owl-carousel"
+			],
+			[
+				"i",
+				"inline-table"
+			],
+			[
+				"_sit",
+				"_SITE_TITLE_"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"slo",
+				"slideDown"
+			],
+			[
+				"cur",
+				"curId"
+			],
+			[
+				"sli",
+				"slide"
+			],
+			[
+				"co",
+				"condo"
+			],
+			[
+				"slide",
+				"slideUp"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"re",
+				"recreation"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"ca",
+				"carousel"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"menu",
+				"menu-details"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"top",
+				"topmenu"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"list",
+				"list:n	list-style-type:none"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"I",
+				"ID_Job"
+			],
+			[
+				"che",
+				"checked"
+			],
+			[
+				"un",
+				"unset"
+			],
+			[
+				"uns",
+				"unset"
+			],
+			[
+				"Tel",
+				"Tel"
+			],
+			[
+				"o",
+				"outline"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"bg",
+				"bg	background: #${1:000};"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"a",
+				"a	Tag"
+			],
+			[
+				"c",
+				"cursor"
+			],
+			[
+				"lis",
+				"lisi	list-style-image"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"footer",
+				"footer-details"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"rig",
+				"right"
+			],
+			[
+				"but",
+				"button-wrapper"
+			],
+			[
+				"bu",
+				"button-wrapper"
+			],
+			[
+				"foo",
+				"footer-details"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"righ",
+				"right-side"
+			],
+			[
+				"lef",
+				"left-side"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"ban",
+				"background"
+			],
+			[
+				"html",
+				"htmlentities"
+			],
+			[
+				"job",
+				"jobDetails"
+			],
+			[
+				"is_nu",
+				"is_numeric"
+			],
+			[
+				"mysql_re",
+				"mysql_real_escape_string"
+			],
+			[
+				"me",
+				"medium-range"
+			],
+			[
+				"sl",
+				"slideDown"
+			],
+			[
+				"slid",
+				"slideDown"
+			],
+			[
+				"content",
+				"content-container"
+			],
+			[
+				"tex",
+				"textarea  (element)"
+			],
+			[
+				"one",
+				"one-in-3"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"ar",
+				"article	Tag"
+			],
+			[
+				"s",
+				"section  (element)"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"f",
+				"flush  (function)"
+			],
+			[
+				"std",
+				"stdout  (variable)"
+			],
+			[
+				"fin",
+				"finditer  (function)"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"for",
+				"forCur"
+			],
+			[
+				"fw",
+				"fw:lr	font-weight:lighter"
+			],
+			[
+				"backgr",
+				"background-image:   (property)"
+			],
+			[
+				"bgs",
+				"background-size:   (property)"
+			],
+			[
+				"ex",
+				"extend"
+			],
+			[
+				"back",
+				"background-image:   (property)"
+			],
+			[
+				"tac",
+				"ta:c	text-align:center"
+			],
+			[
+				"db",
+				"d:b	display:block"
+			],
+			[
+				"box",
+				"box"
+			],
+			[
+				"rad",
+				"radius-8"
+			],
+			[
+				"page",
+				"page-break-inside:   (property)"
+			],
+			[
+				"tab",
+				"table-header-group"
+			],
+			[
+				"page-b",
+				"page-break-inside"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"4px",
+				"40px"
+			],
+			[
+				"bsh",
+				"box-shadow:   (property)"
+			],
+			[
+				"on",
+				"one-in-thirds"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"d",
+				"d:b	display:block"
+			],
+			[
+				"ta",
+				"ta:c	text-align:center"
+			],
+			[
+				"ri",
+				"right"
+			],
+			[
+				"wrap",
+				"wrapper"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"si",
+				"siwapov"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"file",
+				"fileReader"
+			],
+			[
+				"read",
+				"readAsDataURL"
+			],
+			[
+				"reader",
+				"reader"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"fil",
+				"fileReader"
+			],
+			[
+				"mo",
+				"Modernizr"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/index.php",
+			"settings":
+			{
+				"buffer_size": 4993,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/SASS Build/SASS.sublime-build",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"BracketHighlighter: Swap Brackets"
+			],
+			[
+				"t",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"trimmer",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"trimmer: Delete empty lines",
+				"Trimmer: Delete empty lines."
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Add Repository"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"sub",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 181.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/metatag.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/style.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/Backup_outer/index.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/owl.theme.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/inc_index.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/jquery/carousel/owl.carousel.js",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/index 2.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/jquery/carousel/assets/owl.theme.default.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/owl.theme.default.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/skin/css/style.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/index.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/topmenu.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-5/index.php",
+		"/C/Users/lenovo/Downloads/font-awesome-4.1.0/font-awesome-4.1.0/css/font-awesome.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/jquery/core.js",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/topmenu 2.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/inc_index.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/index 3.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/inc_news.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/inc_mission.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/inc_preapprove.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/inc_pastproject.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/topmenu.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/index 2.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/index.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/core.js",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/jquery/carousel/assets/owl.carousel.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/infinite/style.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/include/_mixin.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/include/_useful.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/news.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/contact.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/faq.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/faq.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/casestudy.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/casestudy.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/news.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/index.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sassy.bat",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/config.rb",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/css/main.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/include/_res.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/include/_var.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/include/_object.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/include/_func.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/career.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/reference_details.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/career.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/index.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/reference.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/about.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/about.sass",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-4/layout.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-4/elements.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-4/js_composer_front.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-4/styles.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/admin-options.php",
+		"/C/Users/lenovo/Downloads/themeforest-7973960-sapphire-responsive-business-wordpress-theme/01.sapphire-wp/sapphire-wp/framework/modules/ewf-header/ewf-modHeader.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-4/base.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/layout.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-4/functions.php",
+		"/C/Users/lenovo/Downloads/themeforest-7973960-sapphire-responsive-business-wordpress-theme/01.sapphire-wp/sapphire-wp/framework/modules/ewf-header/includes/resize/jquery.resize.js",
+		"/C/Users/lenovo/Downloads/themeforest-7973960-sapphire-responsive-business-wordpress-theme/01.sapphire-wp/sapphire-wp/framework/admin/admin-options.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/service.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/less/sass/service.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/sass/about.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/include/footer.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/css/main.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/product.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/Sirayooth/conn.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe6.html",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe5.html",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe4.html",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe3.html",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe2-5.html",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe2.html",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe1.html",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/index.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/css/main.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/js/main.js",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/success.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/main.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe7.html",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/iframe.html",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/js/mai2.js",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/css/popupiframe.css",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/colorbox.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/index.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-2/popupiframe.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/js/plugins/colorbox/example4/colorbox.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/404.html",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Bu/js/plugins/colorbox/jquery.colorbox-min.js",
+		"/C/Users/lenovo/Downloads/DBAdmanX-Bold/styles.css",
+		"/C/xampp/apache/conf/extra/httpd-xampp.conf",
+		"/C/xampp/apache/conf/httpd.conf",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth2/sirayooth.sql",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/sass/main.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/sass/screen.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/sass/include/_mixin.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/sass/print.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/stylesheets/print.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/stylesheets/screen.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/config.rb",
+		"/C/Ruby200/lib/ruby/gems/2.0.0/gems/compass-import-once-1.0.4/lib/compass/import-once/importer.rb",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/css/service.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/stylesheets/main.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/1/config.rb",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/config.rb.bk",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/sass/_func.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/stylesheets/style.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/sass/screen.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/sass/ie.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/sass/print.scss",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/config.rb",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/eurosnack/stylesheets/normalize.css",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/sirayooth.sublime-project",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/news.sass",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/library.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/program.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/panel-discussion-library.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/speakers-library.php",
+		"/C/Users/lenovo/AppData/Local/Temp/fz3temp-3/spouse-program.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/mixin.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/news.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/reference.php",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/product.sass",
+		"/C/Users/lenovo/Dropbox/Private/myscript/php/Sirayooth/less/include/_res.scss"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"topmenu",
+			"owl-theme",
+			"active",
+			"home",
+			"slideUp",
+			"condo",
+			"townhome",
+			"#menu-details",
+			"translate",
+			"phone",
+			"angle",
+			"left",
+			"angle",
+			"fa-angle",
+			"\\.\\./f",
+			"../f",
+			"owl-nav",
+			"listproduct",
+			":hover",
+			".hover",
+			"#999",
+			"999",
+			"#01947E",
+			"#00A290",
+			"logo",
+			"header",
+			"choose",
+			"form",
+			"top:",
+			"google",
+			".wpb_accordion .wpb_accordion_wrapper .wpb_accordion_header a",
+			"img",
+			"block",
+			"blockqoute",
+			"backqoute",
+			"baackqoute",
+			"blackqoute",
+			"headline",
+			".headline",
+			"submenu-arrow",
+			"sub-menu",
+			"trigger",
+			"3f",
+			"#mobile-menu-trigger",
+			"#96e0a9",
+			"#08ab89",
+			"headline",
+			"font",
+			"#footer-middle",
+			"footer",
+			"ewf-logo-size",
+			"header",
+			"section article",
+			"news-slider",
+			"read",
+			"readmore",
+			"ID=",
+			"id",
+			"product",
+			"menu",
+			"#pro",
+			"#product",
+			"*/\n",
+			"menu",
+			"product menu header",
+			"navigator",
+			"b>",
+			"b",
+			"checked",
+			"active",
+			"close",
+			"left-side",
+			"left",
+			"close",
+			": ",
+			"jobDetails",
+			"Country",
+			"country",
+			"form",
+			"none",
+			"menu-wrapper",
+			"hightlignt",
+			"h1",
+			"r_16",
+			"100",
+			"<option value=\"(\\d{3})\">(\\w+.+)",
+			"<option value=\"(\\d{3})\">(\\w+)",
+			"Panel",
+			"</span><a href=\"#\">",
+			"h3",
+			"clear",
+			"three",
+			"<p>(.*)</p>",
+			"h2",
+			"active",
+			"%;\n",
+			"ICON/TUSCANYSTONE",
+			"ICON/ITALIAN",
+			"ICON/HARMONY",
+			"ICON/GRANITOTILE",
+			"ICON/extrudedtile",
+			"../elements/imgs/LIVING_ROOM-1/floor",
+			"../elements/imgs/livingroom/",
+			"../elements/imgs/LIVING_ROOM-1/wall",
+			"../elements/imgs/Livingroom/",
+			"(class=\"iceburg_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"GRANITO_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"florencetile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"extrudedtile_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"armstone_floor_(\\d{1,3})\" onclick=\"changeFloor\\(')('\\))",
+			"(class=\"tuscany_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"marina_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"italian_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"harmony_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"granito_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"extrudedtile_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"(class=\"(armstone)_(\\d{1,3})\" onclick=\"changeWall\\(')('\\))",
+			"changeWall_\\w+_floor_\\d+\\('floor'\\)",
+			"changeWall_\\w+_\\d+\\('wall'\\)",
+			"FLOOR/ICON/GRANITOTILE",
+			"FLOOR/ICON/FLORENCETILE",
+			"FLOOR/ICON/ARMSTONE",
+			"WALL/ICON/ROCKY",
+			"WALL/ICON/OlDCOUNTRY",
+			"WALL/ICON/LAVASTONE",
+			"WALL/ICON/italian",
+			"WALL/ICON/GRINITOTILE",
+			"ICON/EXTRUDEDTILE"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"own-theme",
+			".menu-details",
+			"f",
+			"Market",
+			"<option value=\"$1\">$2</option>",
+			"</span><a href=\"javascript:void(0);\">",
+			"two",
+			"<div>$1</div>",
+			"ICON/TUSCANY_STONE",
+			"ICON/ITALIAN_MODERN_DESIGN",
+			"ICON/HARMONY",
+			"ICON/GRANITO_TILE",
+			"ICON/EXTRUDED_TILE",
+			"../elements/imgs/LIVING_ROOM-1/FLOOR",
+			"../elements/imgs/LIVING_ROOM-1/WALL",
+			"../elements/imgs/LIVING_ROOM-1/",
+			"$1element/imgs/KITCHEN-1/WALL/ICEBURG/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/GRANITO/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/FLORENCE_TILE/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/EXTRUDED_TILE/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/ARMSTONE/$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/tuscany/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/marina/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/italian_modern_design/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/harmony/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/granito/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/extruded_tile/pic-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/WALL/$2/pic-$3-01.png$4",
+			"changeFloor('')",
+			"changeWall('')",
+			"FLOOR/ICON/GRANITO_TILE",
+			"FLOOR/ICON/FLORENCE_TILE",
+			"FLOOR/ICON/ARMSTONE",
+			"WALL/ICON/ROCKY",
+			"WALL/ICON/OlD_COUNTRY",
+			"WALL/ICON/LAVA_STONE",
+			"WALL/ICON/ITALIAN_MODERN_DESIGN",
+			"WALL/ICON/GRINITO_TILE",
+			"ICON/EXTRUDED_TILE",
+			"/elements/imgs/KITCHEN-1/FLOOR",
+			"/elements/imgs/KITCHEN-1/WALL",
+			"/elements/imgs/KITCHEN-1/",
+			"elements/imgs",
+			"elements",
+			"element/imgs/KITCHEN-1/WALL/$1",
+			"$1element/imgs/KITCHEN-1/FLOOR/ICEBURG/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/FLOOR/GRANITO/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/FLOOR/FLORENCE_TILE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/FLOOR/EXTRUDED_TILE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/ARMSTONE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/ROCKY/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/OLDCOUNTRY/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/LAVA_STONE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/ITALIAN_MODERN_DESIGN/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/HARMONY/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/GRANITO/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/EXTRUDED_TILE/PIC-$2-01.png$3",
+			"$1element/imgs/KITCHEN-1/ARMSTONE/PIC-$2-01.png$3",
+			"changeFloor('')",
+			"changeWall('')",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/ICEBURG/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/GRANITO/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/FLORENCE_TILE/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/EXTRUDED_TILE/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/ARMSTONE/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/FLOOR/pic-$2-01.png$3",
+			"$1changeFloor('')",
+			"$1elements/imgs/DINING_ROOM-1/WALL/OLDCOUTRY/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/WALL/LAVA_STONE/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/WALL/GRANITO/pic-$2-01.png$3",
+			"$1elements/imgs/DINING_ROOM-1/WALL/EXTRUDED_TILE/pic-$2-01.png$3",
+			"$1/elements/imgs/DINING_ROOM-1/WALL/EXTRUDED_TILE/pic-$2-01.png$3",
+			"changeWall('')",
+			"changeWall_$1('')",
+			"/ICON/ICEBERG",
+			"/ICON/FLORENCE_TILE",
+			"/ICON/OLD_COUNTY",
+			"/ICON/LAVA_STONE",
+			"/ICON/GRANITO_TILE",
+			"/ICON/EXTRUDED_TILE",
+			"../elements/imgs/DINING_ROOM-1",
+			"../elements/imgs/DINING_ROOM-1/FLOOR",
+			"../elements/imgs/DINING_ROOM-1/WALL",
+			"ICON/GRANITO_TILE",
+			"ICON/FLORENCE_TILE",
+			"ICON/ARMSTONE",
+			"/elements/imgs/BED_ROOM-2/FLOOR/ICON",
+			"/elements/imgs/BED_ROOM-2/FLOOR",
+			"ICON/ROCKY",
+			"_",
+			"/ICON/ITALIAN_MODERN_DESIGN",
+			"/ICON/HARMONY",
+			"../elements/imgs/BED_ROOM-2",
+			"ICON/EXTRUDED_TILE",
+			"../ICON/EXTRUDED_TILE",
+			"../elements/imgs/BED_ROOM-2/WALL/ICON",
+			"/WALL/ICON/GRANITO/",
+			"/OLD_COUNTRY",
+			"/GY-101",
+			"/GRANITOTILE",
+			"GRANITOTILE",
+			"_",
+			"../elements/imgs/BATHROOM-1/",
+			"_../elements/imgs/BATHROOM-1/FLOOR",
+			"_../elements/imgs/BATHROOM-1/WALL",
+			"_",
+			"../elements/imgs/BATHROOM-1/",
+			"'elements/",
+			"'elements",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/ICEBURG/BED_ROOM_$2-01.png$3",
+			"changeFloor('')",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/ICEBURG/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/granito/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/florence_tile/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/extruded_tile/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/FLOOR/ARMSTONE/BED_ROOM_$2-01.png$3",
+			"changeFloor('')",
+			"changeWall('')",
+			"$1/elements/imgs/BED_ROOM-2/WALL/tuscany/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/rocky/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/oldcoutry/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/lavastone/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/italian_moderm_design/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/harmony/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/granito/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/extruded_tile/BED_ROOM_$2-01.png$3",
+			"$1/elements/imgs/BED_ROOM-2/WALL/armstone/BED_ROOM_$2-01.png$3",
+			"$1@#%&*$2$3"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/lenovo/Dropbox/Private/myscript/php/shannta/index.php",
+					"settings":
+					{
+						"buffer_size": 4993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 154.0
+	},
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Users/Jame/Dropbox/Private/myscript/project/meme.in.th/meme.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,783 @@
+@import "inc/init"
+@import "def"
+.headSlider
+	overflow: hidden
+	img
+		width: 100%
+		max-width: 1025px
+	@media #{$small-only}
+		width: 100%
+		height: auto
+		line-height: 100%
+#topcartmenu
+	background-color: #FFF
+	padding: px-to-em(5) 0
+	color: getColor("baseFive")
+	a
+		color: getColor("baseFive")
+		font-size: 15px
+		&:hover,&.active
+			color: darken(getColor("baseFive"),30%)
+		@media #{$medium-only}
+			font-size: 13px
+	ul
+		> li
+			list-style: none
+			position: relative
+			> a
+				text-align: center
+				font-size: 15px
+				// padding: px-to-em(5,15) 0
+				white-space: nowrap
+				display: block
+				border: 1px solid transparent
+				background-color: #FFF
+				margin-top: -#{px-to-em(2,15)}
+				.icon
+					font-size: px-to-em(22,15)
+				&:hover,&.active
+					padding: px-to-em(2.5,15) 0
+					border-top: 1px solid #000
+					border-left: 1px solid #000
+					border-right: 1px solid #000
+					position: relative
+					z-index: 92
+				&:hover
+					border-bottom: 1px solid #000
+				&.active:hover
+					border-bottom: 1px solid transparent
+				@media #{$medium-only}
+					font-size: 13px
+			.sub
+				position: absolute
+				background-color: #fff
+				border: 1px solid #000
+				top: 30px
+				padding-bottom: px-to-em(15)
+				z-index: 91
+				display: none
+				text-align: left
+				.columns
+					// padding: 0 px-to-em(5)
+					padding: 0
+					padding-left: px-to-em(5)
+				.button
+					margin: 0
+					margin-top: 0.5em
+					padding: px-to-em(10) px-to-em(20)
+					color: #fff
+				.row
+					margin: 0
+					border-top: 1px dotted #000
+					padding: px-to-em(5) 0
+					&:first-child,&.first
+						border: none
+					.columns
+						// padding-left: px-to-em(10)
+						// padding-right: px-to-em(10)
+				h5
+					font-size: 20px
+					white-space: nowrap
+					color: getColor("base")
+				img
+					width: 100%
+					height: auto
+				&.profile
+					right: 0
+					width: 360px
+					padding: 0.5em 0
+				&.selection
+					right: -125px
+					width: 650px
+					color: getColor("base")
+					.row
+						margin: 0 px-to-em(15)
+					.head
+						font-weight: bold
+						padding: px-to-em(6) 0
+						padding-left: px-to-em(15)
+						background-color: getColor("baseFour")
+					@media #{$medium-only}
+						width: 629px
+						right: -103px
+				&.active
+					display: block
+				@media #{$medium-only}
+					top: 31px
+			&.columns
+				padding: 0
+	.row > .columns
+		padding-left: px-to-em(10)
+		padding-right: px-to-em(10)
+		&:first-child
+			padding-left: 0
+	@media #{$large-only}
+		height: 35px
+.searchBox
+	position: relative
+	$sizeBoxIcon: 19
+	i
+		font-size: $sizeBoxIcon+px
+		position: absolute
+		z-index: 2
+		right: 2px
+		top: 2px
+	input[type=text]
+		margin: 0
+		height: 24px
+		height: px-to-rem(24)
+		padding-right: 22px
+
+#topmenu
+	// padding-bottom: px-to-em(20)
+	// padding-top: px-to-em(35)
+	img
+		width: px-to-em(263)
+		height: px-to-em(49)
+	.inline-list
+		overflow: visible
+		overflow: initial
+		.logo
+			img
+				position: relative
+				top: auto
+				right: auto
+				bottom: px-to-em(19)
+				left: auto
+	.menus
+		display: none
+		// display: block
+	@media #{$small-only}
+		.inline-list
+			// font-size: getFontSize("small")+px
+		#small-topmenu
+			background-color: getColor("bg")
+			.icons
+				font-size: px-to-em(getFontSize("icon"))
+				margin-top: px-to-em(5)
+				padding: px-to-em(2)
+				color: lighten(getColor("bg"),10%)
+				&:hover,
+				&.open
+					color: getColor("bg")
+					background-color: darken(getColor("link"),60%)
+			> .row
+				padding: px-to-em(5) 0
+				border-bottom: 1px solid getColor("topMenu")
+			.menus
+				z-index: 9999
+				position: relative
+				// max-height: 370px
+				// height: 100%
+				// height: 325px
+				overflow: auto
+				#navigatorDetail,
+				#userInterfaceDetail
+					// display: none
+				ul
+					margin: 0
+					padding: 0
+					> li
+						list-style: none
+						text-align: center
+						border-top: 1px solid darken(getColor("topMenu"),60%)
+						color: getColor("topMenu")
+						&:first-child,
+						&.noBorder
+							border: none
+						> a,
+						&.noBorder
+							display: block
+							padding: px-to-em(5) 0
+						&.noBorder
+							a
+								display: inline
+						&.row.noBorder
+							> *
+								padding: 0
+	@media #{$medium-only}
+		#medium-topmenu
+			border-top: 1px solid getColor("topMenu")
+			.logo
+				text-align: center
+				margin-top: px-to-em(16)
+			.inline-list
+				> li > a
+					display: inline
+			div
+				display: block
+				// max-width: px-to-em(624,getFontSize("medium"))
+				margin: px-to-em(8) auto px-to-em(4)
+				.inline-list
+					$margin-items: 40
+					// margin-left: -$margin-items+px
+					// margin-left: -#{px-to-rem($margin-items)}
+					margin: 0
+					// margin-left: -3%
+					> li
+						width: 12.5%
+						// margin-left: $margin-items+px
+						// margin-left: px-to-rem($margin-items)
+						margin: 0
+						// margin-left: 3%
+					> .large
+						width: 13.5%
+					> .afterLarge
+						padding-left: 2%
+					> .afterLargeTwo
+						padding-left: 3%
+					> .last
+						width: 11%
+	@media #{$large-up}
+		padding-top: px-to-em(35)
+#content
+	// background-color: getColor("contentBackground")
+	@media #{$medium-up}
+		margin-bottom: px-to-em(15)
+.catagories
+	background-color: getColor("contentBackground")
+	margin: px-to-em(5) 0 px-to-em(20) 0
+	padding: 0
+	border-top: 2px solid #fff
+	border-bottom: 2px solid #fff
+	color: getColor("text")
+	// margin: 5px 10px
+	.columns
+		padding: 0
+	.innerCatagorie
+		.details
+			padding-bottom: px-to-em(15)
+			h1
+				font-size: px-to-em(24)
+				font-weight: bold
+				display: block
+				background-color: getColor("catagorieHeadline")
+				margin: 0
+				padding: px-to-em(5,24) 0
+				padding-left: px-to-em(15,24)
+				color: getColor("h1")
+			section
+				margin-top: px-to-em(10)
+				padding-left: px-to-em(15)
+				h2
+					font-size: px-to-em(18)
+					font-weight: bold
+					color: getColor("catagorieHeadline2")
+		.rightImage
+			img
+				width: 100%
+				height: auto
+	.paginationCatagorieSlider
+		// background-color: getColor("sliderPaginationBackground")
+		text-align: center
+		// border-bottom: 2px solid getColor("borderOne")
+		position: relative
+		z-index: 90
+		.item
+			margin-bottom: 15px
+			border-bottom: 2px solid #fff
+			> a
+				border-left: 1px solid getColor("borderOne")
+				border-right: 1px solid getColor("borderOne")
+				display: block
+				padding: px-to-em(14) 0
+				&:hover,&:focus
+					color: getColor("sliderPaginationFont")
+				@media #{$medium-only}
+					font-size: px-to-em(15)
+			&:first-child
+				> a
+					border-left: 2px solid getColor("borderOne")
+			&.active,&:hover
+				background-color: getColor("sliderPaginationHover")
+		&.row
+			margin: 0
+	.catagorieSlider
+		.item
+			.details
+				margin-top: -#{px-to-em(50)}
+				padding-left: px-to-em(15)
+				h1
+					color: getColor("catagorieHeadline2")
+					font-weight: bold
+				@media #{$medium-up}
+					margin-top: 0
+		@media #{$medium-up}
+			position: relative
+			top: -17px
+			z-index: 80
+	@media #{$medium-only}
+		margin: px-to-em(10) 0 0 0
+	@media #{$medium-up}
+		// min-height: 192px
+		// min-height: px-to-rem(192)
+footer
+	color: getColor("footerText")
+	> .columns
+		padding: 0
+		padding-left: px-to-em(15)
+		font-size: getFontSize("footer")+px
+		font-size: px-to-rem(getFontSize("footer"))
+		@media #{$large-up}
+			$footerFontSizeLarge: getFontSize("footer")+2
+			font-size: $footerFontSizeLarge+px
+			font-size: px-to-rem($footerFontSizeLarge)
+	// @media #{$medium-only}
+	$footerFontSize: getFontSize("footer")
+	$footerIconSize: getFontSize("footerIcons")
+	border-top: 1px solid getColor("footerBorder")
+	padding-top: px-to-em(20,$footerFontSize)
+	.top
+		padding-bottom: px-to-em(20,$footerFontSize)
+	.bottom
+		// padding-top: px-to-em(20,$footerFontSize)
+		padding-bottom: px-to-em(15,$footerFontSize)
+		border-top: 1px solid getColor("footerBorder")
+	.icon-wrapper
+		display: inline
+		margin-left: px-to-em(10,$footerFontSize)
+		.icons
+			font-size: $footerIconSize+px
+			font-size: px-to-rem($footerIconSize)
+			margin-top: px-to-em(10,$footerIconSize)
+			margin-left: px-to-em(10,$footerIconSize)
+	@media #{$large-up}
+		.subscript
+			span,input[type=text],button.button.gray
+				float: left
+			input[type=text]
+				width: 75%
+			button.button.gray
+				$padding-map: (top:9,right:10,bottom:9,left:10)
+				margin-left: 3px
+				margin-left: px-to-rem(3)
+				padding-top: map-get($padding-map,"top")+px
+				padding-right: map-get($padding-map,"right")+px
+				padding-bottom: map-get($padding-map,"bottom")+px
+				padding-left: map-get($padding-map,"left")+px
+				padding-top: px-to-rem(map-get($padding-map,"top"))
+				padding-right: px-to-rem(map-get($padding-map,"right"))
+				padding-bottom: px-to-rem(map-get($padding-map,"bottom"))
+				padding-left: px-to-rem(map-get($padding-map,"left"))
+		.icon-wrapper
+			margin: 0
+			.icons
+				margin-left: 0
+		.bottom
+			padding-top: px-to-em(10,$footerFontSize)
+			padding-bottom: px-to-em(5,$footerFontSize)
+.catagorieBanner
+	position: relative
+	.columns
+		padding: 0
+	img
+		width: 100%
+		height: auto
+	.details
+		text-align: center
+		position: absolute
+		top: 25%
+		right: auto
+		bottom: auto
+		left: auto
+		h1
+			color: getColor("productBannerHeadOne")
+		> article
+			color: getColor("productBannerDetail")
+.products
+	background-color: getColor("productBackground")
+	// padding-left: px-to-em(10)
+	padding-top: px-to-em(5)
+	padding-left: px-to-em(2)
+	padding-right: px-to-em(2)
+	border-left: 1px solid getColor("productBorder")
+	border-bottom: 1px solid getColor("productBorder")
+	cursor: hand
+	cursor: pointer
+	h1
+		font-size: 1em
+		font-weight: bold
+		text-align: center
+		display: block
+		overflow: hidden
+		color: getColor("base")
+		@media #{$small-only}
+			line-height: 1
+			height: 3em
+		@media #{$medium-only}
+			line-height: 1.2
+			height: 2.5em
+			visibility: hidden
+		@media #{$large-up}
+			visibility: hidden
+			height: 3em
+	.columns
+		padding: 0
+		&.small-centered
+			text-align: center
+	.details
+		display: none
+	.priceTag
+		font-size: px-to-em(getFontSize("priceTag"))
+		background-color: getColor("priceTag")
+		margin-bottom: px-to-em(2,getFontSize("addToCart"))
+		text-align: center
+		@media #{$medium-up}
+			visibility: hidden
+.productDetailTrack
+	// padding: 0
+	background-color: #FFF
+	.inner
+		padding: 0 px-to-em(15)
+	hr.dotted
+		margin: px-to-em(20) px-to-em(15) px-to-em(19)
+	span
+		padding: 0 px-to-em(15)
+	.price
+		color: getColor("base")
+		font-weight: bold
+		b
+			font-size: px-to-em(12)
+	.thumbnails
+		padding: 0 px-to-em(15)
+		margin-bottom: px-to-em(15)
+		div
+			float: left
+			margin-left: px-to-em(25)
+			&:first-child
+				margin-left: -#{px-to-em(0.5)}
+	.fullImage
+		padding-top: px-to-em(15)
+		img
+			width: 100%
+			// height: 361px
+			height: auto
+	h1
+		font-size: px-to-em(24)
+		font-weight: bold
+		display: block
+		background-color: getColor("catagorieHeadline")
+		margin: 0
+		margin-top: px-to-em(10.2)
+		padding: px-to-em(5,24) 0
+		padding-left: px-to-em(15,24)
+		color: getColor("base")
+.cart
+	background-color: getColor("contentBackground")
+	// background-color: #000
+	color: getColor("baseThree")
+	// padding-top: 1em
+	// padding-bottom: 1em
+	// padding-left: 1em
+	padding: 1em
+	header
+		// margin-top: 1em
+		font-weight: bold
+		color: getColor("baseTwo")
+		.columns
+			padding: 0
+		nav
+			color: getColor("baseThree")
+			// float: left
+			> ul
+				margin: 0
+				> li
+					$liFontsize: 15
+					font-size: $liFontsize+px
+					// color: getColor("baseTwo")
+					color: getColor("baseSix")
+					display: block
+					list-style: none
+					margin-left: px-to-em(10,$liFontsize)
+					.circle
+						width: px-to-em(35)
+						height: px-to-em(35)
+						text-align: center
+						line-height: px-to-em(31)
+					&.checked
+						// color: getColor("base")
+						color: getColor("baseSix")
+						.circle
+							// background-color: lighten(getColor("base"), 60%)
+							background-color: getColor("baseSix")
+							border: none
+							color: lighten(getColor("link"), 60%)
+							line-height: px-to-em(35)
+						&.current
+							.circle
+								background-color: getColor("base")
+								color: getColor("link")
+					&:first-child
+						margin-left: -#{px-to-em(5,$liFontsize)}
+					div
+						.stepNo,.stepName
+							padding-left: px-to-em(5,$liFontsize)
+						.stepNo
+							font-size: px-to-em(9,$liFontsize)
+						.stepName
+							margin-top: -#{px-to-em(5)}
+					@media #{$small-only}
+						margin: 0
+				@media #{$small-only}
+					margin-left: 0
+				@media #{$large-up}
+					width: 600px
+			@media #{$medium-up}
+				float: right
+				margin-top: px-to-em(12)
+	form
+		border-top: 5px dotted getColor("baseTwo")
+		border-bottom: 5px dotted getColor("baseTwo")
+		padding: px-to-em(20) 0
+		label
+			color: getColor("base")
+			font-weight: bold
+			margin: 0
+			margin-top: px-to-em(5)
+			display: block
+			&.checkbox
+				font-weight: normal
+		h2,h3
+			color: getColor("baseTwo")
+		h2
+			font-size: 17.6px
+			font-size: px-to-rem(17.6)
+			font-weight: bold
+			padding: 0
+			margin: 0
+			margin-top: -#{px-to-em(1,17.6)}
+		h3
+			font-size: 14px
+			font-size: px-to-rem(14)
+		input[type="radio"]
+			margin-bottom: 19.2px
+			margin-bottom: px-to-rem(19.2)
+		input[type="text"]
+			font-size: 14px
+			font-size: px-to-rem(14)
+			padding: 8px
+			padding: px-to-rem(8)
+			height: 29px
+			height: px-to-rem(29)
+			margin-bottom: 12.8px
+			margin-bottom: px-to-rem(12.8)
+		select
+			// margin-left: px-to-em(6.6)
+			// padding-left: px-to-em(10)
+			// padding-right: px-to-em(10)
+			padding: 0
+			height: 29px
+			height: px-to-rem(29.0)
+			&:first-child
+				margin: 0
+			@media #{$small-only}
+				margin: 0
+				margin-top: px-to-em(5)
+		.row
+			border-top: 2px dotted getColor("baseTwo")
+			padding: px-to-em(12) 0
+			margin: 0
+			.row
+				.columns
+					padding: 0 5px
+				&.first
+					border: none
+			> .columns
+				padding: 0
+				> .columns > .columns
+					padding: 0
+					padding-left: 5px
+					@media #{$small-only}
+						padding: 0
+						padding-bottom: 0.5em
+					@media #{$medium-up}
+						&:first-child
+							padding: 0px
+			&:first-child
+				border: none
+			@media #{$small-only}
+				.columns
+					padding: 0
+		.cart5
+			font-size: 12px
+			padding: 1em 2em !important
+			background-color: #EDEBEC
+			h5,h6
+				font-weight: bold
+				font-size: 13px
+				font-size: px-to-rem(13)
+			h5
+				color: getColor("baseTwo")
+			h6
+				color: getColor("base")
+			> .row .row
+				@media #{$medium-down}
+					text-align: center
+		.navigator
+			text-align: center
+			position: relative
+			margin: 0 auto
+			> div
+				// position: absolute
+				// left: 32.5%
+				// top: px-to-em(6.4)
+				position: absolute
+				top: px-to-em(6.4)
+				padding: 0 px-to-em(5)
+				background-color: #FFF
+				.prev,.next
+					display: block
+					padding: px-to-em(5) px-to-em(36.6)
+					text-align: center
+					+cursorClick
+					@media #{$small-only}
+						padding: px-to-em(5) px-to-em(14)
+				.prev
+					background-color: lighten(getColor("base"), 60%)
+					margin-right: 1em
+					margin-left: px-to-em(21.6)
+					&:after
+						border-right-color: lighten(getColor("base"), 60%)
+				.next
+					margin-right: px-to-em(21.6)
+					background-color: getColor("base")
+					&:after
+						border-left-color: getColor("base")
+				.button
+					margin: 0
+					padding: px-to-em(10) px-to-em(15)
+					border-left: 5px solid #fff
+					margin-left: -#{px-to-em(24)}
+					white-space: nowrap
+			@media #{$small-only}
+				// left: 10.5%
+				width: px-to-em(257)
+			@media #{$medium-up}
+				width: px-to-em(345)
+		.edit
+			font-size: 12px
+			font-size: px-to-rem(12)
+			font-weight: bold
+			border: 1px solid darken(getColor("baseTwo"),30%) 
+			padding: px-to-em(2,12) px-to-em(10,12)
+			.icon
+				font-size: 18px
+				font-size: px-to-rem(18)
+		.addressReview
+			border: 1px solid darken(getColor("baseTwo"),30%)
+			padding: 0.5em 1em !important
+			margin-bottom: 1em
+			position: relative
+			.edit
+				position: absolute
+				top: px-to-em(5,12)
+				right: px-to-em(5,12)
+				bottom: auto
+				left: auto
+				color: getColor("base")
+		.productTable
+			img
+				width: 100%
+				height: auto
+			h4,h5
+				color: getColor("base")
+			h4
+				text-align: center
+				display: block
+				background-color: getColor("baseFour")
+				padding: px-to-em(5,16) 0
+				margin: 0
+				@media #{$small-only}
+					font-weight: bold
+					font-size: 12px
+					padding: px-to-em(5,12) 0
+			h5
+				@media #{$small-only}
+					font-weight: bold
+					font-size: 14px
+					margin: 0 px-to-em(5,14)
+			table
+				width: 100%
+				tr
+					border-top: 1px dotted #000
+					&:first-child,&.first
+						border: none
+						// td
+						// 	padding: 0
+					td
+						@media #{$medium-only}
+							padding: 0.3em 0
+			hr.review
+				border: none
+				border-bottom: 10px solid getColor("baseFour")
+			&.shipping
+				.total
+					@media #{$medium-up}
+						margin-top: -53px
+			.price
+				font-weight: bold
+				text-align: center
+				@media #{$small-only}
+					font-size: 14px
+					b
+						display: none
+						font-size: px-to-em(10,14)
+				@media #{$medium-up}
+					font-size: 16px
+					b
+						font-size: px-to-em(14,16)
+			.image
+				@media #{$medium-up}
+					padding: 1em 2em
+			.total
+				margin-bottom: 16px
+				margin-bottom: 1rem
+				background-color: getColor("baseFour")
+				> .columns
+					font-size: 14px
+					background-color: darken(getColor("baseFour"),10%)
+					padding: px-to-em(5,14) px-to-em(10,14)
+					> b
+						font-size: px-to-em(16,14)
+				label
+					margin: px-to-em(10) 0 0
+					text-align: center
+				@media #{$medium-up}
+					float: right
+					margin-top: -64px
+					border: 10px solid getColor("baseFour")
+			.optionalCheckbox
+				font-size: px-to-em(15)
+				
+	h1
+		font-size: 2.1em
+		font-weight: bold
+		color: getColor("base")
+	section
+		border-left: 5px dotted getColor("baseTwo")
+		@media #{$medium-down}
+			border: none
+			border-top: 5px dotted getColor("baseTwo")			
+		&:first-child
+			border: none
+	input[type="text"]
+		// margin-bottom: 0.5em
+	.forgot
+		font-size: 0.7em
+		color: darken(getColor("baseTwo"),10%)
+		margin-top: -1.5em
+		margin-bottom: 1em
+		display: block
+		text-decoration: underline
+		&:hover
+			color: darken(getColor("baseTwo"),20%)
+	.boxDotted
+		margin: 1em
+		padding: 1em 0.5em
+@media #{$medium-up}
+	.medium-6-gutter
+		width: 49.5%
+		margin-left: 0.5%
+		&:first-child
+			margin-left: 0
+			margin-right: 0.5%
