@@ -51,8 +51,7 @@ body {
   cursor: default; }
 
 a:hover {
-  cursor: pointer;
-  cursor: default; }
+  cursor: pointer; }
 
 img {
   max-width: 100%;
