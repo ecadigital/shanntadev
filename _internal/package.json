@@ -1,6 +1,6 @@
 {
   "name": "shannta",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Shannta project",
   "main": "main.js",
   "private": true,
@@ -24,6 +24,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Panudet Tammawongsa (Jame) <mastergrean@gmail.com>",
+  "author": "Panudet Tammawongsa <mastergrean@gmail.com> (Jame)",
   "license": "ISC"
 }

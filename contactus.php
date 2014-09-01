@@ -18,6 +18,7 @@
                 <div class="headImage">
                     <img src="<?php echo __images__;?>/contactus-h.png" alt="">
                 </div>
+                <hr>
             </header>
             <div class="small-6 columns">
                 <h2>SHANNTA JEWELRY</h2>
