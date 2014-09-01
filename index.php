@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="<?php echo __css__; ?>/fractionslider.css">
         <link rel="stylesheet" href="<?php echo __css__; ?>/owl.carousel.css">
 
-        <title>Shanntaa</title>
+        <title>Shanntaaa</title>
     </head>
     <body>
         <?php require "inc/layouts/browserhappy.php"; ?>
