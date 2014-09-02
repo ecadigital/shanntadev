@@ -8,7 +8,7 @@
                     <li class="logo"><a href="index.php"><img src="img/logo.png" alt=""></a></li>
                     <li><a href="collection.php">Collection</a></li>
                     <li><a href="news.php">News &amp; Event</a></li>
-                    <li><a href="#">About us</a></li>
+                    <li><a href="aboutus.php">About us</a></li>
                     <li><a href="contactus.php">Contact us</a></li>
                 </ul>
             </nav>
@@ -22,7 +22,7 @@
                         <li class="afterLarge"><a href="products.php">Products</a></li>
                         <li><a href="collection.php">Collection</a></li>
                         <li class="large"><a href="news.php">News &amp; Event</a></li>
-                        <li class="afterLargeTwo"><a href="#">About us</a></li>
+                        <li class="afterLargeTwo"><a href="aboutus.php">About us</a></li>
                         <li class="last ta-right"><a href="contactus.php">Contact us</a></li>
                     </ul>
                     <div class="clearfix"></div>
@@ -47,7 +47,7 @@
                         <li><a href="products.php">Products</a></li>
                         <li><a href="collection.php">Collection</a></li>
                         <li><a href="news.php">News &amp; Event</a></li>
-                        <li><a href="#">About us</a></li>
+                        <li><a href="aboutus.php">About us</a></li>
                         <li><a href="contactus.php">Contact Us</a></li>
                         <li class="row noBorder">
                             <div class="small-5 columns ta-right"> Member Register </div>
