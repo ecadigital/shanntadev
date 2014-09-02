@@ -840,31 +840,16 @@ footer
 			font-weight: bold
 			margin: 0
 			font-size: px-to-em(40)
-		.headImage
-			position: absolute
-			top: -1em
-			right: -1em
-			@media #{$small-only}
-				z-index: -1
-				+opacity(0.1)
-	h2
-		font-size: px-to-em(16)
-	hr
-		border-bottom: 5px dotted getColor("baseTwo")
-	> .columns
-		padding: 0
-.fullPage
-	> .row
-		margin: 0
-		margin-top: px-to-em(5)
-.image
-	// padding: 0
-	img
-		width: 100%
-		height: auto
-	// &:first-child
-	// 	margin: 0
-.page
+	.headImage
+		position: relative
+		top: -#{px-to-em(72)}
+		right: -1em
+		float: right
+		@media #{$small-only}
+			// z-index: -1
+			+opacity(0.2)
+	h1,h2,h3,h4,h5,h6
+		font-weight: bold
 	h1
 		font-size: 2em
 	h2
@@ -886,8 +871,25 @@ footer
 		font-size: .8em
 	.x2
 		font-size: 2em
+	.x25
+		font-size: 2.5em
 	.x4
 		font-size: 4em
+	hr
+		border-bottom: 5px dotted getColor("baseTwo")
+	> .columns
+		padding: 0
+.fullPage
+	> .row
+		margin: 0
+		margin-top: px-to-em(5)
+.image
+	// padding: 0
+	img
+		width: 100%
+		height: auto
+	// &:first-child
+	// 	margin: 0
 @media #{$medium-up}
 	.medium-6-gutter
 		height: 224px
