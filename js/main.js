@@ -61,7 +61,7 @@ $(document).ready(function(){
 		$(this).removeClass("active");
 		$(this).parent().children(".sub").removeClass("active");
 	});
-	if ($(".page header:has(hr)").length > 0){
-		$(".headImage").attr("style","top: -7.3125em;");
-	}
+	// if ($(".page header:has(hr)").length > 0){
+	// 	$(".headImage").attr("style","top: -7.3125em;");
+	// }
 });

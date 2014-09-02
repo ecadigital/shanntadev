@@ -836,16 +836,26 @@ footer
 		// border-bottom: 5px dotted getColor("baseTwo")
 		position: relative
 		h1
+			display: block
+			position: relative
+			z-index: 1
 			color: getColor("pageH1")
 			font-weight: bold
 			margin: 0
 			font-size: px-to-em(40)
+			@media #{$small-only}
+				color: darken(getColor("pageH1"),20%)
 	.headImage
-		position: relative
-		top: -#{px-to-em(72)}
+		// position: relative
+		// top: -#{px-to-em(72)}
+		// right: -1em
+		// float: right
+		position: absolute
+		top: -1em
 		right: -1em
-		float: right
-		@media #{$small-only}
+		img
+			display: block
+		@media #{$medium-down}
 			// z-index: -1
 			+opacity(0.2)
 	h1,h2,h3,h4,h5,h6

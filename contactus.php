@@ -14,10 +14,13 @@
         <?php require "inc/layouts/topmenu.php"; ?>
         <div id="content" class="row page">
             <header>
-                <h1>CONTACT US</h1>
+                <h1>CONTACT US </h1>
                 <hr>
+                <div class="headImage">
+                    <img src="<?php echo __images__;?>/contactus-h.png" alt="">
+                </div>
             </header>
-            <div class="small-12 columns">
+            <div class="small-12 large-8 columns">
                 <!-- <h2>SHANNTA JEWELRY</h2>
                 <p>
                     <b>THE UNIQUE ART PRODUCT WITH SEVERAL PRODUCT AND SERVICE ROOM</b>
@@ -26,7 +29,6 @@
                 <p>
                     <b>SHOP OPEN</b> : Tru - Sun. : 10 am - 9 pm. <b>TELLEPHONE</b> : +(66)2-214-3018
                 </p> -->
-                <img src="<?php echo __images__;?>/contactus-h.png" alt="" class="headImage">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia repellendus facere eveniet, architecto ipsa nostrum? Repudiandae voluptate vero assumenda, cumque vitae. Earum assumenda amet porro esse tenetur dolores quisquam maiores.
                 <h1>H1 Lorem ipsum dolor sit amet.</h1>
                 <h2>H2 Lorem ipsum dolor sit amet.</h2>
