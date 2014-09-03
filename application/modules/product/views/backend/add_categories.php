@@ -1,0 +1,270 @@
+<?php if(isset($redirect)){ echo $redirect; }else{ ?>
+<h3>เพิ่มข้อมูลหมวดหมู่สินค้า</h3>
+<div>
+	<a href="<?php echo DIR_ROOT?>admin/admin/index">หน้าแรก</a>&nbsp;&nbsp;>&nbsp;&nbsp;
+    <a href="<?php echo DIR_ROOT?>product/backend/index">รายการสินค้า</a>&nbsp;&nbsp;>&nbsp;&nbsp;
+    <a href="<?php echo DIR_ROOT?>product/backend/index_categories">รายการหมวดหมู่สินค้า</a>&nbsp;&nbsp;>&nbsp;&nbsp;
+	เพิ่มข้อมูลหมวดหมู่สินค้า
+</div>
+
+<div id="showWarning" style="height:40px;"></div>
+
+<div class="fluid">
+    <iframe frameborder="0" width="0" height="0" id="myIframe" name="myIframe"></iframe>
+    <form class="formElement" method="post" id="product_categories_form" name="product_categories_formAdd" target="myIframe" action="<?php echo DIR_ROOT?>product/backend/add_categories">
+        <div class="widget">
+            <!--<div class="formRow">
+                <div class="grid2">
+                    <label class="lbl fl" for="product_categories_parent_id">หมวดหมู่สินค้าหลัก</label>
+                    <span class="required"></span>
+                </div>
+                <div class="grid3">
+                    <select id="product_categories_parent_id" name="product_categories_parent_id" class="sep_bo">
+                        <option value="0">--</option>
+                        <?php 
+						if(!empty($listCategoriesParent)){
+							foreach($listCategoriesParent as $list){
+                        		echo '<option value="'.$list["product_categories_id"].'" >'.$list["product_categories_name"].'</option>';
+							
+							}
+						}
+						?>
+                    </select>
+                </div>
+            </div>
+           	<div class="clear"></div>-->
+            
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>
+            <div class="formRow">
+                <div class="grid2">
+                    <label class="lbl fl" for="product_categories_name[<?php echo $lang_id?>]">ชื่อหมวดหมู่สินค้า <?php echo $lang_icon;?></label>
+                    <?php if($lang_id==1) echo '<span class="required"></span>'; ?>
+                </div>
+                <div class="grid3">
+                    <input type="text" id="product_categories_name[<?php echo $lang_id?>]" name="product_categories_name[<?php echo $lang_id?>]">
+                </div>
+            </div>   
+           	<div class="clear"></div>
+            <?php }}?>        
+			
+            <hr/>
+           	<div class="clear"></div> 
+            
+			<h4>แบนเนอร์หน้าแรก</h4>
+			
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="product_categories_home_keyhead[<?php echo $lang_id?>]">ข้อความหลัก <?php echo $lang_icon;?></label>
+					</div>
+					<div class="grid4">
+						<input type="text" id="product_categories_home_keyhead[<?php echo $lang_id?>]" name="product_categories_home_keyhead[<?php echo $lang_id?>]">
+					</div>
+				</div>   
+				<div class="clear"></div>
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="product_categories_home_keymessage[<?php echo $lang_id?>]">ข้อความรอง <?php echo $lang_icon;?></label>
+					</div>
+					<div class="grid4">
+						<textarea id="product_categories_home_keymessage[<?php echo $lang_id?>]" name="product_categories_home_keymessage[<?php echo $lang_id?>]" style="height:40px; width:389px;"></textarea>
+					</div>
+				</div>   
+				<div class="clear" style="height:5px;"></div>
+            <?php }}?>        
+				
+				
+            <div class="formRow">
+                <div class="grid2">
+                    <label class="lbl fl" for="product_categories_home_keymessage">ตำแหน่งการจัดข้อความ</label>
+                </div>
+                <div class="grid2">
+					<div><input type="radio" name="product_categories_home_position" id="product_categories_home_positionL" value="L" checked="checked" />&nbsp;&nbsp;<label for="product_categories_home_positionL">ซ้าย</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="product_categories_home_position" id="product_categories_home_positionC" value="C" />&nbsp;&nbsp;<label for="product_categories_home_positionC">กลาง</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="product_categories_home_position" id="product_categories_home_positionR" value="R" />&nbsp;&nbsp;<label for="product_categories_home_positionR">ขวา</label></div>
+                </div>
+                <div class="clear"></div>
+                <div class="grid2">&nbsp;</div>
+                <div class="grid5">
+                    <div class="txt_notify" style="margin-left:-20px;">* เพื่อความสวยงาม ควรคำนึงถึงรูปที่ใช้ด้วย</div>
+                </div>
+            </div>   
+           	<div class="clear" style="height:5px;"></div>
+			
+            <div class="formRow">
+                <div class="grid2">
+                    <label class="lbl fl" for="product_categories_image_home">รูปแบนเนอร์หน้าแรก</label>
+                    <span class="required"></span>
+                </div>
+                <div class="grid2">
+                    <input type="file" id="file_upload_home" name="file_upload_home">
+                    <input type="hidden" name="image_path_home" id="image_path_home" />
+                    <div id="wrap_img_home" style="text-align:center;" class="wrap_img blank_img"></div>
+                    <div class="uploading" id="uploading_home" style="width:300px; height:147px; position:absolute; top:0px; display:none; "></div>
+   				</div>
+                <div class="clear"></div>
+                <div class="grid2">&nbsp;</div>
+                <div class="grid5">
+                    <div class="txt_notify" style="margin-top:40px;margin-left:-20px;">* ขนาดรูปที่แนะนำคือ 859 x 420 พิกเซล</div>
+                </div>
+            </div>
+           	<div class="clear" style="height:10px;"></div> 
+            <hr/>
+           	<div class="clear"></div> 
+            
+			<h4>แบนเนอร์หน้าสินค้า</h4>
+			
+			
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>
+			
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="product_categories_banner_keyhead[<?php echo $lang_id?>]">ข้อความหลัก <?php echo $lang_icon;?></label>
+					</div>
+					<div class="grid4">
+						<input type="text" id="product_categories_banner_keyhead[<?php echo $lang_id?>]" name="product_categories_banner_keyhead[<?php echo $lang_id?>]">
+					</div>
+				</div>   
+				<div class="clear"></div>
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="product_categories_banner_keymessage[<?php echo $lang_id?>]">ข้อความรอง <?php echo $lang_icon;?></label>
+					</div>
+					<div class="grid4">
+						<textarea id="product_categories_banner_keymessage[<?php echo $lang_id?>]" name="product_categories_banner_keymessage[<?php echo $lang_id?>]" style="height:40px; width:389px;"></textarea>
+					</div>
+				</div>   
+				<div class="clear" style="height:5px;"></div>
+				
+            <?php }}?>        
+			
+            <div class="formRow">
+                <div class="grid2">
+                    <label class="lbl fl" for="product_categories_banner_keymessage">ตำแหน่งการจัดข้อความ</label>
+                </div>
+                <div class="grid2">
+					<div><input type="radio" name="product_categories_banner_position" id="product_categories_banner_positionL" value="L" checked="checked" />&nbsp;&nbsp;<label for="product_categories_banner_positionL">ซ้าย</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="product_categories_banner_position" id="product_categories_banner_positionC" value="C" />&nbsp;&nbsp;<label for="product_categories_banner_positionC">กลาง</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="radio" name="product_categories_banner_position" id="product_categories_banner_positionR" value="R" />&nbsp;&nbsp;<label for="product_categories_banner_positionR">ขวา</label></div>
+                </div>
+                <div class="clear"></div>
+                <div class="grid2">&nbsp;</div>
+                <div class="grid5">
+                    <div class="txt_notify" style="margin-left:-20px;">* เพื่อความสวยงาม ควรคำนึงถึงรูปที่ใช้ด้วย</div>
+                </div>
+            </div>   
+           	<div class="clear" style="height:5px;"></div>
+			
+            <div class="formRow">
+                <div class="grid2">
+                    <label class="lbl fl" for="product_categories_image_banner">รูปแบนเนอร์หน้าสินค้า</label>
+                    <span class="required"></span>
+                </div>
+                <div class="grid2">
+                    <input type="file" id="file_upload_banner" name="file_upload_banner">
+                    <input type="hidden" name="image_path_banner" id="image_path_banner" />
+                    <div id="wrap_img_banner" style="text-align:center;" class="wrap_img blank_img"></div>
+                    <div class="uploading" id="uploading_banner" style="width:300px; height:147px; position:absolute; top:0px; display:none; "></div>
+   				</div>
+                <div class="clear"></div>
+                <div class="grid2">&nbsp;</div>
+                <div class="grid5">
+                    <div class="txt_notify" style="margin-top:40px;margin-left:-20px;">* ขนาดรูปที่แนะนำคือ 859 x 420 พิกเซล</div>
+                </div>
+            </div>
+           	<div class="clear" style="height:40px;"></div> 
+			
+            <div class="formRow">
+				<input type="hidden" id="captcha" name="captcha" value=""></input>
+				<input type="submit" class="button" value="<?php echo lang('web_save');?>"></input>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </form>
+</div>
+<style>
+.uploadify,.uploadify-button,.swfupload{ margin-top:35px; }
+#file_upload_banner{position:absolute; bottom:0;left: 1px;width:100%;}
+#file_upload_home{position:absolute; bottom:0;left: 1px;width:100%;}
+.uploadify-progress,.uploadify-progress-bar,.uploadify-queue{display: none;}
+.wrap_img{ width:300px; height:147px; border:solid 1px #ccc; overflow:hidden; }
+.blank_img{ background:center url("<?php echo DIR_PUBLIC?>images/icons/file/nofile.png") no-repeat; }
+</style>		
+<script>
+$(document).ready(function(){
+	$("#product_categories_form").validate({
+		rules: {
+			'product_categories_name' : {
+				required: true,
+			},
+	   },
+	   submitHandler: function(form) {
+			document.product_categories_formAdd.submit();
+		}
+	});
+	$("#file_upload_home").uploadify({
+		'buttonText':'Upload Image',
+		'uploader' : DIR_ROOT+'product/backend/upload_image/check_login/ignor',
+		'width' : '298',
+		'fileTypeExts' :  '*.gif; *.jpg; *.jpeg; *.png; *.tiff',
+		'multi': false,
+	    'onUploadStart' : function(){
+			$('#uploading_home').show();
+			$('#wrap_img_home').css('opacity',0.5);
+		},
+		'onUploadSuccess' : function(file, data, response) {
+			$('#uploading_home').hide();
+			$('#wrap_img_home').css('opacity',1);
+			var src = $.trim(data);
+			if(data=='') alert("ไฟล์ไม่รองรับค่ะ");
+			else{
+				// show img //
+				var img = '<img src="'+DIR_ROOT+src+'" style="max-width:300px; max-height:147px;" />';
+				var image_path = getInput('image_path_home');
+				if(image_path != ''){
+					$.post(DIR_ROOT+'product/backend/delete_image_home',{image_path:image_path});
+				}
+				$("#wrap_img_home").html(img);
+				$("#image_path_home").val(src);
+			}
+		}
+	});
+	$("#file_upload_banner").uploadify({
+		'buttonText':'Upload Image',
+		'uploader' : DIR_ROOT+'product/backend/upload_image/check_login/ignor',
+		'width' : '298',
+		'fileTypeExts' :  '*.gif; *.jpg; *.jpeg; *.png; *.tiff',
+		'multi': false,
+	    'onUploadStart' : function(){
+			$('#uploading_banner').show();
+			$('#wrap_img_banner').css('opacity',0.5);
+		},
+		'onUploadSuccess' : function(file, data, response) {
+			$('#uploading_banner').hide();
+			$('#wrap_img_banner').css('opacity',1);
+			var src = $.trim(data);
+			if(data=='') alert("ไฟล์ไม่รองรับค่ะ");
+			else{
+				// show img //
+				var img = '<img src="'+DIR_ROOT+src+'" style="max-width:300px; max-height:147px;" />';
+				var image_path = getInput('image_path_banner');
+				if(image_path != ''){
+					$.post(DIR_ROOT+'product/backend/delete_image_banner',{image_path:image_path});
+				}
+				$("#wrap_img_banner").html(img);
+				$("#image_path_banner").val(src);
+			}
+		}
+	});
+});
+</script>
+<?php }?>
