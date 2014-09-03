@@ -322,6 +322,15 @@ hr.dotted {
   margin-top: -19px;
 }
 
+/* line 149, ../_internal/sass/sass/_def.sass */
+input[type=text], textarea {
+  background-color: #E9E5E6;
+}
+/* line 151, ../_internal/sass/sass/_def.sass */
+input[type=text]:hover, input[type=text]:focus, textarea:hover, textarea:focus {
+  background-color: #E9E5E6;
+}
+
 /* line 3, ../_internal/sass/sass/main.sass */
 .headSlider {
   overflow: hidden;
@@ -1570,80 +1579,148 @@ footer .icon-wrapper .icons {
   background-color: #FFF;
   padding: 1em;
   min-height: 12.5em;
+  color: #595959;
 }
-/* line 835, ../_internal/sass/sass/main.sass */
+/* line 837, ../_internal/sass/sass/main.sass */
 .page header {
   position: relative;
 }
-/* line 838, ../_internal/sass/sass/main.sass */
+/* line 840, ../_internal/sass/sass/main.sass */
 .page header h1 {
+  display: block;
+  position: relative;
+  z-index: 1;
   color: #D7D2D6;
   font-weight: bold;
   margin: 0;
   font-size: 2.5em;
 }
-/* line 843, ../_internal/sass/sass/main.sass */
-.page header .headImage {
+@media only screen and (max-width: 40em) {
+  /* line 840, ../_internal/sass/sass/main.sass */
+  .page header h1 {
+    color: #a79ca5;
+  }
+}
+/* line 850, ../_internal/sass/sass/main.sass */
+.page .headImage {
   position: absolute;
   top: -1em;
   right: -1em;
 }
-@media only screen and (max-width: 40em) {
-  /* line 843, ../_internal/sass/sass/main.sass */
-  .page header .headImage {
-    z-index: -1;
+/* line 858, ../_internal/sass/sass/main.sass */
+.page .headImage img {
+  display: block;
+}
+@media only screen and (max-width: 64em) {
+  /* line 850, ../_internal/sass/sass/main.sass */
+  .page .headImage {
     /* Required for IE 5, 6, 7 */
     /* ...or something to trigger hasLayout, like zoom: 1; */
     /* Theoretically for IE 8 & 9 (more valid) */
     /* ...but not required as filter works too */
     /* should come BEFORE filter */
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
     /* This works in IE 8 & 9 too */
     /* ... but also 5, 6, 7 */
-    filter: alpha(opacity=10);
+    filter: alpha(opacity=20);
     /* Older than Firefox 0.9 */
-    -moz-opacity: 0.1;
+    -moz-opacity: 0.2;
     /* Safari 1.x (pre WebKit!) */
-    -khtml-opacity: 0.1;
+    -khtml-opacity: 0.2;
     /* Modern! */
     /* Firefox 0.9+, Safari 2?, Chrome any? */
     /* Opera 9+, IE 9+ */
-    opacity: 0.1;
+    opacity: 0.2;
   }
 }
-/* line 850, ../_internal/sass/sass/main.sass */
+/* line 863, ../_internal/sass/sass/main.sass */
+.page h1, .page h2, .page h3, .page h4, .page h5, .page h6, .page b {
+  font-weight: bold;
+  color: #2e1b22;
+}
+/* line 866, ../_internal/sass/sass/main.sass */
+.page h1 {
+  font-size: 2em;
+}
+/* line 868, ../_internal/sass/sass/main.sass */
 .page h2 {
+  font-size: 1.5em;
+}
+/* line 870, ../_internal/sass/sass/main.sass */
+.page h3 {
+  font-size: 1.17em;
+}
+/* line 872, ../_internal/sass/sass/main.sass */
+.page h4 {
   font-size: 1em;
 }
-/* line 852, ../_internal/sass/sass/main.sass */
+/* line 874, ../_internal/sass/sass/main.sass */
+.page h5 {
+  font-size: 0.83em;
+}
+/* line 876, ../_internal/sass/sass/main.sass */
+.page h6 {
+  font-size: 0.75em;
+}
+/* line 878, ../_internal/sass/sass/main.sass */
+.page p {
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+/* line 881, ../_internal/sass/sass/main.sass */
+.page .button {
+  padding: 0.375em 0.75em;
+}
+/* line 883, ../_internal/sass/sass/main.sass */
+.page .x04 {
+  font-size: 0.6em;
+}
+/* line 885, ../_internal/sass/sass/main.sass */
+.page .x02 {
+  font-size: 0.8em;
+}
+/* line 887, ../_internal/sass/sass/main.sass */
+.page .x2 {
+  font-size: 2em;
+}
+/* line 889, ../_internal/sass/sass/main.sass */
+.page .x25 {
+  font-size: 2.5em;
+}
+/* line 891, ../_internal/sass/sass/main.sass */
+.page .x4 {
+  font-size: 4em;
+}
+/* line 893, ../_internal/sass/sass/main.sass */
 .page hr {
   border-bottom: 5px dotted #B6A5AB;
 }
-/* line 854, ../_internal/sass/sass/main.sass */
+/* line 895, ../_internal/sass/sass/main.sass */
 .page > .columns {
   padding: 0;
+  font-size: 15px;
 }
 
-/* line 857, ../_internal/sass/sass/main.sass */
+/* line 899, ../_internal/sass/sass/main.sass */
 .fullPage > .row {
   margin: 0;
   margin-top: 0.3125em;
 }
 
-/* line 862, ../_internal/sass/sass/main.sass */
+/* line 904, ../_internal/sass/sass/main.sass */
 .image img {
   width: 100%;
   height: auto;
 }
 
 @media only screen and (min-width: 40.063em) {
-  /* line 868, ../_internal/sass/sass/main.sass */
+  /* line 910, ../_internal/sass/sass/main.sass */
   .medium-6-gutter {
     height: 224px;
     width: 49.5%;
     margin-left: 0.5%;
   }
-  /* line 873, ../_internal/sass/sass/main.sass */
+  /* line 915, ../_internal/sass/sass/main.sass */
   .medium-6-gutter:first-child {
     margin-left: 0;
     margin-right: 0.5%;
@@ -1651,18 +1728,29 @@ footer .icon-wrapper .icons {
     margin-bottom: 0.5%;
   }
 
-  /* line 878, ../_internal/sass/sass/main.sass */
+  /* line 920, ../_internal/sass/sass/main.sass */
   .medium-4-custom {
     width: 30%;
   }
 }
-/* line 883, ../_internal/sass/sass/main.sass */
+/* line 925, ../_internal/sass/sass/main.sass */
 .page h2 {
   color: #2e1b22;
   font-size: 18px;
 }
-/* line 886, ../_internal/sass/sass/main.sass */
+/* line 928, ../_internal/sass/sass/main.sass */
 .page p {
   color: #2e1b22;
   font-size: 13px;
+}
+
+/* line 932, ../_internal/sass/sass/main.sass */
+.hleft {
+  float: left;
+}
+
+/* line 935, ../_internal/sass/sass/main.sass */
+h2.hleft {
+  padding-top: 11px;
+  margin-left: 5px;
 }

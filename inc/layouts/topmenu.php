@@ -6,10 +6,10 @@
                     <li><a href="#">Jewelry D.I.Y</a></li>
                     <li><a href="products.php">Products</a></li>
                     <li class="logo"><a href="index.php"><img src="img/logo.png" alt=""></a></li>
-                    <li><a href="#">Collection</a></li>
-                    <li><a href="#">News &amp; Event</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="news.php">News &amp; Event</a></li>
+                    <li><a href="aboutus.php">About us</a></li>
+                    <li><a href="contactus.php">Contact us</a></li>
                 </ul>
             </nav>
             <nav id="medium-topmenu" class="show-for-medium-only">
@@ -20,10 +20,10 @@
                         <li><a href="#">Lookbook</a></li>
                         <li><a href="#">Jewelry D.I.Y</a></li>
                         <li class="afterLarge"><a href="products.php">Products</a></li>
-                        <li><a href="#">Collection</a></li>
-                        <li class="large"><a href="#">News &amp; Event</a></li>
-                        <li class="afterLargeTwo"><a href="#">About us</a></li>
-                        <li class="last ta-right"><a href="#">Contact us</a></li>
+                        <li><a href="collection.php">Collection</a></li>
+                        <li class="large"><a href="news.php">News &amp; Event</a></li>
+                        <li class="afterLargeTwo"><a href="aboutus.php">About us</a></li>
+                        <li class="last ta-right"><a href="contactus.php">Contact us</a></li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>
@@ -45,10 +45,10 @@
                         <li><a href="#">Lookbook</a></li>
                         <li><a href="#">Jewelry D.I.Y</a></li>
                         <li><a href="products.php">Products</a></li>
-                        <li><a href="#">Collection</a></li>
-                        <li><a href="#">News &amp; Event</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="collection.php">Collection</a></li>
+                        <li><a href="news.php">News &amp; Event</a></li>
+                        <li><a href="aboutus.php">About us</a></li>
+                        <li><a href="contactus.php">Contact Us</a></li>
                         <li class="row noBorder">
                             <div class="small-5 columns ta-right"> Member Register </div>
                             <div class="small-2 columns"> : </div>
