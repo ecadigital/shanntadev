@@ -1,0 +1,28 @@
+/* BACKEND DETAIL
+-----------------------------------------------------------------------------------------------------------------------*/
+table.order_detail{margin-top: 12px;}
+.main-h-wrap{
+	text-align: right;
+	overflow: hidden;
+	font-size: 14px;
+	color: #333;
+	line-height: 2;
+}
+.main-h-wrap strong{
+	font-weight: 700;
+text-decoration: none;
+}
+.main-h-wrap span{
+	border-bottom: 2px dotted #333;
+	padding: 0 10px;
+}
+.head-wrap{
+	float: left;
+	margin: 2px 0 2px 30px;
+}
+table.order_detail>tfoot tr{
+	line-height: 24px;
+}
+table.order_detail{border:1px solid #ccc;width:100%;margin:4px auto 4px;text-align:left;background:#fff;clear:both;border-collapse:collapse;}
+table.order_detail td, .order_detail th  {border:1px solid #ccc;padding:5px;}
+table.order_detail>thead tr{line-height: 35px;height: 35px;background:#eaeaea;font-size: 1.2em;}

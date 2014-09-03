@@ -1,0 +1,46 @@
+
+/*  VALIDATION
+----------------------------------------------------------------------------------------------- */
+
+span.required{background: url(../../../images/icons/required.png) no-repeat;padding:0 6px;margin-left: 6px;}
+	
+
+
+/*  Notification messages 
+----------------------------------------------------------------------------------------------- */
+
+#showWarning{ display:none; }
+.bar_success {
+	border: 1px solid #cbe0b5;
+	background: #f7ffe8 url(../images/sukses.png) no-repeat left center;
+	float: left;
+	width: 900px;
+	padding: 15px 0px 15px 0px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin: 10px 0 10px 0;
+	color:#cbe0b5;
+}
+.bar_error {
+	border: 1px solid #e78686;
+	background: #ffe1e1 url(../images/gagal.png) no-repeat left center;
+	float: left;
+	width: 900px;
+	padding: 15px 10px 15px 50px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin: 10px 0 10px 0;
+	color: #e78686;
+}
+.bar_information {
+	border: 1px solid #86afe7;
+	background: #e7f1ff url(../images/informasi.png) no-repeat left center;
+	float: left;
+	width: 900px;
+	padding: 15px 10px 15px 50px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin: 10px 0 10px 0;
+	color: #86afe7;
+}
+.bar_success div, .bar_error div, .bar_information div{ width:100%; text-align:center;}
