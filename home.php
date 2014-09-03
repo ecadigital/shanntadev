@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="<?php echo __css__; ?>/owl.carousel.css">
         <!-- <link rel="stylesheet" href="css/layout.css">        -->
         <link rel='stylesheet' href='wp-content/themes/carbontree/public/css/style1.css' type='text/css' media='all' />
-        <title>Shanntazz</title>
+        <title>Shannta</title>
     </head>
     <body>
         <?php require "inc/layouts/browserhappy.php"; ?>
