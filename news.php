@@ -59,9 +59,39 @@
                 distinctive brand and distinctive products A
                 that in just  years has made exceptional.</h2>
                 <p>It all started nearly 30 years ago. Back in 1982 a jeweller’s shop that
-would one day become PANDORA was established in modest surro
-undings in Copenhagen, Denmark, by Danish goldsmith Per Enevold
-sen and his wife Winnie.</p>
+                would one day become PANDORA was established in modest surro
+                undings in Copenhagen, Denmark, by Danish goldsmith Per Enevold
+                sen and his wife Winnie.</p>
+            </div>
+            <div id="news2"><img src="img/demo/news2.jpg"></div>
+            <div id="p-news"><h1 style="font-weight:bold;color:#d8d2d5">25.04.2014</h1>
+            <h2>The PANDORA story is about a company with a
+                distinctive brand and distinctive products A
+                that in just  years has made exceptional.</h2>
+                <p>It all started nearly 30 years ago. Back in 1982 a jeweller’s shop that
+                would one day become PANDORA was established in modest surro
+                undings in Copenhagen, Denmark, by Danish goldsmith Per Enevold
+                sen and his wife Winnie.</p>
+            </div>
+            <div id="news2"><img src="img/demo/news2.jpg"></div>
+            <div id="p-news"><h1 style="font-weight:bold;color:#d8d2d5">25.04.2014</h1>
+            <h2>The PANDORA story is about a company with a
+                distinctive brand and distinctive products A
+                that in just  years has made exceptional.</h2>
+                <p>It all started nearly 30 years ago. Back in 1982 a jeweller’s shop that
+                would one day become PANDORA was established in modest surro
+                undings in Copenhagen, Denmark, by Danish goldsmith Per Enevold
+                sen and his wife Winnie.</p>
+            </div>
+            <div id="news2"><img src="img/demo/news2.jpg"></div>
+            <div id="p-news"><h1 style="font-weight:bold;color:#d8d2d5">25.04.2014</h1>
+            <h2>The PANDORA story is about a company with a
+                distinctive brand and distinctive products A
+                that in just  years has made exceptional.</h2>
+                <p>It all started nearly 30 years ago. Back in 1982 a jeweller’s shop that
+                would one day become PANDORA was established in modest surro
+                undings in Copenhagen, Denmark, by Danish goldsmith Per Enevold
+                sen and his wife Winnie.</p>
             </div>
 
         </div><!-- #content .row.cart -->
