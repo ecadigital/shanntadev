@@ -1676,7 +1676,7 @@ footer .icon-wrapper .icons {
 }
 /* line 883, ../_internal/sass/sass/main.sass */
 .page a {
-  color: #2e1b21;
+  color: #2E1B21;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -1715,7 +1715,7 @@ footer .icon-wrapper .icons {
 }
 /* line 904, ../_internal/sass/sass/main.sass */
 .page hr.smallest {
-  border-bottom: 1px dotted #b6a5ab;
+  border-bottom: 1px dotted #B6A5AB;
 }
 /* line 906, ../_internal/sass/sass/main.sass */
 .page > .row {
@@ -1745,7 +1745,7 @@ footer .icon-wrapper .icons {
 }
 /* line 920, ../_internal/sass/sass/main.sass */
 .map-marker div i {
-  color: #815b6a;
+  color: #815B6A;
   font-size: 4em;
 }
 /* line 923, ../_internal/sass/sass/main.sass */
@@ -1755,7 +1755,7 @@ footer .icon-wrapper .icons {
 }
 /* line 926, ../_internal/sass/sass/main.sass */
 .map-marker div span {
-  color: white;
+  color: #fff;
   display: block;
   font-weight: bold;
   font-size: 1.2em;
@@ -1796,24 +1796,66 @@ footer .icon-wrapper .icons {
     width: 30%;
   }
 }
-/* line 925, ../_internal/sass/sass/main.sass */
+/* line 961, ../_internal/sass/sass/main.sass */
 .page h2 {
   color: #2e1b22;
   font-size: 18px;
 }
-/* line 928, ../_internal/sass/sass/main.sass */
+/* line 964, ../_internal/sass/sass/main.sass */
 .page p {
   color: #2e1b22;
   font-size: 13px;
 }
 
-/* line 932, ../_internal/sass/sass/main.sass */
+/* line 968, ../_internal/sass/sass/main.sass */
 .hleft {
   float: left;
 }
 
-/* line 935, ../_internal/sass/sass/main.sass */
+/* line 971, ../_internal/sass/sass/main.sass */
 h2.hleft {
   padding-top: 11px;
   margin-left: 5px;
+}
+
+/* line 974, ../_internal/sass/sass/main.sass */
+h2.hright {
+  float: right;
+}
+
+/* line 978, ../_internal/sass/sass/main.sass */
+.hright {
+  float: right;
+}
+
+/* line 980, ../_internal/sass/sass/main.sass */
+#news2 {
+  width: 50%;
+  height: 320px;
+  float: left;
+}
+
+/* line 984, ../_internal/sass/sass/main.sass */
+#news-nav {
+  height: 30px;
+  width: 100%;
+}
+/* line 987, ../_internal/sass/sass/main.sass */
+#news-nav h2 {
+  float: left;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+/* line 991, ../_internal/sass/sass/main.sass */
+#news-nav a {
+  float: right;
+  text-decoration: none;
+  color: #d8d2d5;
+}
+
+/* line 995, ../_internal/sass/sass/main.sass */
+#p-news {
+  float: left;
+  width: 45%;
+  margin-left: 10px;
 }
