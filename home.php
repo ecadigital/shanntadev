@@ -73,7 +73,61 @@
         </div><!-- headSlider -->
         <?php require "inc/layouts/topmenu.php"; ?>
         <div class="headSlider show-for-small-only">
-            
+            <div class="site-container">
+                <section class="m-hero m-slider">
+                    <ul class="slides">
+                    <!---------- ADD CONTENTS TO THE SLIDER ---------->
+                        <li>
+                            <!---------- ADD IMAGE ---------->
+                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
+                            <div class="container">
+                                <div class="slide-caption">
+                                    <!---------- ADD OPTIONAL HEADING ---------->
+                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
+                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
+                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
+                                    <!---------- ADD OPTIONAL LINK ---------->
+                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <!---------- ADD IMAGE ---------->
+                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
+                            <div class="container">
+                                <div class="slide-caption">
+                                    <!---------- ADD OPTIONAL HEADING ---------->
+                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
+                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
+                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
+                                    <!---------- ADD OPTIONAL LINK ---------->
+                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <!---------- ADD IMAGE ---------->
+                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
+                            <div class="container">
+                                <div class="slide-caption">
+                                    <!---------- ADD OPTIONAL HEADING ---------->
+                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
+                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
+                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
+                                    <!---------- ADD OPTIONAL LINK ---------->
+                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul> 
+                    <!---------- SLIDER CONTROLS ---------->
+                    <div class="m-slider-controls-container">
+                        <div class="container">
+                            <div class="m-slider-controls"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div><!-- headSlider -->
         <div id="content" class="row">
             <section class="small-12 medium-6-gutter columns catagories">
@@ -87,7 +141,7 @@
                         </section>
                     </section><!-- details -->
                     <section class="small-5 medium-5 large-6 columns rightImage">
-                        <img src="<?php echo __images__;?>/demo/product1.png" alt="">
+                        <img src="<?php echo __images__;?>/demo/product1.png" alt=""><!-- height = 220px -->
                     </section><!-- rightImage -->
                 </article><!-- innerProduct -->
             </section><!-- catagories -->
@@ -101,7 +155,7 @@
                         </section>
                     </section><!-- details -->
                     <section class="small-5 medium-5 large-6 columns rightImage">
-                        <img src="<?php echo __images__;?>/demo/product2.png" alt="">
+                        <img src="<?php echo __images__;?>/demo/product2.png" alt=""><!-- height = 220px -->
                     </section><!-- rightImage -->
                 </article><!-- innerProduct -->
             </section><!-- catagories -->

@@ -252,13 +252,18 @@
 	// background-color: getColor("contentBackground")
 	@media #{$medium-up}
 		margin-bottom: px-to-em(15)
+.catagorieBanner
+
+	> .columns
+		padding: 0
 .catagories
 	background-color: getColor("contentBackground")
 	margin: px-to-em(5) 0 0 0
 	padding: 0
-	border-top: 2px solid #fff
-	border-bottom: 2px solid #fff
+	// border-top: 2px solid #fff
+	// border-bottom: 2px solid #fff
 	color: getColor("h1")
+	overflow: hidden
 	// margin: 5px 10px
 	.columns
 		padding: 0
@@ -302,7 +307,7 @@
 	.paginationCatagorieSlider
 		// background-color: getColor("sliderPaginationBackground")
 		text-align: center
-		// border-bottom: 2px solid getColor("borderOne")
+		border-top: 2px solid getColor("borderOne")
 		position: relative
 		z-index: 90
 		.item
@@ -831,7 +836,7 @@ footer
 .page
 	background-color: #FFF
 	padding: 1em
-	min-height: px-to-em(200)
+	min-height: px-to-em(400)
 	color: getColor("text")
 	// color: #2D1A20
 	header
@@ -876,10 +881,10 @@ footer
 	h6
 		font-size: .75em
 	p
-		line-height: 1.2
+		line-height: 1.4
 		margin-bottom: 1em
-		font-size: 15px
-		font-size: px-to-rem(15)
+		font-size: 16px
+		font-size: px-to-rem(16)
 	a
 		color: #2E1B21
 		font-weight: bold
@@ -900,6 +905,7 @@ footer
 	.x4
 		font-size: 4em
 	hr
+		border: none
 		border-bottom: 5px dotted getColor("baseTwo")
 		&.smallest
 			border-bottom: 1px dotted getColor("baseTwo")
@@ -911,6 +917,35 @@ footer
 		@media #{$small-only}
 			padding: 0
 			margin-top: 1em
+.moreDiy
+	> .columns
+		padding: 0
+	> .columns
+		padding-left: px-to-em(16)
+		&:first-child,&.first
+			padding: 0
+	img
+		width: 100%
+		height: auto
+	a
+		text-decoration: none
+		color: #fff
+		font-size: 14px
+		font-size: px-to-rem(14)
+	.item
+		position: relative
+		aside
+			background-color: rgba(46,27,34,0.7)
+			position: absolute
+			top: auto
+			bottom: 0
+			left: 0
+			right: 0
+			padding: px-to-em(7) px-to-em(15)
+		// 	display: none
+		// &:hover
+		// 	aside
+		// 		display: block
 .map-marker
 	position: relative
 	text-align: center
@@ -955,16 +990,6 @@ footer
 			margin-bottom: 0.5%
 	.medium-4-custom
 		width: 30%
-
-
-.page
-	h2
-		color: #2e1b22
-		font-size: 18px
-	p
-		color: #2e1b22
-		font-size: 13px
-	
 .hleft
 	float: left
 

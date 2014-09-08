@@ -69,7 +69,7 @@
 						</div>
 						<div class="row">
 							<div class="medium-4 medium-offset-8 columns ta-right">
-								<a href="shipping.php" class="button">Shipping</a>
+								<a href="shipping.php" class="button">My Selection</a>
 							</div>
 						</div>
 					</div><!-- sub selection -->

@@ -68,7 +68,7 @@ $redirect = "product.php";?>
 					</section>
 					<section class="small-12 columns priceTag">
 						<div class="small-6 columns price"><?php echo number_format($list['product_price']);?> <b>THB</b></div>
-						<div class="small-6 columns"><a class="addToCart" href="javascript:alert(1);"><i class="fa fa-shopping-cart"></i> <b>ADD TO CART</b></a></div>
+						<div class="small-6 columns"><a class="addToCart medium-8 large-7" href="javascript:alert(1);"><i class="fa fa-shopping-cart"></i> <b>ADD TO CART</b></a></div>
 					</section>
 					<section class="details" style="width:900px;">
 						<div class="medium-6 columns productDetailTrack">
@@ -162,8 +162,7 @@ $redirect = "product.php";?>
         <!-- javascript here -->
         <script type="text/javascript">
             $(document).ready(function(){
-                
-                if(Modernizr.mq('only screen and (min-width: 40.063em)')){
+                if(Modernizr.mq('only screen and (min-width: 40.063em)') || $("html").hasClass("lt-ie9")){
                     $(".products").hover(function(){
                         $(this).children(".priceTag").css("visibility","visible");
                         $(this).children("h1").css("visibility","visible");
@@ -176,7 +175,10 @@ $redirect = "product.php";?>
                             html: $(this).children(".details").html(),
                             fixed: true,
                             //maxWidth: "1000",
-							width: "1000",
+                            previous: '<i class="fa fa-angle-left"></i>',
+                            next: '<i class="fa fa-angle-right"></i>',
+							width: "100%",
+							maxWidth: "1128",
                             height: "auto",
                             rel: "group1"
                         });

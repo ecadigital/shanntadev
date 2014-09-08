@@ -3,7 +3,7 @@
                 <ul class="inline-list">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#">Lookbook</a></li>
-                    <li><a href="#">Jewelry D.I.Y</a></li>
+                    <li><a href="diy.php">Jewelry D.I.Y</a></li>
                     <li><a href="products.php">Products</a></li>
                     <li class="logo"><a href="index.php"><img src="img/logo.png" alt=""></a></li>
                     <li><a href="collection.php">Collection</a></li>
@@ -18,7 +18,7 @@
                     <ul class="inline-list">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="#">Lookbook</a></li>
-                        <li><a href="#">Jewelry D.I.Y</a></li>
+                        <li><a href="diy.php">Jewelry D.I.Y</a></li>
                         <li class="afterLarge"><a href="products.php">Products</a></li>
                         <li><a href="collection.php">Collection</a></li>
                         <li class="large"><a href="news.php">News &amp; Event</a></li>
@@ -43,7 +43,7 @@
                 <nav class="menus">
                     <ul id="navigatorDetail">
                         <li><a href="#">Lookbook</a></li>
-                        <li><a href="#">Jewelry D.I.Y</a></li>
+                        <li><a href="diy.php">Jewelry D.I.Y</a></li>
                         <li><a href="products.php">Products</a></li>
                         <li><a href="collection.php">Collection</a></li>
                         <li><a href="news.php">News &amp; Event</a></li>
