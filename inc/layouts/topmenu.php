@@ -1,11 +1,11 @@
 <header id="topmenu">
             <nav id="large-topmenu" class="row show-for-large-up">
                 <ul class="inline-list">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="home.php">Home</a></li>
                     <li><a href="lookbook.php">Lookbook</a></li>
                     <li><a href="diy.php">Jewelry D.I.Y</a></li>
                     <li><a href="products.php">Products</a></li>
-                    <li class="logo"><a href="index.php"><img src="img/logo.png" alt=""></a></li>
+                    <li class="logo"><a href="home.php"><img src="img/logo.png" alt=""></a></li>
                     <li><a href="collection.php">Collection</a></li>
                     <li><a href="news.php">News &amp; Event</a></li>
                     <li><a href="aboutus.php">About us</a></li>
@@ -16,7 +16,7 @@
                 <div class="logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
                 <div class="row">
                     <ul class="inline-list">
-                        <li><a href="index.php">Home</a></li>
+                        <li><a href="home.php">Home</a></li>
                         <li><a href="lookbook.php">Lookbook</a></li>
                         <li><a href="diy.php">Jewelry D.I.Y</a></li>
                         <li class="afterLarge"><a href="products.php">Products</a></li>
@@ -34,7 +34,7 @@
                         <a id="userInterface" href="javascript:void(0);"><i class="fa fa-user icons"></i></a>
                     </div>
                     <div class="small-8 columns ta-center">
-                        <a href="index.php"><img src="<?php echo __images__; ?>/logo.png" alt=""></a>
+                        <a href="home.php"><img src="<?php echo __images__; ?>/logo.png" alt=""></a>
                     </div>
                     <div class="small-2 columns ta-right">
                         <a id="navigator" href="javascript:void(0);"><i class="fa fa-navicon icons"></i></a>

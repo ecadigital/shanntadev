@@ -20,13 +20,11 @@
                     <img src="<?php echo __images__;?>/contactus-h.png" alt="">
                 </div>
             </header>
-            <div class="small-12 large-7 columns end">
-                <h3>SHANNTA JEWELRY</h3>
-                <p><b>THE UNIQUE ART PRODUCT WITH SEVERAL PRODUCT AND SERVICE ROOM</b><br>
-                306, 3rd Floor Bangkok Art and Cukturat Center - Pathumwan Bangkok, Thailand 12390</p> 
-                <p><b>SHOP OPEN</b> : Tue - Sun : 10 am - 9 om. <b>TELLEPHONE :</b> +(66)2-214-3018</p>
-            </div>
             <div class="small-12 medium-7 columns">
+                <h3>SHANNTA JEWELRY</h3>
+                <p class="x02"><b>THE UNIQUE ART PRODUCT WITH SEVERAL PRODUCT AND SERVICE ROOM</b><br>
+                306, 3rd Floor Bangkok Art and Cukturat Center - Pathumwan Bangkok, Thailand 12390</p> 
+                <p class="x02S"><b>SHOP OPEN</b> : Tue - Sun : 10 am - 9 om. <b>TELLEPHONE :</b> +(66)2-214-3018</p>
                 <img src="<?php echo __images__;?>/dummy-map.png" alt="">
             </div>
             <div class="small-12 medium-5 column">
