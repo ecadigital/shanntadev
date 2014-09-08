@@ -488,6 +488,8 @@ footer
 .productDetailTrack
 	// padding: 0
 	background-color: #FFF
+	padding-top: px-to-em(15)
+	padding-bottom: px-to-em(15)
 	.inner
 		padding: 0 px-to-em(15)
 	hr.dotted
@@ -508,10 +510,11 @@ footer
 			&:first-child
 				margin-left: -#{px-to-em(0.5)}
 	.fullImage
-		padding-top: px-to-em(15)
+		// display: inline-block
+		position: relative
 		img
+			display: block
 			width: 100%
-			// height: 361px
 			height: auto
 	h1
 		font-size: px-to-em(24)
@@ -519,7 +522,7 @@ footer
 		display: block
 		background-color: getColor("catagorieHeadline")
 		margin: 0
-		margin-top: px-to-em(10.2)
+		// margin-top: px-to-em(10.2)
 		padding: px-to-em(5,24) 0
 		padding-left: px-to-em(15,24)
 		color: getColor("base")

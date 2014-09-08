@@ -103,8 +103,12 @@ $redirect = "product.php";?>
 							</div>
 						</div>
 						<div class="medium-6 columns productDetailTrack">
-							<div class="fullImage">
+							<!-- <div class="fullImage">
 								<?php if($img_first!='') echo '<img src="'.$img_first.'" alt="">';?>
+							</div> -->
+							<div class="fullImage">
+								<img src="<?php echo __images__;?>/daisy.jpg" alt="">
+								<!-- <img src="<?php echo __images__;?>/demo/product5.png" alt=""> -->
 							</div>
 						</div>
 					</section>
@@ -180,10 +184,12 @@ $redirect = "product.php";?>
 							width: "100%",
 							maxWidth: "1128",
                             height: "auto",
-                            rel: "group1"
+                            rel: "group1",
+                            onComplete: function(){
+                            	$(".fullImage").zoom();
+                            }
                         });
                     });
-                    $(".fullImage").zoom();
                 }
             });
         </script>
