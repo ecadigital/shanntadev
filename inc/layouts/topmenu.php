@@ -2,7 +2,7 @@
             <nav id="large-topmenu" class="row show-for-large-up">
                 <ul class="inline-list">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Lookbook</a></li>
+                    <li><a href="lookbook.php">Lookbook</a></li>
                     <li><a href="diy.php">Jewelry D.I.Y</a></li>
                     <li><a href="products.php">Products</a></li>
                     <li class="logo"><a href="index.php"><img src="img/logo.png" alt=""></a></li>
@@ -17,7 +17,7 @@
                 <div class="row">
                     <ul class="inline-list">
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="#">Lookbook</a></li>
+                        <li><a href="lookbook.php">Lookbook</a></li>
                         <li><a href="diy.php">Jewelry D.I.Y</a></li>
                         <li class="afterLarge"><a href="products.php">Products</a></li>
                         <li><a href="collection.php">Collection</a></li>
@@ -42,7 +42,7 @@
                 </div> <!-- row -->
                 <nav class="menus">
                     <ul id="navigatorDetail">
-                        <li><a href="#">Lookbook</a></li>
+                        <li><a href="lookbook.php">Lookbook</a></li>
                         <li><a href="diy.php">Jewelry D.I.Y</a></li>
                         <li><a href="products.php">Products</a></li>
                         <li><a href="collection.php">Collection</a></li>

@@ -14,13 +14,19 @@
         <?php require "inc/layouts/topmenu.php"; ?>
         <div id="content" class="row fullPage">
             <div class="row">
-                <img src="<?php echo __images__;?>/lookbook-1.png" alt="">
+                <a href="#">
+                    <img src="<?php echo __images__;?>/lookbook-1.png" alt="">
+                </a>
             </div>
             <div class="row">
-                <img src="<?php echo __images__;?>/lookbook-2.png" alt="">
+                <a href="#">
+                    <img src="<?php echo __images__;?>/lookbook-2.png" alt="">
+                </a>
             </div>
             <div class="row">
-                <img src="<?php echo __images__;?>/lookbook-3.png" alt="">
+                <a href="#">
+                    <img src="<?php echo __images__;?>/lookbook-3.png" alt="">
+                </a>
             </div>
             <div class="row">
                 <img src="<?php echo __images__;?>/lookbook-4.png" alt="">
