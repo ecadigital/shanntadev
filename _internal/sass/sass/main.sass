@@ -252,6 +252,8 @@
 	// background-color: getColor("contentBackground")
 	@media #{$medium-up}
 		margin-bottom: px-to-em(15)
+#contactus
+	margin-top: 45px
 .catagorieBanner
 	> .columns
 		padding: 0
@@ -840,7 +842,8 @@ footer
 		padding: 1em 0.5em
 .page
 	background-color: #FFF
-	padding: 1em
+	padding: 2em
+	padding-top: px-to-em(60)
 	min-height: px-to-em(400)
 	color: getColor("text")
 	// color: #2D1A20
@@ -853,7 +856,6 @@ footer
 			z-index: 1
 			color: getColor("pageH1")
 			font-weight: bold
-			margin: 0
 			font-size: px-to-em(40)
 			@media #{$small-only}
 				color: darken(getColor("pageH1"),20%)
@@ -863,8 +865,9 @@ footer
 		// right: -1em
 		// float: right
 		position: absolute
-		top: -1em
-		right: -1em
+		// top: -1em
+		top: -#{px-to-em(65)}
+		right: -2em
 		img
 			display: block
 		@media #{$medium-down}
@@ -873,6 +876,10 @@ footer
 	h1,h2,h3,h4,h5,h6,b
 		font-weight: bold
 		color: #2e1b22
+		margin-top: 5px
+		margin-top: px-to-rem(5)
+		margin-bottom: 10px
+		margin-bottom: px-to-rem(10)
 	h1
 		font-size: 2.5em
 	h2

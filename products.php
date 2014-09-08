@@ -29,7 +29,6 @@ $redirect = "product.php";?>
             </section>
         </article><!-- catagorieBanner -->
         <div id="content" class="row">
-			
 			<?php 
 			$num=0;
 			$arrList = $mysqli->query("SELECT 	product.product_id,product.product_price,
@@ -159,6 +158,7 @@ $redirect = "product.php";?>
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
         <script type="text/javascript" src="<?php echo __js__; ?>/jquery.colorbox-min.js"></script>
+        <script type="text/javascript" src="<?php echo __js__; ?>/jquery.zoom.min.js"></script>
         <!-- javascript here -->
         <script type="text/javascript">
             $(document).ready(function(){
@@ -183,6 +183,7 @@ $redirect = "product.php";?>
                             rel: "group1"
                         });
                     });
+                    $(".fullImage").zoom();
                 }
             });
         </script>
