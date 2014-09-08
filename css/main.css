@@ -835,7 +835,7 @@ input[type=text]:hover, input[type=text]:focus, textarea:hover, textarea:focus {
   .catagories .catagorieSlider {
     position: relative;
     top: -17px;
-    height: 218px;
+    height: 211px;
     z-index: 80;
   }
 }
