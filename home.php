@@ -5,130 +5,84 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+
         <?php require 'inc/layouts/head-tag.php';?>
         <link rel="stylesheet" href="<?php echo __css__; ?>/owl.carousel.css">
         <!-- <link rel="stylesheet" href="css/layout.css">        -->
-        <link rel='stylesheet' href='wp-content/themes/carbontree/public/css/style1.css' type='text/css' media='all' />
+        
+        <meta charset="utf-8">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+        <!-- slider-->
+       <link rel="stylesheet" href="css/fws2.css" media="all">
+        <link href='css/font-awesome.css' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/imagesloaded.js"></script>
+        <script src="js/jquery.easing.js"></script>
+        <script src="js/fws2.js"></script>
+
+
+
         <title>Shannta</title>
     </head>
     <body>
         <?php require "inc/layouts/browserhappy.php"; ?>
         <?php require "inc/layouts/topcartmenu.php"; ?>
-        <div class="headSlider row show-for-medium-up">
-            <div class="site-container">
-                <section class="m-hero m-slider">
-                    <ul class="slides">
-                    <!---------- ADD CONTENTS TO THE SLIDER ---------->
-                        <li>
-                            <!---------- ADD IMAGE ---------->
-                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
-                            <div class="container">
-                                <div class="slide-caption">
-                                    <!---------- ADD OPTIONAL HEADING ---------->
-                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
-                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
-                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
-                                    <!---------- ADD OPTIONAL LINK ---------->
-                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
-                                </div>
+        
+
+        <div id="main-slider">
+                <div class="fws2" id="fws2-instance1">
+                <div class="slider_container">
+                    <div class="slide"> 
+                        <img src="img/slide1.jpg" alt=""> 
+                        <div class="slide_content">
+                            <div class="slide_content_wrap">
+                                <h4 class="title">NANO SILVER CLAY</h4>               
+                                <p class="description">Jewelry craft now can be visit<br>
+                                at SHANNTA  Jewelry shop in Thailand.</p> 
+                                <a class="readmore" href="#">MORE CONTENT</a> 
                             </div>
-                        </li>
-                        <li>
-                            <!---------- ADD IMAGE ---------->
-                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
-                            <div class="container">
-                                <div class="slide-caption">
-                                    <!---------- ADD OPTIONAL HEADING ---------->
-                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
-                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
-                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
-                                    <!---------- ADD OPTIONAL LINK ---------->
-                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <!---------- ADD IMAGE ---------->
-                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
-                            <div class="container">
-                                <div class="slide-caption">
-                                    <!---------- ADD OPTIONAL HEADING ---------->
-                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
-                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
-                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
-                                    <!---------- ADD OPTIONAL LINK ---------->
-                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul> 
-                    <!---------- SLIDER CONTROLS ---------->
-                    <div class="m-slider-controls-container">
-                        <div class="container">
-                            <div class="m-slider-controls"></div>
                         </div>
                     </div>
-                </section>
+                    <div class="slide"> 
+                       <img src="img/slide1.jpg" alt=""> 
+                        <div class="slide_content">
+                            <div class="slide_content_wrap">
+                                <h4 class="title">NANO SILVER CLAY</h4>               
+                                <p class="description">Jewelry craft now can be visit<br>
+                                at SHANNTA  Jewelry shop in Thailand.</p> 
+                                <a class="readmore" href="#">MORE CONTENT</a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide"> 
+                        <img src="img/slide1.jpg" alt=""> 
+                        <div class="slide_content">
+                            <div class="slide_content_wrap">
+                                <h4 class="title">NANO SILVER CLAY</h4>               
+                                <p class="description">Jewelry craft now can be visit<br>
+                                at SHANNTA  Jewelry shop in Thailand.</p> 
+                                <a class="readmore" href="#">MORE CONTENT</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slidePrev"><i class="fa fa-chevron-left"></i></div>
+                <div class="slideNext"><i class="fa fa-chevron-right"></i></div>
+                <div class="timers"></div>
+                <div class="bullets"></div>
             </div>
-        </div><!-- headSlider -->
+        </div>
+        <!--main-slider-->
+
+
+
+
+
+
         <?php require "inc/layouts/topmenu.php"; ?>
-        <div class="headSlider show-for-small-only">
-            <div class="site-container">
-                <section class="m-hero m-slider">
-                    <ul class="slides">
-                    <!---------- ADD CONTENTS TO THE SLIDER ---------->
-                        <li>
-                            <!---------- ADD IMAGE ---------->
-                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
-                            <div class="container">
-                                <div class="slide-caption">
-                                    <!---------- ADD OPTIONAL HEADING ---------->
-                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
-                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
-                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
-                                    <!---------- ADD OPTIONAL LINK ---------->
-                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <!---------- ADD IMAGE ---------->
-                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
-                            <div class="container">
-                                <div class="slide-caption">
-                                    <!---------- ADD OPTIONAL HEADING ---------->
-                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
-                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
-                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
-                                    <!---------- ADD OPTIONAL LINK ---------->
-                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <!---------- ADD IMAGE ---------->
-                            <div class="slide-image" style="background-image:url('img/banner-1.jpg');"></div>
-                            <div class="container">
-                                <div class="slide-caption">
-                                    <!---------- ADD OPTIONAL HEADING ---------->
-                                    <h1 class="h1-heading">NANO SILVER CLAY</h1>
-                                    <!---------- ADD OPTIONAL SUB-HEADING ---------->
-                                    <div class="m-text-surround"><p>Jewelry craft now can be visit at SHANNTA  Jewelry shop in Thai</p></div>
-                                    <!---------- ADD OPTIONAL LINK ---------->
-                                    <a class="m-btn" href="http://www.thecarbontree.com/landowners/">For Landowners</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul> 
-                    <!---------- SLIDER CONTROLS ---------->
-                    <div class="m-slider-controls-container">
-                        <div class="container">
-                            <div class="m-slider-controls"></div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div><!-- headSlider -->
+       
         <div id="content" class="row">
             <section class="small-12 medium-6-gutter columns catagories">
                 <article class="innerCatagorie">
@@ -265,13 +219,6 @@ var _wpcf7 = {"loaderUrl":"http:\/\/www.thecarbontree.com\/wp-content\/plugins\/
 /* ]]> */
 </script>
 <script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scripts3.5.4.js'></script>
-<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/modernizr.min.js?ver=2.7.1'></script>
-<script type='text/javascript' src='wp-content/themes/carbontree/public/js/script.js?ver=1.0.0'></script>
-<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/snap.svg-0.0.1.min.js?ver=0.0.1'></script>
-<script type='text/javascript' src='wp-content/themes/carbontree/public/js/svg-animations.js?ver=1.0.0'></script>
-<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/jquery.flexslider-2.2.0.min.js?ver=2.2.0'></script>
-<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/waypoints.min.js?ver=2.0.3'></script>
-<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/twenty-twenty/jquery.event.move.js?ver=1.3.6'></script>
-<script type='text/javascript' src='wp-content/themes/carbontree/public/js/libs/twenty-twenty/jquery.twentytwenty.js?ver=1.0.0'></script>
+
     </body>
 </html>
