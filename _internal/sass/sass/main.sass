@@ -252,10 +252,17 @@
 	// background-color: getColor("contentBackground")
 	@media #{$medium-up}
 		margin-bottom: px-to-em(15)
+#contactus
+	margin-top: 45px
 .catagorieBanner
-
 	> .columns
 		padding: 0
+	.details
+		padding-top: 28px
+		text-align: center
+		color: #fff
+		h1
+			color: #76676C
 .catagories
 	background-color: getColor("contentBackground")
 	margin: px-to-em(5) 0 0 0
@@ -270,6 +277,7 @@
 	.innerCatagorie
 		.details
 			// padding-bottom: px-to-em(15)
+			padding: 5px
 			h1
 				font-size: px-to-em(24)
 				font-weight: bold
@@ -343,7 +351,7 @@
 		@media #{$medium-up}
 			position: relative
 			top: -17px
-			height: 218px
+			height: 211px
 			z-index: 80
 	@media #{$medium-only}
 		margin: px-to-em(10) 0 0 0
@@ -481,6 +489,8 @@ footer
 .productDetailTrack
 	// padding: 0
 	background-color: #FFF
+	padding-top: px-to-em(15)
+	padding-bottom: px-to-em(15)
 	.inner
 		padding: 0 px-to-em(15)
 	hr.dotted
@@ -501,10 +511,11 @@ footer
 			&:first-child
 				margin-left: -#{px-to-em(0.5)}
 	.fullImage
-		padding-top: px-to-em(15)
+		// display: inline-block
+		position: relative
 		img
+			display: block
 			width: 100%
-			// height: 361px
 			height: auto
 	h1
 		font-size: px-to-em(24)
@@ -512,7 +523,7 @@ footer
 		display: block
 		background-color: getColor("catagorieHeadline")
 		margin: 0
-		margin-top: px-to-em(10.2)
+		// margin-top: px-to-em(10.2)
 		padding: px-to-em(5,24) 0
 		padding-left: px-to-em(15,24)
 		color: getColor("base")
@@ -835,7 +846,8 @@ footer
 		padding: 1em 0.5em
 .page
 	background-color: #FFF
-	padding: 1em
+	padding: 2em
+	padding-top: px-to-em(60)
 	min-height: px-to-em(400)
 	color: getColor("text")
 	// color: #2D1A20
@@ -848,8 +860,9 @@ footer
 			z-index: 1
 			color: getColor("pageH1")
 			font-weight: bold
-			margin: 0
-			font-size: px-to-em(40)
+			font-size: 65px
+			font-size: px-to-rem(65)
+			letter-spacing: -2px
 			@media #{$small-only}
 				color: darken(getColor("pageH1"),20%)
 	.headImage
@@ -858,8 +871,9 @@ footer
 		// right: -1em
 		// float: right
 		position: absolute
-		top: -1em
-		right: -1em
+		// top: -1em
+		top: -#{px-to-em(65)}
+		right: -2em
 		img
 			display: block
 		@media #{$medium-down}
@@ -868,6 +882,10 @@ footer
 	h1,h2,h3,h4,h5,h6,b
 		font-weight: bold
 		color: #2e1b22
+		margin-top: 5px
+		margin-top: px-to-rem(5)
+		margin-bottom: 10px
+		margin-bottom: px-to-rem(10)
 	h1
 		font-size: 2.5em
 	h2
@@ -883,8 +901,8 @@ footer
 	p
 		line-height: 1.4
 		margin-bottom: 1em
-		font-size: 16px
-		font-size: px-to-rem(16)
+		font-size: 15px
+		font-size: px-to-rem(15)
 	a
 		color: #2E1B21
 		font-weight: bold
@@ -895,9 +913,9 @@ footer
 	.button
 		padding: px-to-em(6) px-to-em(12)
 	.x04
-		font-size: .6em
-	.x02
 		font-size: .8em
+	.x02
+		font-size: .9em
 	.x2
 		font-size: 2em
 	.x25
@@ -964,8 +982,8 @@ footer
 			font-weight: bold
 			font-size: 1.2em
 			position: absolute
-			top: -60%
-			left: 38%
+			top: -65%
+			left: 36%
 .fullPage
 	> .row
 		margin: 0

@@ -2,7 +2,7 @@
 session_start();
 
 error_reporting(E_ALL ^ E_NOTICE);
-$mysqli = new mysqli("localhost","root","","shannta");
+$mysqli = new mysqli("localhost","root","root","shannta");
 if ($mysqli->connect_errno) {
     //echo '<script>window.location="404.html";</script>';
 }

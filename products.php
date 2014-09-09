@@ -29,7 +29,6 @@ $redirect = "product.php";?>
             </section>
         </article><!-- catagorieBanner -->
         <div id="content" class="row">
-			
 			<?php 
 			$num=0;
 			$arrList = $mysqli->query("SELECT 	product.product_id,product.product_price,
@@ -104,8 +103,12 @@ $redirect = "product.php";?>
 							</div>
 						</div>
 						<div class="medium-6 columns productDetailTrack">
-							<div class="fullImage">
+							<!-- <div class="fullImage">
 								<?php if($img_first!='') echo '<img src="'.$img_first.'" alt="">';?>
+							</div> -->
+							<div class="fullImage">
+								<img src="<?php echo __images__;?>/daisy.jpg" alt="">
+								<!-- <img src="<?php echo __images__;?>/demo/product5.png" alt=""> -->
 							</div>
 						</div>
 					</section>
@@ -159,6 +162,7 @@ $redirect = "product.php";?>
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
         <script type="text/javascript" src="<?php echo __js__; ?>/jquery.colorbox-min.js"></script>
+        <script type="text/javascript" src="<?php echo __js__; ?>/jquery.zoom.min.js"></script>
         <!-- javascript here -->
         <script type="text/javascript">
             $(document).ready(function(){
@@ -180,7 +184,10 @@ $redirect = "product.php";?>
 							width: "100%",
 							maxWidth: "1128",
                             height: "auto",
-                            rel: "group1"
+                            rel: "group1",
+                            onComplete: function(){
+                            	$(".fullImage").zoom();
+                            }
                         });
                     });
                 }
