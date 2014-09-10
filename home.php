@@ -14,22 +14,15 @@
         <meta name="HandheldFriendly" content="True">
         <meta name="viewport" content="width=device-width, initial-scale=1.0;">
         <!-- slider-->
-       <link rel="stylesheet" href="css/fws2.css" media="all">
+        <link rel="stylesheet" href="css/fws2.css" media="all">
         <link href='css/font-awesome.css' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/imagesloaded.js"></script>
-        <script src="js/jquery.easing.js"></script>
-        <script src="js/fws2.js"></script>
-
-
-
         <title>Shannta</title>
     </head>
     <body>
         <?php require "inc/layouts/browserhappy.php"; ?>
         <?php require "inc/layouts/topcartmenu.php"; ?>
-        
+        <?php require "inc/layouts/topmenu.php"; ?>
 
         <div id="main-slider">
                 <div class="fws2" id="fws2-instance1">
@@ -81,7 +74,6 @@
 
 
 
-        <?php require "inc/layouts/topmenu.php"; ?>
        
         <div id="content" class="row">
             <section class="small-12 medium-6-gutter columns catagories">
@@ -185,6 +177,9 @@
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
         <script type="text/javascript" src="<?php echo __js__; ?>/owl.carousel.min.js"></script>
+        <script src="js/imagesloaded.js"></script>
+        <script src="js/jquery.easing.js"></script>
+        <script src="js/fws2.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
                 var sync1 = $(".catagorieSlider");
