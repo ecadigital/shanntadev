@@ -22,7 +22,6 @@
     <body>
         <?php require "inc/layouts/browserhappy.php"; ?>
         <?php require "inc/layouts/topcartmenu.php"; ?>
-        <?php require "inc/layouts/topmenu.php"; ?>
 
         <div id="main-slider">
                 <div class="fws2" id="fws2-instance1">
@@ -69,7 +68,7 @@
         </div>
         <!--main-slider-->
 
-
+        <?php require "inc/layouts/topmenu.php"; ?>
 
 
 
