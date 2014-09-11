@@ -1,7 +1,7 @@
 <?php 
 class Backend extends CI_Controller{
 	private $view;
-	private $perpageJewely = 10;
+	private $perpageLookbook = 10;
 	
 	public function __construct()
     {
@@ -21,7 +21,7 @@ class Backend extends CI_Controller{
 		{
 			$this->layout->setActionStack($action["name"],$action["view"]);
 		}
-		$this->model = $this->load->model('jewely/Jewelymodel');
+		$this->model = $this->load->model('lookbook/Lookbookmodel');
     }
 	
 	
@@ -30,85 +30,84 @@ class Backend extends CI_Controller{
 	
 	public function index()
 	{
-		$this->view['targetpage'] = $targetpage = 'jewely/backend/list_jewely';
-		$this->view['perPage'] = $this->perpageJewely;
+		$this->view['targetpage'] = $targetpage = 'lookbook/backend/list_lookbook';
+		$this->view['perPage'] = $this->perpageLookbook;
 		$this->layout->view('/backend/index', $this->view);
 	}
-	public function list_jewely()
+	public function list_lookbook()
 	{
 		$this->layout->setLayout('ajax');
 		$this->view['module'] = $this->request->getModuleName();
 		$this->view['param'] = '';
 		$this->view['target'] = '#boxContent';
-		$this->view['targetpage'] = $targetpage = 'jewely/backend/list_jewely';
+		$this->view['targetpage'] = $targetpage = 'lookbook/backend/list_lookbook';
 		
 		$page = $this->request->getParam('page');
 		$this->view['page'] = $page = (empty($page))?1:$page;
 		
 		$limit = $this->request->getParam('limit');
-		$this->view['limit'] = $limit = (empty($limit))?$this->perpageJewely:$limit;
+		$this->view['limit'] = $limit = (empty($limit))?$this->perpageLookbook:$limit;
 		
 		$q = $this->request->getParam('q');
 		
-		$targetpage = 'jewely/backend/list_jewely/limit/'.$limit;
-		list($this->view['paginaion'],$this->view['page_description'],$this->view['listJewely']) = $this->model->listJewely($targetpage,$page,$limit,$q);
-		$this->layout->view('/backend/list_jewely', $this->view);
+		$targetpage = 'lookbook/backend/list_lookbook/limit/'.$limit;
+		list($this->view['paginaion'],$this->view['page_description'],$this->view['listLookbook']) = $this->model->listLookbook($targetpage,$page,$limit,$q);
+		$this->layout->view('/backend/list_lookbook', $this->view);
 	}
-	public function add_jewely()
+	public function add_lookbook()
 	{
-		$this->view['listAllLang'] = $this->bflibs->listAllLang();
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
 		if($data = $this->input->post()){
 		
 			$this->model->setValue($data);
-			$jewely_id = $this->model->addJewely();			
-			$this->bflibs->addLog('log_add_jewely',$data['jewely_name'],DIR_ROOT.'jewely/backend/edit_jewely/id/'.$jewely_id);
+			$lookbook_id = $this->model->addLookbook();		
 			
-			if(isset($data['file_upload'])){
-				$this->model->upload($data['file_upload'],$jewely_id);
-			}
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				if($data['image_path_'.$lang_id]!=''){
+					$this->model->upload_lookbook($data['image_path_'.$lang_id],$lookbook_id,$lang_id);
+				}
+			}}
+						
 			$this->view['redirect']="
 			<script>
 				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning'); 
 				setTimeout(function(){
-					window.parent.location='".DIR_ROOT."jewely/backend/index';
+					window.parent.location='".DIR_ROOT."lookbook/backend/index';
 				},3000);
 			</script>";
-		}else{
-			$this->model->clearTmpImages();
 		}
-		$this->layout->view('/backend/add_jewely', $this->view);
+		$this->layout->view('/backend/add_lookbook', $this->view);
 	}
-	public function edit_jewely()
+	public function edit_lookbook()
 	{
-		$jewely_id = $this->request->getParam('id');
-		$this->view['listAllLang'] = $this->bflibs->listAllLang();
-		$this->view['listEditJewely'] = $listEditJewely = $this->model->listEditJewely($jewely_id);
+		$lookbook_id = $this->request->getParam('id');
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
+		$this->view['listEditLookbook'] = $listEditLookbook = $this->model->listEditLookbook($lookbook_id);
 
 		if($data = $this->input->post()){
 			
 			$this->model->setValue($data);
-			$jewely_id = $this->model->editJewely();
-			$this->bflibs->addLog('log_edit_jewely',$data['jewely_name'],DIR_ROOT.'jewely/backend/edit_jewely/id/'.$jewely_id);
+			$lookbook_id = $this->model->editLookbook();
 			
-			if(isset($data['file_upload'])){
-				$this->model->upload($data['file_upload'],$jewely_id);
-			}
-			if(isset($data['FileCancel'])){
-				$this->model->file_cancel($data['FileCancel'],$jewely_id);
-			}
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				if($data['image_path_'.$lang_id]!=''){
+					$this->model->upload_lookbook($data['image_path_'.$lang_id],$lookbook_id,$lang_id);
+				}
+			}}
+			
 			$this->view['redirect']="
 			<script>
 				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning');
 				setTimeout(function(){
-					window.parent.location='".DIR_ROOT."jewely/backend/index';
+					window.parent.location='".DIR_ROOT."lookbook/backend/index';
 				},3000);
 			</script>";
-		}else{
-			$this->model->clearTmpImages();
 		}
-		$this->layout->view('/backend/edit_jewely', $this->view);
+		$this->layout->view('/backend/edit_lookbook', $this->view);
 	}
-	public function delete_jewely()
+	public function delete_lookbook()
 	{
 		$this->layout->disableLayout();
 		$Array_id=array();
@@ -119,24 +118,24 @@ class Backend extends CI_Controller{
 		}
 		
 		for($i=0;$i<count($Array_id);$i++){
-			$this->model->deleteJewely($Array_id[$i]);
+			$this->model->deleteLookbook($Array_id[$i]);
 		}
 	}
-	public function up_jewely()
+	public function up_lookbook()
 	{
 		$this->layout->disableLayout();
 		$id = $this->request->getParam('id');
 		$seq = $this->request->getParam('seq');
-		$this->bflibs->upMenuDesc('jewely','jewely_id',$id,'jewely_seq',$seq);
+		$this->bflibs->upMenuDesc('lookbook','lookbook_id',$id,'lookbook_seq',$seq);
 	}
-	public function down_jewely()
+	public function down_lookbook()
 	{
 		$this->layout->disableLayout();
 		$id = $this->request->getParam('id');
 		$seq = $this->request->getParam('seq');
-		$this->bflibs->downMenuDesc('jewely','jewely_id',$id,'jewely_seq',$seq);
+		$this->bflibs->downMenuDesc('lookbook','lookbook_id',$id,'lookbook_seq',$seq);
 	}
-	public function publish_jewely()
+	public function publish_lookbook()
 	{
 		$this->layout->disableLayout();
 		$status = $this->request->getParam('status');
@@ -149,10 +148,10 @@ class Backend extends CI_Controller{
 		}
 		
 		for($i=0;$i<count($Array_id);$i++){
-			$this->bflibs->publish('jewely','jewely_id',$Array_id[$i],'jewely_publish',$status);
+			$this->bflibs->publish('lookbook','lookbook_id',$Array_id[$i],'lookbook_publish',$status);
 		}
 	}
-	public function pin_jewely()
+	public function pin_lookbook()
 	{
 		$this->layout->disableLayout();
 		$status = $this->request->getParam('status');
@@ -165,7 +164,7 @@ class Backend extends CI_Controller{
 		}
 		
 		for($i=0;$i<count($Array_id);$i++){
-			$this->bflibs->publish('jewely','jewely_id',$Array_id[$i],'jewely_pin',$status);
+			$this->bflibs->publish('lookbook','lookbook_id',$Array_id[$i],'lookbook_pin',$status);
 		}
 	}
 
@@ -186,12 +185,11 @@ class Backend extends CI_Controller{
 		}
 		
 	}
-	public function upload_images()
+	public function upload_image()
 	{
 		$this->layout->disableLayout();
 		if (!empty($_FILES)) {
-			$folder = DIR_FILE.DS.'public'.DS.'upload'.DS.$this->request->getModuleName();
-			if(!file_exists($folder)){mkdir($folder);}
+			$product_id = $this->request->getParam('id');
 			$this->model->movefile();
 		}
 	}

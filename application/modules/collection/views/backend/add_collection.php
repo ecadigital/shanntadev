@@ -33,39 +33,52 @@
                 </div>
             </div>
            	<div class="clear"></div>
-            
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="collection_name">ชื่อคอลเลคชั่น</label>
-                    <span class="required"></span>
-                </div>
-                <div class="grid4">
-                    <input type="text" id="collection_name" name="collection_name">
+                     
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>
+			<div class="formRow">
+                <div class="grid12">
+                    <fieldset>
+                        <legend><?php echo $lang['language_desc'].$lang_icon;?></legend>
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="collection_name[<?php echo $lang_id?>]">ชื่อคอลเลคชั่น </label>
+								<?php if($lang_id==1) echo '<span class="required"></span>'; ?>
+							</div>
+							<div class="grid4">
+								<input type="text" id="collection_name[<?php echo $lang_id?>]" name="collection_name[<?php echo $lang_id?>]">
+							</div>
+						</div>
+						<div class="clear"></div>
+						
+						<!--<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="collection_short_detail"><?php echo lang('collection_short_detail');?></label>
+							</div>
+							<div class="grid8">
+								<input type="text" id="collection_short_detail" name="collection_short_detail">
+							</div>
+						</div>
+						<div class="clear" style="height:10px;"></div>-->
+						
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="collection_detail[<?php echo $lang_id?>]">รายละเอียด</label>
+							</div>
+							<div class="grid4">
+								<textarea id="collection_detail[<?php echo $lang_id?>]" name="collection_detail[<?php echo $lang_id?>]" class="mceEditor" style="height:40px; width:389px;"></textarea>
+								
+							</div>
+						</div>
+						<div class="clear" style="height:10px;"></div>
+                    </fieldset>
                 </div>
             </div>
-           	<div class="clear"></div>
-            
-            <!--<div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="collection_short_detail"><?php echo lang('collection_short_detail');?></label>
-                </div>
-                <div class="grid8">
-                    <input type="text" id="collection_short_detail" name="collection_short_detail">
-                </div>
-            </div>
-           	<div class="clear" style="height:10px;"></div>-->
-            
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="collection_detail">รายละเอียด</label>
-                </div>
-                <div class="grid4">
-                    <textarea id="collection_detail" name="collection_detail" class="mceEditor" style="height:40px; width:389px;"></textarea>
-					
-                </div>
-            </div>
-           	<div class="clear" style="height:10px;"></div>
-            
+            <div class="clear" style="height:10px;"></div>
+            <?php }}?>
+			
             <div class="formRow">
                 <div class="grid2">
                     <label class="lbl fl" for="collection_price">ราคา</label>
@@ -145,7 +158,7 @@ $(document).ready(function(){
 	$('#collection_categories_id').chosen();
 	$("#collection_form").validate({
 		rules: {
-			'collection_name' : {
+			'collection_name[1]' : {
 				required: true,
 			},
 			collection_categories_id: {

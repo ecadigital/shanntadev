@@ -15,28 +15,43 @@
 	<iframe frameborder="0" width="0" height="0" id="myIframe" name="myIframe"></iframe>
 	<form class="formElement" method="post" id="faq_form" name="faq_formAdd" target="myIframe" action="<?php echo DIR_ROOT?>faq/backend/add_faq">
         <div class="widget">
-                        
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="faq_question">คำถาม</label>
-                    <span class="required"></span>
-                </div>
-                <div class="grid5">
-                    <input type="text" id="faq_question" name="faq_question">
+                     
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>
+			<div class="formRow">
+                <div class="grid12">
+                    <fieldset>
+                        <legend><?php echo $lang['language_desc'].$lang_icon;?></legend>
+											
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="faq_question[<?php echo $lang_id?>]">คำถาม</label>
+								<?php if($lang_id==1) echo '<span class="required"></span>'; ?>
+							</div>
+							<div class="grid5">
+								<input type="text" id="faq_question[<?php echo $lang_id?>]" name="faq_question[<?php echo $lang_id?>]">
+							</div>
+						</div>
+						<div class="clear"></div>
+						
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="faq_answer[<?php echo $lang_id?>]">คำตอบ</label>
+								<?php if($lang_id==1) echo '<span class="required"></span>'; ?>
+							</div>
+							<div class="grid9">
+								<textarea id="faq_answer[<?php echo $lang_id?>]" name="faq_answer[<?php echo $lang_id?>]" class="mceEditor"></textarea>
+							</div>
+						</div>
+						<div class="clear" style="height:10px;"></div>
+                    </fieldset>
                 </div>
             </div>
-           	<div class="clear"></div>
+            <div class="clear" style="height:10px;"></div>
+            <?php }}?>
             
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="faq_answer">คำตอบ</label>
-                </div>
-                <div class="grid9">
-                    <textarea id="faq_answer" name="faq_answer" class="mceEditor"></textarea>
-                </div>
-            </div>
-           	<div class="clear" style="height:10px;"></div>
-                        
             <div class="formRow">
                 <input type="hidden" id="captcha" name="captcha" value=""></input>
                 <input type="submit" class="button" value="<?php echo lang('web_save');?>"></input>
@@ -48,7 +63,10 @@
 $(document).ready(function(){
 	$("#faq_form").validate({
 		rules: {
-			'faq_name' : {
+			'faq_question[1]' : {
+				required: true,
+			},
+			'faq_answer[1]' : {
 				required: true,
 			},
 		},

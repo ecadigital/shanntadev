@@ -5,7 +5,7 @@ $this->model = $this->load->model('faq/Faqmodel');
 	<thead> 
 		<tr> 
 			<th align="center" width="50"><?php echo lang('web_no');?></th>
-			<th><?php echo lang('faq_name');?></th>
+			<th>FAQ</th>
 			<th width="15%" align="center"><?php echo lang('faq_update');?></th>
             <th align="center" width="180"><?php echo lang('web_tool');?></th> 
 		</tr> 

@@ -153,16 +153,20 @@ class Backend extends CI_Controller{
 		}
 		$this->layout->view('/backend/contact', $this->view);
 	}
-	public function lookbook()
+	/*public function lookbook()
 	{
-		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMain();
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
+		$this->view['listEditMain'] = $listEditMain = $this->model->listEditLookbook();
 
 		if($data = $this->input->post()){
 			$this->model->setValue($data);			
 			
-			if($data['image_path']!=''){
-				$this->model->upload_lookbook($data['image_path']);
-			}
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				if($data['image_path_'.$lang_id]!=''){
+					$this->model->upload_lookbook($data['image_path_'.$lang_id],$lang_id);
+				}
+			}}
 			
 			$this->view['redirect']="
 			<script>
@@ -173,14 +177,19 @@ class Backend extends CI_Controller{
 			</script>";
 		}
 		$this->layout->view('/backend/lookbook', $this->view);
-	}
+	}*/
 	public function policy()
 	{
-		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMain();
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
+		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMainLang();
 
 		if($data = $this->input->post()){
-			$this->model->setValue($data);	
-			$this->model->editMain();
+			$this->model->setValue($data);
+			
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				$this->model->editMainLang($lang_id);
+			}}
 			
 			$this->view['redirect']="
 			<script>
@@ -194,11 +203,16 @@ class Backend extends CI_Controller{
 	}
 	public function shipping()
 	{
-		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMain();
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
+		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMainLang();
 
 		if($data = $this->input->post()){
 			$this->model->setValue($data);	
-			$this->model->editMain();
+			
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				$this->model->editMainLang($lang_id);
+			}}
 			
 			$this->view['redirect']="
 			<script>

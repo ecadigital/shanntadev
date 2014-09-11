@@ -263,6 +263,8 @@ class Productmodel extends CI_Model {
 		$this->db->where('product_id',$id);
 		$this->db->delete($this->tbl_product);
 		$this->db->where('product_id',$id);
+		$this->db->delete($this->tbl_product_lang);
+		$this->db->where('product_id',$id);
 		$this->db->delete($this->tbl_product_images);
 	}
 	public function getFirstProductImage($product_id){
@@ -503,6 +505,8 @@ class Productmodel extends CI_Model {
 		}
 		$this->db->where('product_categories_id',$id);
 		$this->db->delete($this->tbl_product_categories);
+		$this->db->where('product_categories_id',$id);
+		$this->db->delete($this->tbl_product_categories_lang);
 	}
 	public function chkHasData($categories_id){
 	

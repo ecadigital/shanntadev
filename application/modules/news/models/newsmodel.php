@@ -2,6 +2,7 @@
 class Newsmodel extends CI_Model {
 	private $tbl_admin_cfg = 'admin_cfg';
 	private $tbl_news = 'news';
+	private $tbl_news_lang = 'news_lang';
 	private $tbl_news_images = 'news_images';
 	
 	private $member;
@@ -32,8 +33,17 @@ class Newsmodel extends CI_Model {
 
 	public function listNews($targetpage,$page,$limit,$sData=""){
 	
-		$select = $this->db->select()
+		$select = $this->db->select(array(
+						"$this->tbl_news.news_id",
+						"$this->tbl_news.news_last_modified",
+						"$this->tbl_news.news_publish",
+						"$this->tbl_news.news_seq",
+						"$this->tbl_news.news_pin",
+						"$this->tbl_news_lang.news_name",
+						"$this->tbl_news_lang.news_detail"))
 				->from($this->tbl_news)
+				->join($this->tbl_news_lang,"$this->tbl_news.news_id=$this->tbl_news_lang.news_id","left")
+				->where("$this->tbl_news_lang.language_id",$this->defaultlang)
 				->order_by("$this->tbl_news.news_pin",'desc')
 				->order_by("$this->tbl_news.news_seq",'desc')
 				->order_by("$this->tbl_news.news_date_added",'desc')
@@ -41,7 +51,7 @@ class Newsmodel extends CI_Model {
 				
 		if(!empty($sData)){
 			$sData = urlDecode($sData);
-			$where = "(($this->tbl_news.news_name like '%".$sData."%') or ($this->tbl_news.news_detail like '%".$sData."%'))";
+			$where = "(($this->tbl_news_lang.news_name like '%".$sData."%') or ($this->tbl_news_lang.news_detail like '%".$sData."%'))";
 			$this->db->where($where);
 		}
 		
@@ -71,6 +81,17 @@ class Newsmodel extends CI_Model {
 			$query_images = $this->db->get();
 			$result['news_images'] = $query_images->result_array();
 		}
+		
+		$select = $this->db->select()
+				->from($this->tbl_news_lang)
+				->where("news_id",$id);
+		$queryLang = $this->db->get();
+		$resultLang = $queryLang->result_array();
+		
+		foreach($resultLang as $res){
+			$result['news_name'][$res['language_id']] = $res['news_name'];
+			$result['news_detail'][$res['language_id']] = $res['news_detail'];
+		}
 		return $result;
 	}
 	public function addNews(){
@@ -85,14 +106,24 @@ class Newsmodel extends CI_Model {
 			//$news_pin = (isset($val['news_pin']))?$val['news_pin']:0;
 			$data = array(
 					"news_id"=>$news_id,
-					"news_name"=>$val['news_name'],
-					"news_detail"=>htmlspecialchars($val['news_detail'], ENT_QUOTES),
+					//"news_name"=>$val['news_name'],
+					//"news_detail"=>htmlspecialchars($val['news_detail'], ENT_QUOTES),
 					"news_date_added"=>$date,
 					"news_last_modified"=>$date,
 					"news_seq"=>$news_seq,
 					"news_publish"=>1
 			);
-			$this->db->insert($this->tbl_news,$data);			
+			$this->db->insert($this->tbl_news,$data);	
+			
+			foreach($val['news_name'] as $lang=>$news_name){
+				$dataLang = array(
+					"news_id"=>$news_id,
+					"language_id"=>$lang,
+					"news_name"=>$news_name,
+					"news_detail"=>htmlspecialchars($val['news_detail'][$lang], ENT_QUOTES)
+				);
+				$this->db->insert($this->tbl_news_lang,$dataLang);
+			}					
 			return $news_id;
 		}
 	}
@@ -105,13 +136,31 @@ class Newsmodel extends CI_Model {
 			$news_id = $val["news_id"];
 			$date = date('Y-m-d H:i:s');
 			$data = array(
-					"news_name"=>$val['news_name'],
-					"news_detail"=>htmlspecialchars($val['news_detail'], ENT_QUOTES),
+					//"news_name"=>$val['news_name'],
+					//"news_detail"=>htmlspecialchars($val['news_detail'], ENT_QUOTES),
 					"news_last_modified"=>$date
 			);
 
 			$this->db->where('news_id',$news_id);
 			$this->db->update($this->tbl_news,$data);
+			
+			foreach($val['news_name'] as $lang=>$news_name){
+				$dataLang = array(
+					"news_name"=>$news_name,
+					"news_detail"=>htmlspecialchars($val['news_detail'][$lang], ENT_QUOTES)
+				);
+				
+				$chkLang = $this->chkLang($val["news_id"],$lang);
+				if($chkLang==0){
+					$dataLang["news_id"]=$val["news_id"];
+					$dataLang["language_id"]=$lang;
+					$this->db->insert($this->tbl_news_lang,$dataLang);
+				}else{
+					$this->db->where("news_id",$val["news_id"]);
+					$this->db->where("language_id",$lang);
+					$this->db->update($this->tbl_news_lang,$dataLang);
+				}
+			}
 			return $val['news_id'];
 		}
 	}
@@ -149,6 +198,8 @@ class Newsmodel extends CI_Model {
 		$this->db->where('news_id',$id);
 		$this->db->delete($this->tbl_news);
 		$this->db->where('news_id',$id);
+		$this->db->delete($this->tbl_news_lang);
+		$this->db->where('news_id',$id);
 		$this->db->delete($this->tbl_news_images);
 	}
 	public function getFirstNewsImage($news_id){
@@ -161,6 +212,15 @@ class Newsmodel extends CI_Model {
 		$query_images = $query->row_array();
 		$result['news_images'] = (empty($query_images)) ? '' : $query_images['news_images_path'];
 		return $result['news_images'];
+	}
+	
+	public function chkLang($news_id,$lang_id){ 
+		$select = $this->db->select()
+				->from($this->tbl_news_lang)
+				->where("news_id",$news_id)
+				->where("language_id",$lang_id);
+
+		return $this->db->count_all_results();
 	}
 	
 	

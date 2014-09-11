@@ -51,8 +51,6 @@ class Mainmodel extends CI_Model {
 			if(isset($val['main_longitude']))				$data["main_longitude"]=$val['main_longitude'];
 			if(isset($val['main_intro']))					$data["main_intro"]=$val['main_intro'];
 			if(isset($val['main_intro_show']))				$data["main_intro_show"]=$val['main_intro_show'];
-			if(isset($val['main_policy']))					$data["main_policy"]=$val['main_policy'];
-			if(isset($val['main_shipping']))				$data["main_shipping"]=$val['main_shipping'];
 
 			$this->db->where('main_id',1);
 			$this->db->update($this->tbl_main,$data);
@@ -97,7 +95,40 @@ class Mainmodel extends CI_Model {
 			$this->db->update($this->tbl_main,$data);
 		}
 	}
-	public function upload_lookbook($file){
+	
+	
+	public function listEditMainLang(){
+		
+		$select = $this->db->select()
+				->from($this->tbl_main);
+		$queryLang = $this->db->get();
+		$resultLang = $queryLang->result_array();
+		
+		foreach($resultLang as $res){
+			$result['main_policy'][$res['language_id']] = $res['main_policy'];
+			$result['main_shipping'][$res['language_id']] = $res['main_shipping'];
+		}
+		
+		return $result;
+	}
+	public function editMainLang($lang_id){
+		
+		$val = $this->getValue();
+
+		if($val['captcha']=='')
+		{
+			$date = date('Y-m-d H:i:s');
+			$data["main_last_modified"] = $date;
+			
+			$data= array();
+			if(isset($val['main_policy'][$lang_id]))				$data["main_policy"]=$val['main_policy'][$lang_id];
+			if(isset($val['main_shipping'][$lang_id]))				$data["main_shipping"]=$val['main_shipping'][$lang_id];
+
+			$this->db->where('language_id',$lang_id);
+			$this->db->update($this->tbl_main,$data);
+		}
+	}
+	public function upload_lookbook($file,$lang_id){
 	
 		if(!empty($file)){
 			$dir_file = DIR_FILE.'public/upload/'.$this->request->getModuleName().'/original/';
@@ -106,19 +137,19 @@ class Mainmodel extends CI_Model {
 			if(!file_exists($tmb_file)){mkdir($tmb_file);}
 			
 			$ext = $this->bflibs->getExt($file);
-			$file_name = 'lookbook_'.md5(date("mdhis")).".".$ext;
+			$file_name = 'lookbook'.$lang_id.'_'.md5(date("mdhis")).".".$ext;
 			$__dest = $dir_file.$file_name;
 			$source = DIR_FILE.$file;
 
 			copy($source, $__dest);
-			if($this->imagesResize($__dest,'thumbnails'))$file = $this->updatePath_lookbook('public/upload/'.$this->request->getModuleName().'/thumbnails/'.$file_name);
+			if($this->imagesResize($__dest,'thumbnails'))$file = $this->updatePath_lookbook('public/upload/'.$this->request->getModuleName().'/thumbnails/'.$file_name,$lang_id);
 			unlink($source);
 		}
 	}
-	private function updatePath_lookbook($path){
+	private function updatePath_lookbook($path,$lang_id){
 
 		$data = array("main_lookbook_path"=>$path);
-		$this->db->where('main_id',1);
+		$this->db->where('language_id',$lang_id);
 		$this->db->update($this->tbl_main,$data);
 		return 1;
 	}

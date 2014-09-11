@@ -14,7 +14,7 @@
 		foreach($listCategories as $list){
 			$collection_categories_id = $list["collection_categories_id"];
 			$img_db_home = $list["collection_categories_home_path"];
-			$img_path_home = DIR_PUBLIC."layout/default/images/empty.png";
+			$img_path_home = DIR_PUBLIC."images/noimage.png";
 			if($img_db_home!=''){
 				$path = "public/upload/collection/thumbnails/".basename($img_db_home);
 				$dir_file = DIR_FILE.$path;
@@ -23,7 +23,7 @@
 				}
 			}
 			$img_db_banner = $list["collection_categories_banner_path"];
-			$img_path_banner = DIR_PUBLIC."layout/default/images/empty.png";
+			$img_path_banner = DIR_PUBLIC."images/noimage.png";
 			if($img_db_banner!=''){
 				$path = "public/upload/collection/thumbnails/".basename($img_db_banner);
 				$dir_file = DIR_FILE.$path;
@@ -48,7 +48,7 @@
 			</td>
 		</tr>
 		<?php }}else{?>
-		<tr><td colspan="3" align="center"><?php echo lang('web_no_data');?></td></tr>
+		<tr><td colspan="5" align="center"><?php echo lang('web_no_data');?></td></tr>
 		<?php }?>
 	</tbody>
 </table>

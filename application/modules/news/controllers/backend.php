@@ -56,6 +56,7 @@ class Backend extends CI_Controller{
 	}
 	public function add_news()
 	{
+		$this->view['listAllLang'] = $this->bflibs->listAllLang();
 		if($data = $this->input->post()){
 		
 			$this->model->setValue($data);
@@ -80,6 +81,7 @@ class Backend extends CI_Controller{
 	public function edit_news()
 	{
 		$news_id = $this->request->getParam('id');
+		$this->view['listAllLang'] = $this->bflibs->listAllLang();
 		$this->view['listEditNews'] = $listEditNews = $this->model->listEditNews($news_id);
 
 		if($data = $this->input->post()){

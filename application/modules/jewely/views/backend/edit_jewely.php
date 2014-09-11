@@ -15,27 +15,42 @@
 	<iframe frameborder="0" width="0" height="0" id="myIframe" name="myIframe"></iframe>
 	<form class="formElement" method="post" id="jewely_form" name="jewely_formEdit" target="myIframe" action="<?php echo DIR_ROOT?>jewely/backend/edit_jewely">
         <div class="widget">   
-                     
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="jewely_name">หัวข้อ</label>
-                    <span class="required"></span>
-                </div>
-                <div class="grid5">
-                    <input type="text" id="jewely_name" name="jewely_name" value="<?php echo $listEditJewely['jewely_name'];?>">
-                </div>
-            </div>
-           	<div class="clear"></div>
             
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="jewely_detail">รายละเอียด</label>
-                </div>
-                <div class="grid9">
-                    <textarea id="jewely_detail" name="jewely_detail" class="mceEditor"><?php echo $listEditJewely['jewely_detail'];?></textarea>
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>
+			<div class="formRow">
+                <div class="grid12">
+                    <fieldset>
+                        <legend><?php echo $lang['language_desc'].$lang_icon;?></legend>
+								 
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="jewely_name[<?php echo $lang_id?>]">หัวข้อ</label>
+								<?php if($lang_id==1) echo '<span class="required"></span>'; ?>
+							</div>
+							<div class="grid5">
+								<input type="text" id="jewely_name[<?php echo $lang_id?>]" name="jewely_name[<?php echo $lang_id?>]" value="<?php echo $listEditJewely['jewely_name'][$lang_id];?>">
+							</div>
+						</div>
+						<div class="clear"></div>
+						
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="jewely_detail[<?php echo $lang_id?>]">รายละเอียด</label>
+							</div>
+							<div class="grid9">
+								<textarea id="jewely_detail[<?php echo $lang_id?>]" name="jewely_detail[<?php echo $lang_id?>]" class="mceEditor"><?php echo $listEditJewely['jewely_detail'][$lang_id];?></textarea>
+							</div>
+						</div>
+						<div class="clear" style="height:10px;"></div>
+            
+                    </fieldset>
                 </div>
             </div>
-           	<div class="clear" style="height:10px;"></div>
+            <div class="clear" style="height:10px;"></div>
+            <?php }}?>
             
             <div class="formRow">
                 <div class="grid11">            
@@ -67,7 +82,7 @@
 $(document).ready(function(){
 	$("#jewely_form").validate({
 		rules: {
-			'jewely_name' : {
+			'jewely_name[1]' : {
 				required: true,
 			},
 		},

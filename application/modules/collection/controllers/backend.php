@@ -63,6 +63,7 @@ class Backend extends CI_Controller{
 	}
 	public function add_collection(){
 	
+		$this->view['listAllLang'] = $this->bflibs->listAllLang();
 		$this->view['listCategories'] = $this->model->listCategories(0,0);
 		if($data = $this->input->post()){
 		
@@ -88,6 +89,7 @@ class Backend extends CI_Controller{
 	public function edit_collection(){
 	
 		$collection_id = $this->request->getParam('id');
+		$this->view['listAllLang'] = $this->bflibs->listAllLang();
 		$this->view['listCategories'] = $this->model->listCategories(0,0);
 		$this->view['listEditCollection'] = $listEditCollection = $this->model->listEditCollection($collection_id);
 
@@ -278,6 +280,7 @@ class Backend extends CI_Controller{
 	}
 	public function add_categories(){
 	
+		$this->view['listAllLang'] = $this->bflibs->listAllLang();
 		$this->view['listCategoriesParent'] = $this->model->listCategoriesParent(0,0,'');
 		if($data = $this->input->post()){
 		
@@ -307,6 +310,7 @@ class Backend extends CI_Controller{
 	public function edit_categories(){
 	
 		$collection_categories_id = $this->request->getParam('id');
+		$this->view['listAllLang'] = $this->bflibs->listAllLang();
 		$this->view['listEditCategories'] = $listEditCategories = $this->model->listEditCategories($collection_categories_id);
 		$this->view['listCategoriesParent'] = $this->model->listCategoriesParent(0,0,$collection_categories_id);
 		

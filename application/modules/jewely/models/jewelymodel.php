@@ -2,6 +2,7 @@
 class Jewelymodel extends CI_Model {
 	private $tbl_admin_cfg = 'admin_cfg';
 	private $tbl_jewely = 'jewely';
+	private $tbl_jewely_lang = 'jewely_lang';
 	private $tbl_jewely_images = 'jewely_images';
 	
 	private $member;
@@ -32,8 +33,17 @@ class Jewelymodel extends CI_Model {
 
 	public function listJewely($targetpage,$page,$limit,$sData=""){
 	
-		$select = $this->db->select()
+		$select = $this->db->select(array(
+						"$this->tbl_jewely.jewely_id",
+						"$this->tbl_jewely.jewely_last_modified",
+						"$this->tbl_jewely.jewely_publish",
+						"$this->tbl_jewely.jewely_seq",
+						"$this->tbl_jewely.jewely_pin",
+						"$this->tbl_jewely_lang.jewely_name",
+						"$this->tbl_jewely_lang.jewely_detail"))
 				->from($this->tbl_jewely)
+				->join($this->tbl_jewely_lang,"$this->tbl_jewely.jewely_id=$this->tbl_jewely_lang.jewely_id","left")
+				->where("$this->tbl_jewely_lang.language_id",$this->defaultlang)
 				->order_by("$this->tbl_jewely.jewely_pin",'desc')
 				->order_by("$this->tbl_jewely.jewely_seq",'desc')
 				->order_by("$this->tbl_jewely.jewely_date_added",'desc')
@@ -41,7 +51,7 @@ class Jewelymodel extends CI_Model {
 				
 		if(!empty($sData)){
 			$sData = urlDecode($sData);
-			$where = "(($this->tbl_jewely.jewely_name like '%".$sData."%') or ($this->tbl_jewely.jewely_detail like '%".$sData."%'))";
+			$where = "(($this->tbl_jewely_lang.jewely_name like '%".$sData."%') or ($this->tbl_jewely_lang.jewely_detail like '%".$sData."%'))";
 			$this->db->where($where);
 		}
 		
@@ -71,6 +81,17 @@ class Jewelymodel extends CI_Model {
 			$query_images = $this->db->get();
 			$result['jewely_images'] = $query_images->result_array();
 		}
+		
+		$select = $this->db->select()
+				->from($this->tbl_jewely_lang)
+				->where("jewely_id",$id);
+		$queryLang = $this->db->get();
+		$resultLang = $queryLang->result_array();
+		
+		foreach($resultLang as $res){
+			$result['jewely_name'][$res['language_id']] = $res['jewely_name'];
+			$result['jewely_detail'][$res['language_id']] = $res['jewely_detail'];
+		}
 		return $result;
 	}
 	public function addJewely(){
@@ -85,14 +106,25 @@ class Jewelymodel extends CI_Model {
 			//$jewely_pin = (isset($val['jewely_pin']))?$val['jewely_pin']:0;
 			$data = array(
 					"jewely_id"=>$jewely_id,
-					"jewely_name"=>$val['jewely_name'],
-					"jewely_detail"=>$val['jewely_detail'],
+					//"jewely_name"=>$val['jewely_name'],
+					//"jewely_detail"=>$val['jewely_detail'],
 					"jewely_date_added"=>$date,
 					"jewely_last_modified"=>$date,
 					"jewely_seq"=>$jewely_seq,
 					"jewely_publish"=>1
 			);
-			$this->db->insert($this->tbl_jewely,$data);			
+			$this->db->insert($this->tbl_jewely,$data);	
+			
+			foreach($val['jewely_name'] as $lang=>$jewely_name){
+				$dataLang = array(
+					"jewely_id"=>$jewely_id,
+					"language_id"=>$lang,
+					"jewely_name"=>$jewely_name,
+					"jewely_detail"=>htmlspecialchars($val['jewely_detail'][$lang], ENT_QUOTES)
+				);
+				$this->db->insert($this->tbl_jewely_lang,$dataLang);
+			}
+			
 			return $jewely_id;
 		}
 	}
@@ -105,13 +137,31 @@ class Jewelymodel extends CI_Model {
 			$jewely_id = $val["jewely_id"];
 			$date = date('Y-m-d H:i:s');
 			$data = array(
-					"jewely_name"=>$val['jewely_name'],
-					"jewely_detail"=>$val['jewely_detail'],
+					//"jewely_name"=>$val['jewely_name'],
+					//"jewely_detail"=>$val['jewely_detail'],
 					"jewely_last_modified"=>$date
 			);
 
 			$this->db->where('jewely_id',$jewely_id);
 			$this->db->update($this->tbl_jewely,$data);
+			
+			foreach($val['jewely_name'] as $lang=>$jewely_name){
+				$dataLang = array(
+					"jewely_name"=>$jewely_name,
+					"jewely_detail"=>htmlspecialchars($val['jewely_detail'][$lang], ENT_QUOTES)
+				);
+				
+				$chkLang = $this->chkLang($val["jewely_id"],$lang);
+				if($chkLang==0){
+					$dataLang["jewely_id"]=$val["jewely_id"];
+					$dataLang["language_id"]=$lang;
+					$this->db->insert($this->tbl_jewely_lang,$dataLang);
+				}else{
+					$this->db->where("jewely_id",$val["jewely_id"]);
+					$this->db->where("language_id",$lang);
+					$this->db->update($this->tbl_jewely_lang,$dataLang);
+				}
+			}
 			return $val['jewely_id'];
 		}
 	}
@@ -149,6 +199,8 @@ class Jewelymodel extends CI_Model {
 		$this->db->where('jewely_id',$id);
 		$this->db->delete($this->tbl_jewely);
 		$this->db->where('jewely_id',$id);
+		$this->db->delete($this->tbl_jewely_lang);
+		$this->db->where('jewely_id',$id);
 		$this->db->delete($this->tbl_jewely_images);
 	}
 	public function getFirstJewelyImage($jewely_id){
@@ -161,6 +213,15 @@ class Jewelymodel extends CI_Model {
 		$query_images = $query->row_array();
 		$result['jewely_images'] = (empty($query_images)) ? '' : $query_images['jewely_images_path'];
 		return $result['jewely_images'];
+	}
+	
+	public function chkLang($jewely_id,$lang_id){ 
+		$select = $this->db->select()
+				->from($this->tbl_jewely_lang)
+				->where("jewely_id",$jewely_id)
+				->where("language_id",$lang_id);
+
+		return $this->db->count_all_results();
 	}
 	
 	

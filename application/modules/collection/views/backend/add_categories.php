@@ -34,39 +34,51 @@
             </div>
            	<div class="clear"></div>-->
             
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>            
             <div class="formRow">
                 <div class="grid2">
-                    <label class="lbl fl" for="collection_categories_name">ชื่อหมวดหมู่คอลเลคชั่น</label>
-                    <span class="required"></span>
+                    <label class="lbl fl" for="collection_categories_name[<?php echo $lang_id?>]">ชื่อหมวดหมู่คอลเลคชั่น <?php echo $lang_icon;?></label>
+                    <?php if($lang_id==1) echo '<span class="required"></span>'; ?>
                 </div>
                 <div class="grid3">
-                    <input type="text" id="collection_categories_name" name="collection_categories_name">
+                    <input type="text" id="collection_categories_name[<?php echo $lang_id?>]" name="collection_categories_name[<?php echo $lang_id?>]">
                 </div>
             </div>   
            	<div class="clear"></div>
+            <?php }}?>        
+			
             <hr/>
            	<div class="clear"></div> 
             
 			<h4>แบนเนอร์หน้าแรก</h4>
 			
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="collection_categories_home_keyhead">ข้อความหลัก</label>
-                </div>
-                <div class="grid4">
-                    <input type="text" id="collection_categories_home_keyhead" name="collection_categories_home_keyhead">
-                </div>
-            </div>   
-           	<div class="clear"></div>
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="collection_categories_home_keymessage">ข้อความรอง</label>
-                </div>
-                <div class="grid4">
-                    <textarea id="collection_categories_home_keymessage" name="collection_categories_home_keymessage" style="height:40px; width:389px;"></textarea>
-                </div>
-            </div>   
-           	<div class="clear" style="height:5px;"></div>
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="collection_categories_home_keyhead[<?php echo $lang_id?>]">ข้อความหลัก <?php echo $lang_icon;?></label>
+					</div>
+					<div class="grid4">
+						<input type="text" id="collection_categories_home_keyhead[<?php echo $lang_id?>]" name="collection_categories_home_keyhead[<?php echo $lang_id?>]">
+					</div>
+				</div>   
+				<div class="clear"></div>
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="collection_categories_home_keymessage[<?php echo $lang_id?>]">ข้อความรอง <?php echo $lang_icon;?></label>
+					</div>
+					<div class="grid4">
+						<textarea id="collection_categories_home_keymessage[<?php echo $lang_id?>]" name="collection_categories_home_keymessage[<?php echo $lang_id?>]" style="height:40px; width:389px;"></textarea>
+					</div>
+				</div>   
+				<div class="clear" style="height:5px;"></div>
+            <?php }}?>        
+			
             <div class="formRow">
                 <div class="grid2">
                     <label class="lbl fl" for="collection_categories_home_keymessage">ตำแหน่งการจัดข้อความ</label>
@@ -105,26 +117,32 @@
             <hr/>
            	<div class="clear"></div> 
             
-			<h4>แบนเนอร์หน้าคอลเลคชั่น</h4>
+			<h4>แบนเนอร์หน้าคอลเลคชั่น</h4>			
 			
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="collection_categories_banner_keyhead">ข้อความหลัก</label>
-                </div>
-                <div class="grid4">
-                    <input type="text" id="collection_categories_banner_keyhead" name="collection_categories_banner_keyhead">
-                </div>
-            </div>   
-           	<div class="clear"></div>
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="collection_categories_banner_keymessage">ข้อความรอง</label>
-                </div>
-                <div class="grid4">
-                    <textarea id="collection_categories_banner_keymessage" name="collection_categories_banner_keymessage" style="height:40px; width:389px;"></textarea>
-                </div>
-            </div>   
-           	<div class="clear" style="height:5px;"></div>
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>			
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="collection_categories_banner_keyhead[<?php echo $lang_id?>]">ข้อความหลัก <?php echo $lang_icon;?></label>
+					</div>
+					<div class="grid4">
+						<input type="text" id="collection_categories_banner_keyhead[<?php echo $lang_id?>]" name="collection_categories_banner_keyhead[<?php echo $lang_id?>]">
+					</div>
+				</div>   
+				<div class="clear"></div>
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="collection_categories_banner_keymessage[<?php echo $lang_id?>]">ข้อความรอง <?php echo $lang_icon;?></label>
+					</div>
+					<div class="grid4">
+						<textarea id="collection_categories_banner_keymessage[<?php echo $lang_id?>]" name="collection_categories_banner_keymessage[<?php echo $lang_id?>]" style="height:40px; width:389px;"></textarea>
+					</div>
+				</div>   
+				<div class="clear" style="height:5px;"></div>
+			<?php }}?>
+			
             <div class="formRow">
                 <div class="grid2">
                     <label class="lbl fl" for="collection_categories_banner_keymessage">ตำแหน่งการจัดข้อความ</label>
@@ -181,7 +199,7 @@
 $(document).ready(function(){
 	$("#collection_categories_form").validate({
 		rules: {
-			'collection_categories_name' : {
+			'collection_categories_name[1]' : {
 				required: true,
 			},
 	   },
