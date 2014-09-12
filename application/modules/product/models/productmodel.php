@@ -33,7 +33,8 @@ class Productmodel extends CI_Model {
         $admin = $this->session->userdata('admin');
 		$this->member= $this->session->userdata('member');
 		@$this->admin_id = $admin->admin_id;
-		$this->ip = $this->bflibs->getIP();
+		$Array_ip = explode('.',$this->bflibs->getIP());
+		$this->ip = implode('_',$Array_ip);
 		$this->defaultlang = $this->bflibs->getDefaultLangId();
 	}
 	
@@ -696,8 +697,8 @@ class Productmodel extends CI_Model {
 		$temp = $dir_root.'temp/';
 		if(!file_exists($temp)){mkdir($temp);}
 		//$path = 'public/upload/'.$module.'/temp/'.$this->ip.'/';
-		$dir_file = $temp.$this->ip.'/';
-		if(!file_exists($dir_file)){mkdir($dir_file);}
+		echo $dir_file = $temp.$this->ip.'/';
+		if(!file_exists($dir_file)){mkdir($dir_file,0755,true);}
 		
 		$config['upload_path'] = $dir_file;
 		$config['allowed_types'] = 'gif|jpg|png';
