@@ -77,10 +77,10 @@
                         <h3>Mandatory field *</h3>
                     </div>
                     <div class="small-12 large-10 columns">
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Title *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <select>
                                 <option value="0">select</option>
                                 <option value="Mr">Mr.</option>
@@ -88,42 +88,42 @@
                                 <option value="Miss">Miss</option>
                             </select>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">First Name *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns end">
                             <input type="text">
                         </div>
                     </div>
                     <div class="small-12 large-10 large-offset-2 columns">
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Last Name *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Address *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Postcode *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">City</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Phone *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <div class="small-4 columns">
                                 <select>
                                     <option value="1">+1</option>
@@ -135,15 +135,15 @@
                                 <input type="text">
                             </div>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Shopping method</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <select>
                                 <option value="0">Complimenttary Standart</option>
                             </select>
                         </div>
-                        <div class="medium-6 medium-offset-3 columns end">
+                        <div class="medium-6 medium-offset-3-custom columns end">
                             <label><input type="checkbox" value="1"> Include a personalised massage</label>
                         </div>
                     </div>

@@ -10,6 +10,7 @@
     </head>
     <body>
         <?php require "inc/layouts/browserhappy.php"; ?>
+        <?php require "inc/layouts/topcartmenu.php"; ?>
         <?php require "inc/layouts/topmenu.php"; ?>
         <div id="content" class="row cart">
             <header>
@@ -75,11 +76,15 @@
                         <h2>PAYMENT</h2>
                     </div>
                     <div class="small-12 large-10 columns">
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Payment Method</label>
                         </div>
-                        <div class="medium-3 large-3 columns end">
-                            <input type="text">
+                        <div class="medium-4-custom columns end">
+                            <select name="" id="">
+                                <option value="creditcard">Credit Card</option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -88,33 +93,33 @@
                         <h2>DETAIL CARD</h2>
                     </div>
                     <div class="small-12 large-10 columns">
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Card</label>
                         </div>
-                        <div class="medium-3 columns end">
-                            <input type="radio" name="card" value="visa">Visa
-                            <input type="radio" name="card" value="master">Master Card
+                        <div class="medium-10 columns end">
+                            <label><input type="radio" name="card" value="visa">&nbsp;&nbsp;<img src="<?php echo __images__;?>/assets/bank-1.png"></label>
+                            <label><input type="radio" name="card" value="master">&nbsp;&nbsp;<img src="<?php echo __images__;?>/assets/bank-2.png"></label>
                         </div>
                     </div>
                     <div class="small-12 large-10 large-offset-2 columns">
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Card number</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Name of Card Hoder</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
                     </div>
                     <div class="small-12 large-10 large-offset-2 columns">
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Expiration date</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <div class="medium-6 columns">
                                 <select name="years">
                                     <option value="2017">2017</option>
@@ -140,10 +145,10 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Security cord</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
                     </div>

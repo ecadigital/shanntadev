@@ -132,10 +132,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="small-6 columns">
+                            <div class="small-6 medium-5 columns">
                                 <h5>TOTAL</h5>
                             </div>
-                            <div class="small-6 columns">
+                            <div class="small-6 medium-7 columns">
                                 <h6>1,680 <b>THB</b></h6>
                             </div>
                         </div>

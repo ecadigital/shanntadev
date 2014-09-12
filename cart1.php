@@ -88,18 +88,18 @@
                                 <option value="Miss">Miss</option>
                             </select>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">First Name *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
                     </div>
                     <div class="small-12 large-10 large-offset-2 columns">
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Last Name</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
                         <div class="medium-2 columns">
@@ -182,30 +182,30 @@
                         <br>
                     </div>
                     <div class="small-12 large-10 columns">
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">E-mail Address *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Confirm E-mail *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
                     </div>
                     <div class="small-12 large-10 large-offset-2 columns">
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Password</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-2 columns">
                             <label for="#">Confirm Password *</label>
                         </div>
-                        <div class="medium-3 columns">
+                        <div class="medium-4-custom columns">
                             <input type="text">
                         </div>
                     </div>

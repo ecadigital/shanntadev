@@ -25,8 +25,8 @@
                         <h1>CONTINUE AS A GUEST</h1>
                     </a>
                 </section>
-                <section class="large-6 columns">
-                    <h1>EXISTING MEMBER</h1>
+                <section class="large-6 columns ta-center">
+                    <h1 class="cart0head">EXISTING MEMBER</h1>
                     <div>
                         If you already have an account, please sign in below
                         <br>
@@ -47,6 +47,9 @@
                     </div>
                     <div class="large-12 columns ta-center">
                         <button><b>SIGN IN</b></button>
+                    </div>
+                    <div class="large-12 columns noMember">
+                        NOT A MEMBER? <a href="#">REGISTER HERE</a>
                     </div>
                 </section>
                 <div class="clearfix"></div>

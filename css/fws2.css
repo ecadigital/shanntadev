@@ -315,12 +315,12 @@ body .fws2 * {
 
 /* ------------------------------- 4. Custom -------------------------------------- */
 
-body {
+/*body {
     padding:0;
     margin:0;
     background:#000;
 }
-
+*/
 #fws2-head {
     background:#FFF;
 }

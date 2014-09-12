@@ -4,7 +4,7 @@
                     <li><a href="home.php">Home</a></li>
                     <li><a href="lookbook.php">Lookbook</a></li>
                     <li><a href="diy.php">Jewelry D.I.Y</a></li>
-                    <li><a href="products.php">Products</a></li>
+                    <li class="productSelection"><a href="products.php">Products</a></li>
                     <li class="logo"><a href="home.php"><img src="img/logo.png" alt=""></a></li>
                     <li><a href="collection.php">Collection</a></li>
                     <li><a href="news.php">News &amp; Event</a></li>
@@ -19,7 +19,7 @@
                         <li><a href="home.php">Home</a></li>
                         <li><a href="lookbook.php">Lookbook</a></li>
                         <li><a href="diy.php">Jewelry D.I.Y</a></li>
-                        <li class="afterLarge"><a href="products.php">Products</a></li>
+                        <li class="productSelection" class="afterLarge"><a href="products.php">Products</a></li>
                         <li><a href="collection.php">Collection</a></li>
                         <li class="large"><a href="news.php">News &amp; Event</a></li>
                         <li class="afterLargeTwo"><a href="aboutus.php">About us</a></li>
@@ -89,4 +89,11 @@
                 </nav><!-- menus -->
             </nav> <!-- small-topmenu -->
             <div class="clearfix"></div>
-        </header>
+            <div id="productPopup">
+                <img src="<?php echo __images__;?>/assets/collection-product-1.png" alt="">
+                <img src="<?php echo __images__;?>/assets/collection-product-2.png" alt="">
+                <img src="<?php echo __images__;?>/assets/collection-product-3.png" alt="">
+                <img src="<?php echo __images__;?>/assets/collection-product-4.png" alt="">
+                <img src="<?php echo __images__;?>/assets/collection-product-5.png" alt="">
+            </div>
+        </header><!-- #topmenu -->

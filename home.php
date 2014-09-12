@@ -106,11 +106,11 @@
             </section><!-- catagories -->
             <section class="small-12 columns catagories">
                 <nav class="paginationCatagorieSlider row show-for-medium-up">
-                    <div class="medium-2 columns item arrow_box " data-merge="1"><a href="#">CHARMS</a></div>
-                    <div class="medium-2 columns item arrow_box " data-merge="1"><a href="#">BRACELETS</a></div>
-                    <div class="medium-2 columns item arrow_box " data-merge="1"><a href="#">RINGS</a></div>
-                    <div class="medium-2 columns item arrow_box active" data-merge="1"><a href="#">EARRINGS</a></div>
-                    <div class="medium-4 columns item arrow_box " data-merge="2"><a href="#">NECKLACES AND PENDANTS</a></div>
+                    <div class="medium-2 columns item arrow_box " data-merge="1"><a href="javascript:void(0);">CHARMS</a></div>
+                    <div class="medium-2 columns item arrow_box " data-merge="1"><a href="javascript:void(0);">BRACELETS</a></div>
+                    <div class="medium-2 columns item arrow_box " data-merge="1"><a href="javascript:void(0);">RINGS</a></div>
+                    <div class="medium-2 columns item arrow_box active" data-merge="1"><a href="javascript:void(0);">EARRINGS</a></div>
+                    <div class="medium-4 columns item arrow_box " data-merge="2"><a href="javascript:void(0);">NECKLACES AND PENDANTS</a></div>
                     <div class="" data-merge="1"></div>
                 </nav>
                 <div class="catagorieSlider">

@@ -61,6 +61,11 @@ $(document).ready(function(){
 		$(this).removeClass("active");
 		$(this).parent().children(".sub").removeClass("active");
 	});
+	$(".productSelection > a").click(function(e){
+		// e.preventDefault();
+		alert(1);
+		return false;
+	});
 	// if ($(".page header:has(hr)").length > 0){
 	// 	$(".headImage").attr("style","top: -7.3125em;");
 	// }
