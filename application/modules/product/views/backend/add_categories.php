@@ -118,14 +118,12 @@
             <hr/>
            	<div class="clear"></div> 
             
-			<h4>แบนเนอร์หน้าสินค้า</h4>
-			
+			<h4>แบนเนอร์หน้าสินค้า</h4>			
 			
 	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
 				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
 				$lang_id = $lang['language_id'];
-			?>
-			
+			?>			
 				<div class="formRow">
 					<div class="grid2">
 						<label class="lbl fl" for="product_categories_banner_keyhead[<?php echo $lang_id?>]">ข้อความหลัก <?php echo $lang_icon;?></label>
@@ -143,8 +141,7 @@
 						<textarea id="product_categories_banner_keymessage[<?php echo $lang_id?>]" name="product_categories_banner_keymessage[<?php echo $lang_id?>]" style="height:40px; width:389px;"></textarea>
 					</div>
 				</div>   
-				<div class="clear" style="height:5px;"></div>
-				
+				<div class="clear" style="height:5px;"></div>				
             <?php }}?>        
 			
             <div class="formRow">
@@ -203,7 +200,7 @@
 $(document).ready(function(){
 	$("#product_categories_form").validate({
 		rules: {
-			'product_categories_name' : {
+			'product_categories_name[1]' : {
 				required: true,
 			},
 	   },

@@ -25,7 +25,7 @@ else if(strpos(DIR_URI,DIR_ROOT.'main/backend/index/p/10')===0) 	$active_order =
 else if(strpos(DIR_URI,DIR_ROOT.'main/backend/contact')===0) 	$active_contactus = 'active';
 else if(strpos(DIR_URI,DIR_ROOT.'jewely')===0) 			$active_other = 'active';
 else if(strpos(DIR_URI,DIR_ROOT.'faq')===0) 			$active_other = 'active';
-else if(strpos(DIR_URI,DIR_ROOT.'main')===0) 			$active_other = 'active';
+else if(strpos(DIR_URI,DIR_ROOT.'lookbook')===0) 			$active_other = 'active';
 else if(strpos(DIR_URI,DIR_ROOT.'admin')===0) 			$active_admin = 'active';
 
 else $active_home = 'active';
@@ -80,7 +80,7 @@ else $active_home = 'active';
         <ul>
 			<li><a href="<?php echo DIR_ROOT?>jewely/backend/index"><img src="<?php echo DIR_PUBLIC?>images/icons/color/jewely.png" height="20" /> หน้า Jewely D.I.Y</a></li>
 			<li><a href="<?php echo DIR_ROOT?>faq/backend/index"><img src="<?php echo DIR_PUBLIC?>images/icons/color/comment.png" height="20" /> หน้า FAQ</a></li>
-			<li><a href="<?php echo DIR_ROOT?>main/backend/lookbook"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" /> หน้า Lookbook</a></li>
+			<li><a href="<?php echo DIR_ROOT?>lookbook/backend/index"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" /> หน้า LOOKBOOK</a></li>
 			<li><a href="<?php echo DIR_ROOT?>main/backend/policy"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" /> หน้า Policy</a></li>
 			<li><a href="<?php echo DIR_ROOT?>main/backend/shipping"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" /> หน้า Shipping</a></li>>
             <li><a href="<?php echo DIR_ROOT?>main/backend/intro"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" />  จัดการหน้า Intro </a></li>

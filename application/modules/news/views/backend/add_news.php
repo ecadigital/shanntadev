@@ -15,27 +15,40 @@
 	<iframe frameborder="0" width="0" height="0" id="myIframe" name="myIframe"></iframe>
 	<form class="formElement" method="post" id="news_form" name="news_formAdd" target="myIframe" action="<?php echo DIR_ROOT?>news/backend/add_news">
         <div class="widget">
-                        
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="news_name"><?php echo lang('news_name');?></label>
-                    <span class="required"></span>
-                </div>
-                <div class="grid5">
-                    <input type="text" id="news_name" name="news_name">
+                                             
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+			?>
+			<div class="formRow">
+                <div class="grid12">
+                    <fieldset>
+                        <legend><?php echo $lang['language_desc'].$lang_icon;?></legend>						
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="news_name[<?php echo $lang_id?>]"><?php echo lang('news_name');?></label>
+								<?php if($lang_id==1) echo '<span class="required"></span>'; ?>
+							</div>
+							<div class="grid5">
+								<input type="text" id="news_name[<?php echo $lang_id?>]" name="news_name[<?php echo $lang_id?>]">
+							</div>
+						</div>
+						<div class="clear"></div>
+						
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="news_detail[<?php echo $lang_id?>]"><?php echo lang('news_detail');?></label>
+							</div>
+							<div class="grid9">
+								<textarea id="news_detail[<?php echo $lang_id?>]" name="news_detail[<?php echo $lang_id?>]" class="mceEditor"></textarea>
+							</div>
+						</div>
+						<div class="clear" style="height:10px;"></div>
+                    </fieldset>
                 </div>
             </div>
-           	<div class="clear"></div>
-            
-            <div class="formRow">
-                <div class="grid2">
-                    <label class="lbl fl" for="news_detail"><?php echo lang('news_detail');?></label>
-                </div>
-                <div class="grid9">
-                    <textarea id="news_detail" name="news_detail" class="mceEditor"></textarea>
-                </div>
-            </div>
-           	<div class="clear" style="height:10px;"></div>
+            <div class="clear" style="height:10px;"></div>
+            <?php }}?>
             
             <div class="formRow">
                 <div class="grid11">
@@ -59,7 +72,7 @@
 $(document).ready(function(){
 	$("#news_form").validate({
 		rules: {
-			'news_name' : {
+			'news_name[1]' : {
 				required: true,
 			},
 		},

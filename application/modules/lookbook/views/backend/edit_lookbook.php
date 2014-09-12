@@ -1,18 +1,19 @@
 <?php if(isset($redirect)){ echo $redirect; }else{ ?>
-<h3>หน้า Lookbook</h3>
+
+<h3>แก้ไข LOOKBOOK</h3>
 <div>
 	<a href="<?php echo DIR_ROOT?>admin/admin/index">หน้าแรก</a>&nbsp;&nbsp;>&nbsp;&nbsp;
-	จัดการหน้าอื่นๆ&nbsp;&nbsp;>&nbsp;&nbsp;
-	หน้า Lookbook
+    <a href="<?php echo DIR_ROOT?>lookbook/backend/index"> LOOKBOOK</a>&nbsp;&nbsp;>&nbsp;&nbsp;
+	แก้ไข LOOKBOOK
 </div>
 
 <div id="showWarning" style="height:40px;"></div>
 
 <div class="fluid">
 	<iframe frameborder="0" width="0" height="0" id="myIframe" name="myIframe"></iframe>
-	<form class="formElement" method="post" id="main_form" name="main_formEdit" target="myIframe" action="<?php echo DIR_ROOT?>main/backend/lookbook">
-        <div class="widget">
-			
+	<form class="formElement" method="post" id="lookbook_form" name="lookbook_formEdit" target="myIframe" action="<?php echo DIR_ROOT?>lookbook/backend/edit_lookbook">
+        <div class="widget">  
+                      
 	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
 				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
 				$lang_id = $lang['language_id'];
@@ -25,11 +26,11 @@
                 <div class="grid2">
 					<?php 
 					$file_img = 'images/icons/file/nofile.png';
-                    if(!empty($listEditMain['main_lookbook_path'][$lang_id])){
-                        $file_img = 'upload/main/original/'.basename($listEditMain['main_lookbook_path'][$lang_id]);
+                    if(!empty($listEditLookbook['lookbook_path'][$lang_id])){
+                        $file_img = 'upload/lookbook/original/'.basename($listEditLookbook['lookbook_path'][$lang_id]);
                     }
                     ?>
-                    <input type="file" class="file_upload" id="file_upload_<?php echo $lang_id?>" name="file_upload_<?php echo $lang_id;?>">
+                    <input type="file" class="file_upload" id="file_upload_<?php echo $lang_id?>" name="file_upload[<?php echo $lang_id;?>]">
                     <input type="hidden" name="image_path_<?php echo $lang_id;?>" id="image_path_<?php echo $lang_id;?>" />
                     <div id="wrap_img_<?php echo $lang_id;?>" style="text-align:center;" class="wrap_img"><img src="<?php echo DIR_PUBLIC.$file_img?>" style="max-width:726px; max-height:213px;"/></div>
                     <div class="uploading" id="uploading_<?php echo $lang_id;?>" style="width:726px; height:147px; position:absolute; top:0px; display:none; "></div>
@@ -43,13 +44,13 @@
             </div>
            	<div class="clear" style="height:10px;"></div> 
 			<?php }}?>
-			
-            <div class="formRow">
+                        
+            <div class="formRow">   
+                <input type="hidden" id="lookbook_id" name="lookbook_id" value="<?php echo $listEditLookbook['lookbook_id'];?>"></input>
                 <input type="hidden" id="captcha" name="captcha" value=""></input>
                 <input type="submit" class="button" value="<?php echo lang('web_save');?>"></input>
-			</div>
-		</div>
-	</form>
+            </div>
+    </form>
 </div>
 <style>
 .uploadify,.uploadify-button,.swfupload{ margin-top:35px; }

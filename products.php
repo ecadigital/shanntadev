@@ -17,6 +17,11 @@ $redirect = "product.php";?>
         <?php require "inc/layouts/browserhappy.php"; ?>
         <?php require "inc/layouts/topcartmenu.php"; ?>
         <?php require "inc/layouts/topmenu.php"; ?>
+
+		<script src="<?php echo DIR_PUBLIC;?>js/jquery-1.7.min.js"></script>
+		<script src="<?php echo DIR_PUBLIC;?>js/script.js"></script>
+		<script src="<?php echo DIR_PUBLIC;?>module/product/frontend/js/script.js"></script>
+		
         <article class="row show-for-medium-up catagorieBanner">
             <section class="medium-6 large-7 medium-push-6 large-push-5 columns">
                 <img src="<?php echo __images__;?>/demo/product3.png" alt="">
@@ -29,8 +34,9 @@ $redirect = "product.php";?>
             </section>
         </article><!-- catagorieBanner -->
         <div id="content" class="row">
+			<script>loadListProduct('<?php echo $defaultLang;?>','<?php echo '';//$product_categories_id;?>');</script>
 			<?php 
-			$num=0;
+			/*$num=0;
 			$arrList = $mysqli->query("SELECT 	product.product_id,product.product_price,
 												product_lang.product_name,
 												product_lang.product_detail 
@@ -153,17 +159,17 @@ $redirect = "product.php";?>
 								</div>
 							</div>
 						</section>
-					</article>';*/
+					</article>';
 				
 				}
-			}
+			}*/
 			?>		
 		</div><!-- row -->
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
         <script type="text/javascript" src="<?php echo __js__; ?>/jquery.colorbox-min.js"></script>
         <script type="text/javascript" src="<?php echo __js__; ?>/jquery.zoom.min.js"></script>
-        <!-- javascript here -->
+        <!-- javascript here 
         <script type="text/javascript">
             $(document).ready(function(){
                 if(Modernizr.mq('only screen and (min-width: 40.063em)') || $("html").hasClass("lt-ie9")){
@@ -192,6 +198,6 @@ $redirect = "product.php";?>
                     });
                 }
             });
-        </script>
+        </script>-->
     </body>
 </html>
