@@ -8,7 +8,7 @@
                 <a href="#" class="button gray"><strong>NEWSLETTER SUBSCRIBE</strong></a>
             </div>
             <div class="medium-12 columns bottom">
-                <a href="#">Member Register</a> : <a href="#">FAQs</a> : <a href="#">Help</a> : <a href="#">Order and Payment</a> : <a href="#">Shipping information</a> : <a href="#">Refunnd Policy</a> : <a href="#">Terms of Service</a>
+                <a href="#">Member Register</a> : <a href="#">FAQs</a> : <a href="#">Help</a> : <a href="#">Order and Payment</a> : <a href="shippinginfo.php">Shipping information</a> : <a href="#">Refunnd Policy</a> : <a href="termsofservice.php">Terms of Service</a>
                 <nav class="icon-wrapper">
                     <a href="mailto:#"><i class="fa fa-envelope icons"></i></a>
                     <a href="#"><i class="fa fa-facebook-square icons"></i></a>
