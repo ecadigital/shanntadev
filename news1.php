@@ -15,6 +15,9 @@
         <div id="content" class="row page">
             <header>
                 <h1>NEWS &amp; EVENT</h1>
+                <div class="headImage">
+                    <img src="<?php echo __images__;?>/contactus-h.png" alt="">
+                </div>
                 
             </header>
             <div id="news1"><img src="img/demo/news1.jpg"></div>
