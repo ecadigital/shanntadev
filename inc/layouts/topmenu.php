@@ -31,13 +31,13 @@
             <nav id="small-topmenu" class="show-for-small-only sticky">
                 <div class="row" data-topbar data-options="sticky_on: small">
                     <div class="small-2 columns ta-left">
-                        <a id="userInterface" href="javascript:void(0);"><i class="fa fa-user icons"></i></a>
+                        <a id="userInterface" href="#userInterfaceDetail"><i class="fa fa-user icons"></i></a>
                     </div>
                     <div class="small-8 columns ta-center">
                         <a href="home.php"><img src="<?php echo __images__; ?>/logo.png" alt=""></a>
                     </div>
                     <div class="small-2 columns ta-right">
-                        <a id="navigator" href="javascript:void(0);"><i class="fa fa-navicon icons"></i></a>
+                        <a id="navigator" href="#navigatorDetail"><i class="fa fa-navicon icons"></i></a>
                     </div>
                 </div> <!-- row -->
                 <nav class="menus">
@@ -53,8 +53,9 @@
                             <div class="small-5 columns ta-right"> Member Register </div>
                             <div class="small-2 columns"> : </div>
                             <div class="small-5 columns ta-left">
-                                <a href="#">FAQs</a> : <a href="#">Help</a></li>
+                                <a href="#">FAQs</a> : <a href="#">Help</a>
                             </div>
+                        </li>
                         <li class="row noBorder">
                             <!-- Order and Payment : <a href="#">Shipping Infomation</a> -->
                             <div class="small-5 columns ta-right"> Order and Payment </div>
@@ -90,10 +91,38 @@
             </nav> <!-- small-topmenu -->
             <div class="clearfix"></div>
             <div id="productPopup">
-                <img src="<?php echo __images__;?>/assets/collection-product-1.png" alt="">
-                <img src="<?php echo __images__;?>/assets/collection-product-2.png" alt="">
-                <img src="<?php echo __images__;?>/assets/collection-product-3.png" alt="">
-                <img src="<?php echo __images__;?>/assets/collection-product-4.png" alt="">
-                <img src="<?php echo __images__;?>/assets/collection-product-5.png" alt="">
+                <div class="large-items-2 columns">
+                    <a href="#" data-self="<?php echo __images__;?>/assets/collection-product-1-hover.png" data-preview="<?php echo __images__;?>/demo/product3.png">
+                        <img src="<?php echo __images__;?>/assets/collection-product-1.png" alt="">
+                        <span>CHARM</span>
+                    </a>
+                </div>
+                <div class="large-items-2 columns">
+                    <a href="#" data-self="<?php echo __images__;?>/assets/collection-product-2-hover.png" data-preview="<?php echo __images__;?>/demo/product3.png">
+                        <img src="<?php echo __images__;?>/assets/collection-product-2.png" alt="">
+                        <span>BRACELETS</span>
+                    </a>
+                </div>
+                <div class="large-items-2 columns">
+                    <a href="#" data-self="<?php echo __images__;?>/assets/collection-product-3-hover.png" data-preview="<?php echo __images__;?>/demo/product3.png">
+                        <img src="<?php echo __images__;?>/assets/collection-product-3.png" alt="">
+                        <span>RINGS</span>
+                    </a>
+                </div>    
+                <div class="large-items-2 columns">
+                    <a href="#" data-self="<?php echo __images__;?>/assets/collection-product-4-hover.png" data-preview="<?php echo __images__;?>/demo/product3.png">
+                        <img src="<?php echo __images__;?>/assets/collection-product-4.png" alt="">
+                        <span>ERRINGS</span>
+                    </a>
+                </div>
+                <div class="large-items-2 columns">
+                    <a href="#" data-self="<?php echo __images__;?>/assets/collection-product-5-hover.png" data-preview="<?php echo __images__;?>/demo/product3.png">
+                        <img src="<?php echo __images__;?>/assets/collection-product-5.png" alt="">
+                        <span>NECKLACES AND PENDANTS</span>
+                    </a>
+                </div>
+                <div class="large-items-3 columns preview">
+                    <img src="<?php echo __images__;?>/demo/product3.png" alt="">
+                </div>
             </div>
         </header><!-- #topmenu -->

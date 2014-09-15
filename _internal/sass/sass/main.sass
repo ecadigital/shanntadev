@@ -169,8 +169,58 @@
 		width: 100%
 		max-width: 1000px
 		position: absolute
-		z-index: 9999
+		z-index: 90
+		overflow: hidden
+		background-color: #25161b
+		border-top: 2px solid #ACACAC
+		border-bottom: 2px solid #ACACAC
+		// padding: 2em 0
 		display: none
+		a
+			display: block
+			color: #7B797A
+			&:hover
+				color: #fff
+		img
+			width: 100%
+			height: auto
+		span
+			display: block
+			text-align: center
+			font-size: 12px
+			font-size: px-to-rem(12)
+		@media #{$small-up}
+			display: none
+		@media #{$medium-up}
+			.large-items-2,.large-items-3
+				margin-top: 0.5em
+				margin-bottom: 0.5em
+				padding-top: 1em
+				height: 123px
+				border-left: 2px dotted #7B797A
+				&:first-child
+					border: none
+			.large-items-2
+				width: 13%
+			.large-items-3
+				width: 35%
+			.preview
+				// margin: 0
+				padding: 0
+				// position: relative
+				img
+					display: block
+					position: absolute
+					width: 348px
+					height: 139px
+					top: -8px
+					bottom: 0px
+			// &.columns
+			// 	$padding: (left: 30,right: 30)
+			// 	padding-left: #{map-get($padding,"left")}+px
+			// 	padding-left: px-to-rem(map-get($padding,"left"))
+			// 	padding-right: #{map-get($padding,"right")}+px
+			// 	padding-right: px-to-rem(map-get($padding,"right"))
 	@media #{$small-only}
 		.inline-list
 			// font-size: getFontSize("small")+px
