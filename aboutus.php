@@ -18,7 +18,7 @@
                 <hr>
 
                 <div class="headImage">
-                    <img src="<?php echo __images__;?>/aboutus-h.png" alt="">
+                    <!-- <img src="<?php echo __images__;?>/aboutus-h.png" alt=""> -->
                 </div>
             </header>
             <div class="small-12 large-8 columns">
@@ -28,11 +28,11 @@
                 just a few years has made the exceptional journey from a local Danish jeweler to a world-leading<br>
                 international jewelry company, with sales in more than 70 countries.</p>    
 
-                <h1 class="x4">{</h1><h1>SHANNTA JEWELRY IS THE...</h1>
+                <h1 class="x4"></h1><h1>SHANNTA JEWELRY IS THE...</h1>
                 <p>manufactures and markets hand-finished and modern jewelry made<br>style="color:red"
                 from genuine materials at affordable prices. PANDORA jewelry is sold<br>
                 in more than 80 countries on six continents is through approximately<br>
-                10,000 points of sale, including approximately 1,100 concept stores.</p> }
+                10,000 points of sale, including approximately 1,100 concept stores.</p>
                 <hr>
                 <h1 class="hleft" style="font-weight:bold;color:#d8d2d5">1980-1999</h1><h2 class="hleft">The early years</h2>
                 <div class='clearfix'></div>
