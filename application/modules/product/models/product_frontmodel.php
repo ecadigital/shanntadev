@@ -83,5 +83,42 @@ class Product_frontmodel extends CI_Model {
 		return $result['product_images'];
 	}
 
+	
+	
+	public function listCategories($lang_id){
+		
+		$select = $this->db->select(array("product_categories.product_categories_id",
+										"product_categories.product_categories_home_path",
+										"product_categories.product_categories_home_position",
+										"product_categories_lang.product_categories_name",
+										"product_categories_lang.product_categories_home_keyhead",
+										"product_categories_lang.product_categories_home_keymessage"))
+				->from($this->tbl_product_categories_lang)
+				->join($this->tbl_product_categories,"$this->tbl_product_categories.product_categories_id=$this->tbl_product_categories_lang.product_categories_id","left")
+				->where("$this->tbl_product_categories_lang.language_id",$lang_id);
+		$this->db->order_by("$this->tbl_product_categories.product_categories_seq","ASC");
+		$query = $this->db->get();
+		$result = $query->result_array();
+		
+		return $result;
+	}
+	public function getCategories($lang_id,$product_categories_id){
+		
+		$select = $this->db->select(array("product_categories.product_categories_id",
+										"product_categories.product_categories_banner_path",
+										"product_categories.product_categories_banner_position",
+										"product_categories_lang.product_categories_name",
+										"product_categories_lang.product_categories_banner_keyhead",
+										"product_categories_lang.product_categories_banner_keymessage"))
+				->from($this->tbl_product_categories_lang)
+				->join($this->tbl_product_categories,"$this->tbl_product_categories.product_categories_id=$this->tbl_product_categories_lang.product_categories_id","left")
+				->where("$this->tbl_product_categories_lang.language_id",$lang_id)
+				->where("$this->tbl_product_categories.product_categories_id",$product_categories_id)
+				->limit(1);
+		$query = $this->db->get();
+		$result = $query->row_array();
+		
+		return $result;
+	}
 }
 ?>

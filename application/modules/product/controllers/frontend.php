@@ -31,6 +31,31 @@ class Frontend extends CI_Controller{
 		$this->view['listProduct'] = $this->model->listProduct($lang_id,$product_categories_id='');
 		$this->layout->view('/frontend/list_product', $this->view);
 	}
+	public function list_menuhover()
+	{
+		$this->layout->disableLayout();
+		$lang_id = $this->request->getParam('lang');
+		$this->view['listCategories'] = $this->model->listCategories($lang_id);
+		$this->layout->view('/frontend/list_menuhover', $this->view);
+	}
+	public function list_slidecategories()
+	{
+		$this->layout->disableLayout();
+		$lang_id = $this->request->getParam('lang');
+		$this->view['listCategories'] = $this->model->listCategories($lang_id);
+		$this->layout->view('/frontend/list_slidecategories', $this->view);
+	}
+	public function get_bannercategories()
+	{
+		$this->layout->disableLayout();
+		$lang_id = $this->request->getParam('lang');
+		$product_categories_id = $this->request->getParam('cat');
+		$this->view['getCategories'] = $this->model->getCategories($lang_id,$product_categories_id);
+		$this->layout->view('/frontend/get_bannercategories', $this->view);
+	}
+	
+	
+	
 	public function update_cart() // update เฉพาะจำนวนสินค้า
 	{
 		$this->layout->disableLayout();

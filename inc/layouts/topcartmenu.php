@@ -1,7 +1,11 @@
+
 <div id="topcartmenu" class="show-for-medium-up sticky">
 	<div class="row" data-topbar data-options="sticky_on: ['medium','large']">
 		<div class="medium-3 large-2 columns">
-			LANGUAGE : <a href="#">TH</a> | <a href="#">EN</a> | <a href="#">CN</a> 
+			<?php echo strtoupper($Array_lang['language']);?> : 
+			<a href="<?php echo (isset($_GET['id'])) ? $_SERVER['PHP_SELF'].'?id='.$_GET['id'].'&lang=1' : $_SERVER['PHP_SELF'].'?lang=1';?>">TH</a> | 
+			<a href="<?php echo (isset($_GET['id'])) ? $_SERVER['PHP_SELF'].'?id='.$_GET['id'].'&lang=2' : $_SERVER['PHP_SELF'].'?lang=2';?>">EN</a> | 
+			<a href="<?php echo (isset($_GET['id'])) ? $_SERVER['PHP_SELF'].'?id='.$_GET['id'].'&lang=3' : $_SERVER['PHP_SELF'].'?lang=3';?>">CN</a> 
 		</div>
 		<div class="medium-3 columns ta-center">
 			<div class="medium-10 searchBox">

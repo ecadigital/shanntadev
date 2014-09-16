@@ -1,4 +1,5 @@
-<?php require "inc/init.php"; ?>
+<?php require "inc/init.php";
+$redirect = "home.php";?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -113,7 +114,8 @@
                     <div class="medium-4 columns item arrow_box " data-merge="2"><a href="javascript:void(0);">NECKLACES AND PENDANTS</a></div>
                     <div class="" data-merge="1"></div>
                 </nav>
-                <div class="catagorieSlider">
+                <div class="catagorieSlider" id="slideCategories">
+				<!--
                     <article class="item">
                         <section class="small-12 medium-7 medium-push-5 columns">
                             <img src="<?php echo __images__;?>/demo/product3.png" alt="">
@@ -169,18 +171,27 @@
                         </section>
                         <div class="clearfix"></div>
                     </article>
-                </div><!-- productSlider -->
+                -->
+				</div><!-- productSlider -->
             </section><!-- products -->
             <div class="clearfix"></div>
         </div><!-- row -->
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
+		
+		<script>
+			loadListSlideCategories('<?php echo $defaultLang;?>');
+		</script>
+		
         <script type="text/javascript" src="<?php echo __js__; ?>/owl.carousel.min.js"></script>
         <script src="js/imagesloaded.js"></script>
         <script src="js/jquery.easing.js"></script>
         <script src="js/fws2.js"></script>
         <script type="text/javascript">
-            $(document).ready(function(){
+            /*
+			change to file public/module/product/frontend/js/script.js
+			
+			$(document).ready(function(){
                 var sync1 = $(".catagorieSlider");
                 var sync2 = $(".paginationCatagorieSlider");
                 var flag = false;
@@ -205,7 +216,8 @@
                         $(this).addClass("active");
                 }).data('owl.carousel');
             });
-        </script>
+        */
+		</script>
         <script type='text/javascript' src='http://www.thecarbontree.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.45.0-2013.10.17'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
@@ -213,6 +225,7 @@ var _wpcf7 = {"loaderUrl":"http:\/\/www.thecarbontree.com\/wp-content\/plugins\/
 /* ]]> */
 </script>
 <script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scripts3.5.4.js'></script>
+
 
     </body>
 </html>

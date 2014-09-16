@@ -1,4 +1,4 @@
-<?php
+<?php 
 //error handler function
 function ErrorMessage($errno, $errstr) {
   echo "<div class=\"error\"><b>Error:</b> [$errno] $errstr</div>";
@@ -14,4 +14,6 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 define('__css__', 'css');
 define('__js__', 'js');
 define('__images__','img');
+
+require_once("public/config/config.php.inc");
 ?>

@@ -33,8 +33,9 @@ class Productmodel extends CI_Model {
         $admin = $this->session->userdata('admin');
 		$this->member= $this->session->userdata('member');
 		@$this->admin_id = $admin->admin_id;
-		$Array_ip = explode('.',$this->bflibs->getIP());
-		$this->ip = implode('_',$Array_ip);
+		$this->ip = $this->bflibs->getIP();
+		//$Array_ip = explode('.',$this->bflibs->getIP());
+		//$this->ip = implode('_',$Array_ip);
 		$this->defaultlang = $this->bflibs->getDefaultLangId();
 	}
 	
@@ -697,7 +698,7 @@ class Productmodel extends CI_Model {
 		$temp = $dir_root.'temp/';
 		if(!file_exists($temp)){mkdir($temp);}
 		//$path = 'public/upload/'.$module.'/temp/'.$this->ip.'/';
-		echo $dir_file = $temp.$this->ip.'/';
+		$dir_file = $temp.$this->ip.'/';
 		if(!file_exists($dir_file)){mkdir($dir_file,0755,true);}
 		
 		$config['upload_path'] = $dir_file;
@@ -735,7 +736,7 @@ class Productmodel extends CI_Model {
 					$source = DIR_FILE.'public/upload/'.$this->request->getModuleName().'/temp/'.$this->ip.'/'.$file;
 	
 					copy($source, $__dest);
-					unlink($source);
+					//unlink($source);
 					if($this->imagesResize($__dest))$files[$key] = $this->updatePath('public/upload/'.$this->request->getModuleName().'/thumbnails/'.$file_name,$product_id);
 
 					//copy($source, $__dest);
@@ -762,7 +763,7 @@ class Productmodel extends CI_Model {
 
 			copy($source, $__dest);
 			if($this->imagesResize($__dest,'thumbnails'))$file = $this->updatePath_categories('public/upload/'.$this->request->getModuleName().'/thumbnails/'.$file_name,$product_categories_id,$type);
-			unlink($source);
+			//unlink($source);
 		}
 	}
 	private function imagesResize($pathImages,$folder='thumbnails',$width=300,$height=300,$ratio=TRUE){

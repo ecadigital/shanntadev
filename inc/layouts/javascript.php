@@ -5,3 +5,11 @@
         <script type="text/javascript" src="<?php echo __js__; ?>/plugins.js"></script>
         <script type="text/javascript" src="<?php echo __js__; ?>/main.js"></script>
         
+
+<!--<script src="<?php echo DIR_PUBLIC;?>js/jquery-1.7.min.js"></script>-->
+<script src="<?php echo DIR_PUBLIC;?>js/script.js"></script>
+<script src="<?php echo DIR_PUBLIC;?>module/product/frontend/js/script.js"></script>
+
+<script>
+	loadListMenuHover('<?php echo $defaultLang;?>');
+</script>
