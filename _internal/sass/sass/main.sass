@@ -928,6 +928,7 @@ footer
 	padding-top: px-to-em(60)
 	min-height: px-to-em(400)
 	color: getColor("text")
+	overflow: hidden
 	// color: #2D1A20
 	header
 		// border-bottom: 5px dotted getColor("baseTwo")
@@ -1101,8 +1102,13 @@ h2.hright
 .hright
 	float: right
 #news-nav
-	height: 30px
 	width: 100%
+	.columns
+		padding: 0
+		margin-top: 10px
+	.rightContent
+		padding-left: 32px
+		padding-left: px-to-rem(32)
 	h2
 		float: left
 		margin-bottom: 0px

@@ -19,7 +19,7 @@
                         <li><a href="home.php">Home</a></li>
                         <li><a href="lookbook.php">Lookbook</a></li>
                         <li><a href="diy.php">Jewelry D.I.Y</a></li>
-                        <li class="productSelection" class="afterLarge"><a href="products.php">Products</a></li>
+                        <li class="afterLarge productSelection"><a href="products.php">Products</a></li>
                         <li><a href="collection.php">Collection</a></li>
                         <li class="large"><a href="news.php">News &amp; Event</a></li>
                         <li class="afterLargeTwo"><a href="aboutus.php">About us</a></li>
@@ -61,7 +61,7 @@
                             <div class="small-5 columns ta-right"> Order and Payment </div>
                             <div class="small-2 columns"> : </div>
                             <div class="small-5 columns ta-left">
-                                <a href="#">Shipping Infomation</a></li>
+                                <a href="#">Shipping Infomation</a>
                             </div>
                         </li>
                         <li class="row noBorder">
@@ -69,7 +69,7 @@
                             <div class="small-5 columns ta-right"> Refunnd Policy </div>
                             <div class="small-2 columns"> : </div>
                             <div class="small-5 columns ta-left">
-                                <a href="#">Terms of Sevice</a></li>
+                                <a href="#">Terms of Sevice</a>
                             </div>
                         </li>
                         <li class="noBorder">

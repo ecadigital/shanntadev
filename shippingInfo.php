@@ -14,11 +14,12 @@
         <?php require "inc/layouts/topmenu.php"; ?>
         <div id="content" class="row page">
             <header>
-                
+                <h1 style="font-weight:bold;color:#d8d2d5">SHIPPING INFORMATION</h1>
+                <hr>
+                <div class="headImage">
+                    <img src="<?php echo __images__;?>/shipping-h.png" alt="">
+                </div>
             </header>
-            
-            <h1 style="font-weight:bold;color:#d8d2d5">SHIPPING INFORMATION</h1>
-             <hr>
             <h2>PROCESSING TIME</h2>
             <div id="clearfix"></div>
             
