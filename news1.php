@@ -20,7 +20,7 @@
                 </div>
                 
             </header>
-            <div id="news1"><img src="img/demo/news1.jpg"></div>
+            <div id="news1" class="arrow_box inner bottom vleft"><img src="img/demo/news1.jpg"></div>
             <h1 style="font-weight:bold;color:#d8d2d5">25.04.2014</h1>
             <div id="clearfix"></div>
             <h3>The PANDORA story is about a company with a distinctive brand and distinctive products A that in just 

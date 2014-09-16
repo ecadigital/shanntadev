@@ -148,6 +148,90 @@ hr
             border-left-color: #fff
             border-width: ($right+2)+px
             margin-top: negative($right+2)+px
+.arrow_box.inner
+    position: relative
+    background: #fff
+    $left: 17
+    $right: 17
+    $top: 17
+    $bottom: 17
+    &.left,&.aright,&.top,&.bottom
+        &:after,&:before
+            top: 100%
+            left: 50%
+            border: solid transparent
+            content: " "
+            height: 0
+            width: 0
+            position: absolute
+            pointer-events: none
+        &:after
+            border-color: rgba(255,255,255, 0)
+            border-top-color: #fff
+            border-width: 16px
+            margin-left: -16px
+        &:before
+            border-color: rgba(255, 255, 255, 0)
+            border-top-color: #ffffff
+            border-width: 19px
+            margin-left: -19px
+    &.left
+        &:after,&:before
+            left: 3%
+            bottom: auto
+            right: auto
+            top: 13%
+            border: solid transparent
+        &:after
+            border-color: rgba(255,255,255, 0)
+            margin: 0
+            border-left-color: #fff
+            border-width: $left+px
+            margin-top: negative($left)+px
+        &:before
+            border-color: rgba(255, 255, 255, 0)
+            margin: 0
+            border-left-color: #fff
+            border-width: ($left+2)+px
+            margin-top: negative($left+2)+px
+    &.aright
+        &:after,&:before
+            left: auto
+            bottom: auto
+            right: 3%
+            top: 13%
+            border: solid transparent
+        &:after
+            border-color: rgba(255,255,255, 0)
+            margin: 0
+            border-right-color: #fff
+            border-width: $right+px
+            margin-top: negative($right)+px
+        &:before
+            border-color: rgba(255, 255, 255, 0)
+            margin: 0
+            border-right-color: #fff
+            border-width: ($right+2)+px
+            margin-top: negative($right+2)+px
+    &.bottom
+        &:after,&:before
+            left: 3%
+            bottom: 0
+            right: auto
+            top: auto
+            border: solid transparent
+        &:after
+            border-color: rgba(255,255,255, 0)
+            margin: 0
+            border-bottom-color: #fff
+            border-width: $right+px
+            margin-top: negative($right)+px
+        &:before
+            border-color: rgba(255, 255, 255, 0)
+            margin: 0
+            border-bottom-color: #fff
+            border-width: ($right+2)+px
+            margin-top: negative($right+2)+px
 input[type=text],textarea
     background-color: #E9E5E6
     &:hover,&:focus

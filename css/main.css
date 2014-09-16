@@ -340,10 +340,113 @@ hr.dotted {
 }
 
 /* line 151, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner {
+  position: relative;
+  background: white;
+}
+/* line 159, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.left:after, .arrow_box.inner.left:before, .arrow_box.inner.aright:after, .arrow_box.inner.aright:before, .arrow_box.inner.top:after, .arrow_box.inner.top:before, .arrow_box.inner.bottom:after, .arrow_box.inner.bottom:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+/* line 168, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.left:after, .arrow_box.inner.aright:after, .arrow_box.inner.top:after, .arrow_box.inner.bottom:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: white;
+  border-width: 16px;
+  margin-left: -16px;
+}
+/* line 173, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.left:before, .arrow_box.inner.aright:before, .arrow_box.inner.top:before, .arrow_box.inner.bottom:before {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: white;
+  border-width: 19px;
+  margin-left: -19px;
+}
+/* line 179, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.left:after, .arrow_box.inner.left:before {
+  left: 3%;
+  bottom: auto;
+  right: auto;
+  top: 13%;
+  border: solid transparent;
+}
+/* line 185, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.left:after {
+  border-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  border-left-color: white;
+  border-width: 17px;
+  margin-top: -17px;
+}
+/* line 191, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.left:before {
+  border-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  border-left-color: white;
+  border-width: 19px;
+  margin-top: -19px;
+}
+/* line 198, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.aright:after, .arrow_box.inner.aright:before {
+  left: auto;
+  bottom: auto;
+  right: 3%;
+  top: 13%;
+  border: solid transparent;
+}
+/* line 204, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.aright:after {
+  border-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  border-right-color: white;
+  border-width: 17px;
+  margin-top: -17px;
+}
+/* line 210, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.aright:before {
+  border-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  border-right-color: white;
+  border-width: 19px;
+  margin-top: -19px;
+}
+/* line 217, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.bottom:after, .arrow_box.inner.bottom:before {
+  left: 3%;
+  bottom: 0;
+  right: auto;
+  top: auto;
+  border: solid transparent;
+}
+/* line 223, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.bottom:after {
+  border-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  border-bottom-color: white;
+  border-width: 17px;
+  margin-top: -17px;
+}
+/* line 229, ../_internal/sass/sass/_def.sass */
+.arrow_box.inner.bottom:before {
+  border-color: rgba(255, 255, 255, 0);
+  margin: 0;
+  border-bottom-color: white;
+  border-width: 19px;
+  margin-top: -19px;
+}
+
+/* line 235, ../_internal/sass/sass/_def.sass */
 input[type=text], textarea {
   background-color: #e9e5e6;
 }
-/* line 153, ../_internal/sass/sass/_def.sass */
+/* line 237, ../_internal/sass/sass/_def.sass */
 input[type=text]:hover, input[type=text]:focus, textarea:hover, textarea:focus {
   background-color: #e9e5e6;
 }
@@ -2012,35 +2115,21 @@ h2.hright {
 }
 
 /* line 1103, ../_internal/sass/sass/main.sass */
-#news2 {
-  width: 49%;
-  height: 320px;
-  float: left;
-}
-
-/* line 1107, ../_internal/sass/sass/main.sass */
 #news-nav {
   height: 30px;
   width: 100%;
 }
-/* line 1110, ../_internal/sass/sass/main.sass */
+/* line 1106, ../_internal/sass/sass/main.sass */
 #news-nav h2 {
   float: left;
   margin-bottom: 0px;
   margin-top: 0px;
 }
-/* line 1114, ../_internal/sass/sass/main.sass */
+/* line 1110, ../_internal/sass/sass/main.sass */
 #news-nav a {
   float: right;
   text-decoration: none;
   color: #d8d2d5;
-}
-
-/* line 1118, ../_internal/sass/sass/main.sass */
-#p-news {
-  float: left;
-  width: 49%;
-  margin-left: 15px;
 }
 
 /* line 1122, ../_internal/sass/sass/main.sass */
