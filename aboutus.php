@@ -18,7 +18,7 @@
                 <hr>
 
                 <div class="headImage">
-                    <!-- <img src="<?php echo __images__;?>/aboutus-h.png" alt=""> -->
+                    <img src="<?php echo __images__;?>/aboutus-h.png" alt="">
                 </div>
             </header>
             <div class="small-12 large-8 columns">

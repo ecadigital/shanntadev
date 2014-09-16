@@ -44,7 +44,7 @@
             </div>
             <div class="medium-12 columns bottom">
                 <div class="ta-left">Copyright 2014 SHANNTA .CO .LTD .All Rights Reserved.</div>
-                <div class="ta-right"><a href="#">Member Register</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">  FAQs</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">Help</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">Order and Payment</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">Shipping information</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">Refunnd Policy</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">Terms of Service</a></div>
+                <div class="ta-right"><a href="#">Member Register</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">  FAQs</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">Help</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">Order and Payment</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="shippingInfo.php">Shipping information</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="#">Refunnd Policy</a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="termsofservice.php">Terms of Service</a></div>
                 
             </div>
         </footer>

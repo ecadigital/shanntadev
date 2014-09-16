@@ -21,8 +21,10 @@
             </header>
             
             <a href="news1.php" class="row">
-                <div class="medium-6 columns arrow_box inner aright news2">
-                    <img src="img/demo/news1.jpg">
+                <div class="medium-6 columns news2">
+                    <div class="arrow_box inner aright">
+                        <img src="img/demo/news1.jpg">
+                    </div>
                 </div>
                 <div class="medium-6 columns p-news">
                     <h1 style="font-weight:bold;color:#d8d2d5">25.04.2014</h1>
@@ -36,8 +38,10 @@
                 </div>
             </a>
             <a href="news1.php" class="row">
-                <div class="medium-6 medium-push-6 columns arrow_box inner left  news2">
-                    <img src="img/demo/news3.jpg">
+                <div class="medium-6 medium-push-6 columns news2">
+                    <div class="arrow_box inner left">
+                        <img src="img/demo/news3.jpg">
+                    </div>
                 </div>
                 <div class="medium-6 medium-pull-6 columns p-news">
                     <h1 style="font-weight:bold;color:#d8d2d5">25.04.2014</h1>
@@ -51,8 +55,10 @@
                 </div>
             </a>
             <a href="news1.php" class="row">
-                <div class="medium-6 columns arrow_box inner aright news2">
-                    <img src="img/demo/news4.jpg">
+                <div class="medium-6 columns news2">
+                    <div class="arrow_box inner aright">
+                        <img src="img/demo/news4.jpg">
+                    </div>
                 </div>
                 <div class="medium-6 columns p-news">
                     <h1 style="font-weight:bold;color:#d8d2d5">25.04.2014</h1>
@@ -66,8 +72,10 @@
                 </div>
             </a>
             <a href="news1.php" class="row">
-                <div class="medium-6 medium-push-6 columns arrow_box inner left news2">
-                    <img src="img/demo/news2.jpg">
+                <div class="medium-6 medium-push-6 columns news2">
+                    <div class="arrow_box inner left">
+                        <img src="img/demo/news2.jpg">
+                    </div>
                 </div>
                 <div class="medium-6 medium-pull-6 columns p-news">
                     <h1 style="font-weight:bold;color:#d8d2d5">25.04.2014</h1>
