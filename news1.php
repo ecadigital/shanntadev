@@ -20,7 +20,7 @@
                 </div>
                 
             </header>
-            <div class="cms">
+            <div class="innerContent cms">
                 <div class="arrow_box inner bottom vleft contentHead">
                     <img src="img/demo/news1.jpg" alt="">
                 </div>

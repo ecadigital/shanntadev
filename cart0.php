@@ -49,7 +49,7 @@
                         <button><b>SIGN IN</b></button>
                     </div>
                     <div class="large-12 columns noMember">
-                        NOT A MEMBER? <a href="#">REGISTER HERE</a>
+                        NOT A MEMBER? <a href="cart1.php">REGISTER HERE</a>
                     </div>
                 </section>
                 <div class="clearfix"></div>

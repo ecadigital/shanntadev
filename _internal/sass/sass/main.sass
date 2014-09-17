@@ -306,6 +306,9 @@
 		padding-top: px-to-em(35)
 #content
 	// background-color: getColor("contentBackground")
+	.innerContent
+		position: relative
+		z-index: 1
 	@media #{$medium-up}
 		margin-bottom: px-to-em(15)
 #contactus
@@ -953,6 +956,7 @@ footer
 		// top: -1em
 		top: -#{px-to-em(65)}
 		right: -2em
+		z-index: 0
 		img
 			display: block
 		@media #{$medium-down}
