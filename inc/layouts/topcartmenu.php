@@ -15,7 +15,8 @@
 		<div class="medium-6 columns ta-right">
 			<ul>
 				<li class="medium-4 large-3 columns right"><a href="#"><i class="fa fa-ban icon"></i> CHECKOUT</a></li>
-				<li class="medium-4 large-3 columns right">
+				<li class="medium-4 large-3 columns right" id="boxWidgetCart">
+					<?php /*?>
 					<a href="#" class=""><i class="fa fa-shopping-cart icon"></i> MY CART [5]</a>
 					<div class="sub selection">
 						<div class="medium-7 columns head">Item</div>
@@ -77,6 +78,7 @@
 							</div>
 						</div>
 					</div><!-- sub selection -->
+					<?php */?>
 				</li>
 				<li class="medium-4 large-3 columns right">
 					<a href="#"><i class="fa fa-user icon"></i> CHARINTIP</a>

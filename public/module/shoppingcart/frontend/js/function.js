@@ -39,3 +39,25 @@ var recalculate = function(){
 	$.post(DIR_ROOT+"shoppingcart/frontend/update_cart",$("form#form_cart").serialize(),function(){  });
 
 }
+
+
+
+function addCart(id){	
+	$.post(DIR_ROOT+"shoppingcart/frontend/add_cart", { 
+		id: id,
+		qty: 1
+	}).done(function( data ) {
+		window.location.reload()
+	});
+	
+}
+function loadWidgetCart(lang_id){
+	$('#boxWidgetCart').html('<div style="text-align:center;"><img src="'+DIR_PUBLIC+'images/icons/loader.gif" /><div>');
+	$.ajax({
+		url : DIR_ROOT+'shoppingcart/frontend/widget/lang/'+lang_id,
+		success: function(data){
+			$('#boxWidgetCart').html(data);
+			
+		}
+	});
+}

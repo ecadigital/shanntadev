@@ -1,5 +1,7 @@
 <?php require "inc/init.php";
 $redirect = "product.php";
+if(!isset($_GET['id'])) echo '<script>window.location="home.php";</script>';
+else{
 $product_categories_id = $_GET['id'];
 ?>
 <!DOCTYPE html>
@@ -33,6 +35,8 @@ $product_categories_id = $_GET['id'];
 			</article> catagorieBanner -->
 		</div>
         <div id="content" class="row">
+			<?php 
+				/*echo '
 				<article class="small-6 large-4 columns end products">
 					<h1>test
 						testddddddddddddd
@@ -72,8 +76,7 @@ $product_categories_id = $_GET['id'];
 					</section>
 				</article>
 				
-			<?php 
-				/*echo '
+			
 					<article class="small-6 large-4 columns '; if($num%3==0) echo 'end '; echo 'products">
 						<h1>'.$list['product_name'].'
 							'.$list['product_detail'].'
@@ -159,3 +162,4 @@ $product_categories_id = $_GET['id'];
         </script>-->
     </body>
 </html>
+<?php }?>

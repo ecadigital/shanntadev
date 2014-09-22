@@ -30,12 +30,17 @@ class Frontend extends CI_Controller{
 			$this->view['num'] = 1;
 			$this->model->setValue($data);
 			$this->model->add_cart();
-			echo "
+			/*echo "
 			<script>
-				window.parent.location='".DIR_ROOT."shipping.php';
-			</script>";
+				window.location.reload();
+			</script>";*/
 		}
 		//$this->layout->view('/frontend/add_cart', $this->view);
+	}
+	public function widget()
+	{
+		$this->layout->disableLayout();
+		$this->layout->view('/frontend/widget', $this->view);
 	}
 	public function cart()
 	{

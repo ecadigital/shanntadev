@@ -1,0 +1,26 @@
+TRUNCATE `product_categories`;
+TRUNCATE `product_categories_lang`;
+
+INSERT INTO `product_categories` (`product_categories_id`, `product_categories_parent_id`, `product_categories_home_position`, `product_categories_home_path`, `product_categories_banner_position`, `product_categories_banner_path`, `product_categories_publish`, `product_categories_hot`, `product_categories_seq`) VALUES
+(1, 0, 'L', 'public/upload/product/thumbnails/categories_home_1_331251da81ecd0ec11e2e3cd66369dc6.png', 'L', 'public/upload/product/thumbnails/categories_banner_1_c041444b3cc7be75f00f220cc8ddfcee.png', '1', 0, 1),
+(2, 0, 'C', 'public/upload/product/thumbnails/categories_home_2_1a5917f3f59ea2b888faad75f900da82.png', 'L', 'public/upload/product/thumbnails/categories_banner_2_a179093006d591de6979370fd6b9dab7.png', '1', 0, 2),
+(3, 0, 'C', 'public/upload/product/thumbnails/categories_home_3_6097bba7f9e43194fcf85b592b1a0700.png', 'L', 'public/upload/product/thumbnails/categories_banner_3_6097bba7f9e43194fcf85b592b1a0700.png', '1', 0, 3),
+(4, 0, 'R', '', 'L', '', '1', 0, 4),
+(5, 0, 'L', '', 'L', '', '1', 0, 5);
+
+INSERT INTO `product_categories_lang` (`product_categories_id`, `language_id`, `product_categories_name`, `product_categories_home_keyhead`, `product_categories_home_keymessage`, `product_categories_banner_keyhead`, `product_categories_banner_keymessage`) VALUES
+(1, 1, 'ตะกรุด', 'ตะกรุด', 'เงินสเตอร์ลิงทอง 14k สีทูโทนและความอุดมสมบูรณ์ของอัญมณีที่สวยงามทำขึ้น PANDORA', '', ''),
+(1, 2, 'CHARMS', 'CHARMS test', 'Sterling silver, 14k gold. two-tone and an abundance of beautiful gemstones make up the PANDORA', 'test', 'Sterling silver, 14k gold. two-tone and an abundance of beautiful gemstones make up the PANDORA'),
+(1, 3, '魅力', '', '', '', ''),
+(2, 1, 'สร้อยข้อมือ', '', '', '', ''),
+(2, 2, 'BRACELETS', 'BRACELETS', 'BRACELETS BRACELETS BRACELETS BRACELETS BRACELETS', '', ''),
+(2, 3, '手镯 ', '', '', '', ''),
+(3, 1, 'แหวน', '', '', '', ''),
+(3, 2, 'RINGS', 'RINGS RINGS', 'RINGS RINGS RINGS RINGS', '', ''),
+(3, 3, '环', '', '', '', ''),
+(4, 1, 'ต่างหู', '', '', '', ''),
+(4, 2, 'EARRINGS', 'EARRINGS', 'Sterling silver, 14k gold. two-tone and an abundance of beautiful gemstones make up the PANDORA', '', ''),
+(4, 3, '耳环', '', '', '', ''),
+(5, 1, 'สร้อยคอและจี้', '', '', '', ''),
+(5, 2, 'NECKLACES AND PENDANTS', '', '', '', ''),
+(5, 3, '项链和吊坠', '', '', '', '');

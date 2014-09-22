@@ -31,7 +31,7 @@ if(!empty($listProduct)){
 			</section>
 			<section class="small-12 columns priceTag">
 				<div class="small-6 columns price"><?php echo number_format($list['product_price']);?> <b><?php echo lang('product_baht');?></b></div>
-				<div class="small-6 columns"><a class="addToCart medium-8 large-7" href="javascript:alert(1);"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('product_addtocart'));?></b></a></div>
+				<div class="small-6 columns"><a class="addToCart medium-8 large-7" href="#"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('product_addtocart'));?></b></a></div>
 			</section>
 			<section class="details" style="width:900px;">
 				<div class="medium-6 columns productDetailTrack">
@@ -42,7 +42,7 @@ if(!empty($listProduct)){
 						<?php echo number_format($list['product_price']);?> <b><?php echo lang('product_baht');?></b>
 					</div>
 					<div class="medium-6 large-4 columns">
-						<a class="addToCart" href="#"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('product_addtocart'));?></b></a>
+						<a class="addToCart" href="javascript:void(0)" onclick="addCart('<?php echo $list['product_id'];?>')"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('product_addtocart'));?></b></a>
 					</div>
 					<div class="clearfix"></div>
 					<hr class="dotted">
