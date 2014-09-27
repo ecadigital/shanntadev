@@ -33,7 +33,7 @@ if(!empty($listCategories)){
 			<section class="small-12 medium-5 medium-pull-<?php echo $pull;?> columns details">
 				<h1><?php echo strtoupper($keyhead);?></h1>
 				<p><strong><?php echo $keymessage;?></strong></p>
-				<a href="products.php?id=<?php echo $categories_id;?>" class="button"><?php echo lang('product_seeall');?></a>
+				<a href="products.php?id=<?php echo $categories_id;?>" class="button"><?php echo lang('seeall');?></a>
 			</section>
 			<div class="clearfix"></div>
 		</article>

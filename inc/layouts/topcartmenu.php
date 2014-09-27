@@ -15,10 +15,10 @@
 		<div class="medium-6 columns ta-right">
 			<ul>
 				<li class="medium-4 large-3 columns right"><a href="#"><i class="fa fa-ban icon"></i> CHECKOUT</a></li>
-				<li class="medium-4 large-3 columns right" id="boxWidgetCart">
+				<li class="medium-4 large-3 columns right">
+					<a href="#" class=""><i class="fa fa-shopping-cart icon"></i> MY CART [<span class="widget_items">0</span>]</a>
+					<div class="sub selection" id="boxWidgetCart">
 					<?php /*?>
-					<a href="#" class=""><i class="fa fa-shopping-cart icon"></i> MY CART [5]</a>
-					<div class="sub selection">
 						<div class="medium-7 columns head">Item</div>
 						<div class="medium-2 columns head">Unit Price</div>
 						<div class="medium-1 columns head">Qty.</div>
@@ -77,8 +77,8 @@
 								<a href="shipping.php" class="button">My Selection</a>
 							</div>
 						</div>
-					</div><!-- sub selection -->
 					<?php */?>
+					</div><!-- sub selection -->
 				</li>
 				<li class="medium-4 large-3 columns right">
 					<a href="#"><i class="fa fa-user icon"></i> CHARINTIP</a>
@@ -99,3 +99,12 @@
 	    </div>
     </div>
 </div>
+
+
+<script src="<?php echo DIR_PUBLIC;?>js/jquery-1.7.min.js"></script>
+<script src="<?php echo DIR_PUBLIC;?>js/script.js"></script>
+<script src="<?php echo DIR_PUBLIC;?>module/product/frontend/js/script.js"></script>
+<script src="<?php echo DIR_PUBLIC;?>module/shoppingcart/frontend/js/function.js"></script>
+<script>
+	loadWidgetCart('<?php echo $defaultLang;?>');
+</script>

@@ -23,6 +23,29 @@ class Frontend extends CI_Controller{
    	 	$this->model->register = $this->view['addRegister'] = 300;
     }
 
+	public function set_sesmember(){		
+		$this->layout->disableLayout();
+		if($data = $this->input->post()){
+			if(isset($data['member_type'])) $_SESSION['order']['member_type']=$data['member_type'];
+			if(isset($data['member_title'])) $_SESSION['order']['member_title']=$data['member_title'];
+			if(isset($data['member_fname'])) $_SESSION['order']['member_fname']=$data['member_fname'];
+			if(isset($data['member_lname'])) $_SESSION['order']['member_lname']=$data['member_lname'];
+			if(isset($data['member_bday'])) $_SESSION['order']['member_bday']=$data['member_bday'];
+			if(isset($data['member_bmonth'])) $_SESSION['order']['member_bmonth']=$data['member_bmonth'];
+			if(isset($data['member_byear'])) $_SESSION['order']['member_byear']=$data['member_byear'];
+			if(isset($data['member_address'])) $_SESSION['order']['member_address']=$data['member_address'];
+			if(isset($data['member_postcode'])) $_SESSION['order']['member_postcode']=$data['member_postcode'];
+			if(isset($data['member_city'])) $_SESSION['order']['member_city']=$data['member_city'];
+			if(isset($data['member_prephone'])) $_SESSION['order']['member_prephone']=$data['member_prephone'];
+			if(isset($data['member_phone'])) $_SESSION['order']['member_phone']=$data['member_phone'];
+			if(isset($data['chk_accept'])) $_SESSION['order']['chk_accept']=$data['chk_accept'];
+			if(isset($data['chk_message'])) $_SESSION['order']['chk_message']=$data['chk_message'];
+			if(isset($data['member_message'])) $_SESSION['order']['member_message']=$data['member_message'];
+			if(isset($data['member_payment'])) $_SESSION['order']['member_payment']=$data['member_payment'];
+			if(isset($data['transfer_bank'])) $_SESSION['order']['transfer_bank']=$data['transfer_bank'];				
+		}
+	}
+	
 	public function add_cart()
 	{
 		$this->layout->disableLayout();
@@ -37,16 +60,83 @@ class Frontend extends CI_Controller{
 		}
 		//$this->layout->view('/frontend/add_cart', $this->view);
 	}
+	public function list_order()
+	{
+		$this->layout->disableLayout();
+		$this->view['id'] = $id = $this->request->getParam('id');
+		$this->view['member_point'] = $this->model->get_member_point($_SESSION['member_id']);
+		$this->layout->view('/frontend/list_order', $this->view);
+	}
 	public function widget()
 	{
 		$this->layout->disableLayout();
+		$this->view['lang'] = $this->request->getParam('lang');
+		$this->view['contents'] = $this->model->getCartRef();
 		$this->layout->view('/frontend/widget', $this->view);
 	}
 	public function cart()
 	{
 		$this->layout->disableLayout();
+		$this->view['lang'] = $this->request->getParam('lang');
 		$this->view['contents'] = $this->model->getCartRef();
 		$this->layout->view('/frontend/cart', $this->view);
+	}
+	public function cart0()
+	{
+		$this->layout->disableLayout();
+		$this->view['lang'] = $this->request->getParam('lang');
+		$this->view['contents'] = $this->model->getCartRef();
+		$this->layout->view('/frontend/cart0', $this->view);
+	}
+	public function cart1()
+	{
+		$this->layout->disableLayout();
+		$this->view['lang'] = $this->request->getParam('lang');
+		$this->view['type'] = $this->request->getParam('type');
+		$this->view['contents'] = $this->model->getCartRef();
+		$this->layout->view('/frontend/cart1', $this->view);
+	}
+	public function cart2()
+	{
+		$this->layout->disableLayout();
+		$this->view['lang'] = $this->request->getParam('lang');
+		$this->view['type'] = $this->request->getParam('type');
+		$this->view['contents'] = $this->model->getCartRef();
+		$this->layout->view('/frontend/cart2', $this->view);
+	}
+	public function cart3()
+	{
+		$this->layout->disableLayout();
+		$this->view['lang'] = $this->request->getParam('lang');
+		$this->view['type'] = $this->request->getParam('type');
+		$this->view['contents'] = $this->model->getCartRef();
+		$this->layout->view('/frontend/cart3', $this->view);
+	}
+	public function cart4()
+	{
+		$this->layout->disableLayout();
+		$this->view['lang'] = $this->request->getParam('lang');
+		$this->view['type'] = $this->request->getParam('type');
+		$this->view['contents'] = $this->model->getCartRef();
+		$this->view['listAllBank'] = $this->model->listAllBank();
+		$this->layout->view('/frontend/cart4', $this->view);
+	}
+	public function cart5()
+	{
+		$this->layout->disableLayout();
+		$this->view['lang'] = $this->request->getParam('lang');
+		$this->view['order_id'] = $order_id = $this->request->getParam('id');
+		$this->view['getOrder'] = $this->model->getOrder($order_id);
+		$this->view['getOrderItem'] = $this->model->getOrderItem($order_id);
+		$this->layout->view('/frontend/cart5', $this->view);
+	}
+	public function update_cart_widget() // update เฉพาะจำนวนสินค้า
+	{
+		$this->layout->disableLayout();
+		if($data = $this->input->post()){
+			$this->model->setValue($data);
+			$this->model->update_cart_widget();
+		}
 	}
 	public function update_cart() // update เฉพาะจำนวนสินค้า
 	{
@@ -55,31 +145,6 @@ class Frontend extends CI_Controller{
 			$this->model->setValue($data);
 			$this->model->update_cart();
 		}
-	}
-	public function checkout()
-	{
-		$this->layout->disableLayout();
-		$this->view['listBank'] = $this->model->listAllBank();
-		$this->view['member_point'] = $this->model->get_member_point($_SESSION['member_id']);
-		$this->view['getMember'] = $this->model->getMember($_SESSION['member_id']);
-		$this->view['contents'] = $this->model->getCart();
-		if($data = $this->input->post()){
-			$this->model->setValue($data);
-			$this->model->addOrder();
-			$this->model->clear_cart();
-			echo "
-			<script>
-				window.parent.location='".DIR_ROOT."orderreview.php';
-			</script>";	
-		}
-		$this->layout->view('/frontend/checkout', $this->view);
-	}
-	public function list_order()
-	{
-		$this->layout->disableLayout();
-		$this->view['id'] = $id = $this->request->getParam('id');
-		$this->view['member_point'] = $this->model->get_member_point($_SESSION['member_id']);
-		$this->layout->view('/frontend/list_order', $this->view);
 	}
 	public function total_cart()
 	{
@@ -95,6 +160,19 @@ class Frontend extends CI_Controller{
 			$this->model->setValue($data);
 			$this->model->remove_cart();
 		}
+	}
+	public function checkout()
+	{
+		$this->layout->disableLayout();
+		$this->view['contents'] = $this->model->getCart();
+		$lang = $this->request->getParam('lang');
+		if($data = $this->input->post()){
+			$this->model->setValue($data);
+			echo $this->model->addOrder($lang);
+			unset($_SESSION['order']);
+			$this->model->clear_cart();
+		}
+		//$this->layout->view('/frontend/checkout', $this->view);
 	}
 	/*public function load(){
 		$this->layout->disableLayout();

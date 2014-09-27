@@ -83,6 +83,22 @@ class Product_frontmodel extends CI_Model {
 		return $result['product_images'];
 	}
 
+	public function getProduct($lang_id,$product_id){
+		
+		$select = $this->db->select(array("$this->tbl_product.product_id",
+										"$this->tbl_product.product_price",
+										"$this->tbl_product_lang.product_name",
+										"$this->tbl_product_lang.product_detail"))
+				->from($this->tbl_product_lang)
+				->join($this->tbl_product,"$this->tbl_product.product_id=$this->tbl_product_lang.product_id","left")
+				->where("$this->tbl_product_lang.language_id",$lang_id)
+				->where("$this->tbl_product.product_id",$product_id)
+				->limit(1);
+		$query = $this->db->get();
+		$result = $query->row_array();
+		
+		return $result;
+	}
 	
 	
 	public function listCategories($lang_id){

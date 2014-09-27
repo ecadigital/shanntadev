@@ -1,0 +1,9 @@
+/*.errorlist label.error{color: #E46C6E;font-size: 85%;font-style: italic;margin : 5px 0 5px 10px ;}
+.errorlist input:valid, .errorlist textarea:valid, .error textarea:valid{border-color: #E77776;border-style: solid;border-width: 1px;background:#F8DBDB; }*/
+span[class=errorspan] {display: none;color: #E46C6E;font-size: 100%;font-style: italic; font-weight: normal; font-size: 0.8em; position:relative; top:-13px}
+input[class=validate],input[class=validate]:hover,input[class=validate]:focus, 
+select[class=validate],select[class=validate]:hover,select[class=validate]:focus, 
+textarea[class=validate],textarea[class=validate]:hover,textarea[class=validate]:focus { border:1px solid #E46C6E;background-color: #FFaaaa; }
+
+
+input, textarea { padding:5px !important; }

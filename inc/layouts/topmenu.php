@@ -84,14 +84,14 @@
 			</ul><!-- navigatorDetail -->
 			<ul id="userInterfaceDetail">
 				<li><a href="#"><i class="fa fa-user"></i> CHARINTIP</a></li>
-				<li><a href="#"><i class="fa fa-shopping-cart"></i> MY Cart [5]</a></li>
+				<li><a href="#"><i class="fa fa-shopping-cart"></i> MY Cart [<span class="widget_items">0</span>]</a></li>
 				<li><a href="#"><i class="fa fa-ban"></i> CHECKOUT</a></li>
 			</ul><!-- userInterfaceDetail -->
 		</nav><!-- menus -->
 	</nav> <!-- small-topmenu -->
 	<div class="clearfix"></div>
 	<div id="productPopup">
-		<div class="large-items-2 columns">
+		<!--<div class="large-items-2 columns">
 			<a href="#" data-self="<?php echo __images__;?>/assets/collection-product-1-hover.png" data-preview="<?php echo __images__;?>/demo/product3.png">
 				<img src="<?php echo __images__;?>/assets/collection-product-1.png" alt="">
 				<span>CHARM</span>
@@ -123,6 +123,6 @@
 		</div>
 		<div class="large-items-3 columns preview">
 			<img src="<?php echo __images__;?>/demo/product3.png" alt="">
-		</div>
+		</div>-->
 	</div>
 </header><!-- #topmenu -->

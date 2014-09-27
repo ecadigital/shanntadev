@@ -30,8 +30,8 @@ if(!empty($listProduct)){
 				<img src="<?php echo $img_path;?>" alt="" style="max-width:190px; max-height:248px;">
 			</section>
 			<section class="small-12 columns priceTag">
-				<div class="small-6 columns price"><?php echo number_format($list['product_price']);?> <b><?php echo lang('product_baht');?></b></div>
-				<div class="small-6 columns"><a class="addToCart medium-8 large-7" href="#"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('product_addtocart'));?></b></a></div>
+				<div class="small-6 columns price"><?php echo number_format($list['product_price']);?> <b><?php echo lang('baht');?></b></div>
+				<div class="small-6 columns"><a class="addToCart medium-8 large-7" href="#"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('addtocart'));?></b></a></div>
 			</section>
 			<section class="details" style="width:900px;">
 				<div class="medium-6 columns productDetailTrack">
@@ -39,14 +39,14 @@ if(!empty($listProduct)){
 					<div class="inner"><?php echo $list['product_detail'];?></div>
 					<hr class="dotted">
 					<div class="medium-6 large-8 columns price">
-						<?php echo number_format($list['product_price']);?> <b><?php echo lang('product_baht');?></b>
+						<?php echo number_format($list['product_price']);?> <b><?php echo lang('baht');?></b>
 					</div>
 					<div class="medium-6 large-4 columns">
-						<a class="addToCart" href="javascript:void(0)" onclick="addCart('<?php echo $list['product_id'];?>')"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('product_addtocart'));?></b></a>
+						<a class="addToCart" href="javascript:void(0)" onclick="addCart('<?php echo $list['product_id'];?>')"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('addtocart'));?></b></a>
 					</div>
 					<div class="clearfix"></div>
 					<hr class="dotted">
-					<span><?php echo lang('product_morephoto');?></span><br>
+					<span><?php echo lang('morephoto');?></span><br>
 					<div class="thumbnails clearfix">
 						<?php 
 						$img_first='';

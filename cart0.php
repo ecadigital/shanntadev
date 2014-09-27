@@ -15,48 +15,16 @@
         <?php require "inc/layouts/browserhappy.php"; ?>
         <?php require "inc/layouts/topcartmenu.php"; ?>
         <?php require "inc/layouts/topmenu.php"; ?>
-        <div id="content" class="row cart">
-            <header class="ta-center">
-                YOU ARE ENTERING A SECURE ZONE
-            </header>
-            <article class="boxDotted">
-                <section class="large-6 columns">
-                    <a href="cart1.php" class="guest">
-                        <h1>CONTINUE AS A GUEST</h1>
-                    </a>
-                </section>
-                <section class="large-6 columns ta-center">
-                    <h1 class="cart0head">EXISTING MEMBER</h1>
-                    <div>
-                        If you already have an account, please sign in below
-                        <br>
-                        <br>
-                    </div>
-                    <div class="large-2 columns">
-                        <label for="#">Login</label>
-                    </div>
-                    <div class="large-10 columns">
-                        <input type="text">
-                    </div>
-                    <div class="large-2 columns">
-                        <label for="#">Password</label>
-                    </div>
-                    <div class="large-10 columns">
-                        <input type="text">
-                        <a class="forgot" href="#">FORGOTTEN YOUR PASSWORD?</a>
-                    </div>
-                    <div class="large-12 columns ta-center">
-                        <button><b>SIGN IN</b></button>
-                    </div>
-                    <div class="large-12 columns noMember">
-                        NOT A MEMBER? <a href="cart1.php">REGISTER HERE</a>
-                    </div>
-                </section>
-                <div class="clearfix"></div>
-            </article>
-        </div><!-- #content .row.cart -->
+		
+        <div id="content" class="row cart"></div><!-- #content .row.cart -->
+		
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
+		
+		<script>
+			loadCart0('<?php echo $defaultLang;?>');
+		</script>
+		
         <!-- javascript here -->
         <script type="text/javascript">
         </script>

@@ -12,6 +12,7 @@ if($defaultLang==1){
 	
 	$Array_lang['language'] = 'ภาษา';
 	$Array_lang['seeall'] = 'ดูทั้งหมด';
+	
 
 }else if($defaultLang==3){
 
@@ -27,4 +28,5 @@ if($defaultLang==1){
 	
 	$Array_lang['language'] = 'Language';
 	$Array_lang['seeall'] = 'See all';
+	
 }

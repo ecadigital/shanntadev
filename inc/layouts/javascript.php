@@ -7,11 +7,8 @@
         
 
 <!--<script src="<?php echo DIR_PUBLIC;?>js/jquery-1.7.min.js"></script>-->
-<script src="<?php echo DIR_PUBLIC;?>js/script.js"></script>
-<script src="<?php echo DIR_PUBLIC;?>module/product/frontend/js/script.js"></script>
-<script src="<?php echo DIR_PUBLIC;?>module/shoppingcart/frontend/js/function.js"></script>
 
 <script>
+	//loadWidgetCart('<?php echo $defaultLang;?>');
 	loadListMenuHover('<?php echo $defaultLang;?>');
-	loadWidgetCart('<?php echo $defaultLang;?>');
 </script>

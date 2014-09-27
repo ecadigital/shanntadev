@@ -2,6 +2,7 @@
 class Shoppingcart_frontmodel extends CI_Model {
 	
 	private $tbl_product = 'product';
+	private $tbl_product_lang = 'product_lang';
 	private $tbl_product_images = 'product_images';
 	private $tbl_product_categories = 'product_categories';
 	private $tbl_sp_order = 'sp_order';
@@ -25,30 +26,26 @@ class Shoppingcart_frontmodel extends CI_Model {
         $this->defaultlang = $this->bflibs->getDefaultLangId();
 	}
 	
-	public function addOrder(){
+	public function addOrder($lang){
 		
 		$val = $this->getValue();
 		
 		$order_id = $this->bflibs->getLastID($this->tbl_sp_order,'order_id');
 		$date = date('Y-m-d H:i:s');
-		$member_id=$_SESSION['member_id'];
+		$member_id=(isset($_SESSION['member_id']) && $_SESSION['member_id']!='') ? $_SESSION['member_id'] : 0;
 		
 		$order_summary=0;
-		$point_summary=0;
 		
 		$contents = $this->getCart();
 		
 		if(!empty($contents)){
 			foreach($contents as $content){
-				$product = $this->model->getProduct($content['id']);
+				$product = $this->model->getProduct($lang,$content['id']);
 				$qty = $content['qty'];
 				$price = $product['product_price'];
 				$total_price = $price*$qty;
-				$point = $product['product_point'];
-				$total_point = $point*$qty;
 				
 				$order_summary += $total_price;
-				$point_summary += $total_point;
 				$data_item = array(
 							"order_id"=>$order_id,
 							"product_id"=>$content['id'],
@@ -56,70 +53,47 @@ class Shoppingcart_frontmodel extends CI_Model {
 							"product_detail"=>$product['product_detail'],
 							"order_qty"=>$qty,
 							"order_price"=>$product['product_price'],
-							"order_discount"=>0,
-							"order_point"=>$product['product_point'],
 							"order_status"=>1
 				);			
 				$this->db->insert($this->tbl_sp_order_item,$data_item);
 			}
 		}
 		
-		$member_id = (isset($_SESSION['member_id'])) ? $_SESSION['member_id'] : 0;
-		$member_discount = $this->model->get_member_discount($member_id);
-		
-		$member_first_name = '';
-		$member_last_name = '';
-		$member_address = '';
-		$member_tel = '';
-		if($val['radio_address']==0){
-			$member_first_name = $val['member_first_name'];
-			$member_last_name = $val['member_last_name'];
-			$member_address = $val['member_address'];
-			$member_tel = $val['member_tel'];
-		}else{
-			$member_first_name = $val['member_first_name_1'];
-			$member_last_name = $val['member_last_name_1'];
-			$member_address = $val['member_address_1'];
-			$member_tel = $val['member_tel_1'];
-		}
+		$member_title = (isset($_SESSION['order']['member_title'])) ? $_SESSION['order']['member_title'] : '';
+		$member_fname = (isset($_SESSION['order']['member_fname'])) ? $_SESSION['order']['member_fname'] : '';
+		$member_lname = (isset($_SESSION['order']['member_lname'])) ? $_SESSION['order']['member_lname'] : '';
+		$member_address = (isset($_SESSION['order']['member_address'])) ? $_SESSION['order']['member_address'] : '';
+		$member_city = (isset($_SESSION['order']['member_city'])) ? $_SESSION['order']['member_city'] : '';
+		$member_postcode = (isset($_SESSION['order']['member_postcode'])) ? $_SESSION['order']['member_postcode'] : '';
+		$member_prephone = (isset($_SESSION['order']['member_prephone'])) ? $_SESSION['order']['member_prephone'] : '';
+		$member_phone = (isset($_SESSION['order']['member_phone'])) ? $_SESSION['order']['member_phone'] : '';
+		$member_message = (isset($_SESSION['order']['member_message'])) ? $_SESSION['order']['member_message'] : '';
+		$member_payment = (isset($val['member_payment'])) ? $val['member_payment'] : '';
+		$transfer_bank = (isset($val['transfer_bank'])) ? $val['transfer_bank'] : '';
 		
 		$data = array(
 				"order_id"=>$order_id,
 				"member_id"=>$member_id,
-				"order_discount"=>$member_discount.'%',
 				"order_summary"=>$order_summary,
-				"order_point"=>'',//$val['point'],
-				"order_point_summary"=>$point_summary,
-				"member_first_name"=>$member_first_name,
-				"member_last_name"=>$member_last_name,
+				"order_shipping"=>'0',
+				"member_title"=>$member_title,
+				"member_first_name"=>$member_fname,
+				"member_last_name"=>$member_lname,
 				"member_address"=>$member_address,
-				"member_tel"=>$member_tel,
+				"member_city"=>$member_city,
+				"member_postcode"=>$member_postcode,
+				"member_prephone"=>$member_prephone,
+				"member_phone"=>$member_phone,
+				"member_message"=>$member_message,
+				"order_method"=>'',
 				"order_date"=>$date,
 				"order_date_added"=>$date,
 				"order_last_update"=>$date,
-				"order_status_id"=>($val['payment']==1) ? 2 : 1,
-				"order_payment"=>$val['payment'],
+				"order_status_id"=>($member_payment=='transfer') ? 1 : 2,
+				"order_payment"=>$member_payment,
 				"order_read"=>0
 		);
 		$this->db->insert($this->tbl_sp_order,$data);
-		
-		if($val['payment']==1){
-			// add point //
-			$old_point = $this->bflibs->getMemberPoint($member_id);
-			$new_point = $old_point-$point_summary;
-			$this->bflibs->updateMemberPoint($member_id,$new_point);			
-		}	
-		
-		if($val['radio_address']==0){
-			$data = array(
-				"member_first_name"=>$member_first_name,
-				"member_last_name"=>$member_last_name,
-				"member_address"=>$member_address,
-				"member_tel"=>$member_tel
-			);
-			$this->db->where("member_id",$member_id);			
-			$this->db->update($this->tbl_member,$data);
-		}
 					
 		return $order_id;
 	}
@@ -179,6 +153,20 @@ class Shoppingcart_frontmodel extends CI_Model {
 			}
 		}
 	}
+	public function update_cart_widget() // update เฉพาะจำนวนสินค้า
+	{
+		$val = $this->getValue();
+		if(!empty($val)){
+			foreach($val['winp-qty'] as $rowid=>$qty){
+				$qty = (empty($qty))?9999:$qty;
+				$cart = array(
+	               'rowid' => $rowid,
+	               'qty'   => $qty
+	            );
+				$this->cart->update($cart);
+			}
+		}
+	}
 	public function remove_cart()
 	{
 		$val = $this->getValue();
@@ -216,35 +204,42 @@ class Shoppingcart_frontmodel extends CI_Model {
 	
 	/* OTHER
 	------------------------------------------------------------------------------------*/
-	public function get_member_point($id){
+	public function getOrder($order_id){
 		
-		$select = $this->db->select(array("member_point"))
-					->from($this->tbl_member)
-					->where("member_id",$id);
-		$query = $this->db->get();
-		$result = $query->row_array();
-		
-		return (!empty($result)) ? $result['member_point'] : 0;
-	}
-	public function get_member_discount($id){
-		
-		$select = $this->db->select(array("member_discount"))
-					->from($this->tbl_member)
-					->where("member_id",$id);
-		$query = $this->db->get();
-		$result = $query->row_array();
-		
-		return (!empty($result)) ? $result['member_discount'] : 0;
-	}
-	public function getProduct($id){
-		
-		$select = $this->db->select(array("product_name","product_detail","product_price","product_point"))
-					->from($this->tbl_product)
-					->where("product_id",$id);
+		$select = $this->db->select()
+					->from($this->tbl_sp_order)
+					->where("order_id",$order_id);
 		$query = $this->db->get();
 		$result = $query->row_array();
 		
 		return $result;	
+	}
+	public function getOrderItem($order_id){
+		
+		$select = $this->db->select()
+					->from($this->tbl_sp_order_item)
+					->where("order_id",$order_id);
+		$query = $this->db->get();
+		$result = $query->result_array();
+		
+		return $result;	
+	}
+	
+	public function getProduct($lang_id,$product_id){
+		
+		$select = $this->db->select(array("$this->tbl_product.product_id",
+										"$this->tbl_product.product_price",
+										"$this->tbl_product_lang.product_name",
+										"$this->tbl_product_lang.product_detail"))
+				->from($this->tbl_product_lang)
+				->join($this->tbl_product,"$this->tbl_product.product_id=$this->tbl_product_lang.product_id","left")
+				->where("$this->tbl_product_lang.language_id",$lang_id)
+				->where("$this->tbl_product.product_id",$product_id)
+				->limit(1);
+		$query = $this->db->get();
+		$result = $query->row_array();
+		
+		return $result;
 	}
 	public function getMember($id){
 		
@@ -277,5 +272,75 @@ class Shoppingcart_frontmodel extends CI_Model {
 		
 		return $result;	
 	}
+	
+	/* CONTENT
+	------------------------------------------------------------------------------------*/
+	
+	public function nav_cart($step){
+		$txt = '
+		<nav>
+			<ul>
+				<li class="small-4 medium-2 columns'; 
+				if($step>=1) $txt .= ' checked'; 
+				if($step==1) $txt .= ' current'; $txt .= '">
+					<div class="large-4 columns">
+						<div class="circle">1</div>
+					</div>
+					<div class="large-8 columns">
+						<div class="stepNo">STEP 1</div>
+						<div class="stepName">Register</div>
+					</div>
+				</li>
+				<li class="small-4 medium-2 columns'; 
+				if($step>=2) $txt .= ' checked'; 
+				if($step==2) $txt .= ' current'; $txt .= '">
+					<div class="large-4 columns">
+						<div class="circle">2</div>
+					</div>
+					<div class="large-8 columns">
+						<div class="stepNo">STEP 2</div>
+						<div class="stepName">Delivery</div>
+					</div>
+				</li>
+				<li class="small-4 medium-2 columns'; 
+				if($step>=3) $txt .= ' checked'; 
+				if($step==3) $txt .= ' current'; $txt .= '">
+					<div class="large-4 columns">
+						<div class="circle">3</div>
+					</div>
+					<div class="large-8 columns">
+						<div class="stepNo">STEP 3</div>
+						<div class="stepName">Review</div>
+					</div>
+				</li>
+				<li class="small-4 medium-2 columns'; 
+				if($step>=4) $txt .= ' checked'; 
+				if($step==4) $txt .= ' current'; $txt .= '">
+					<div class="large-4 columns">
+						<div class="circle">4</div>
+					</div>
+					<div class="large-8 columns">
+						<div class="stepNo">STEP 4</div>
+						<div class="stepName">Payment</div>
+					</div>
+				</li>
+				<li class="small-4 medium-2 columns end'; 
+				if($step>=5) $txt .= ' checked'; 
+				if($step==5) $txt .= ' current'; $txt .= '">
+					<div class="large-4 columns">
+						<div class="circle">5</div>
+					</div>
+					<div class="large-8 columns">
+						<div class="stepNo">STEP 5</div>
+						<div class="stepName">Confirmation</div>
+					</div>
+				</li>
+			</ul>
+		</nav>';
+		
+		return $txt;	
+	}
+	
+	
 }
 ?>
