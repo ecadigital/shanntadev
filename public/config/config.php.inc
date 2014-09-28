@@ -53,14 +53,15 @@ function setLang($lang_id,$url){
 function getDefaultLangId(){
 	$name = SITE.'_lang_id';
 	$lang_id = fetch_cookie($name);
-	if(empty($_SESSION[SITE.'_lang_id']) && !empty($lang_id)){
+	if(!isset($_SESSION[SITE.'_lang_id']) && empty($_SESSION[SITE.'_lang_id']) && !empty($lang_id)){
 		$_SESSION[SITE.'_lang_id'] = $lang_id;
 	}else if(empty($_SESSION[SITE.'_lang_id']) && empty($lang_id)){
-		$arr = mysql_query("SELECT language_id FROM admin_language WHERE language_front='1'");
-		if(mysql_num_rows($arr)>0){
-			$result = mysql_fetch_array($arr);
-			$_SESSION[SITE.'_lang_id'] = $result['language_id'];
-		}
+		//$arr = mysql_query("SELECT language_id FROM admin_language WHERE language_front='1'");
+		//if(mysql_num_rows($arr)>0){
+		//	$result = mysql_fetch_array($arr);
+		//	echo $_SESSION[SITE.'_lang_id'] = $result['language_id'];
+		//}
+		$_SESSION[SITE.'_lang_id'] = 2;
 	}
 	return $defaultLang = $_SESSION[SITE.'_lang_id'];
 }

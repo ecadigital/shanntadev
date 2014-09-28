@@ -12,31 +12,14 @@
         <?php require "inc/layouts/browserhappy.php"; ?>
         <?php require "inc/layouts/topcartmenu.php"; ?>
         <?php require "inc/layouts/topmenu.php"; ?>
-        <div id="content" class="row fullPage">
-            <div class="row">
-                <a href="#">
-                    <img src="<?php echo __images__;?>/lookbook-1.png" alt="">
-                </a>
-            </div>
-            <div class="row">
-                <a href="#">
-                    <img src="<?php echo __images__;?>/lookbook-2.png" alt="">
-                </a>
-            </div>
-            <div class="row">
-                <a href="#">
-                    <img src="<?php echo __images__;?>/lookbook-3.png" alt="">
-                </a>
-            </div>
-            <div class="row">
-                <img src="<?php echo __images__;?>/lookbook-4.png" alt="">
-            </div>
-        </div><!-- #content .row.cart -->
+		
+        <div id="content" class="row fullPage"></div><!-- #content .row.cart -->
+		
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
         <!-- javascript here -->
         <script type="text/javascript">
-            
+            loadPage('lookbook/frontend/index/lang/<?php echo $defaultLang;?>');
         </script>
     </body>
 </html>

@@ -5,10 +5,25 @@
 $this->model = $this->load->model('shoppingcart/Shoppingcart_frontmodel');
 $this->modelMember = $this->load->model('member/Member_frontmodel');
 
-$member_type = (isset($_SESSION['order']['member_type'])) ? $_SESSION['order']['member_type'] : '';
-$member_title = (isset($_SESSION['order']['member_title'])) ? $_SESSION['order']['member_title'] : '';
-$member_fname = (isset($_SESSION['order']['member_fname'])) ? $_SESSION['order']['member_fname'] : '';
-$member_lname = (isset($_SESSION['order']['member_lname'])) ? $_SESSION['order']['member_lname'] : '';
+echo $member_id = (isset($_SESSION['member_id'])) ? $_SESSION['member_id'] : '';
+$member_type = '';
+$member_title = '';
+$member_fname = '';
+$member_lname = '';
+
+if($member_id!=''){
+	$getMember = $this->modelMember->getMember($member_id);
+	if(!empty($getMember)){
+		$member_type = 'member';
+		$member_title = $getMember['member_title'];
+		$member_fname = $getMember['member_first_name'];
+		$member_lname = $getMember['member_last_name'];
+	}
+}
+$member_type = (isset($_SESSION['order']['member_type'])) ? $_SESSION['order']['member_type'] : $member_type;
+$member_title = (isset($_SESSION['order']['member_title'])) ? $_SESSION['order']['member_title'] : $member_title;
+$member_fname = (isset($_SESSION['order']['member_fname'])) ? $_SESSION['order']['member_fname'] : $member_fname;
+$member_lname = (isset($_SESSION['order']['member_lname'])) ? $_SESSION['order']['member_lname'] : $member_lname;
 $member_address = (isset($_SESSION['order']['member_address'])) ? $_SESSION['order']['member_address'] : '';
 $member_city = (isset($_SESSION['order']['member_city'])) ? $_SESSION['order']['member_city'] : '';
 $member_postcode = (isset($_SESSION['order']['member_postcode'])) ? $_SESSION['order']['member_postcode'] : '';

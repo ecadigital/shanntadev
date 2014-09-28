@@ -5,6 +5,9 @@
 $this->model = $this->load->model('shoppingcart/Shoppingcart_frontmodel');
 $this->modelMember = $this->load->model('member/Member_frontmodel');
 
+$member_id = (isset($_SESSION['member_id'])) ? $_SESSION['member_id'] : '';
+if($member_id!='') echo '<script>window.location="cart2.php";</script>';
+
 $member_type = (isset($_SESSION['order']['member_type'])) ? $_SESSION['order']['member_type'] : '';
 $member_title = (isset($_SESSION['order']['member_title'])) ? $_SESSION['order']['member_title'] : '';
 $member_fname = (isset($_SESSION['order']['member_fname'])) ? $_SESSION['order']['member_fname'] : '';
@@ -86,42 +89,46 @@ $member_byear = (isset($_SESSION['order']['member_byear'])) ? $_SESSION['order']
 			</div>
 		</div>
 	</div>
-	<?php if($member_type!='guest'){?>
+	<?php //if($member_type!='guest'){?>
 	<div class="row">
 		<div class="large-2 columns">
-			<h2>YOUR ACCOUNT</h2>
+			<h2><?php echo lang('youraccount');?></h2>
 			<br>
 		</div>
 		<div class="small-12 large-10 columns">
 			<div class="medium-2 columns">
-				<label for="#">E-mail Address *</label>
+				<label for="member_email"><?php echo lang('email');?> *</label>
 			</div>
 			<div class="medium-4-custom columns">
-				<input type="text">
+				<input type="text" id="member_email" name="member_email">
+				<span class="errorspan"><?php echo lang('v_email');?></span>
 			</div>
 			<div class="medium-2 columns">
-				<label for="#">Confirm E-mail *</label>
+				<label for="member_confirm_email"><?php echo lang('confirmemail');?> *</label>
 			</div>
 			<div class="medium-4-custom columns">
-				<input type="text">
+				<input type="text" id="member_confirm_email" name="member_confirm_email">
+				<span class="errorspan"><?php echo lang('v_confirmemail');?></span>
 			</div>
 		</div>
 		<div class="small-12 large-10 large-offset-2 columns">
 			<div class="medium-2 columns">
-				<label for="#">Password</label>
+				<label for="member_password"><?php echo lang('password');?> *</label>
 			</div>
 			<div class="medium-4-custom columns">
-				<input type="text">
+				<input type="password" id="member_password" name="member_password">
+				<span class="errorspan"><?php echo lang('v_password');?></span>
 			</div>
 			<div class="medium-2 columns">
-				<label for="#">Confirm Password *</label>
+				<label for="member_confirm_password"><?php echo lang('confirmpassword');?> *</label>
 			</div>
 			<div class="medium-4-custom columns">
-				<input type="text">
+				<input type="password" id="member_confirm_password" name="member_confirm_password">
+				<span class="errorspan"><?php echo lang('v_confirmpassword');?></span>
 			</div>
 		</div>
 	</div> <!-- .row -->
-	<?php }?>
+	<?php //}?>
 	
 	<div class="navigator">
 		<div>
@@ -134,11 +141,48 @@ $member_byear = (isset($_SESSION['order']['member_byear'])) ? $_SESSION['order']
 	//loadNavCart('<?php echo $lang;?>',1);
 	function chkCart1(){
 		chk=1;
-		if($('#member_title').val()==''){
-			$('#member_title').focus().addClass('validate').next().show();
+		
+		if($('#member_confirm_password').val()==''){
+			$('#member_confirm_password').focus().addClass('validate').next().show();
 			chk=0;
 		}else{
-			$('#member_title').removeClass('validate').next().hide();
+			$('#member_confirm_password').removeClass('validate').next().hide();
+			
+			if($('#member_password').val()!=$('#member_confirm_password').val()){
+				$('#member_confirm_password').focus().addClass('validate').next().show();
+				chk=0;
+			}
+		}
+		if($('#member_password').val()==''){
+			$('#member_password').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#member_password').removeClass('validate').next().hide();
+		}
+		
+		if($('#member_confirm_email').val()==''){
+			$('#member_confirm_email').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#member_confirm_email').removeClass('validate').next().hide();
+			
+			if($('#member_email').val()!=$('#member_confirm_email').val()){
+				$('#member_confirm_email').focus().addClass('validate').next().show();
+				chk=0;		
+			}
+		}
+		if($('#member_email').val()==''){
+			$('#member_email').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#member_email').removeClass('validate').next().hide();
+		}
+		
+		if($('#member_lname').val()==''){
+			$('#member_lname').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#member_lname').removeClass('validate').next().hide();
 		}
 		if($('#member_fname').val()==''){
 			$('#member_fname').focus().addClass('validate').next().show();
@@ -146,20 +190,23 @@ $member_byear = (isset($_SESSION['order']['member_byear'])) ? $_SESSION['order']
 		}else{
 			$('#member_fname').removeClass('validate').next().hide();
 		}
-		if($('#member_lname').val()==''){
-			$('#member_lname').focus().addClass('validate').next().show();
+		if($('#member_title').val()==''){
+			$('#member_title').focus().addClass('validate').next().show();
 			chk=0;
 		}else{
-			$('#member_lname').removeClass('validate').next().hide();
+			$('#member_title').removeClass('validate').next().hide();
 		}
+		
 		if(chk==1){
-			$.post( DIR_ROOT+'shoppingcart/frontend/set_sesmember', { 
+			$.post( DIR_ROOT+'member/frontend/register', { 
 				member_title: $('#member_title').val(),
 				member_fname: $('#member_fname').val(),
 				member_lname: $('#member_lname').val(),
 				member_bday: $('#member_bday').val(),
 				member_bmonth: $('#member_bmonth').val(),
-				member_byear: $('#member_byear').val()
+				member_byear: $('#member_byear').val(),
+				member_email: $('#member_email').val(),
+				member_password: $('#member_password').val()
 			}).done(function( data ) {
 				window.location='cart2.php';
 			});

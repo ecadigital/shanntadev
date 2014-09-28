@@ -42,7 +42,7 @@ class Member_frontmodel extends CI_Model {
 		return (!empty($result))? $result:'';
 	}
 	
-	public function register($member_pass){
+	public function register(){
 	
 		$val = $this->getValue();
 		$member_id = $this->bflibs->getLastID($this->tbl_member,'member_id');
@@ -51,15 +51,19 @@ class Member_frontmodel extends CI_Model {
 		$data = array(
 				"member_id"=>$member_id,
 				"member_pass"=>base64_encode($val['member_password']),//md5($member_pass),
-				"member_first_name"=>$val['member_first_name'],
-				"member_last_name"=>$val['member_last_name'],
+				"member_title"=>$val['member_title'],
+				"member_first_name"=>$val['member_fname'],
+				"member_last_name"=>$val['member_lname'],
+				"member_birth_day"=>$val['member_bday'],
+				"member_birth_month"=>$val['member_bmonth'],
+				"member_birth_year"=>$val['member_byear'],
 				"member_email"=>$val['member_email'],
-				/*"member_address"=>$val['member_address'],
-				"province_id"=>$val['province_id'],
-				"member_postcode"=>$val['member_postcode'],*/
-				"member_tel"=>$val['member_tel'],
-				"parent_id"=>0,
-				"member_publish"=>0,
+				//"member_address"=>$val['member_address'],
+				//"member_city"=>$val['member_city'],
+				//"member_postcode"=>$val['member_postcode'],
+				//"member_prephone"=>$val['member_prephone'],
+				//"member_phone"=>$val['member_phone'],
+				"member_publish"=>1,
 				"member_date_added"=>$date
 		);
 		$this->db->insert($this->tbl_member,$data);
@@ -133,6 +137,15 @@ class Member_frontmodel extends CI_Model {
 	
 	
 	
+	public function getMember($member_id){
+	
+		$query = $this->db->select()
+				->from($this->tbl_member)
+				->where("member_id",$member_id);
+		$query = $this->db->get();
+		$result = $query->row_array();
+		return $result;
+	}
 	public function getMain(){
 	
 		$query = $this->db->select()
@@ -314,46 +327,6 @@ class Member_frontmodel extends CI_Model {
 		}
 	}
 	
-	/* TEAM	
-	-------------------------------------------------------------------------------*/
-	
-	public function addTeam(){
-	
-		$val = $this->getValue();
-		$team_id = $this->bflibs->getLastID($this->tbl_team,'team_id');
-
-		$data = array(
-				"team_id"=>$team_id,
-				"member_id"=>$val['member_id'],
-				"team_name"=>$val['team_name']
-		);
-		$this->db->insert($this->tbl_team,$data);
-		return $team_id;
-	}
-	public function editTeam($team_id,$team_name){
-		
-		$data = array(
-				"team_name"=>$team_name
-		);
-
-		$this->db->where('team_id',$team_id);
-		$this->db->update($this->tbl_team,$data);
-		return $team_id;
-	}
-	public function deleteTeam($id){
-		$this->db->where('team_id',$id);
-		$this->db->delete($this->tbl_team);
-	}
-	public function listTeam($team_id){
-	
-		$query = $this->db->select()
-				->from($this->tbl_sp_order_item)
-				->join($this->tbl_sp_order,"$this->tbl_sp_order.order_id=$this->tbl_sp_order_item.order_id","left")
-				->where("$this->tbl_sp_order_item.team_id",$team_id);
-		$query = $this->db->get();
-		$result = $query->result_array();
-		return $result;
-	}
 	
 	
 	

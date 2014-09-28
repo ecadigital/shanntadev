@@ -1,5 +1,6 @@
 <?php
 
+$lang['jewely_date'] = "Date";
 $lang['seeall'] = "See all";
 $lang['baht'] = "THB";
 $lang['addtocart'] = "Add To Cart";
@@ -40,13 +41,18 @@ $lang['alertterms'] = "Please accept the general terms and condition.";
 
 $lang['username'] = "Username";
 $lang['password'] = "Password";
+$lang['confirmpassword'] = "Confirm Password";
+$lang['email'] = "E-mail Address";
+$lang['confirmemail'] = "Confirm E-mail";
 $lang['forgotpassword'] = "FORGOTTEN YOUR PASSWORD?";
 $lang['signin'] = "SIGN IN";
 $lang['notmember'] = "NOT A MEMBER?";
 $lang['registerhere'] = "REGISTER HERE";
+$lang['viewprofile'] = "View Profile";
 
 $lang['register'] = "Register";
 $lang['yourprofile'] = "YOUR PROFILE";
+$lang['youraccount'] = "YOUR ACCOUNT";
 $lang['mandatoryfield'] = "Mandatory field *";
 $lang['shippingmethod'] = "Shipping method";
 $lang['select'] = "Select";
@@ -102,6 +108,9 @@ $lang['v_address'] = "Please type address.";
 $lang['v_phone'] = "Please type phone number.";
 $lang['v_paymentmethod'] = "Please select payment method.";
 $lang['v_bank'] = "Please select bank.";
+$lang['v_username'] = "Please type email.";
+$lang['v_password'] = "Please type password.";
+$lang['v_incorrectlogin'] = "Email/Password is incorrect.";
 
 
 /* End of file shoppingcart_lang.php */

@@ -2,6 +2,8 @@
 $this->model = $this->load->model('shoppingcart/Shoppingcart_frontmodel');
 $this->modelProduct = $this->load->model('product/Product_frontmodel');
 
+$member_id = (isset($_SESSION['member_id'])) ? $_SESSION['member_id'] : '';
+
 $summary = 0;
 $shipping = 250;
 ?>
@@ -87,7 +89,7 @@ $shipping = 250;
 	<br>
 	<div class="navigator">
 		<div>
-			<a href="cart0.php" class="arrow_box right next"><?php echo lang('continue');?></a>
+			<a href="<?php echo ($member_id=='') ? 'cart0.php' : 'cart2.php';?>" class="arrow_box right next"><?php echo lang('continue');?></a>
 		</div>
 	</div> <!-- .navigator -->
 <?php }?>

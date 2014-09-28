@@ -225,6 +225,40 @@ class Jewelymodel extends CI_Model {
 	}
 	
 	
+	
+	public function getJewely($id,$lang_id){
+		
+		$select = $this->db->select()
+				->from($this->tbl_jewely)
+				->join($this->tbl_jewely_lang,"$this->tbl_jewely_lang.jewely_id=$this->tbl_jewely.jewely_id","left")
+				->where("$this->tbl_jewely.jewely_publish",1)
+				->where("$this->tbl_jewely_lang.language_id",$lang_id)
+				->order_by("$this->tbl_jewely.jewely_pin","desc")
+				->order_by("$this->tbl_jewely.jewely_seq","desc");
+		if($id!='first') $this->db->where("$this->tbl_jewely.jewely_id",$id);	
+		
+		$query = $this->db->get();
+		$result = $query->row_array();
+		
+		return $result;
+	}	
+	public function listAllJewely($lang_id,$except_id){
+		
+		$select = $this->db->select(array("$this->tbl_jewely.jewely_id","$this->tbl_jewely_lang.jewely_name"))
+				->from($this->tbl_jewely)
+				->join($this->tbl_jewely_lang,"$this->tbl_jewely_lang.jewely_id=$this->tbl_jewely.jewely_id","left")
+				->where("$this->tbl_jewely.jewely_publish",1)
+				->where("$this->tbl_jewely_lang.language_id",$lang_id)
+				->where("$this->tbl_jewely.jewely_id !=",$except_id)
+				->order_by("$this->tbl_jewely.jewely_seq",'asc');
+		$query = $this->db->get();
+		$result = $query->result_array();
+		
+		return $result;
+	}
+	
+	
+	
 	/* CATEGORIES
 	-----------------------------------------------------------------------------------------------------------*/
 	/*public function listJewelyCategories(){

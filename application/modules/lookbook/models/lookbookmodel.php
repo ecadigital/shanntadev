@@ -42,8 +42,8 @@ class Lookbookmodel extends CI_Model {
 				->from($this->tbl_lookbook)
 				->join($this->tbl_lookbook_lang,"$this->tbl_lookbook.lookbook_id=$this->tbl_lookbook_lang.lookbook_id","left")
 				->where("$this->tbl_lookbook_lang.language_id",$this->defaultlang)
-				->order_by("$this->tbl_lookbook.lookbook_seq",'desc')
-				->order_by("$this->tbl_lookbook.lookbook_date_added",'desc')
+				->order_by("$this->tbl_lookbook.lookbook_seq",'asc')
+				->order_by("$this->tbl_lookbook.lookbook_date_added",'asc')
 				->group_by("$this->tbl_lookbook.lookbook_id");
 				
 		if(!empty($sData)){
@@ -193,6 +193,20 @@ class Lookbookmodel extends CI_Model {
 		return $this->db->count_all_results();
 	}
 	
+	public function listAllLookbook($lang_id){
+		
+		$select = $this->db->select(array("$this->tbl_lookbook_lang.lookbook_path"))
+				->from($this->tbl_lookbook)
+				->join($this->tbl_lookbook_lang,"$this->tbl_lookbook_lang.lookbook_id=$this->tbl_lookbook.lookbook_id","left")
+				->where("$this->tbl_lookbook.lookbook_publish",1)
+				->where("$this->tbl_lookbook_lang.language_id",$lang_id)
+				->order_by("$this->tbl_lookbook.lookbook_seq",'asc');		
+		$query = $this->db->get();
+		$result = $query->result_array();
+		
+		return $result;
+	}
+	
 	
 	
 	/* UPLOAD
@@ -245,13 +259,12 @@ class Lookbookmodel extends CI_Model {
 
 			copy($source, $__dest);
 			if($this->imagesResize($__dest,'thumbnails'))$file = $this->updatePath_lookbook('public/upload/'.$this->request->getModuleName().'/thumbnails/'.$file_name,$lookbook_id,$lang_id);
-			unlink($source);
+			//unlink($source);
 		}
 	}
 	private function updatePath_lookbook($path,$lookbook_id,$lang_id){
 
-		$data = array("lookbook_path"=>$path);
-		
+		$dataLang = array("lookbook_path"=>$path);
 		$chkLang = $this->chkLang($lookbook_id,$lang_id);
 		if($chkLang==0){
 			$dataLang["lookbook_id"]=$lookbook_id;
@@ -263,8 +276,8 @@ class Lookbookmodel extends CI_Model {
 			$this->db->update($this->tbl_lookbook_lang,$dataLang);
 		}
 		
-		$this->db->where('language_id',$lang_id);
-		$this->db->update($this->tbl_lookbook_lang,$data);
+		//$this->db->where('language_id',$lang_id);
+		//$this->db->update($this->tbl_lookbook_lang,$data);
 		return 1;
 	}
 	

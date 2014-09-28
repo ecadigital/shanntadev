@@ -1,3 +1,10 @@
+<?php 
+$member_id = (isset($_SESSION['member_id'])) ? $_SESSION['member_id'] : '';
+$member_name = (isset($_SESSION['member_name'])) ? $_SESSION['member_name'] : '';
+$member_fname = (isset($_SESSION['member_fname'])) ? $_SESSION['member_fname'] : '';
+$member_lname = (isset($_SESSION['member_lname'])) ? $_SESSION['member_lname'] : '';
+?>
+<link rel="stylesheet" type="text/css" href="<?php echo DIR_PUBLIC;?>module/shoppingcart/frontend/css/style.css">
 
 <div id="topcartmenu" class="show-for-medium-up sticky">
 	<div class="row" data-topbar data-options="sticky_on: ['medium','large']">
@@ -14,7 +21,7 @@
 		</div>
 		<div class="medium-6 columns ta-right">
 			<ul>
-				<li class="medium-4 large-3 columns right"><a href="#"><i class="fa fa-ban icon"></i> CHECKOUT</a></li>
+				<li class="medium-4 large-3 columns right"><a href="<?php echo ($member_id=='') ? 'cart0.php' : 'cart1.php';?>"><i class="fa fa-ban icon"></i> CHECKOUT</a></li>
 				<li class="medium-4 large-3 columns right">
 					<a href="#" class=""><i class="fa fa-shopping-cart icon"></i> MY CART [<span class="widget_items">0</span>]</a>
 					<div class="sub selection" id="boxWidgetCart">
@@ -81,20 +88,45 @@
 					</div><!-- sub selection -->
 				</li>
 				<li class="medium-4 large-3 columns right">
-					<a href="#"><i class="fa fa-user icon"></i> CHARINTIP</a>
+					<a href="#"><i class="fa fa-user icon"></i> <?php echo ($member_id=='') ? 'LOGIN' : $member_name;?></a>
 					<div class="sub profile">
-						<div class="medium-4 columns">
-							<img src="img/profile.png" alt="none profile picture">
-						</div>
-						<div class="medium-8 columns">
-							<h5>Charintip Bumrungsak</h5>
-							<span>Bangkok, Thailand</span>
-							<a href="#" class="button">View Profile</a>
-						</div>
+						<?php if($member_id==''){?>
+							<div class="medium-3 large-offset-1 columns">
+								<label for="widget_username"><strong><?php echo $Array_lang['username'];?> *</strong></label>
+							</div>
+							<div class="medium-7 columns" style="max-height:50px;" >
+								<input type="text" id="widget_username" name="widget_username" style="height:1.8125rem;margin-bottom:8px;">
+								<span class="errorspan"><?php echo $Array_lang['v_username'];?></span>
+							</div>
+							
+							<div class="medium-3 large-offset-1 columns">
+								<label for="widget_password"><strong><?php echo $Array_lang['password'];?> *</strong></label>
+							</div>
+							<div class="medium-7 columns" style="max-height:50px;" >
+								<input type="password" id="widget_password" name="widget_password" style="height:1.8125rem;margin-bottom:8px;">
+								<span class="errorspan"><?php echo $Array_lang['v_password'];?></span>
+							</div>
+							
+							<div class="medium-12 columns ta-center" style="margin-top:10px !important;">
+								<span class="errorspan" id="widget_incorrectlogin"><?php echo $Array_lang['v_incorrectlogin'];?></span>
+							</div>
+							<div class="medium-10 columns ta-right">
+								<a href="javascript:void(0)" onclick="widgetLogin()" class="button"><?php echo $Array_lang['login'];?></a>
+							</div>
+						<?php }else{
+							echo '
+							<div class="medium-4 columns">
+								<img src="img/profile.png" alt="none profile picture">
+							</div>
+							<div class="medium-8 columns">
+								<h5>'.$member_name.'</h5>
+								<span>Bangkok, Thailand</span>
+								<a href="#" class="button">'.$Array_lang['viewprofile'].'</a>
+								<a href="javascript:void(0)" onclick="logout()" class="button">'.$Array_lang['logout'].'</a>
+							</div>';
+						}?> 
 					</div><!-- sub profile -->
 				</li>
-				
-				
 			</ul>
 	    </div>
     </div>
@@ -103,8 +135,43 @@
 
 <script src="<?php echo DIR_PUBLIC;?>js/jquery-1.7.min.js"></script>
 <script src="<?php echo DIR_PUBLIC;?>js/script.js"></script>
+<script src="<?php echo DIR_PUBLIC;?>module/main/frontend/js/script.js"></script>
 <script src="<?php echo DIR_PUBLIC;?>module/product/frontend/js/script.js"></script>
 <script src="<?php echo DIR_PUBLIC;?>module/shoppingcart/frontend/js/function.js"></script>
 <script>
 	loadWidgetCart('<?php echo $defaultLang;?>');
+	
+	function widgetLogin(){
+		chk=1;
+		if($('#widget_password').val()==''){
+			$('#widget_password').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#widget_password').removeClass('validate').next().hide();
+		}
+		if($('#widget_username').val()==''){
+			$('#widget_username').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#widget_username').removeClass('validate').next().hide();
+		}
+		if(chk==1){
+			$.post( DIR_ROOT+'member/frontend/login', { 
+				widget_username: $('#widget_username').val(),
+				widget_password: $('#widget_password').val()
+			}).done(function( data ) {
+				if(data=='0'){
+					$('#widget_incorrectlogin').show();
+				}else{
+					window.location.reload();
+				}
+			});
+		}
+	}
+	function logout(){
+		$.post( DIR_ROOT+'member/frontend/logout', { 
+		}).done(function( data ) {
+			window.location.reload();
+		});
+	}
 </script>

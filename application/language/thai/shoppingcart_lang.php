@@ -1,5 +1,6 @@
 <?php
 
+$lang['jewely_date'] = "วันที่";
 $lang['seeall'] = "ดูทั้งหมด";
 $lang['baht'] = "บาท";
 $lang['addtocart'] = "เพิ่มลงตะกร้า";
@@ -40,13 +41,18 @@ $lang['alertterms'] = "กรุณายอมรับข้อตกลงแ
 
 $lang['username'] = "ชื่อผู้ใช้";
 $lang['password'] = "รหัสผ่าน";
+$lang['confirmpassword'] = "ยืนยันรหัสผ่าน";
+$lang['email'] = "อีเมล์";
+$lang['confirmemail'] = "ยืนยันอีเมล์";
 $lang['forgotpassword'] = "ลืมรหัสผ่าน";
 $lang['signin'] = "เข้าสู่ระบบ";
 $lang['notmember'] = "ยังไม่เป็นสมาชิก";
 $lang['registerhere'] = "ลงทะเบียนที่นี่";
+$lang['viewprofile'] = "ดูประวัติ";
 
 $lang['register'] = "ลงทะเบียน";
 $lang['yourprofile'] = "ประวัติส่วนตัว";
+$lang['youraccount'] = "บัญชีของคุณ";
 $lang['mandatoryfield'] = "กรุณากรอกทุกช่องที่มี *";
 $lang['shippingmethod'] = "วิธีการช้อปปิ้ง";
 $lang['select'] = "กรุณาเลือก";
@@ -95,6 +101,10 @@ $lang['bank_branch'] = "สาขา";
 $lang['bank_account'] = "ชื่อบัญชี";
 $lang['bank_no'] = "เลขที่บัญชี";
 
+$lang['v_email'] = "กรุณากรอกอีเมล์ของคุณ";
+$lang['v_confirmemail'] = "ยืนยันอีเมล์ของคุณไม่ถูกต้อง";
+$lang['v_password'] = "กรุณากรอกรหัสผ่าน";
+$lang['v_confirmpassword'] = "ยืนยันรหัสผ่านไม่ถูกต้อง";
 $lang['v_title'] = "กรุณาเลือกคำนำหน้าชื่อ";
 $lang['v_firstname'] = "กรุณากรอกชื่อ";
 $lang['v_lastname'] = "กรุณากรอกนามสกุล";
@@ -102,6 +112,9 @@ $lang['v_address'] = "กรุณากรอกที่อยู่";
 $lang['v_phone'] = "กรุณากรอกเบอร์โทรศัพท์";
 $lang['v_paymentmethod'] = "กรุณาเลือกวิธีการชำระเงิน";
 $lang['v_bank'] = "กรุณาเลือกธนาคาร";
+$lang['v_username'] = "กรุณากรอกอีเมล์";
+$lang['v_password'] = "กรุณากรอกรหัสผ่าน";
+$lang['v_incorrectlogin'] = "อีเมล์/รหัสผ่านไม่ถูกต้อง";
 
 
 /* End of file shoppingcart_lang.php */

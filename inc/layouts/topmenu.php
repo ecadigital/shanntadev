@@ -1,3 +1,9 @@
+<?php 
+$member_id = (isset($_SESSION['member_id'])) ? $_SESSION['member_id'] : '';
+$member_name = (isset($_SESSION['member_name'])) ? $_SESSION['member_name'] : '';
+$member_fname = (isset($_SESSION['member_fname'])) ? $_SESSION['member_fname'] : '';
+$member_lname = (isset($_SESSION['member_lname'])) ? $_SESSION['member_lname'] : '';
+?>
 <header id="topmenu">
 	<nav id="large-topmenu" class="row show-for-large-up">
 		<ul class="inline-list">
@@ -83,9 +89,9 @@
 				</li>
 			</ul><!-- navigatorDetail -->
 			<ul id="userInterfaceDetail">
-				<li><a href="#"><i class="fa fa-user"></i> CHARINTIP</a></li>
-				<li><a href="#"><i class="fa fa-shopping-cart"></i> MY Cart [<span class="widget_items">0</span>]</a></li>
-				<li><a href="#"><i class="fa fa-ban"></i> CHECKOUT</a></li>
+				<li><a href="cart0.php"><i class="fa fa-user"></i> <?php echo ($member_id=='') ? 'LOGIN' : $member_fname;?></a></li>
+				<li><a href="shipping.php"><i class="fa fa-shopping-cart"></i> MY Cart [<span class="widget_items">0</span>]</a></li>
+				<li><a href="<?php echo ($member_id=='') ? 'cart0.php' : 'cart1.php';?>"><i class="fa fa-ban"></i> CHECKOUT</a></li>
 			</ul><!-- userInterfaceDetail -->
 		</nav><!-- menus -->
 	</nav> <!-- small-topmenu -->

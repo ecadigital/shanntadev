@@ -94,7 +94,19 @@ class Shoppingcart_frontmodel extends CI_Model {
 				"order_read"=>0
 		);
 		$this->db->insert($this->tbl_sp_order,$data);
-					
+		
+		if($member_id!=0){
+			$data = array(
+					"member_address"=>$member_address,
+					"member_city"=>$member_city,
+					"member_postcode"=>$member_postcode,
+					"member_prephone"=>$member_prephone,
+					"member_phone"=>$member_phone
+			);
+			$this->db->where('member_id',$_SESSION['member_id']);
+			$this->db->update($this->tbl_member,$data);
+		}
+		
 		return $order_id;
 	}
 	

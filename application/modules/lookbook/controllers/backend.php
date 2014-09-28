@@ -61,7 +61,7 @@ class Backend extends CI_Controller{
 		
 			$this->model->setValue($data);
 			$lookbook_id = $this->model->addLookbook();		
-			
+			print_r($data);
 	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
 				$lang_id = $lang['language_id'];
 				if($data['image_path_'.$lang_id]!=''){
