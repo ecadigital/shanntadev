@@ -5,7 +5,7 @@
 $this->model = $this->load->model('shoppingcart/Shoppingcart_frontmodel');
 $this->modelMember = $this->load->model('member/Member_frontmodel');
 
-echo $member_id = (isset($_SESSION['member_id'])) ? $_SESSION['member_id'] : '';
+$member_id = (isset($_SESSION['member_id'])) ? $_SESSION['member_id'] : '';
 $member_type = '';
 $member_title = '';
 $member_fname = '';

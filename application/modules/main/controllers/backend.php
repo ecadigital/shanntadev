@@ -137,11 +137,17 @@ class Backend extends CI_Controller{
 	}
 	public function contact()
 	{
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
 		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMain();
-
+		$this->view['listEditMainLang'] = $listEditMainLang = $this->model->listEditMainLang();
 		if($data = $this->input->post()){
 			$this->model->setValue($data);			
 			$this->model->editContact();
+			
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				$this->model->editMainLang($lang_id);
+			}}
 			
 			$this->view['redirect']="
 			<script>
@@ -223,6 +229,29 @@ class Backend extends CI_Controller{
 			</script>";
 		}
 		$this->layout->view('/backend/shipping', $this->view);
+	}
+	public function aboutus()
+	{
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
+		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMainLang();
+
+		if($data = $this->input->post()){
+			$this->model->setValue($data);	
+			
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				$this->model->editMainLang($lang_id);
+			}}
+			
+			$this->view['redirect']="
+			<script>
+				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning');
+				setTimeout(function(){
+					window.parent.location='".DIR_ROOT."main/backend/aboutus';
+				},3000);
+			</script>";
+		}
+		$this->layout->view('/backend/aboutus', $this->view);
 	}
 
 

@@ -86,10 +86,15 @@ class Mainmodel extends CI_Model {
 			$data["main_last_modified"] = $date;
 			
 			$data=array();
-			$data["main_email"]=(isset($val['main_email'])) ? $val["main_email"] : '';
-			$data["main_tel"]=(isset($val['main_tel'])) ? $val["main_tel"] : '';
-			$data["main_facebook"]=(isset($val['main_facebook'])) ? $val["main_facebook"] : '';
-			$data["main_twitter"]=(isset($val['main_twitter'])) ? $val["main_twitter"] : '';
+			if(isset($val['main_email']))					$data["main_email"]=$val['main_email'];
+			if(isset($val['main_facebook']))				$data["main_facebook"]=$val['main_facebook'];
+			if(isset($val['main_twitter']))					$data["main_twitter"]=$val['main_twitter'];
+			if(isset($val['main_instagram']))				$data["main_instagram"]=$val['main_instagram'];
+
+			//$data["main_email"]=(isset($val['main_email'])) ? $val["main_email"] : '';
+			//$data["main_tel"]=(isset($val['main_tel'])) ? $val["main_tel"] : '';
+			//$data["main_facebook"]=(isset($val['main_facebook'])) ? $val["main_facebook"] : '';
+			//$data["main_twitter"]=(isset($val['main_twitter'])) ? $val["main_twitter"] : '';
 
 			$this->db->where('main_id',1);
 			$this->db->update($this->tbl_main,$data);
@@ -105,8 +110,11 @@ class Mainmodel extends CI_Model {
 		$resultLang = $queryLang->result_array();
 		
 		foreach($resultLang as $res){
+			$result['main_contact'][$res['language_id']] = $res['main_contact'];
+			$result['main_footer'][$res['language_id']] = $res['main_footer'];
 			$result['main_policy'][$res['language_id']] = $res['main_policy'];
 			$result['main_shipping'][$res['language_id']] = $res['main_shipping'];
+			$result['main_aboutus'][$res['language_id']] = $res['main_aboutus'];
 		}
 		
 		return $result;
@@ -121,13 +129,32 @@ class Mainmodel extends CI_Model {
 			$data["main_last_modified"] = $date;
 			
 			$data= array();
+			if(isset($val['main_contact'][$lang_id]))				$data["main_contact"]=$val['main_contact'][$lang_id];
+			if(isset($val['main_footer'][$lang_id]))				$data["main_footer"]=$val['main_footer'][$lang_id];
 			if(isset($val['main_policy'][$lang_id]))				$data["main_policy"]=$val['main_policy'][$lang_id];
 			if(isset($val['main_shipping'][$lang_id]))				$data["main_shipping"]=$val['main_shipping'][$lang_id];
+			if(isset($val['main_aboutus'][$lang_id]))				$data["main_aboutus"]=$val['main_aboutus'][$lang_id];
 
 			$this->db->where('language_id',$lang_id);
 			$this->db->update($this->tbl_main,$data);
 		}
 	}
+	
+	
+	public function getMain($lang_id){
+		
+		$select = $this->db->select()
+				->from($this->tbl_main)
+				->where("language_id",$lang_id)
+				->limit(1);
+		$query = $this->db->get();
+		$result = $query->row_array();
+		
+		return $result;
+	}
+	
+	
+	
 	public function upload_lookbook($file,$lang_id){
 	
 		if(!empty($file)){

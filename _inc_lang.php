@@ -13,6 +13,14 @@ if($defaultLang==1){
 	$Array_lang['language'] = 'ภาษา';
 	$Array_lang['seeall'] = 'ดูทั้งหมด';
 	
+	$Array_lang['memberregister'] = 'สมัครสมาชิก';
+	$Array_lang['faqs'] = 'คำถาม';
+	$Array_lang['help'] = 'ช่วยเหลือ';
+	$Array_lang['orderandpayment'] = 'วิธีการสั่งซื้อสินค้าและชำระเงิน';
+	$Array_lang['shippinginformation'] = 'ข้อมูลการจัดส่ง';
+	$Array_lang['refundpolicy'] = 'นโยบายการคืนเงิน';
+	$Array_lang['termsofservice'] = 'เงื่อนไขการใช้บริการ';
+
 	$Array_lang['username'] = "อีเมล์";
 	$Array_lang['password'] = "รหัสผ่าน";
 	$Array_lang['login'] = "เข้าสู่ระบบ";
@@ -42,6 +50,14 @@ if($defaultLang==1){
 	
 	$Array_lang['language'] = 'Language';
 	$Array_lang['seeall'] = 'See all';
+	
+	$Array_lang['memberregister'] = 'Member Register';
+	$Array_lang['faqs'] = 'FAQs';
+	$Array_lang['help'] = 'Help';
+	$Array_lang['orderandpayment'] = 'Order and Payment';
+	$Array_lang['shippinginformation'] = 'Shipping information';
+	$Array_lang['refundpolicy'] = 'Refunnd Policy';
+	$Array_lang['termsofservice'] = 'Terms of Service';
 	
 	$Array_lang['username'] = "Email";
 	$Array_lang['password'] = "Password";

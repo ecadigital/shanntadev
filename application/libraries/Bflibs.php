@@ -783,7 +783,53 @@ class Bflibs
 		$this->db_lib->where($fieldId,$id);
 		$this->db_lib->update($table,$data);
 	}
-	
+	public function getSubStr($string, $start, $length)
+	{			
+		$length = ($length+$start)-1;
+		$array = $this->getMBStrSplit($string);
+		$count = 0;
+		$return = "";
+			
+		for($i=$start; $i < count($array); $i++)
+		{
+			$ascii = ord(iconv("UTF-8", "TIS-620", $array[$i] ));
+			
+			if( $ascii == 209 ||  ($ascii >= 212 && $ascii <= 218 ) || ($ascii >= 231 && $ascii <= 238 ) )
+			{
+				//$start++;
+				$length++;
+			}
+			
+			if( $i >= $start )
+			{
+				$return .= $array[$i];
+			}
+			
+			if( $i >= $length )
+			{
+				$return .= ' ...';
+				break;
+			}
+		}
+		return $return;
+	}
+	public function getMBStrSplit($string, $split_length = 1){
+		mb_internal_encoding('UTF-8');
+		mb_regex_encoding('UTF-8'); 
+		
+		$split_length = ($split_length <= 0) ? 1 : $split_length;
+		$mb_strlen = mb_strlen($string, 'utf-8');
+		$array = array();
+		$i = 0; 
+		
+		while($i < $mb_strlen)
+		{
+			$array[] = mb_substr($string, $i, $split_length);
+			$i = $i+$split_length;
+		}
+		
+		return $array;
+	}
 	public function getSubString($str,$len){
 	
 		$c = strlen($str);

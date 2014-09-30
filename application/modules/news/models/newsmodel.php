@@ -223,6 +223,59 @@ class Newsmodel extends CI_Model {
 		return $this->db->count_all_results();
 	}
 	
+	public function listAllNews($lang_id){
+		
+		$select = $this->db->select(array("$this->tbl_news.news_id",
+											"$this->tbl_news_lang.news_name",
+											"$this->tbl_news_lang.news_detail",
+											"$this->tbl_news.news_date_added"))
+				->from($this->tbl_news)
+				->join($this->tbl_news_lang,"$this->tbl_news_lang.news_id=$this->tbl_news.news_id","left")
+				->where("$this->tbl_news.news_publish",1)
+				->where("$this->tbl_news_lang.language_id",$lang_id)
+				->order_by("$this->tbl_news.news_seq",'desc')
+				->order_by("$this->tbl_news.news_date_added",'desc');		
+		$query = $this->db->get();
+		$result = $query->result_array();
+		
+		return $result;
+	}
+	public function getNews($lang_id,$news_id){
+		
+		$select = $this->db->select(array("$this->tbl_news.news_id",
+										"$this->tbl_news_lang.news_name",
+										"$this->tbl_news_lang.news_detail",
+										"$this->tbl_news.news_date_added"))
+				->from($this->tbl_news_lang)
+				->join($this->tbl_news,"$this->tbl_news.news_id=$this->tbl_news_lang.news_id","left")
+				->where("$this->tbl_news_lang.language_id",$lang_id)
+				->where("$this->tbl_news.news_id",$news_id)
+				->limit(1);
+		$query = $this->db->get();
+		$result = $query->row_array();
+		
+		return $result;
+	}
+	public function randomNews($lang_id,$news_id){
+		
+		$select = $this->db->select(array("$this->tbl_news.news_id",
+											"$this->tbl_news_lang.news_name",
+											"$this->tbl_news_lang.news_detail",
+											"$this->tbl_news.news_date_added"))
+				->from($this->tbl_news)
+				->join($this->tbl_news_lang,"$this->tbl_news_lang.news_id=$this->tbl_news.news_id","left")
+				->where("$this->tbl_news.news_publish",1)
+				->where("$this->tbl_news_lang.language_id",$lang_id)
+				->where("$this->tbl_news.news_id !=",$news_id)
+				->order_by("$this->tbl_news.news_seq",'random');
+		$query = $this->db->get();
+		$result = $query->row_array();
+		
+		return $result;
+	}
+	
+	
+	
 	
 	/* CATEGORIES
 	-----------------------------------------------------------------------------------------------------------*/

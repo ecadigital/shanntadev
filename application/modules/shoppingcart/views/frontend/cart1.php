@@ -1,6 +1,6 @@
-<?php if(empty($contents)){?>
-	<div style="height:150px; text-align:center; margin-top:50px;"><?php echo lang('nodata');?></div>
-<?php }else{ ?>
+<?php //if(empty($contents)){?>
+	<!--<div style="height:150px; text-align:center; margin-top:50px;"><?php echo lang('nodata');?></div>-->
+<?php //}else{ ?>
 <?php 
 $this->model = $this->load->model('shoppingcart/Shoppingcart_frontmodel');
 $this->modelMember = $this->load->model('member/Member_frontmodel');
@@ -21,7 +21,9 @@ $member_byear = (isset($_SESSION['order']['member_byear'])) ? $_SESSION['order']
 	<div class="medium-4 columns">
 		<h1>Register</h1>
 	</div>
-	<div class="medium-8 columns"><?php echo $this->model->nav_cart(1);?></div>
+	<div class="medium-8 columns">
+		<?php if(!empty($contents)){ echo $this->model->nav_cart(1); }?>
+	</div>
 	<div class="clearfix"></div>
 </header>
 <form action="#" method="post">
@@ -132,7 +134,7 @@ $member_byear = (isset($_SESSION['order']['member_byear'])) ? $_SESSION['order']
 	
 	<div class="navigator">
 		<div>
-			<a href="javascript:void(0)" onclick="chkCart1()" class="arrow_box right next"><?php echo lang('continue');?></a>
+			<a href="javascript:void(0)" onclick="chkCart1()" class="box right next"><?php echo (empty($contents)) ? lang('register') : lang('continue');?></a>
 		</div>
 	</div> <!-- .navigator -->
 </form>
@@ -208,9 +210,18 @@ $member_byear = (isset($_SESSION['order']['member_byear'])) ? $_SESSION['order']
 				member_email: $('#member_email').val(),
 				member_password: $('#member_password').val()
 			}).done(function( data ) {
-				window.location='cart2.php';
+				if(data==''){
+					alert("<?php echo lang('duplicateemail');?>");
+					$('#member_email').focus();
+				}else{
+					<?php if(empty($contents)){?>
+						window.location='home.php';
+					<?php }else{?>
+						window.location='cart2.php';
+					<?php }?>
+				}
 			});
 		}
 	}
 </script>
-<?php }?>
+<?php //}?>

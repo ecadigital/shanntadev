@@ -79,42 +79,49 @@ class Frontend extends CI_Controller{
 			
 			//$member_pass = $data['member_password'];//rand(100000,999999);
 			
-			echo $member_id = $this->model->register();//($member_pass);
-			//$this->model->sendmail($member_id);
-			//$this->model->sendmail($member_id,$member_pass);
+			$member_id = $this->model->chkDuplicateEmail($data['member_email']);
 			
-			/*echo "
-			<script>
-				alert('สมัครสมาชิกสำเร็จ กรุณรรอการติดต่อกลับภายใน 1-2 วันค่ะ');
-				window.parent.location='".DIR_ROOT."index.php';
-			</script>";*/
-			
-			$_SESSION['member_id'] = $member_id;
-			$_SESSION['member_user'] = $data['member_email'];
-			$_SESSION['member_name'] = lang($data['member_title']).' '.$data['member_fname'].' '.$data['member_lname'];
-			$_SESSION['member_title'] = $data['member_title'];
-			$_SESSION['member_fname'] = $data['member_fname'];
-			$_SESSION['member_lname'] = $data['member_lname'];
-			$_SESSION['member_language'] = 1;
-			
-			if(isset($data['remember']) && ($data['remember']=='1' || $data['remember']=='on'))
-			{
-				$name = SITE.'_member_id';
-				$value = $return['member_id'];
-				$this->bflibs->set_cookie($name, $value);
+			if($member_id==''){				
+				
+				echo $member_id = $this->model->register();//($member_pass);
+				//$this->model->sendmail($member_id);
+				//$this->model->sendmail($member_id,$member_pass);
+				
+				/*echo "
+				<script>
+					alert('สมัครสมาชิกสำเร็จ กรุณรรอการติดต่อกลับภายใน 1-2 วันค่ะ');
+					window.parent.location='".DIR_ROOT."index.php';
+				</script>";*/
+				
+				$_SESSION['member_id'] = $member_id;
+				$_SESSION['member_user'] = $data['member_email'];
+				$_SESSION['member_name'] = $data['member_fname'].' '.$data['member_lname'];
+				$_SESSION['member_title'] = $data['member_title'];
+				$_SESSION['member_fname'] = $data['member_fname'];
+				$_SESSION['member_lname'] = $data['member_lname'];
+				$_SESSION['member_language'] = 1;
+				
+				if(isset($data['remember']) && ($data['remember']=='1' || $data['remember']=='on'))
+				{
+					$name = SITE.'_member_id';
+					$value = $return['member_id'];
+					$this->bflibs->set_cookie($name, $value);
+				}
+				else{
+					$this->session->sess_expiration = 1800; //half hours
+				}
+				
+				if(isset($data['member_type'])) $_SESSION['order']['member_type']='member';
+				if(isset($data['member_id'])) $_SESSION['order']['member_id']=$member_id;
+				if(isset($data['member_title'])) $_SESSION['order']['member_title']=$data['member_title'];
+				if(isset($data['member_fname'])) $_SESSION['order']['member_fname']=$data['member_fname'];
+				if(isset($data['member_lname'])) $_SESSION['order']['member_lname']=$data['member_lname'];
+				if(isset($data['member_bday'])) $_SESSION['order']['member_bday']=$data['member_bday'];
+				if(isset($data['member_bmonth'])) $_SESSION['order']['member_bmonth']=$data['member_bmonth'];
+				if(isset($data['member_byear'])) $_SESSION['order']['member_byear']=$data['member_byear'];
+			}else{
+				echo '';
 			}
-			else{
-				$this->session->sess_expiration = 1800; //half hours
-			}
-			
-			if(isset($data['member_type'])) $_SESSION['order']['member_type']='member';
-			if(isset($data['member_id'])) $_SESSION['order']['member_id']=$member_id;
-			if(isset($data['member_title'])) $_SESSION['order']['member_title']=$data['member_title'];
-			if(isset($data['member_fname'])) $_SESSION['order']['member_fname']=$data['member_fname'];
-			if(isset($data['member_lname'])) $_SESSION['order']['member_lname']=$data['member_lname'];
-			if(isset($data['member_bday'])) $_SESSION['order']['member_bday']=$data['member_bday'];
-			if(isset($data['member_bmonth'])) $_SESSION['order']['member_bmonth']=$data['member_bmonth'];
-			if(isset($data['member_byear'])) $_SESSION['order']['member_byear']=$data['member_byear'];
 		}
 		//$this->layout->view('/frontend/register',$this->view);
     }

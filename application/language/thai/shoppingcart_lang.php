@@ -1,4 +1,10 @@
 <?php
+$lang['newsandevent'] = "ข่าวและกิจกรรม";
+$lang['newsandeventmore'] = "ข่าวและกิจกรรมอื่นๆ";
+$lang['back'] = "กลับ";
+
+$lang['aboutus'] = "เกี่ยวกับเรา";
+$lang['contactus'] = "ติดต่อเรา";
 
 $lang['jewely_date'] = "วันที่";
 $lang['seeall'] = "ดูทั้งหมด";
@@ -44,6 +50,7 @@ $lang['password'] = "รหัสผ่าน";
 $lang['confirmpassword'] = "ยืนยันรหัสผ่าน";
 $lang['email'] = "อีเมล์";
 $lang['confirmemail'] = "ยืนยันอีเมล์";
+$lang['duplicateemail'] = "อีเมล์นี้ถูกใช้ไปแล้ว";
 $lang['forgotpassword'] = "ลืมรหัสผ่าน";
 $lang['signin'] = "เข้าสู่ระบบ";
 $lang['notmember'] = "ยังไม่เป็นสมาชิก";

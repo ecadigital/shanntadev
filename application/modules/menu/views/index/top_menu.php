@@ -78,11 +78,12 @@ else $active_home = 'active';
     
     <li class="sub <?php echo $active_other;?>" style="width:140px;"><a href="#"><img src="<?php echo DIR_PUBLIC?>images/icons/color/config.png" height="20" /> จัดการหน้าอื่นๆ</a>
         <ul>
+			<li><a href="<?php echo DIR_ROOT?>main/backend/aboutus"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" /> หน้า About us</a></li>
 			<li><a href="<?php echo DIR_ROOT?>jewely/backend/index"><img src="<?php echo DIR_PUBLIC?>images/icons/color/jewely.png" height="20" /> หน้า Jewely D.I.Y</a></li>
 			<li><a href="<?php echo DIR_ROOT?>faq/backend/index"><img src="<?php echo DIR_PUBLIC?>images/icons/color/comment.png" height="20" /> หน้า FAQ</a></li>
 			<li><a href="<?php echo DIR_ROOT?>lookbook/backend/index"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" /> หน้า LOOKBOOK</a></li>
 			<li><a href="<?php echo DIR_ROOT?>main/backend/policy"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" /> หน้า Policy</a></li>
-			<li><a href="<?php echo DIR_ROOT?>main/backend/shipping"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" /> หน้า Shipping</a></li>>
+			<li><a href="<?php echo DIR_ROOT?>main/backend/shipping"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" /> หน้า Shipping</a></li>
             <li><a href="<?php echo DIR_ROOT?>main/backend/intro"><img src="<?php echo DIR_PUBLIC?>images/icons/color/archives.png" height="20" />  จัดการหน้า Intro </a></li>
             <!--<li><a href="<?php echo DIR_ROOT?>slide/backend/index"><img src="<?php echo DIR_PUBLIC?>images/icons/color/delicious.png" height="20" /> รายการภาพสไลด์</a></li>
             <li><a href="<?php echo DIR_ROOT?>slide/backend/add_slide"><img src="<?php echo DIR_PUBLIC?>images/icons/color/delicious.png" height="20" />  เพิ่มภาพสไลด์</a></li>
