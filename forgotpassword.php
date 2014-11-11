@@ -1,5 +1,6 @@
 <?php require "inc/init.php";
-$redirect = "forgot.php";?>
+$prev_page = (isset($_SESSION['prev_page'])) ? $_SESSION['prev_page'] : "home.php";
+$_SESSION['prev_page'] = "forgotpassword.php";?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -16,7 +17,7 @@ $redirect = "forgot.php";?>
 		
         <div id="content" class="row cart">
 			<header>
-				<div class="medium-4 columns">
+				<div class="medium-8 columns">
 					<h1><?php echo strtoupper($Array_lang['forgotpassword']);?></h1>
 				</div>
 				<div class="medium-8 columns">
@@ -43,7 +44,7 @@ $redirect = "forgot.php";?>
 				<div class="clearfix"></div>
 			</form>
 		</div><!-- #content .row.cart -->
-		
+		<?php //echo $_SERVER['HTTP_REFERER'];$HTTP_SERVER_VARS['HTTP_REFERER']?>
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
 		
@@ -66,6 +67,7 @@ $redirect = "forgot.php";?>
 						}else{
 							$('#forgot_username').removeClass('validate').next().next().hide();
 							alert('<?php echo $Array_lang['v_sendpass'];?>');
+							window.location='<?php echo $prev_page;?>';
 						}
 					});
 				}

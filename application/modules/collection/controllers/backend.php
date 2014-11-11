@@ -280,8 +280,8 @@ class Backend extends CI_Controller{
 	}
 	public function add_categories(){
 	
-		$this->view['listAllLang'] = $this->bflibs->listAllLang();
-		$this->view['listCategoriesParent'] = $this->model->listCategoriesParent(0,0,'');
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
+		//$this->view['listCategoriesParent'] = $this->model->listCategoriesParent(0,0,'');
 		if($data = $this->input->post()){
 		
 			$this->model->setValue($data);
@@ -291,15 +291,21 @@ class Backend extends CI_Controller{
 			if($data['image_path_home']!=''){
 				$this->model->upload_categories($data['image_path_home'],$collection_categories_id,'home');
 			}
-			if($data['image_path_banner']!=''){
+			/*if($data['image_path_banner']!=''){
 				$this->model->upload_categories($data['image_path_banner'],$collection_categories_id,'banner');
-			}
+			}*/
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				if($data['image_path_'.$lang_id]!=''){
+					$this->model->upload_categories($data['image_path_banner_'.$lang_id],$collection_categories_id,$lang_id);
+				}
+			}}
 			
 			$this->view['redirect']="
 			<script>
 				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning');
 				setTimeout(function(){
-					window.parent.location='".DIR_ROOT."collection/backend/index_categories';
+					//window.parent.location='".DIR_ROOT."collection/backend/index_categories';
 				},3000);
 			</script>";//parent.document.getElementById('collection_categories_form').reset();
 		}else{
@@ -310,9 +316,9 @@ class Backend extends CI_Controller{
 	public function edit_categories(){
 	
 		$collection_categories_id = $this->request->getParam('id');
-		$this->view['listAllLang'] = $this->bflibs->listAllLang();
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
 		$this->view['listEditCategories'] = $listEditCategories = $this->model->listEditCategories($collection_categories_id);
-		$this->view['listCategoriesParent'] = $this->model->listCategoriesParent(0,0,$collection_categories_id);
+		//$this->view['listCategoriesParent'] = $this->model->listCategoriesParent(0,0,$collection_categories_id);
 		
 		/////////////////////////////////// No data //////////////////////////////////////////
 		if(empty($listEditCategories)){
@@ -330,15 +336,22 @@ class Backend extends CI_Controller{
 			if($data['image_path_home']!=''){
 				$this->model->upload_categories($data['image_path_home'],$collection_categories_id,'home');
 			}
-			if($data['image_path_banner']!=''){
+			/*if($data['image_path_banner']!=''){
 				$this->model->upload_categories($data['image_path_banner'],$collection_categories_id,'banner');
-			}
+			}*/
+			print_r($data);
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				if($data['image_path_banner_'.$lang_id]!=''){
+					$this->model->upload_categories($data['image_path_banner_'.$lang_id],$collection_categories_id,$lang_id);
+				}
+			}}
 			
 			$this->view['redirect']="
 			<script>
 				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning');
 				setTimeout(function(){
-					window.parent.location='".DIR_ROOT."collection/backend/index_categories';
+					//window.parent.location='".DIR_ROOT."collection/backend/index_categories';
 				},3000);
 			</script>";
 		}else{

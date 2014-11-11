@@ -29,6 +29,12 @@ $Array_widget['widget_box'] = '
 		$product = $this->modelProduct->getProduct($lang,$product_id);
 		$qty = $content['qty'];
 		$price = $product['product_price'];
+		$currency = $product['product_currency'];
+		if($currency==''){
+			$currency = 'USD';
+			if($lang==1) $currency = 'บาท';
+			if($lang==3) $currency = 'CNY';
+		}		
 		$name = $product["product_name"];
 		$detail = $product["product_detail"];
 		$img_db = $this->modelProduct->getFirstProductImage($product_id);
@@ -45,7 +51,7 @@ $Array_widget['widget_box'] = '
 		$i++;
 		$total = $price*$qty;
 		$summary += $total;
-		
+
 		$Array_widget['widget_box'] .= '<div row-id="'.$rowid.'" class="row list_'.$i; 
 		if($i==1) $Array_widget['widget_box'] .= ' first'; 
 		$Array_widget['widget_box'] .= '">
@@ -54,31 +60,36 @@ $Array_widget['widget_box'] = '
 			</div>
 			<div class="medium-5 columns">
 				'.$name.'
-				<a href="javascript:void(0)" class="wremove">['.lang('remove').']</a>
+				<a href="javascript:void(0)" onclick="removeCartWidget(\''.$rowid.'\',\''.$lang.'\')" class="wremove" id="wremove_'.$rowid.'">['.lang('remove').']</a>
 			</div>
 			<div class="medium-2 columns">
-				<span id="wprice_'.$i.'">'.number_format($price).'</span> '.lang('baht').'
+				<span id="wprice_'.$i.'">'.number_format($price).'</span> '.$currency.'
 			</div>
 			<div class="medium-1 columns">
 				<input type="text" class="wqty" id="wqty_'.$i.'" name="winp-qty['.$rowid.']" value="'.$qty.'" onkeyup="changeQty(\''.$i.'\')">
 			</div>
 			<div class="medium-2 columns ta-right">
-				<span id="wtotal_'.$i.'">'.number_format($total).'</span> '.lang('baht').'
+				<span id="wtotal_'.$i.'">'.number_format($total).'</span> '.$currency.'
 			</div>
 		</div>';
 	}
+		
+	$currency = 'USD';
+	if($lang==1) $currency = 'บาท';
+	if($lang==3) $currency = 'CNY';
+	
 	$Array_widget['widget_box'] .= '
 	<div class="row">
 		<div class="medium-3 medium-offset-6 columns"><b>'.lang('subtotal').':</b></div> 
-		<div class="medium-3 columns ta-right"><b><span id="wsubtotal">'.number_format($summary).'</span> '.lang('baht').'</b></div>
+		<div class="medium-3 columns ta-right"><b><span id="wsubtotal">'.number_format($summary).'</span> '.$currency.'</b></div>
 	</div>
 	<div class="row">
 		<div class="medium-3 medium-offset-6 columns"><b>'.lang('shipping').':</b></div>
-		<div class="medium-3 columns ta-right"><b><span id="wshipping">'.number_format($shipping).'</span> '.lang('baht').'</b></div>
+		<div class="medium-3 columns ta-right"><b><span id="wshipping">'.number_format($shipping).'</span> '.$currency.'</b></div>
 	</div>
 	<div class="row">
 		<div class="medium-3 medium-offset-6 columns"><b>'.lang('total').':</b></div>
-		<div class="medium-3 columns ta-right"><b><span id="wsummary">'.number_format($summary+$shipping).'</span> '.lang('baht').'</b></div>
+		<div class="medium-3 columns ta-right"><b><span id="wsummary">'.number_format($summary+$shipping).'</span> '.$currency.'</b></div>
 	</div>
 	<div class="row">
 		<div class="medium-4 medium-offset-8 columns ta-right">

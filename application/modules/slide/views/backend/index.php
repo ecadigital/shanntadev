@@ -1,9 +1,13 @@
-<h3><?php echo lang('slide_ii');?></h3>
+<h3>รายการภาพสไลด์</h3>
 <div>
 	<a href="<?php echo DIR_ROOT?>admin/admin/index">หน้าแรก</a>&nbsp;&nbsp;>&nbsp;&nbsp;
-    <?php echo lang('slide_ii');?>
+	รายการภาพสไลด์
+	
+    <div style="float:right;">
+		<a href="<?php echo DIR_ROOT?>slide/backend/add_slide"><input type="submit" class="button_gray" value="เพิ่มภาพสไลด์" /></a>
+    </div>
 </div>
-<div class="clearfix formRow">
+<div class="clearfix formRow" style="margin-top:10px;">
 	<?php 
         echo $this->bflibs->mkSelect('perPage','#boxContent',$targetpage,$perPage);
         echo $this->bflibs->mkSelect('searchData','#boxContent',$targetpage);

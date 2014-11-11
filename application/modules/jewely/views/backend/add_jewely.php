@@ -56,7 +56,7 @@
                     <fieldset style="margin-top:20px;">
                         <legend><?php echo lang('web_image');?></legend>
                         <input type="file" id="file_upload" name="file_upload">
-                        <div class="txt_notify">* <?php echo lang('web_notify_multi_upload');?></label></div>
+                        <div class="txt_notify">* <?php echo lang('web_notify_multi_upload');?>&nbsp;&nbsp;/&nbsp;&nbsp; ขนาดรูปที่แนะนำคือ 410 x 372 พิกเซล</div>
                     </fieldset>
         		</div>
    			</div>

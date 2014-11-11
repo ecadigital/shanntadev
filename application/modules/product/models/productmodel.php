@@ -47,7 +47,6 @@ class Productmodel extends CI_Model {
 		$select = $this->db->select(array(
 						"$this->tbl_product.product_id",
 						"$this->tbl_product.product_categories_id",
-						"$this->tbl_product.product_price",
 						"$this->tbl_product.product_discount",
 						"$this->tbl_product.product_rec",
 						"$this->tbl_product.product_hot",
@@ -56,6 +55,8 @@ class Productmodel extends CI_Model {
 						"$this->tbl_product.product_seq",
 						"$this->tbl_product_lang.product_name",
 						"$this->tbl_product_lang.product_detail",
+						"$this->tbl_product_lang.product_price",
+						"$this->tbl_product_lang.product_currency",
 						"$this->tbl_product_categories_lang.product_categories_name"))
 				->from($this->tbl_product)
 				->join($this->tbl_product_lang,"$this->tbl_product.product_id=$this->tbl_product_lang.product_id","left")
@@ -119,7 +120,7 @@ class Productmodel extends CI_Model {
 	}
 	public function listEditProduct($id,$member_id=''){
 		
-		$select = $this->db->select()
+		$select = $this->db->select(array("product_id","product_categories_id","product_discount"))
 				->from($this->tbl_product)
 				->where("product_id",$id);		
 		$query = $this->db->get();
@@ -143,6 +144,8 @@ class Productmodel extends CI_Model {
 		foreach($resultLang as $res){
 			$result['product_name'][$res['language_id']] = $res['product_name'];
 			$result['product_detail'][$res['language_id']] = $res['product_detail'];
+			$result['product_price'][$res['language_id']] = $res['product_price'];
+			$result['product_currency'][$res['language_id']] = $res['product_currency'];
 		}
 		return $result;
 	}
@@ -163,9 +166,9 @@ class Productmodel extends CI_Model {
 					//"product_name"=>$val['product_name'],
 					//"product_short_detail"=>$val['product_short_detail'],
 					//"product_detail"=>$val['product_detail'],
-					"product_price"=>$this->bflibs->cutNumberSeparate($val['product_price']),
-					"product_discount"=>($dis_type==1) ? $val['product_discount'] : $this->bflibs->cutNumberSeparate($discount),
-					"product_newprice"=>$this->bflibs->cutNumberSeparate($val['product_newprice']),
+					//"product_price"=>$this->bflibs->cutNumberSeparate($val['product_price']),
+					"product_discount"=>$this->bflibs->cutNumberSeparate($discount),//($dis_type==1) ? $val['product_discount'] : $this->bflibs->cutNumberSeparate($discount),
+					//"product_newprice"=>$this->bflibs->cutNumberSeparate($val['product_newprice']),
 					"product_date_added"=>$date,
 					"product_last_modified"=>$date,
 					"product_publish"=>1,
@@ -179,7 +182,9 @@ class Productmodel extends CI_Model {
 					"language_id"=>$lang,
 					"product_name"=>$product_name,
 					//"product_short_detail"=>htmlspecialchars($val['product_short_detail'][$lang], ENT_QUOTES),
-					"product_detail"=>htmlspecialchars($val['product_detail'][$lang], ENT_QUOTES)
+					"product_detail"=>htmlspecialchars($val['product_detail'][$lang], ENT_QUOTES),
+					"product_price"=>$val['product_price'][$lang],
+					"product_currency"=>$val['product_currency'][$lang]
 				);
 				$this->db->insert($this->tbl_product_lang,$dataLang);
 			}
@@ -197,14 +202,17 @@ class Productmodel extends CI_Model {
 			$date = date('Y-m-d H:i:s');
 			$product_publish = (isset($val['product_publish']))?$val['product_publish']:0;
 			$product_pin = (isset($val['product_pin']))?$val['product_pin']:0;
+			
+			list($discount,$dis_type) = $this->bflibs->getDiscount($val['product_discount']);
+			
 			$data = array(
 					"product_categories_id"=>$val['product_categories_id'],
 					//"product_name"=>$val['product_name'],
 					//"product_short_detail"=>$val['product_short_detail'],
 					//"product_detail"=>$val['product_detail'],
-					"product_price"=>$this->bflibs->cutNumberSeparate($val['product_price']),
-					"product_discount"=>($dis_type==1) ? $val['product_discount'] : $this->bflibs->cutNumberSeparate($discount),
-					"product_newprice"=>$this->bflibs->cutNumberSeparate($val['product_newprice']),
+					//"product_price"=>$this->bflibs->cutNumberSeparate($val['product_price']),
+					"product_discount"=>$this->bflibs->cutNumberSeparate($discount),//($dis_type==1) ? $val['product_discount'] : $this->bflibs->cutNumberSeparate($discount),
+					//"product_newprice"=>$this->bflibs->cutNumberSeparate($val['product_newprice']),
 					"product_last_modified"=>$date
 			);
 
@@ -214,7 +222,9 @@ class Productmodel extends CI_Model {
 			foreach($val['product_name'] as $lang=>$product_name){
 				$dataLang = array(
 					"product_name"=>$product_name,
-					"product_detail"=>htmlspecialchars($val['product_detail'][$lang], ENT_QUOTES)
+					"product_detail"=>htmlspecialchars($val['product_detail'][$lang], ENT_QUOTES),
+					"product_price"=>$val['product_price'][$lang],
+					"product_currency"=>$val['product_currency'][$lang]
 				);
 				
 				$chkLang = $this->chkLang($val["product_id"],$lang);

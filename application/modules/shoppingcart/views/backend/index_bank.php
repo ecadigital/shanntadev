@@ -1,7 +1,7 @@
-<h3><?php echo lang('sp_bank_ii');?></h3>
+<h3>รายการบัญชีธนาคาร</h3>
 <div>
 	<a href="<?php echo DIR_ROOT?>admin/admin/index">หน้าแรก</a>&nbsp;&nbsp;>&nbsp;&nbsp;
-    <?php echo lang('sp_bank_ii');?>
+	รายการบัญชีธนาคาร
     
     <div style="float:right;">
 		<a href="<?php echo DIR_ROOT?>shoppingcart/backend/add_bank"><input type="submit" class="button_gray" value="เพิ่มบัญชีธนาคาร" /></a>

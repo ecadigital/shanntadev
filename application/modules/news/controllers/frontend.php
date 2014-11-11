@@ -10,7 +10,14 @@ class Frontend extends CI_Controller{
 		// set lang
 		$lang_id = $this->request->getParam('lang');
     	$this->bflibs->setLang($lang_id,$_SERVER['REQUEST_URI']);
-		
+    	
+    	$actions=$this->bflibs->insertActionStackFront();
+   	 	if(!empty($actions)){
+			foreach($actions as $action)
+			{
+				$this->layout->setActionStack($action["name"],$action["view"]);
+			}
+   	 	}		
    	 	$this->model = $this->load->model('news/Newsmodel');
     }
 

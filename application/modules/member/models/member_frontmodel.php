@@ -189,7 +189,7 @@ class Member_frontmodel extends CI_Model {
 	
 	/* SEND MAIL
 	-----------------------------------------------------------------------------------------------------------*/
-	private $websiteName = 'HAVEREWARD.COM';
+	private $websiteName = 'SHANNTA';
 	private $websiteDir = DIR_HOST;
 	public function sendmail($member_id){//,$member_pass,$member_code=''){
 	
@@ -200,18 +200,19 @@ class Member_frontmodel extends CI_Model {
 		$result = $query->row_array();
 		
 		$getMain = $this->getMain();
-			echo $getMain['main_email'];
-		if(!empty($getMain) && $getMain['main_email']!="")
+			//echo $getMain['main_email'];
+		//if(!empty($getMain) && $getMain['main_email']!="")
+		if($result['member_email']!="")
 		{
 			$member_name = $result['member_first_name'].' '.$result['member_last_name'];
-			$to_email = $getMain["main_email"];
-			$subject = '['.$this->websiteName.'] มีสมาชิกใหม่';
+			$to_email = $result['member_email'];//$getMain["main_email"];
+			$subject = '['.$this->websiteName.'] MEMBER REGISTRY COMPLETE';
 			
 			$str='ข้อมูลสมาชิกที่ทำการสมัครสมาชิก<br/>
 			<br/><strong>ชื่อ - นามสกุล</strong> :  '.$member_name.'
-			<br/><strong>เบอร์โทรศัพท์</strong> :  '.$member_name.'
 			<br/><strong>ชื่อผู้ใช้</strong> :  '.$result['member_email'].'
-			<br/><br/>ต้องการแก้ไขข้อมูลอื่นๆ <a href="http://www.havereward.com/member/backend/edit_member/id/'.$member_id.'" target="_blank">คลิกที่นี่</a>';
+			<br/><strong>รหัสผ่าน</strong> :  '.base64_decode($result['member_pass']).'';
+			//<br/><br/>ต้องการแก้ไขข้อมูลอื่นๆ <a href="http://www.havereward.com/member/backend/edit_member/id/'.$member_id.'" target="_blank">คลิกที่นี่</a>';
 			echo $str;
 			$this->load->library('email');
 			$config['mailtype'] = 'html';

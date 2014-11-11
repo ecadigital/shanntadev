@@ -26,9 +26,9 @@ class Frontend extends CI_Controller{
 	public function list_product()
 	{
 		$this->layout->disableLayout();
-		$lang_id = $this->request->getParam('lang');
+		$this->view['lang_id'] = $lang_id = $this->request->getParam('lang');
 		$product_categories_id = $this->request->getParam('cat');
-		$this->view['listProduct'] = $this->model->listProduct($lang_id,$product_categories_id='');
+		$this->view['listProduct'] = $this->model->listProduct($lang_id,$product_categories_id);
 		$this->layout->view('/frontend/list_product', $this->view);
 	}
 	public function list_menuhover()

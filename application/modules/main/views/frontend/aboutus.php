@@ -1,5 +1,5 @@
 <header>
-	<h1><?php echo lang('web_aboutus');?></h1>
+	<h1><?php echo lang('aboutus');?></h1>
 	<hr>
 	<div class="headImage">
 		<img src="img/aboutus-h.png" alt="">

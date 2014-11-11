@@ -37,7 +37,7 @@
 				<div class="medium-6'; echo ($no%2==1) ? '' : ' medium-pull-6'; echo ' columns p-news">
 					<h1 style="font-weight:bold;color:#d8d2d5">'.date("d.m.Y",strtotime($news_date)).'</h1>
 					<h3>'.$news_name.'</h3>
-						<p>'.$this->bflibs->getSubStr(strip_tags(html_entity_decode($news_detail)),0,220).'</p>
+						<p>'.$this->bflibs->getSubStr(strip_tags(html_entity_decode($news_detail)),0,220).' '.lang('readmore').'>></p>
 				</div>
 			</a>';
 		}

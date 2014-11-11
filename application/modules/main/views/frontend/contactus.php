@@ -1,5 +1,9 @@
+<?php 
+$this->modelShop = $this->load->model('shop/Shopmodel');
+?>
+<link rel="stylesheet" type="text/css" href="<?php echo DIR_PUBLIC;?>module/shoppingcart/frontend/css/style.css">
 <header>
-	<h1><?php echo lang('web_contactus');?></h1>
+	<h1><?php echo lang('contactus');?></h1>
 	<!-- <hr> -->
 	<div class="headImage">
 		<img src="img/contactus-h.png" alt="">
@@ -17,97 +21,115 @@
 		<img src="img/dummy-map.png" alt="">
 	</div>
 	<div class="small-12 medium-5 column">
-		<form id="contactus">
-			<input type="text" placeholder="Name">
-			<input type="text" placeholder="Email">
-			<input type="text" placeholder="Tel">
-			<textarea rows="5">Massage</textarea>
+		<!--<form id="contactus">-->
+			<input type="text" id="c_name" name="c_name" placeholder="<?php echo lang('name');?>">
+			<span class="errorspan"><?php echo lang('v_name');?></span>
+			<input type="text" id="c_email" name="c_email" placeholder="<?php echo lang('email');?>">
+			<span class="errorspan"><?php echo lang('v_email');?></span>
+			<input type="text" id="c_phone" name="c_phone" placeholder="<?php echo lang('phone');?>">
+			<span class="errorspan"><?php echo lang('v_phone');?></span>
+			<textarea rows="5" id="c_message" name="c_message" placeholder"<?php echo lang('message');?>"></textarea>
+			<span class="errorspan"><?php echo lang('v_message');?></span>
 			<div class="ta-right">
-				<input type="submit" value="Send Massage >" class="button">
+				<input type="button" onclick="chkContact()"  value="<?php echo lang('sendmessage');?>" class="button">
 			</div>
-		</form>
+		<!--</form>-->
 	</div>
 	<div class="small-12 columns">
 		<hr>
 	</div>
 	<div class="small-12 columns">
-		<h2 style="color: #D8D2D6;">STORE LOCATION</h2>
+		<h2 style="color: #D8D2D6;"><?php echo lang('storelocation');?></h2>
 	</div>
-	<div class="row">
-		<div class="small-3 medium-1 columns">
-			<div class="map-marker">
-				<div>
-					<img src="img/assets/marker.png" alt="">
-					<span>A</span>
+	<?php 
+	$no=0;
+	$listShop = $this->modelShop->listAllShop($lang);
+	if(!empty($listShop)){
+		foreach($listShop as $list){
+			$no++;
+			$shop_id = $list["shop_id"];
+			$shop_name = $list["shop_name"];
+			$shop_detail = $list["shop_detail"];
+			$shop_date = $list["shop_date_added"];
+			$img_db = $list["shop_image"];
+			
+			$img_path = DIR_PUBLIC."images/noimage.png";
+			if($img_db!=''){
+				$path = "public/upload/shop/original/".basename($img_db);
+				$dir_file = DIR_FILE.$path;
+				if(file_exists($dir_file)){
+					$img_path = DIR_ROOT.$path;
+				}
+			}
+			if($no>1) echo '<hr class="smallest">';
+			echo '
+			<div class="row">
+				<div class="small-3 medium-1 columns">
+					<div class="map-marker">
+						<div>
+							<img src="img/assets/marker.png" alt="">
+							<span>'.$no.'</span>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="small-9 medium-6 column">
-			<h3>SHANNTA JEWELRY STORE A</h3>
-			<p>
-				Central Festival Pattaya43 miles1 Floor,33/98 Moo 9,Pattaya Beach Road,
-				Banglamung, Pattaya Chonburi, 20260 Phone : +622-804-3371
-			</p>
-			<p>
-				<b>INFOREMATIONSHOP :</b> <br>
-				it all started nearly 30 years ago. Back in 1982 a jeweller's shop that would one day
-				become by Danish goldsmith Per Enevold sen and his wife Winnie. <a href="#">View map</a>
-			</p>
-		</div>
-		<div class="small-12 medium-5 column">
-			<img src="img/dummy-map-2.png" alt="">
-		</div>
-	</div><!-- .row -->
-	<hr class="smallest">
-	<div class="row">
-		<div class="small-3 medium-1 columns">
-			<div class="map-marker">
-				<div>
-					<img src="img/assets/marker.png" alt="">
-					<span>B</span>
+				<div class="small-9 medium-6 column">
+					<h3>'.$shop_name.'</h3>
+					'.html_entity_decode($shop_detail).'
 				</div>
-			</div>
-		</div>
-		<div class="small-9 medium-6 column">
-			<h3>SHANNTA JEWELRY STORE B</h3>
-			<p>
-				Central Festival Pattaya43 miles1 Floor,33/98 Moo 9,Pattaya Beach Road,
-				Banglamung, Pattaya Chonburi, 20260 Phone : +622-804-3371
-			</p>
-			<p>
-				<b>INFOREMATIONSHOP :</b> <br>
-				it all started nearly 30 years ago. Back in 1982 a jeweller's shop that would one day
-				become by Danish goldsmith Per Enevold sen and his wife Winnie. <a href="#">View map</a>
-			</p>
-		</div>
-		<div class="small-12 medium-5 column">
-			<img src="img/dummy-map-3.png" alt="">
-		</div>
-	</div><!-- .row -->
-	<hr class="smallest">
-	<div class="row">
-		<div class="small-3 medium-1 columns">
-			<div class="map-marker">
-				<div>
-					<img src="img/assets/marker.png" alt="">
-					<span>C</span>
+				<div class="small-12 medium-5 column">
+					<img src="'.$img_path.'" alt="">
 				</div>
-			</div>
-		</div>
-		<div class="small-9 medium-6 column">
-			<h3>SHANNTA JEWELRY STORE C</h3>
-			<p>
-				Central Festival Pattaya43 miles1 Floor,33/98 Moo 9,Pattaya Beach Road,
-				Banglamung, Pattaya Chonburi, 20260 Phone : +622-804-3371
-			</p>
-			<p>
-				<b>INFOREMATIONSHOP :</b> <br>
-				it all started nearly 30 years ago. Back in 1982 a jeweller's shop that would one day
-				become by Danish goldsmith Per Enevold sen and his wife Winnie. <a href="#">View map</a>
-			</p>
-		</div>
-		<div class="small-12 medium-5 column">
-			<img src="img/dummy-map-4.png" alt="">
-		</div>
-	</div><!-- .row -->
+			</div><!-- .row -->';
+		}
+	}
+	?>
 </div>
+
+<script>
+	function chkContact(){
+		chk=1;
+		
+		if($('#c_message').val()==''){
+			$('#c_message').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#c_message').removeClass('validate').next().hide();
+		}
+		
+		if($('#c_phone').val()==''){
+			$('#c_phone').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#c_phone').removeClass('validate').next().hide();
+		}
+		if($('#c_email').val()==''){
+			$('#c_email').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#c_email').removeClass('validate').next().hide();
+		}
+		if($('#c_name').val()==''){
+			$('#c_name').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#c_name').removeClass('validate').next().hide();
+		}
+		
+		if(chk==1){
+			$.post( DIR_ROOT+'contactus/frontend/add', { 
+				c_name: $('#c_name').val(),
+				c_email: $('#c_email').val(),
+				c_phone: $('#c_phone').val(),
+				c_message: $('#c_message').val()
+			}).done(function( data ) {
+				if(data==''){
+					//alert("<?php echo lang('duplicateemail');?>");
+					//$('#member_email').focus();
+				}else{
+					alert("<?php echo lang('v_sendcomplete');?>");
+					window.location.reload();
+				}
+			});
+		}
+	}
+</script>

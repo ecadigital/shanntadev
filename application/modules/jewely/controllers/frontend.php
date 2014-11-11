@@ -23,5 +23,12 @@ class Frontend extends CI_Controller{
 		//$this->view['listJewely'] = $this->model->listAllJewely($lang_id,$id);
 		$this->layout->view('/frontend/index', $this->view);
 	}
+	public function widget()
+	{
+		$this->layout->disableLayout();
+		$this->view['lang'] = $lang_id = $this->request->getParam('lang');
+		$this->view['getJewely'] = $this->model->getJewely('first',$lang_id);
+		$this->layout->view('/frontend/widget', $this->view);
+	}
 }
 ?>

@@ -1,8 +1,11 @@
 <?php require "inc/init.php";
-$redirect = "product.php";
-if(!isset($_GET['id'])) echo '<script>window.location="home.php";</script>';
+$prev_page = (isset($_SESSION['prev_page'])) ? $_SESSION['prev_page'] : "home.php";
+$_SESSION['prev_page'] = "products.php";
+
+if(!isset($_GET['id'])&&!isset($_GET['col'])) echo '<script>window.location="home.php";</script>';
 else{
-$product_categories_id = $_GET['id'];
+$product_categories_id = (isset($_GET['id'])) ? $_GET['id'] : '';
+$collection_categories_id = (isset($_GET['col'])) ? $_GET['col'] : '';
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -124,8 +127,15 @@ $product_categories_id = $_GET['id'];
         <?php require "inc/layouts/javascript.php"; ?>
 		
 		<script>
-			loadBannerCategories('<?php echo $defaultLang;?>','<?php echo $product_categories_id;?>');
-			loadListProduct('<?php echo $defaultLang;?>','<?php echo $product_categories_id;?>');
+			
+			<?php if($product_categories_id!=''){?> 
+				loadBannerCategories('<?php echo $defaultLang;?>','<?php echo $product_categories_id;?>');
+				loadListProduct('<?php echo $defaultLang;?>','<?php echo $product_categories_id;?>'); 
+			<?php }?>
+			<?php if($collection_categories_id!=''){?> 
+				loadBannerCollection('<?php echo $defaultLang;?>','<?php echo $collection_categories_id;?>');
+				loadListCollection('<?php echo $defaultLang;?>','<?php echo $collection_categories_id;?>'); 
+			<?php }?>
 		</script>
 			
         <script type="text/javascript" src="<?php echo __js__; ?>/jquery.colorbox-min.js"></script>

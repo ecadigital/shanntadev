@@ -48,7 +48,7 @@ jQuery().ready(function(){
 						return false;
 					}
 					else{
-						window.location=DIR_ROOT+"product/backend/index";//+"admin/admin/index";
+						window.location=DIR_ROOT+"main/backend/dashboard";//+"admin/admin/index";
 					}
 		 		}
 			);

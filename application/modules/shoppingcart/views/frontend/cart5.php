@@ -107,12 +107,17 @@ $shipping = $getOrder['order_shipping'];
 					}?>
 				</div>
 			</div>
+			<?php 
+			$currency = 'USD';
+			if($lang==1) $currency = 'บาท';
+			if($lang==3) $currency = 'CNY';
+			?>
 			<div class="row">
 				<div class="small-6 medium-5 columns">
 					<h5><?php echo strtoupper(lang('total'));?></h5>
 				</div>
 				<div class="small-6 medium-7 columns">
-					<h6><?php echo number_format($summary+$shipping);?> <b><?php echo lang('baht');?></b></h6>
+					<h6><?php echo number_format($summary+$shipping);?> <b><?php echo $currency;?></b></h6>
 				</div>
 			</div>
 		</div>

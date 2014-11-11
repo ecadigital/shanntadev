@@ -25,10 +25,10 @@ $shipping = 250;
 	<div class="row productTable shipping">
 		<table>
 			<tr>
-				<td>
+				<td class="medium-2">
 					<h4><?php echo lang('product');?></h4>
 				</td>
-				<td class="medium-7">
+				<td class="medium-8">
 					<h4><?php echo lang('description');?></h4>
 				</td>
 				<td>
@@ -43,6 +43,12 @@ $shipping = 250;
 				$product = $this->modelProduct->getProduct($lang,$product_id);
 				$qty = $content['qty'];
 				$price = $product['product_price'];
+				$currency = $product['product_currency'];
+				if($currency==''){
+					$currency = 'USD';
+					if($lang==1) $currency = 'บาท';
+					if($lang==3) $currency = 'CNY';
+				}
 				$name = $product["product_name"];
 				$detail = $product["product_detail"];
 				$img_db = $this->modelProduct->getFirstProductImage($product_id);
@@ -89,6 +95,7 @@ $shipping = 250;
 	<br>
 	<div class="navigator">
 		<div>
+			<a href="products.php?id=1" class="arrow_box left prev"><?php echo lang('buymore');?></a>
 			<a href="<?php echo ($member_id=='') ? 'cart0.php' : 'cart2.php';?>" class="arrow_box right next"><?php echo lang('continue');?></a>
 		</div>
 	</div> <!-- .navigator -->

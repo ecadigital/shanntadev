@@ -1,5 +1,8 @@
 <?php 
 $num=0;
+$txt_head = '';
+$txt_slide = '';
+
 if(!empty($listCategories)){
 	$no=1;//($page-1)*$limit;
 	foreach($listCategories as $list){
@@ -24,17 +27,29 @@ if(!empty($listCategories)){
 		if($position=='L') $pull = '7';
 		else if($position=='C') $pull = '4';
 		else if($position=='R') $pull = '1';
-		?>
-	
+				
+		if($num==1) $txt_head .= '<div class="medium-2 columns item arrow_box " data-merge="1"><a href="javascript:void(0);">'.$name.'</a></div>';
+		if($num==2) $txt_head .= '<div class="medium-2 columns item arrow_box " data-merge="1"><a href="javascript:void(0);">'.$name.'</a></div>';
+		if($num==3) $txt_head .= '<div class="medium-2 columns item arrow_box " data-merge="1"><a href="javascript:void(0);">'.$name.'</a></div>';
+		if($num==4) $txt_head .= '<div class="medium-2 columns item arrow_box active" data-merge="1"><a href="javascript:void(0);">'.$name.'</a></div>';
+		if($num==5) $txt_head .= '<div class="medium-4 columns item arrow_box " data-merge="2"><a href="javascript:void(0);">'.$name.'</a></div>';
+		
+		$txt_slide .= '
 		<article class="item">
 			<section class="small-12 medium-7 medium-push-5 columns">
-				<img src="<?php echo $img_path;?>" alt="">
+				<img src="'.$img_path.'" alt="">
 			</section>
-			<section class="small-12 medium-5 medium-pull-<?php echo $pull;?> columns details">
-				<h1><?php echo strtoupper($keyhead);?></h1>
-				<p><strong><?php echo $keymessage;?></strong></p>
-				<a href="products.php?id=<?php echo $categories_id;?>" class="button"><?php echo lang('seeall');?></a>
+			<section class="small-12 medium-5 medium-pull-'.$pull.' columns details" '; if($num==5) $txt_slide .= ' style="margin-top:5px;"'; $txt_slide .= '>
+				<h1'; if($num==5) $txt_slide .= ' style="font-size:30px;"'; else  $txt_slide .= ' style="font-size:40px;"'; $txt_slide .= '>'.strtoupper($keyhead).'</h1>
+				<p><strong>'.$keymessage.'</strong></p>
+				<a href="products.php?id='.$categories_id.'" class="button">'.lang('seeall').'</a>
 			</section>
 			<div class="clearfix"></div>
-		</article>
-<?php }}?>
+		</article>';
+}}?>
+
+<nav class="paginationCatagorieSlider row show-for-medium-up">
+	<?php echo $txt_head;?>
+	<div class="" data-merge="1"></div>
+</nav>
+<div class="catagorieSlider"><?php echo $txt_slide;?></div>

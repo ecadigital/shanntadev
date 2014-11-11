@@ -44,9 +44,10 @@ class Product_frontmodel extends CI_Model {
 	public function listProduct($lang_id,$product_categories_id=''){
 		
 		$select = $this->db->select(array("product.product_id",
-										"product.product_price",
 										"product_lang.product_name",
-										"product_lang.product_detail"))
+										"product_lang.product_detail",
+										"product_lang.product_price",
+										"product_lang.product_currency"))
 				->from($this->tbl_product_lang)
 				->join($this->tbl_product,"$this->tbl_product.product_id=$this->tbl_product_lang.product_id","left")
 				->where("$this->tbl_product_lang.language_id",$lang_id);
@@ -86,9 +87,10 @@ class Product_frontmodel extends CI_Model {
 	public function getProduct($lang_id,$product_id){
 		
 		$select = $this->db->select(array("$this->tbl_product.product_id",
-										"$this->tbl_product.product_price",
 										"$this->tbl_product_lang.product_name",
-										"$this->tbl_product_lang.product_detail"))
+										"$this->tbl_product_lang.product_detail",
+										"$this->tbl_product_lang.product_price",
+										"$this->tbl_product_lang.product_currency"))
 				->from($this->tbl_product_lang)
 				->join($this->tbl_product,"$this->tbl_product.product_id=$this->tbl_product_lang.product_id","left")
 				->where("$this->tbl_product_lang.language_id",$lang_id)

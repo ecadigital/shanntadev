@@ -1,6 +1,6 @@
-<?php require "inc/init.php"; 
-$redirect = "product.php";
-?>
+<?php require "inc/init.php";
+$prev_page = (isset($_SESSION['prev_page'])) ? $_SESSION['prev_page'] : "home.php";
+$_SESSION['prev_page'] = "news.php";?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->

@@ -56,6 +56,7 @@ class Backend extends CI_Controller{
 	}
 	public function add_slide()
 	{
+		$this->view['listAllLang'] = $this->bflibs->listAllLang();
 		if($data = $this->input->post()){
 		
 			$this->model->setValue($data);
@@ -70,7 +71,7 @@ class Backend extends CI_Controller{
 			<script>
 				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning'); 
 				setTimeout(function(){
-					window.parent.location='".DIR_ROOT."slide/backend/add_slide';
+					window.parent.location='".DIR_ROOT."slide/backend/index';
 				},3000);
 			</script>";
 		}else{
@@ -81,6 +82,7 @@ class Backend extends CI_Controller{
 	public function edit_slide()
 	{
 		$slide_id = $this->request->getParam('id');
+		$this->view['listAllLang'] = $this->bflibs->listAllLang();
 		$this->view['listEditSlide'] = $listEditSlide = $this->model->listEditSlide($slide_id);
 
 		if($data = $this->input->post()){

@@ -2,6 +2,7 @@
 class Shoppingcartmodel extends CI_Model {
 	private $tbl_admin_cfg = 'admin_cfg';
 	private $tbl_product = 'product';
+	private $tbl_product_lang = 'product_lang';
 	private $tbl_product_images = 'product_images';
 	private $tbl_product_categories = 'product_categories';
 	private $tbl_product_promotion = 'product_promotion';
@@ -42,24 +43,25 @@ class Shoppingcartmodel extends CI_Model {
 	-------------------------------------------------------------------------------------------------------*/
 	public function listAllProduct()
 	{
-		$query = $this->db->select(array("product_id","product_name","product_price","product_point"))
+		$query = $this->db->select(array("$this->tbl_product.product_id","$this->tbl_product_lang.product_name","$this->tbl_product.product_price"))
 				->from($this->tbl_product)
-				->where("product_publish", '1')
-				->order_by("product_pin","desc")
-				->order_by("product_name","asc");
+				->join($this->tbl_product_lang,"$this->tbl_product.product_id=$this->tbl_product_lang.product_id","left")
+				->where("$this->tbl_product.product_publish", '1')
+				->order_by("$this->tbl_product.product_pin","desc")
+				->order_by("$this->tbl_product_lang.product_name","asc");
 		$query = $this->db->get();
 		$result = $query->result_array();
 		return $result;
 	}
 	public function getProduct($id)
 	{
-		$query = $this->db->select(array("product_id","product_name","product_price","product_point"))
+		$query = $this->db->select(array("$this->tbl_product.product_id","$this->tbl_product_lang.product_name","$this->tbl_product.product_price"))
 				->from($this->tbl_product)
 				->where("product_id",$id);
 		$query = $this->db->get();
 		$result = $query->row_array();
 		return $result;
-	}
+	}/**/
 
 	/*  MEMBER
 	-------------------------------------------------------------------------------------------------------*/
@@ -73,13 +75,13 @@ class Shoppingcartmodel extends CI_Model {
 		$query = $this->db->get();
 		$result = $query->result_array();
 		return $result;
-	}
+	}/**/
 
 	/*  ORDER
 	-------------------------------------------------------------------------------------------------------*/	
 	public function listOrder($targetpage,$page,$limit,$sData=""){
 	
-		$select = $this->db->select(array("$this->tbl_sp_order.order_id","$this->tbl_sp_order.order_summary","$this->tbl_sp_order.order_point_summary","$this->tbl_sp_order.order_date","$this->tbl_sp_order.order_read","$this->tbl_member.member_first_name","$this->tbl_member.member_last_name","$this->tbl_sp_order.order_status_id","$this->tbl_sp_order.order_tracking","$this->tbl_sp_order.order_discount","$this->tbl_sp_order.order_payment"))
+		$select = $this->db->select(array("$this->tbl_sp_order.order_id","$this->tbl_sp_order.order_date","$this->tbl_sp_order.order_read","$this->tbl_sp_order.member_first_name","$this->tbl_sp_order.member_last_name","$this->tbl_sp_order.order_status_id","$this->tbl_sp_order.order_tracking","$this->tbl_sp_order.order_payment","$this->tbl_sp_order.order_summary"))
 				->from($this->tbl_sp_order)
 				->join($this->tbl_member,"$this->tbl_member.member_id=$this->tbl_sp_order.member_id","left")
 				->order_by("$this->tbl_sp_order.order_date_added",'desc');
@@ -104,7 +106,6 @@ class Shoppingcartmodel extends CI_Model {
 		
 		$select = $this->db->select()
 				->from($this->tbl_sp_order)
-				->join($this->tbl_member,"$this->tbl_member.member_id=$this->tbl_sp_order.member_id","left")
 				->where("order_id",$id);		
 		$query = $this->db->get();
 		$result = $query->row_array();
@@ -128,37 +129,26 @@ class Shoppingcartmodel extends CI_Model {
 			$order_id = $this->bflibs->getLastID($this->tbl_sp_order,'order_id');
 			$date = date('Y-m-d H:i:s');
 			$order_summary=0;
-			$point_summary=0;
 			
 			for($i=1;$i<=$numList;$i++){
 				if(isset($val['id_'.$i])){
 					$order_summary += $val['eachPrice_'.$i];
-					$point_summary += $val['eachPoint_'.$i];
 					$data_item = array(
 								"order_id"=>$order_id,
 								"product_id"=>$val['id_'.$i],
 								"product_name"=>$val['name_'.$i],
 								"order_qty"=>$val['amount_'.$i],
 								"order_price"=>$val['price_'.$i],
-								"order_discount"=>0,
-								"order_point"=>$val['point_'.$i],
 								"order_status"=>1
 					);			
 					$this->db->insert($this->tbl_sp_order_item,$data_item);
 				}
 			}
 			
-			//list($discount,$dis_type) = $this->getDiscount($val['discount']);
-			//$order_summary = ($dis_type==1) ? $order_summary*(100-$val['discount'])/100 : $order_summary-$val['discount'];
-			//$point_summary += $val['point'];
-			
 			$data = array(
 					"order_id"=>$order_id,
 					"member_id"=>$val['member_id'],
-					"order_discount"=>'',//$val['discount'],
 					"order_summary"=>$order_summary,
-					"order_point"=>'',//$val['point'],
-					"order_point_summary"=>$point_summary,
 					"order_date"=>$this->bflibs->dateToDb($val['sp_date'],'date'),
 					"order_date_added"=>$date,
 					"order_last_update"=>$date,
@@ -255,18 +245,15 @@ class Shoppingcartmodel extends CI_Model {
 				<td align="center"><a class="delete" title="'.lang('web_delete').'" href="javascript:void(0);" onclick="'.$delList.'" ></a></td>';
 		return $txt;
 	}
-	public function rowShow($num,$id,$name,$amount,$price,$point){
+	public function rowShow($num,$id,$name,$amount,$price){
 		$no = $num;
 		$sumPrice = $amount*$price;
-		$sumPoint = $amount*$point;
 		
 		$txt='<td align="center">'.$no.'</td>
 				<td>'.$name.'</td>
 				<td align="right">'.number_format($amount).'</td>
 				<td align="right">'.number_format($price,2).'</td>
-				<td align="right">'.number_format($sumPrice,2).'</td>
-				<td align="right">'.number_format($point).'</td>
-				<td align="right">'.number_format($sumPoint).'</td>';
+				<td align="right">'.number_format($sumPrice,2).'</td>';
 		return $txt;
 	}
 	public function getDiscount($discount){
@@ -280,7 +267,33 @@ class Shoppingcartmodel extends CI_Model {
 		
 		return array($discount,$dis_type);
 	}
-
+	
+	
+	/* FOR CHART
+	-----------------------------------------------------------------------------------------------------------*/
+	
+	public function countOrderByMonth($monthyear){
+		
+		$select = $this->db->select(array("count(member_id) AS num_member"))
+				->from($this->tbl_sp_order)
+				->where("order_date_added LIKE '".$monthyear."%' ")
+				->where("member_id !=",'0');
+		$query = $this->db->get();
+		$res1 = $query->row_array();
+		
+		$select = $this->db->select(array("count(member_id) AS num_member"))
+				->from($this->tbl_sp_order)
+				->where("order_date_added LIKE '".$monthyear."%' ")
+				->where("member_id",'0');
+		$query = $this->db->get();
+		$res2 = $query->row_array();
+		
+		return array($res1['num_member'],$res2['num_member']);
+	}
+	
+	
+	
+	
 
 	/*  CONFIRM
 	-------------------------------------------------------------------------------------------------------*/	

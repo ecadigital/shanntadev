@@ -1,7 +1,7 @@
 <h3>ประวัติการสั่งซื้อของ <?php echo $member_name;?></h3>
 <div>
 	<a href="<?php echo DIR_ROOT?>admin/admin/index">หน้าแรก</a>&nbsp;&nbsp;>&nbsp;&nbsp;
-    <a href="<?php echo DIR_ROOT?>member/backend/index"><?php echo lang('member_ii');?></a>
+    <a href="<?php echo DIR_ROOT?>member/backend/index">รายชื่อสมาชิก</a>
     &nbsp;&nbsp;>&nbsp;&nbsp;
     ประวัติการสั่งซื้อของ <?php echo $member_name;?>
 </div>

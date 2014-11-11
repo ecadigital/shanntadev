@@ -2,6 +2,7 @@
 class Contactusmodel extends CI_Model {
 	private $tbl_contactus = 'contactus';
 	private $tbl_contactus_detail = 'contactus_detail';
+	private $tbl_main = 'main';
 	
 	private $defaultlang;
 	
@@ -57,11 +58,11 @@ class Contactusmodel extends CI_Model {
 
 		$data = array(
 				"contactus_id"=>$contact_id,
-				"contactus_name"=>$val['contact_name'],
-				"contactus_email"=>$val['contact_email'],
-				"contactus_tel"=>$val['contact_tel'],
+				"contactus_name"=>$val['c_name'],
+				"contactus_email"=>$val['c_email'],
+				"contactus_tel"=>$val['c_phone'],
 				"contactus_topic"=>"",
-				"contactus_detail"=>$val['contact_detail'],
+				"contactus_detail"=>$val['c_message'],
 				"contactus_date"=>$date
 		);
 		$this->db->insert($this->tbl_contactus,$data);
@@ -71,30 +72,40 @@ class Contactusmodel extends CI_Model {
 		$this->db->where('contactus_id',$id);
 		$this->db->delete($this->tbl_contactus);
 	}
+	public function getMain(){
+	
+		$query = $this->db->select()
+				->from($this->tbl_main)
+				->where("$this->tbl_main.main_id",1);
+		$query = $this->db->get();
+		$result = $query->row_array();
+		return $result;
+	}
 	
 	
 	/* SEND MAIL
 	-----------------------------------------------------------------------------------------------------------*/
-	private $websiteName = 'Have Reward';
+	private $websiteName = 'SHANNTA';
 	private $websiteDir = DIR_HOST;
 	
 	public function sendmail()
 	{	
 		$val = $this->getValue();
-			
-		if(isset($result) && $val['contact_email']!="")
-		{
-			$to_email = $val['contact_email'];
-			$subject = '['.$this->websiteName.'] Forgot password';
-			$name = $result['contact_name'];
-			$str='สวัสดีค่ะ E-mail นี้ส่งจากระบบอัตโนมัติของ '.$this->websiteName.'<br><br>ข้อมูลที่คุณส่งมาให้ มีดังนี้<br><br>
-
-				    ชื่อ : '.$val['contact_name'].'<br>
-				    อีเมล์ : '.$val['contact_email'].'<br>
-				    เบอร์โทรศัพท์ : '.$val['contact_tel'].'<br>
-				    ข้อความ : '.$val['contact_detail'].'<br><br>
+		$getMain = $this->getMain();		
 					
-			ขอขอบคุณที่ให้ความไว้วางใจค่ะ <br><br>';
+		if(!empty($getMain) && $getMain['main_email']!="")
+		{
+			$to_email = 'jiwakoo@gmail.com';//$getMain['main_email'];
+			$subject = '['.$this->websiteName.'] ติดต่อเรา';
+			$name = $result['contact_name'];
+			$str='สวัสดีค่ะ E-mail นี้ส่งจากระบบอัตโนมัติของ '.$this->websiteName.'<br><br>ข้อมูลที่ลูกค้าส่งมาให้ มีดังนี้<br><br>
+
+				    ชื่อ : '.$val['c_name'].'<br>
+				    อีเมล์ : '.$val['c_email'].'<br>
+				    เบอร์โทรศัพท์ : '.$val['c_phone'].'<br>
+				    ข้อความ : '.$val['c_message'].'<br><br>';
+					
+			//ขอขอบคุณที่ให้ความไว้วางใจค่ะ <br><br>';
 			
 			$this->load->library('email');
 			$config['mailtype'] = 'html';

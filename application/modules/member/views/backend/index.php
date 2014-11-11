@@ -1,7 +1,7 @@
-<h3><?php echo lang('member_ii');?></h3>
+<h3>รายชื่อสมาชิก</h3>
 <div>
 	<a href="<?php echo DIR_ROOT?>admin/admin/index">หน้าแรก</a>&nbsp;&nbsp;>&nbsp;&nbsp;
-    <?php echo lang('member_ii');?>
+    รายชื่อสมาชิก
 </div>
 <div class="clearfix formRow">
 	<?php 

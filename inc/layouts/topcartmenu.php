@@ -91,18 +91,18 @@ $member_lname = (isset($_SESSION['member_lname'])) ? $_SESSION['member_lname'] :
 					<a href="#"><i class="fa fa-user icon"></i> <?php echo ($member_id=='') ? 'LOGIN' : $member_name;?></a>
 					<div class="sub profile">
 						<?php if($member_id==''){?>
-							<div class="medium-3 large-offset-1 columns">
+							<div class="medium-4 large-offset-1 columns">
 								<label for="widget_username"><strong><?php echo $Array_lang['username'];?> *</strong></label>
 							</div>
-							<div class="medium-7 columns" style="max-height:50px;" >
+							<div class="medium-6 columns" style="max-height:50px;" >
 								<input type="text" id="widget_username" name="widget_username" style="height:1.8125rem;margin-bottom:8px;">
 								<span class="errorspan"><?php echo $Array_lang['v_username'];?></span>
 							</div>
 							
-							<div class="medium-3 large-offset-1 columns">
+							<div class="medium-4 large-offset-1 columns">
 								<label for="widget_password"><strong><?php echo $Array_lang['password'];?> *</strong></label>
 							</div>
-							<div class="medium-7 columns" style="max-height:50px;" >
+							<div class="medium-6 columns" style="max-height:50px;" >
 								<input type="password" id="widget_password" name="widget_password" style="height:1.8125rem;margin-bottom:8px;">
 								<span class="errorspan"><?php echo $Array_lang['v_password'];?></span>
 							</div>
@@ -110,7 +110,10 @@ $member_lname = (isset($_SESSION['member_lname'])) ? $_SESSION['member_lname'] :
 							<div class="medium-12 columns ta-center" style="margin-top:10px !important;">
 								<span class="errorspan" id="widget_incorrectlogin"><?php echo $Array_lang['v_incorrectlogin'];?></span>
 							</div>
-							<div class="medium-10 columns ta-right">
+							<div class="medium-4 large-offset-1 columns">
+								<a href="forgotpassword.php" class="forgot">Forgot</a>
+							</div>
+							<div class="medium-6 columns ta-right">
 								<a href="javascript:void(0)" onclick="widgetLogin()" class="button"><?php echo $Array_lang['login'];?></a>
 							</div>
 						<?php }else{

@@ -136,7 +136,7 @@
                             <?php }?>
                         </ul>
                         <?php }?>
-                        <div class="txt_notify">* <?php echo lang('web_notify_multi_upload');?>&nbsp;&nbsp;/&nbsp;&nbsp; ขนาดรูปที่แนะนำคือ 408 x 274 พิกเซล</div>
+                        <div class="txt_notify">* <?php echo lang('web_notify_multi_upload');?>&nbsp;&nbsp;/&nbsp;&nbsp; ขนาดรูปที่แนะนำคือ 410 x 372 พิกเซล</div>
                     </fieldset>
                 </div>
             </div>
@@ -167,7 +167,9 @@ $(document).ready(function(){
 			document.collection_formEdit.submit();
 	 	}
 	});
-    $("#file_upload").uploadfile();
+    $("#file_upload").uploadfile({
+		module : 'collection'
+	});
     //LoadTinyMCE();
 	
 	$('#collection_price').keyup(function(){

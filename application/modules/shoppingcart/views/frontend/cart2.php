@@ -10,6 +10,7 @@ $member_type = '';
 $member_title = '';
 $member_fname = '';
 $member_lname = '';
+$member_email = '';
 
 if($member_id!=''){
 	$getMember = $this->modelMember->getMember($member_id);
@@ -18,6 +19,7 @@ if($member_id!=''){
 		$member_title = $getMember['member_title'];
 		$member_fname = $getMember['member_first_name'];
 		$member_lname = $getMember['member_last_name'];
+		$member_email = $getMember['member_email'];
 	}
 }
 $member_type = (isset($_SESSION['order']['member_type'])) ? $_SESSION['order']['member_type'] : $member_type;
@@ -29,6 +31,7 @@ $member_city = (isset($_SESSION['order']['member_city'])) ? $_SESSION['order']['
 $member_postcode = (isset($_SESSION['order']['member_postcode'])) ? $_SESSION['order']['member_postcode'] : '';
 $member_prephone = (isset($_SESSION['order']['member_prephone'])) ? $_SESSION['order']['member_prephone'] : '+66';
 $member_phone = (isset($_SESSION['order']['member_phone'])) ? $_SESSION['order']['member_phone'] : '';
+$member_email = (isset($_SESSION['order']['member_email'])) ? $_SESSION['order']['member_email'] : '';
 $chk_message = (isset($_SESSION['order']['chk_message'])) ? $_SESSION['order']['chk_message'] : '';
 $member_message = (isset($_SESSION['order']['member_message'])) ? $_SESSION['order']['member_message'] : '';
 ?>
@@ -95,6 +98,7 @@ $member_message = (isset($_SESSION['order']['member_message'])) ? $_SESSION['ord
 			</div>
 			<div class="medium-4-custom columns">
 				<input type="text" id="member_city" name="member_city" value="<?php echo $member_city;?>">
+				<span class="errorspan"><?php echo lang('v_city');?></span>
 			</div>
 			<div class="medium-2 columns">
 				<label for="member_phone"><?php echo lang('phone');?> *</label>
@@ -114,6 +118,13 @@ $member_message = (isset($_SESSION['order']['member_message'])) ? $_SESSION['ord
 				<span class="errorspan"><?php echo lang('v_phone');?></span>
 			</div>
 			<div class="medium-2 columns">
+				<label for="member_address"><?php echo lang('email');?> *</label>
+			</div>
+			<div class="medium-4-custom columns">
+				<input type="text" id="member_email" name="member_email" value="<?php echo $member_email;?>">
+				<span class="errorspan"><?php echo lang('v_email');?></span>
+			</div>
+			<div class="medium-2 columns">
 				<label for="#"><?php echo lang('shippingmethod');?></label>
 			</div>
 			<div class="medium-4-custom columns">
@@ -121,7 +132,8 @@ $member_message = (isset($_SESSION['order']['member_message'])) ? $_SESSION['ord
 					<option value="0">Complimenttary Standart</option>
 				</select>
 			</div>
-			<div class="medium-6 medium-offset-3-custom columns end">
+			
+			<div class="medium-6 medium-offset-3-custom columns end" style="margin-top:10px;">
 				<input type="checkbox" id="chk_message" name="chk_message" value="1" <?php if($chk_message==1) echo 'checked="checked"';?>> <label for="chk_message"><?php echo lang('personalmessage');?></label>
 				<div class="small-12" id="boxMessage" style="<?php if($chk_message!=1) echo 'display:none;';?>">
 					<textarea name="member_message" id="member_message" style="height:70px;"><?php echo $member_message;?></textarea>
@@ -193,6 +205,12 @@ $member_message = (isset($_SESSION['order']['member_message'])) ? $_SESSION['ord
 		}else{
 			$('#member_phone').removeClass('validate').parent().next().hide();
 		}
+		if($('#member_email').val()==''){
+			$('#member_email').focus().addClass('validate').next().show();
+			chk=0;
+		}else{
+			$('#member_email').removeClass('validate').next().hide();
+		}
 		if(chk==1){
 			$.post( DIR_ROOT+'shoppingcart/frontend/set_sesmember', { 
 				member_title: $('#member_title').val(),
@@ -203,6 +221,7 @@ $member_message = (isset($_SESSION['order']['member_message'])) ? $_SESSION['ord
 				member_city: $('#member_city').val(),
 				member_prephone: $('#member_prephone').val(),
 				member_phone: $('#member_phone').val(),
+				member_email: $('#member_email').val(),
 				chk_message: $('#chk_message:checked').length,
 				member_message: $('#member_message').val(),
 			}).done(function( data ) {

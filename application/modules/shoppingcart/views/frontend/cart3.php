@@ -13,6 +13,7 @@ $member_lname = (isset($_SESSION['order']['member_lname'])) ? $_SESSION['order']
 $member_address = (isset($_SESSION['order']['member_address'])) ? $_SESSION['order']['member_address'] : '';
 $member_city = (isset($_SESSION['order']['member_city'])) ? $_SESSION['order']['member_city'] : '';
 $member_postcode = (isset($_SESSION['order']['member_postcode'])) ? $_SESSION['order']['member_postcode'] : '';
+$member_email = (isset($_SESSION['order']['member_email'])) ? $_SESSION['order']['member_email'] : '';
 $chk_accept = (isset($_SESSION['order']['chk_accept'])) ? $_SESSION['order']['chk_accept'] : '';
 $chk_message = (isset($_SESSION['order']['chk_message'])) ? $_SESSION['order']['chk_message'] : '';
 $member_message = (isset($_SESSION['order']['member_message'])) ? $_SESSION['order']['member_message'] : '';
@@ -61,10 +62,10 @@ $shipping = 250;
 		</div>
 		<table>
 			<tr>
-				<td>
+				<td class="medium-2">
 					<h4><?php echo lang('product');?></h4>
 				</td>
-				<td class="medium-7">
+				<td class="medium-8">
 					<h4><?php echo lang('description');?></h4>
 				</td>
 				<td>
@@ -79,6 +80,12 @@ $shipping = 250;
 				$product = $this->modelProduct->getProduct($lang,$product_id);
 				$qty = $content['qty'];
 				$price = $product['product_price'];
+				$currency = $product['product_currency'];
+				if($currency==''){
+					$currency = 'USD';
+					if($lang==1) $currency = 'บาท';
+					if($lang==3) $currency = 'CNY';
+				}
 				$name = $product["product_name"];
 				$detail = $product["product_detail"];
 				$img_db = $this->modelProduct->getFirstProductImage($product_id);
@@ -105,11 +112,17 @@ $shipping = 250;
 						<div class="show-for-medium-up details">'.$detail.'</div>
 					</td>
 					<td>
-						<div class="price"><span id="price_'.$i.'">'.number_format($price).'</span> <b>'.lang('baht').'</b></div>
+						<div class="price"><span id="price_'.$i.'">'.number_format($price).'</span> <b>'.$currency.'</b></div>
 					</td>
 				</tr>';
 			}?>
 		</table>
+		<?php 
+		$currency = 'USD';
+		if($lang==1) $currency = 'บาท';
+		if($lang==3) $currency = 'CNY';
+		?>
+			
 		<hr class="review">
 		<div class="small-12 medium-7 columns optionalCheckbox" style="margin-top:-15px;">
 			<input type="checkbox" name="chk_message" id="chk_message" value="1" <?php if($chk_message==1) echo 'checked="checked"';?>><label for="chk_message"> <?php echo lang('personalmessage');?></label>
@@ -120,9 +133,9 @@ $shipping = 250;
 		</div>
 		<div class="small-12 medium-4 columns total" style="margin-top:-29px;">
 			<div class="small-4 columns"><?php echo lang('shipping');?></div>
-			<div class="small-8 columns ta-right"> <?php echo number_format($shipping);?> <?php echo lang('baht');?></div>
+			<div class="small-8 columns ta-right"> <?php echo number_format($shipping);?> <?php echo $currency;?></div>
 			<div class="small-4 columns"><b><?php echo lang('total');?></b></div>
-			<div class="small-8 columns ta-right"><b><?php echo number_format($summary+$shipping);?> <?php echo lang('baht');?></b></div>
+			<div class="small-8 columns ta-right"><b><?php echo number_format($summary+$shipping);?> <?php echo $currency;?></b></div>
 			<div class="clearfix"></div>
 			<label class="checkbox"><input type="checkbox" name="chk_accept" id="chk_accept" value="1"> <?php echo lang('iaccept');?> <u><?php echo lang('termsandcon');?></u></label>
 		</div>

@@ -22,7 +22,7 @@ if(!empty($listProduct)){
 		}
 		?>
 	
-		<article class="small-6 large-4 columns end products">
+		<article class="small-6 large-4 columns end products">			
 			<h1><?php echo $product_name;?>
 				<?php echo $product_detail;?>
 			</h1>
@@ -30,19 +30,20 @@ if(!empty($listProduct)){
 				<img src="<?php echo $img_path;?>" alt="" style="max-width:190px; max-height:248px;">
 			</section>
 			<section class="small-12 columns priceTag">
-				<div class="small-6 columns price"><?php echo number_format($list['product_price']);?> <b><?php echo lang('baht');?></b></div>
+				<div class="small-6 columns price"><?php echo number_format($list['product_price']);?> <b><?php echo $list['product_currency'];?></b></div>
 				<div class="small-6 columns"><a class="addToCart medium-8 large-7" href="#"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('addtocart'));?></b></a></div>
 			</section>
 			<section class="details" style="width:900px;">
 				<div class="medium-6 columns productDetailTrack">
+					<div id="v_addtocart_<?php echo $product_id;?>" class="v_addtocart" style="color:#31B404; display:none;"><img src="<?php echo DIR_PUBLIC?>images/elements/uploader/uploaded.png">&nbsp;&nbsp;<?php echo lang('v_addtocart1').' '.$list['product_name'].' '.lang('v_addtocart2');?></div>
 					<h1><?php echo $list['product_name'];?></h1>
 					<div class="inner"><?php echo $list['product_detail'];?></div>
 					<hr class="dotted">
 					<div class="medium-6 large-8 columns price">
-						<?php echo number_format($list['product_price']);?> <b><?php echo lang('baht');?></b>
+						<?php echo number_format($list['product_price']);?> <b><?php echo $list['product_currency'];?></b>
 					</div>
 					<div class="medium-6 large-4 columns">
-						<a class="addToCart" href="javascript:void(0)" onclick="addCart('<?php echo $list['product_id'];?>')"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('addtocart'));?></b></a>
+						<a class="addToCart" href="javascript:void(0)" onclick="addCart('<?php echo $list['product_id'];?>','<?php echo $lang_id;?>')"><i class="fa fa-shopping-cart"></i> <b><?php echo strtoupper(lang('addtocart'));?></b></a>
 					</div>
 					<div class="clearfix"></div>
 					<hr class="dotted">

@@ -37,6 +37,9 @@
 	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
 				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
 				$lang_id = $lang['language_id'];
+				$currency = 'USD';
+				if($lang_id==1) $currency = 'บาท';
+				if($lang_id==3) $currency = 'CNY';
 			?>
 			<div class="formRow">
                 <div class="grid12">
@@ -74,13 +77,44 @@
 							</div>
 						</div>
 						<div class="clear" style="height:10px;"></div>
+						
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="product_price[<?php echo $lang_id?>]">ราคา</label>
+								<span class="required"></span>
+							</div>
+							<div class="grid3">
+								<input type="text" id="product_price[<?php echo $lang_id?>]" name="product_price[<?php echo $lang_id?>]" placeholder="0" style="width:70px;">
+								<input type="text" id="product_currency[<?php echo $lang_id?>]" name="product_currency[<?php echo $lang_id?>]" placeholder="<?php echo $currency;?>" value="<?php echo $currency;?>" style="width:30px;"> 
+							</div>
+						</div>
+						<div class="clear"></div>	
                     </fieldset>
                 </div>
             </div>
             <div class="clear" style="height:10px;"></div>
             <?php }}?>
             
+			
+           	<div class="clear" style="height:10px;"></div>
             <div class="formRow">
+                <div class="grid2">
+                    <label class="lbl fl" for="product_discount">สินค้าที่มีส่วนลด (ถ้ามี)</label>
+                </div>
+                <div class="grid1">
+                    <input type="text" id="product_discount" name="product_discount" placeholder="0" style="width:40px;"> %
+                </div>
+                <div class="grid5">
+                    <div class="txt_notify" style="margin-top:5px;">* กรุณากรอกส่วนลดเป็นเปอร์เซ็นต์ (%) เท่านั้น</div>
+                </div>
+            </div>
+           	<div class="clear"></div>
+			
+			<hr/>
+           	<div class="clear"></div>
+			
+			<?php /*?>			
+			<div class="formRow">
                 <div class="grid2">
                     <label class="lbl fl" for="product_price">ราคา</label>
                     <span class="required"></span>
@@ -89,7 +123,7 @@
                     <input type="text" id="product_price" name="product_price" placeholder="0" style="width:70px;">
                 </div>
             </div>
-           	<div class="clear"></div>			
+           	<div class="clear"></div>	
 			<hr/>
            	<div class="clear"></div>
 			
@@ -100,7 +134,7 @@
 			</div>
            	<div class="clear" style="height:10px;"></div>
 			
-            <div class="formRow">
+			<div class="formRow">
                 <div class="grid1">&nbsp;</div>
                 <div class="grid2">
                     <label class="lbl fl" for="product_price">ราคาเดิม</label>
@@ -131,10 +165,11 @@
                 <div class="grid1">
                     <input type="text" id="product_newprice" name="product_newprice" placeholder="0" style="width:70px;">
                 </div>
-            </div>
+            </div>	
            	<div class="clear"></div>			
 			<hr/>
-           	<div class="clear"></div>  
+           	<div class="clear"></div>            
+			<?php */?>
             
             <div class="formRow">
                 <div class="grid11">

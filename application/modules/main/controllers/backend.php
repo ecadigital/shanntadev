@@ -28,6 +28,13 @@ class Backend extends CI_Controller{
 	/*  MAIN
 	-------------------------------------------------------------------------------------------------------*/
 	
+	public function dashboard()
+	{
+		$year = $this->request->getParam('year');
+		$this->view['year'] = ($year=='') ? date("Y") : $year;
+		$this->layout->view('/backend/dashboard', $this->view);
+	}
+	
 	public function index()
 	{
 		$this->view['p'] = $p = $this->request->getParam('p');
@@ -159,31 +166,6 @@ class Backend extends CI_Controller{
 		}
 		$this->layout->view('/backend/contact', $this->view);
 	}
-	/*public function lookbook()
-	{
-		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
-		$this->view['listEditMain'] = $listEditMain = $this->model->listEditLookbook();
-
-		if($data = $this->input->post()){
-			$this->model->setValue($data);			
-			
-	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
-				$lang_id = $lang['language_id'];
-				if($data['image_path_'.$lang_id]!=''){
-					$this->model->upload_lookbook($data['image_path_'.$lang_id],$lang_id);
-				}
-			}}
-			
-			$this->view['redirect']="
-			<script>
-				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning');
-				setTimeout(function(){
-					window.parent.location='".DIR_ROOT."main/backend/lookbook';
-				},3000);
-			</script>";
-		}
-		$this->layout->view('/backend/lookbook', $this->view);
-	}*/
 	public function policy()
 	{
 		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
@@ -252,6 +234,75 @@ class Backend extends CI_Controller{
 			</script>";
 		}
 		$this->layout->view('/backend/aboutus', $this->view);
+	}
+	public function help()
+	{
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
+		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMainLang();
+
+		if($data = $this->input->post()){
+			$this->model->setValue($data);
+			
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				$this->model->editMainLang($lang_id);
+			}}
+			
+			$this->view['redirect']="
+			<script>
+				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning');
+				setTimeout(function(){
+					window.parent.location='".DIR_ROOT."main/backend/help';
+				},3000);
+			</script>";
+		}
+		$this->layout->view('/backend/help', $this->view);
+	}
+	public function howtobuy()
+	{
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
+		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMainLang();
+
+		if($data = $this->input->post()){
+			$this->model->setValue($data);
+			
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				$this->model->editMainLang($lang_id);
+			}}
+			
+			$this->view['redirect']="
+			<script>
+				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning');
+				setTimeout(function(){
+					window.parent.location='".DIR_ROOT."main/backend/howtobuy';
+				},3000);
+			</script>";
+		}
+		$this->layout->view('/backend/howtobuy', $this->view);
+	}
+	public function refund()
+	{
+		$this->view['listAllLang'] = $listAllLang = $this->bflibs->listAllLang();
+		$this->view['listEditMain'] = $listEditMain = $this->model->listEditMainLang();
+
+		if($data = $this->input->post()){
+			$this->model->setValue($data);
+			
+	        if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_id = $lang['language_id'];
+				$this->model->editMainLang($lang_id);
+			}}
+			
+			$this->view['redirect']="
+			<script>
+				window.parent.displayNotify('".lang('web_save_success')."','success','#showWarning');
+				setTimeout(function(){
+					window.parent.location='".DIR_ROOT."main/backend/refund';
+				},3000);
+			</script>";
+		}
+		$this->layout->view('/backend/refund', $this->view);
 	}
 
 

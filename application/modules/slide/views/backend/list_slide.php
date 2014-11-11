@@ -18,7 +18,7 @@ $this->model = $this->load->model('slide/Slidemodel');
 		foreach($listSlide as $list){
 			$slide_id = $list["slide_id"];
 			$img_db = $list["slide_image"];
-			$img_path = DIR_PUBLIC."layout/default/images/empty.png";
+			$img_path = DIR_PUBLIC."images/noimage.png";
 			if($img_db!=''){
 				$path = "public/upload/slide/thumbnails/".basename($img_db);
 				$dir_file = DIR_FILE.$path;
@@ -30,7 +30,8 @@ $this->model = $this->load->model('slide/Slidemodel');
 		<tr>
 			<td align="center"><?php echo ++$no;?></td>
 			<td>
-				<a href="<?php echo DIR_ROOT?>slide/backend/edit_slide/id/<?php echo $list['slide_id']; ?>" class="bluesky"><strong><?php echo $list['slide_name'];?></strong></a>
+				<a href="<?php echo DIR_ROOT?>slide/backend/edit_slide/id/<?php echo $list['slide_id']; ?>" class="bluesky"><strong><?php echo $list['slide_keyhead'];?></strong></a>
+				<div><?php echo $list['slide_keymessage'];?></div>
 			</td>
 			<td align="center"><img src="<?php echo $img_path?>" style="max-width:300px;" /></td>
             <td align="center"><?php echo $this->bflibs->timeString($list['slide_last_modified']);?></td>

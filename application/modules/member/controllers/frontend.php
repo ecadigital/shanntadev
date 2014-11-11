@@ -83,8 +83,8 @@ class Frontend extends CI_Controller{
 			
 			if($member_id==''){				
 				
-				echo $member_id = $this->model->register();//($member_pass);
-				//$this->model->sendmail($member_id);
+				$member_id = $this->model->register();//($member_pass);
+				$this->model->sendmail($member_id);
 				//$this->model->sendmail($member_id,$member_pass);
 				
 				/*echo "

@@ -8,7 +8,7 @@
                 <a href="#" class="button gray"><strong>NEWSLETTER SUBSCRIBE</strong></a>
             </div>
             <div class="medium-12 columns bottom">
-                <a href="cart1.php"><?php echo $Array_lang['memberregister'];?></a> : <a href="shippingInfo.php"> <?php echo $Array_lang['faqs'];?></a> : <a href="shippingInfo.php"><?php echo $Array_lang['help'];?></a> : <a href="shippingInfo.php"><?php echo $Array_lang['orderandpayment'];?></a> : <a href="shippingInfo.php"><?php echo $Array_lang['shippinginformation'];?></a> : <a href="refund.php"><?php echo $Array_lang['refundpolicy'];?></a> : <a href="termsofservice.php"><?php echo $Array_lang['termsofservice'];?></a>
+                <a href="cart1.php"><?php echo $Array_lang['memberregister'];?></a> : <a href="faq.php"> <?php echo $Array_lang['faqs'];?></a> : <a href="help.php"><?php echo $Array_lang['help'];?></a> : <a href="howto.php"><?php echo $Array_lang['orderandpayment'];?></a> : <a href="shippingInfo.php"><?php echo $Array_lang['shippinginformation'];?></a> : <a href="refund.php"><?php echo $Array_lang['refundpolicy'];?></a> : <a href="termsofservice.php"><?php echo $Array_lang['termsofservice'];?></a>
                 <nav class="icon-wrapper" id="boxSocial">
                     <!--<a href="mailto:#"><i class="fa fa-envelope icons"></i></a>
                     <a href="#"><i class="fa fa-facebook-square icons"></i></a>
@@ -44,7 +44,7 @@
             </div>
             <div class="medium-12 columns bottom">
                 <div class="ta-left">Copyright 2014 SHANNTA .CO .LTD .All Rights Reserved.</div>
-                <div class="ta-right"><a href="cart1.php"><?php echo $Array_lang['memberregister'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="shippingInfo.php"> <?php echo $Array_lang['faqs'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="shippingInfo.php"><?php echo $Array_lang['help'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="shippingInfo.php"><?php echo $Array_lang['orderandpayment'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="shippingInfo.php"><?php echo $Array_lang['shippinginformation'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="refund.php"><?php echo $Array_lang['refundpolicy'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="termsofservice.php"><?php echo $Array_lang['termsofservice'];?></a></div>
+                <div class="ta-right"><a href="cart1.php"><?php echo $Array_lang['memberregister'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="faq.php"> <?php echo $Array_lang['faqs'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="help.php"><?php echo $Array_lang['help'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="howto.php"><?php echo $Array_lang['orderandpayment'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="shippingInfo.php"><?php echo $Array_lang['shippinginformation'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="refund.php"><?php echo $Array_lang['refundpolicy'];?></a>&nbsp;&nbsp;:&nbsp;&nbsp;<a href="termsofservice.php"><?php echo $Array_lang['termsofservice'];?></a></div>
                 
             </div>
         </footer>

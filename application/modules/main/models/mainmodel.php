@@ -115,6 +115,9 @@ class Mainmodel extends CI_Model {
 			$result['main_policy'][$res['language_id']] = $res['main_policy'];
 			$result['main_shipping'][$res['language_id']] = $res['main_shipping'];
 			$result['main_aboutus'][$res['language_id']] = $res['main_aboutus'];
+			$result['main_help'][$res['language_id']] = $res['main_help'];
+			$result['main_howtobuy'][$res['language_id']] = $res['main_howtobuy'];
+			$result['main_refund'][$res['language_id']] = $res['main_refund'];
 		}
 		
 		return $result;
@@ -134,6 +137,9 @@ class Mainmodel extends CI_Model {
 			if(isset($val['main_policy'][$lang_id]))				$data["main_policy"]=$val['main_policy'][$lang_id];
 			if(isset($val['main_shipping'][$lang_id]))				$data["main_shipping"]=$val['main_shipping'][$lang_id];
 			if(isset($val['main_aboutus'][$lang_id]))				$data["main_aboutus"]=$val['main_aboutus'][$lang_id];
+			if(isset($val['main_help'][$lang_id]))					$data["main_help"]=$val['main_help'][$lang_id];
+			if(isset($val['main_howtobuy'][$lang_id]))					$data["main_howtobuy"]=$val['main_howtobuy'][$lang_id];
+			if(isset($val['main_refund'][$lang_id]))					$data["main_refund"]=$val['main_refund'][$lang_id];
 
 			$this->db->where('language_id',$lang_id);
 			$this->db->update($this->tbl_main,$data);

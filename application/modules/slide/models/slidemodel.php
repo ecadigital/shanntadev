@@ -2,6 +2,7 @@
 class Slidemodel extends CI_Model {
 	private $tbl_admin_cfg = 'admin_cfg';
 	private $tbl_slide = 'slide';
+	private $tbl_slide_lang = 'slide_lang';
 	
 	private $defaultlang;
 	//public $param;
@@ -25,13 +26,17 @@ class Slidemodel extends CI_Model {
 	}
 	
 
-	/*  PRODUCT
+	/*  SLIDE
 	-------------------------------------------------------------------------------------------------------*/
 
 	public function listSlide($targetpage,$page,$limit,$sData=""){
 	
-		$select = $this->db->select()
+		$select = $this->db->select(array(	"$this->tbl_slide.*",
+											"$this->tbl_slide_lang.slide_keyhead",
+											"$this->tbl_slide_lang.slide_keymessage"))
 				->from($this->tbl_slide)
+				->join($this->tbl_slide_lang,"$this->tbl_slide.slide_id=$this->tbl_slide_lang.slide_id","left")
+				->where("$this->tbl_slide_lang.language_id",$this->defaultlang)
 				->order_by("$this->tbl_slide.slide_pin",'desc')
 				->order_by("$this->tbl_slide.slide_seq",'desc')
 				->order_by("$this->tbl_slide.slide_date_added",'desc')
@@ -57,9 +62,20 @@ class Slidemodel extends CI_Model {
 		
 		$select = $this->db->select()
 				->from($this->tbl_slide)
-				->where("slide_id",$id);		
+				->where('slide_id',$id);
 		$query = $this->db->get();
 		$result = $query->row_array();
+		
+		$select = $this->db->select()
+				->from($this->tbl_slide_lang)
+				->where("slide_id",$id);
+		$queryLang = $this->db->get();
+		$resultLang = $queryLang->result_array();
+		
+		foreach($resultLang as $res){
+			$result['slide_keyhead'][$res['language_id']] 		= $res['slide_keyhead'];
+			$result['slide_keymessage'][$res['language_id']] 		= $res['slide_keymessage'];
+		}
 		return $result;
 	}
 	public function addSlide(){
@@ -74,14 +90,24 @@ class Slidemodel extends CI_Model {
 			$slide_pin = (isset($val['slide_pin']))?$val['slide_pin']:0;
 			$data = array(
 					"slide_id"=>$slide_id,
-					"slide_name"=>$val['slide_name'],
+					//"slide_name"=>$val['slide_name'],
+					"slide_position"=>$val['slide_position'],
 					"slide_date_added"=>$date,
 					"slide_last_modified"=>$date,
 					"slide_seq"=>$slide_seq,
-					"slide_pin"=>$slide_pin,
-					"slide_publish"=>$slide_publish
+					"slide_publish"=>1
 			);
-			$this->db->insert($this->tbl_slide,$data);			
+			$this->db->insert($this->tbl_slide,$data);
+			
+			foreach($val['slide_keyhead'] as $lang=>$slide_keyhead){
+				$dataLang = array(
+					"slide_id"=>$slide_id,
+					"language_id"=>$lang,
+					"slide_keyhead"=>$slide_keyhead,
+					"slide_keymessage"=>htmlspecialchars($val['slide_keymessage'][$lang], ENT_QUOTES)
+				);
+				$this->db->insert($this->tbl_slide_lang,$dataLang);
+			}
 			return $slide_id;
 		}
 	}
@@ -96,16 +122,39 @@ class Slidemodel extends CI_Model {
 			$slide_publish = (isset($val['slide_publish']))?$val['slide_publish']:0;
 			$slide_pin = (isset($val['slide_pin']))?$val['slide_pin']:0;
 			$data = array(
-					"slide_name"=>$val['slide_name'],
-					"slide_last_modified"=>$date,
-					"slide_pin"=>$slide_pin,
-					"slide_publish"=>$slide_publish
+					"slide_position"=>$val['slide_position'],
+					"slide_last_modified"=>$date
 			);
-
 			$this->db->where('slide_id',$slide_id);
 			$this->db->update($this->tbl_slide,$data);
+			
+			foreach($val['slide_keyhead'] as $lang=>$slide_keyhead){
+				$dataLang = array(
+					"slide_keyhead"=>$slide_keyhead,
+					"slide_keymessage"=>htmlspecialchars($val['slide_keymessage'][$lang], ENT_QUOTES)
+				);
+				
+				$chkLang = $this->chkLangSlide($slide_id,$lang);
+				if($chkLang==0){
+					$dataLang["slide_id"]=$slide_id;
+					$dataLang["language_id"]=$lang;
+					$this->db->insert($this->tbl_slide_lang,$dataLang);
+				}else{
+					$this->db->where("slide_id",$slide_id);
+					$this->db->where("language_id",$lang);
+					$this->db->update($this->tbl_slide_lang,$dataLang);
+				}
+			}
 			return $val['slide_id'];
 		}
+	}
+	public function chkLangSlide($slide_id,$lang_id){ 
+		$select = $this->db->select()
+				->from($this->tbl_slide_lang)
+				->where("slide_id",$slide_id)
+				->where("language_id",$lang_id);
+
+		return $this->db->count_all_results();
 	}
 	public function deleteSlide($id){
 		

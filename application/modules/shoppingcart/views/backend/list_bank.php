@@ -4,11 +4,11 @@
 	<thead> 
 		<tr> 
 			<th align="center" width="5%"><?php echo lang('web_no');?></th>
-			<th align="center" width="20%"><?php echo lang('sp_bank_name');?></th>
-            <th align="center" width="15%"><?php echo lang('sp_bank_branch');?></th> 
-            <th align="center"><?php echo lang('sp_bank_account');?></th>
-            <th align="center" width="12%"><?php echo lang('sp_bank_no');?></th>
-            <th align="center" width="12%"><?php echo lang('sp_bank_update');?></th>
+			<th align="center" width="20%">ชื่อธนาคาร</th>
+            <th align="center" width="15%">สาขา</th> 
+            <th align="center">ชื่อบัญชี</th>
+            <th align="center" width="12%">เลขที่บัญชี</th>
+            <th align="center" width="12%">วันที่อัพเดต</th>
             <th align="center" width="150"><?php echo lang('web_tool');?></th>
 		</tr> 
 	</thead>

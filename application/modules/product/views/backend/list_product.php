@@ -28,6 +28,7 @@ $this->model = $this->load->model('product/Productmodel');
 					$img_path = DIR_ROOT.$path;
 				}
 			}
+			$product_newprice = $list['product_price']*((100-$list['product_discount'])/100);
 			?>
 		<tr>
 			<td align="center"><?php echo ++$no;?></td>
@@ -44,15 +45,15 @@ $this->model = $this->load->model('product/Productmodel');
 			<td align="right">
 				<?php 
 				if($list['product_discount']==''||$list['product_discount']==0||$list['product_discount']=='0%'){
-					echo number_format($list['product_price']);
+					echo number_format($list['product_price']).' '.$list['product_currency'];
 				}else{
 					echo '
 					<div style="height:15px;"><div style="float:left; font-weight:bold;"><i>ราคาเดิม</i></div></div>
-					<div style="height:15px;"><div style="float:right; text-decoration:line-through;"><i>'.number_format($list['product_price']).'</i></div></div>
+					<div style="height:15px;"><div style="float:right; text-decoration:line-through;"><i>'.number_format($list['product_price']).' '.$list['product_currency'].'</i></div></div>
 					<div style="height:15px;"><div style="float:left; font-weight:bold;"><i>ส่วนลด</i></div></div>
-					<div style="height:15px;"><div style="float:right;"><i>'.$list['product_discount'].'</i></div></div>
+					<div style="height:15px;"><div style="float:right;"><i>'.$list['product_discount'].' '.$list['product_currency'].'</i></div></div>
 					<div style="height:15px;"><div style="float:left; font-weight:bold;">ราคาสุทธิ</div></div>
-					<div style="height:15px;"><div style="float:right;">'.number_format($list['product_newprice']).'</div></div>';
+					<div style="height:15px;"><div style="float:right;">'.number_format($product_newprice).' '.$list['product_currency'].'</div></div>';
 				}
 				?>
 			</td>

@@ -48,7 +48,7 @@
 	</div>
 	<div class="clear"></div>
 	<div id="footer">
-		&copy; 2012 MOS css template : Modified by Jiwako | <a href="<?php echo DIR_ROOT;?>">Have Reward</a>
+		&copy; 2012 MOS css template : Modified by Jiwako | <a href="<?php echo DIR_ROOT;?>">Shannta</a>
 	</div>
 </div>
 </body>

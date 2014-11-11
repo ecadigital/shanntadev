@@ -1,10 +1,10 @@
 <?php if(isset($redirect)){ echo $redirect; }else{ ?>
 
-<h3><?php echo lang('sp_bank_edit');?></h3>
+<h3>แก้ไขบัญชีธนาคาร</h3>
 <div>
 	<a href="<?php echo DIR_ROOT?>admin/admin/index">หน้าแรก</a>&nbsp;&nbsp;>&nbsp;&nbsp;
-    <a href="<?php echo DIR_ROOT?>shoppingcart/backend/index_bank"><?php echo lang('sp_bank_ii');?></a>&nbsp;&nbsp;>&nbsp;&nbsp;
-	<?php echo lang('sp_bank_edit');?>
+    <a href="<?php echo DIR_ROOT?>shoppingcart/backend/index_bank">รายการบัญชีธนาคาร</a>&nbsp;&nbsp;>&nbsp;&nbsp;
+	แก้ไขบัญชีธนาคาร
 </div>
 
 <div id="showWarning" style="height:40px;"></div>
@@ -15,7 +15,7 @@
         <div class="widget">
             <div class="formRow">
                 <div class="grid2">
-                    <label class="lbl fl" for="bank_name"><?php echo lang('sp_bank_name');?></label>
+                    <label class="lbl fl" for="bank_name">ชื่อธนาคาร</label>
                     <span class="required"></span>
                 </div>
                 <div class="grid4">
@@ -26,7 +26,7 @@
             
             <div class="formRow">
                 <div class="grid2">
-                    <label class="lbl fl" for="bank_branch"><?php echo lang('sp_bank_branch');?></label>
+                    <label class="lbl fl" for="bank_branch">สาขา</label>
                     <span class="required"></span>
                 </div>
                 <div class="grid4">
@@ -37,7 +37,7 @@
             
             <div class="formRow">
                 <div class="grid2">
-                    <label class="lbl fl" for="bank_account"><?php echo lang('sp_bank_account');?></label>
+                    <label class="lbl fl" for="bank_account">ชื่อบัญชี</label>
                     <span class="required"></span>
                 </div>
                 <div class="grid3">
@@ -48,7 +48,7 @@
             
             <div class="formRow">
                 <div class="grid2">
-                    <label class="lbl fl" for="bank_no"><?php echo lang('sp_bank_no');?></label>
+                    <label class="lbl fl" for="bank_no">เลขที่บัญชี</label>
                     <span class="required"></span>
                 </div>
                 <div class="grid3">
@@ -58,7 +58,7 @@
            	<div class="clear"></div>      
             <div class="formRow">
                 <div class="grid2">
-                    <label class="lbl fl" for="bank_image"><?php echo lang('web_image');?></label>
+                    <label class="lbl fl" for="bank_image">รูป</label>
                     <span class="required"></span>
                 </div>
                 <div class="grid2">

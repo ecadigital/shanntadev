@@ -27,14 +27,13 @@ class Frontend extends CI_Controller{
 		if($data = $this->input->post()){
 		
 			$this->model->setValue($data);
-			$status = $this->model->addContact();
-			$status = $this->model->sendmail();
-			echo "
+			echo $contactus_id = $this->model->addContact();
+			$this->model->sendmail();
+			/*echo "
 			<script>
 				window.parent.alert('Send email complete. Please wait for contact immediately.');
 				window.parent.reload();
-			</script>";
-			/*$this->view['success']="<script>window.parent.alert('Send email complete. Please wait for contact immediately.');window.parent.location='".DIR_ROOT."contactus';</script>";*/
+			</script>";*/
 		}
 		//$this->layout->view('/frontend/index', $this->view);
 	}

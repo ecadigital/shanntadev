@@ -106,7 +106,7 @@ class Admin extends CI_Controller{
 			}
 			$this->layout->view('/admin/login', $this->view);
 		}else{
-			redirect('/product/backend/index', 'refresh');
+			redirect('/main/backend/dashboard', 'refresh');
 		}
     }
 	public function showlogin()

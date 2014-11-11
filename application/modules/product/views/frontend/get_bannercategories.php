@@ -30,7 +30,7 @@ if(!empty($getCategories)){
 		<section class="medium-6 large-5 medium-pull-6 large-pull-7 columns details">
 			<h1><?php echo strtoupper($keyhead);?></h1>
 			<article>
-				<p><strong><?php echo $keymessage;?></strong></p>
+				<p><?php echo $keymessage;?></p>
 			</article>
 		</section>
 	</article>

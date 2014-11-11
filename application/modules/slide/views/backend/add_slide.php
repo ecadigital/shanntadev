@@ -13,7 +13,7 @@
 	<iframe frameborder="0" width="0" height="0" id="myIframe" name="myIframe"></iframe>
 	<form class="formElement" method="post" id="slide_form" name="slide_formAdd" target="myIframe" action="<?php echo DIR_ROOT?>slide/backend/add_slide">
         <div class="widget">
-            <div class="formRow">
+            <!--<div class="formRow">
                 <div class="grid2">
                     <label class="lbl fl" for="slide_name"><?php echo lang('slide_name');?></label>
                     <span class="required"></span>
@@ -22,8 +22,53 @@
                     <input type="text" id="slide_name" name="slide_name">
                 </div>
             </div>
-           	<div class="clear"></div>         
+           	<div class="clear"></div>-->
+						
+	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
+				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
+				$lang_id = $lang['language_id'];
+				?>
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="slide_keyhead[<?php echo $lang_id?>]">ข้อความหลัก <?php echo $lang_icon;?></label>
+						<span class="required"></span>
+					</div>
+					<div class="grid4">
+						<input type="text" id="slide_keyhead[<?php echo $lang_id?>]" name="slide_keyhead[<?php echo $lang_id?>]">
+					</div>
+				</div>
+				<div class="clear"></div>
+				
+				<div class="formRow">
+					<div class="grid2">
+						<label class="lbl fl" for="slide_keymessage[<?php echo $lang_id?>]">ข้อความรอง <?php echo $lang_icon;?></label>
+						<span class="required"></span>
+					</div>
+					<div class="grid5">
+						<textarea id="slide_keymessage[<?php echo $lang_id?>]" name="slide_keymessage[<?php echo $lang_id?>]" style="height:40px; width:389px;"></textarea>
+					</div>
+				</div>
+				<div class="clear" style="height:5px;"></div>
+			<?php }}?>
             
+			<div class="clear" style="height:5px;"></div>
+            <div class="formRow">
+                <div class="grid2">
+                    <label class="lbl fl" for="slide_keymessage">ตำแหน่งการจัดข้อความ</label>
+                </div>
+                <div class="grid2">
+					<div><input type="radio" name="slide_position" id="slide_positionL" value="L" checked="checked" />&nbsp;&nbsp;<label for="slide_positionL">ซ้าย</label>&nbsp;&nbsp;&nbsp;&nbsp;
+					<!--<input type="radio" name="slide_position" id="slide_positionC" value="C" />&nbsp;&nbsp;<label for="slide_positionC">กลาง</label>&nbsp;&nbsp;&nbsp;&nbsp;-->
+					<input type="radio" name="slide_position" id="slide_positionR" value="R" />&nbsp;&nbsp;<label for="slide_positionR">ขวา</label></div>
+                </div>
+                <div class="clear"></div>
+                <div class="grid2">&nbsp;</div>
+                <div class="grid5">
+                    <div class="txt_notify" style="margin-left:-20px;">* เพื่อความสวยงาม ควรคำนึงถึงรูปที่ใช้ด้วย</div>
+                </div>
+            </div>   
+           	<div class="clear" style="height:5px;"></div>
+			
             <div class="formRow">
                 <div class="grid2">
                     <label class="lbl fl" for="slide_image"><?php echo lang('slide_image');?></label>
@@ -38,21 +83,10 @@
                 <div class="clear"></div>
                 <div class="grid2">&nbsp;</div>
                 <div class="grid5">
-                    <div class="txt_notify" style="margin-top:40px;margin-left:-20px;">* ขนาดรูปที่แนะนำคือ 859 x 420 พิกเซล</div>
+                    <div class="txt_notify" style="margin-top:40px;margin-left:-20px;">* ขนาดรูปที่แนะนำคือ 1,250 x 380 พิกเซล</div>
                 </div>
             </div>
-           	<div class="clear" style="height:40px;"></div> 
-            
-            <div class="formRow">
-                <div class="grid11">
-                    <fieldset style="margin-top:20px; margin-bottom:20px;">
-                        <legend>Setting</legend>
-                        <div class="sep_bo"><label for='slide_publish'><input type="checkbox" id="slide_publish" name="slide_publish" value="1" checked="checked"/>&nbsp;&nbsp;<?php echo lang('web_publish');?></label></div>
-                        <div class="sep_bo"><label for='slide_pin'><input type="checkbox" id="slide_pin" name="slide_pin" value="1" />&nbsp;&nbsp;<?php echo lang('web_pin');?></label></div>
-                    </fieldset>
-                </div>
-            </div>
-           	<div class="clear"></div>
+           	<div class="clear" style="height:40px;"></div>
             
             <div class="formRow">
                 <input type="hidden" id="captcha" name="captcha" value=""></input>

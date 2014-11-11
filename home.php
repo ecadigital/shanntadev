@@ -1,5 +1,6 @@
 <?php require "inc/init.php";
-$redirect = "home.php";?>
+$prev_page = (isset($_SESSION['prev_page'])) ? $_SESSION['prev_page'] : "home.php";
+$_SESSION['prev_page'] = "home.php";?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -26,8 +27,8 @@ $redirect = "home.php";?>
 
         <div id="main-slider">
                 <div class="fws2" id="fws2-instance1">
-                <div class="slider_container">
-                    <div class="slide"> 
+                <div class="slider_container" id="boxSlide">
+                    <!--<div class="slide"> 
                         <img src="img/slide1.jpg" alt=""> 
                         <div class="slide_content">
                             <div class="slide_content_wrap">
@@ -59,7 +60,7 @@ $redirect = "home.php";?>
                                 <a class="readmore" href="#">MORE CONTENT</a> 
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="slidePrev"><i class="fa fa-chevron-left"></i></div>
                 <div class="slideNext"><i class="fa fa-chevron-right"></i></div>
@@ -77,36 +78,15 @@ $redirect = "home.php";?>
        
         <div id="content" class="row">
             <section class="small-12 medium-6-gutter columns catagories">
-                <article class="innerCatagorie">
-                    <section class="small-7 medium-7 large-6 columns details">
-                        <h1>COLLECTION</h1>
-                        <section>
-                            <h2>ORGANIC CIRCLES<br> GOLD CUPS</h2>
-                            <p>and our crane systems areprofessional<br>  designed<br></p>
-                            <a href="#" class="button">See More</a>
-                        </section>
-                    </section><!-- details -->
-                    <section class="small-5 medium-5 large-6 columns rightImage">
-                        <img src="<?php echo __images__;?>/demo/product1.png" alt=""><!-- height = 220px -->
-                    </section><!-- rightImage -->
-                </article><!-- innerProduct -->
+			
+                <article class="innerCatagorie" id="widgetCollection"></article><!-- innerProduct -->
+				
             </section><!-- catagories -->
             <section class="small-12 medium-6-gutter columns catagories">
-                <article class="innerCatagorie">
-                    <section class="small-7 medium-7 large-6 columns details">
-                        <h1>JEWELRY D.I.Y</h1>
-                        <section>
-                            <strong>Rellable suppllers in Europe.</strong><br>
-                            <p>and our crene systems are professional design and manufactured...</p>
-                        </section>
-                    </section><!-- details -->
-                    <section class="small-5 medium-5 large-6 columns rightImage">
-                        <img src="<?php echo __images__;?>/demo/product2.png" alt=""><!-- height = 220px -->
-                    </section><!-- rightImage -->
-                </article><!-- innerProduct -->
+                <article class="innerCatagorie" id="widgetDIY"></article><!-- innerProduct -->
             </section><!-- catagories -->
-            <section class="small-12 columns catagories">
-                <nav class="paginationCatagorieSlider row show-for-medium-up">
+            <section class="small-12 columns catagories" id="slideCategories">
+                <!--<nav class="paginationCatagorieSlider row show-for-medium-up">
                     <div class="medium-2 columns item arrow_box " data-merge="1"><a href="javascript:void(0);">CHARMS</a></div>
                     <div class="medium-2 columns item arrow_box " data-merge="1"><a href="javascript:void(0);">BRACELETS</a></div>
                     <div class="medium-2 columns item arrow_box " data-merge="1"><a href="javascript:void(0);">RINGS</a></div>
@@ -115,7 +95,7 @@ $redirect = "home.php";?>
                     <div class="" data-merge="1"></div>
                 </nav>
                 <div class="catagorieSlider" id="slideCategories">
-				<!--
+				
                     <article class="item">
                         <section class="small-12 medium-7 medium-push-5 columns">
                             <img src="<?php echo __images__;?>/demo/product3.png" alt="">
@@ -171,8 +151,8 @@ $redirect = "home.php";?>
                         </section>
                         <div class="clearfix"></div>
                     </article>
-                -->
-				</div><!-- productSlider -->
+                
+				</div>--><!-- productSlider -->
             </section><!-- products -->
             <div class="clearfix"></div>
         </div><!-- row -->
@@ -180,7 +160,10 @@ $redirect = "home.php";?>
         <?php require "inc/layouts/javascript.php"; ?>
 		
 		<script>
+			loadSlide('<?php echo $defaultLang;?>');
 			loadListSlideCategories('<?php echo $defaultLang;?>');
+			loadwidgetCollection('<?php echo $defaultLang;?>');
+			loadwidgetDIY('<?php echo $defaultLang;?>');
 		</script>
 		
         <script type="text/javascript" src="<?php echo __js__; ?>/owl.carousel.min.js"></script>

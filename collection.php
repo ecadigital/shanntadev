@@ -1,4 +1,6 @@
-<?php require "inc/init.php"; ?>
+<?php require "inc/init.php";
+$prev_page = (isset($_SESSION['prev_page'])) ? $_SESSION['prev_page'] : "home.php";
+$_SESSION['prev_page'] = "collection.php";?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -12,22 +14,14 @@
         <?php require "inc/layouts/browserhappy.php"; ?>
         <?php require "inc/layouts/topcartmenu.php"; ?>
         <?php require "inc/layouts/topmenu.php"; ?>
-        <div id="content" class="row fullPage">
-            <div class="row">
-                <a href="products.php"><img src="<?php echo __images__;?>/collection-1.png" alt=""></a>
-            </div>
-            <div class="row">
-                <a href="products.php"><img src="<?php echo __images__;?>/collection-2.png" alt=""></a>
-            </div>
-            <div class="row">
-                <a href="products.php"><img src="<?php echo __images__;?>/collection-3.png" alt=""></a>
-            </div>
-        </div><!-- #content .row.cart -->
+		
+        <div id="content" class="row fullPage"></div><!-- #content .row.cart -->
+		
         <?php require "inc/layouts/footer-tag.php"; ?>
         <?php require "inc/layouts/javascript.php"; ?>
-        <!-- javascript here -->
+        <!-- javascript here -->-->
         <script type="text/javascript">
-            
+            loadPage('collection/frontend/index/lang/<?php echo $defaultLang;?>');
         </script>
     </body>
 </html>

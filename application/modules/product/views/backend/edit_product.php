@@ -36,6 +36,10 @@
 	        <?php if(!empty($listAllLang)){foreach($listAllLang as $lang){
 				$lang_icon = ($lang['language_icon'] != '')?'<img src="'.DIR_ROOT.$lang['language_icon'].'" title="'.$lang['language_desc'].'" style="margin-left:3px;" />':'';
 				$lang_id = $lang['language_id'];
+				$currency = 'USD';
+				if($lang_id==1) $currency = 'บาท';
+				if($lang_id==3) $currency = 'CNY';
+				if($listEditProduct['product_currency'][$lang_id]=='') $listEditProduct['product_currency'][$lang_id] = $currency;
 			?>
 			<div class="formRow">
                 <div class="grid12">
@@ -62,13 +66,44 @@
 							</div>
 						</div>
 						<div class="clear" style="height:10px;"></div>
+						
+						<div class="formRow">
+							<div class="grid2">
+								<label class="lbl fl" for="product_price[<?php echo $lang_id?>]">ราคา</label>
+								<span class="required"></span>
+							</div>
+							<div class="grid3">
+								<input type="text" id="product_price[<?php echo $lang_id?>]" name="product_price[<?php echo $lang_id?>]" placeholder="0" style="width:70px;" value="<?php echo $listEditProduct['product_price'][$lang_id];?>">
+								<input type="text" id="product_currency[<?php echo $lang_id?>]" name="product_currency[<?php echo $lang_id?>]" placeholder="<?php echo $currency;?>" value="<?php echo $listEditProduct['product_currency'][$lang_id];?>" style="width:30px;"> 
+							</div>
+						</div>
+						<div class="clear"></div>	
             
                     </fieldset>
                 </div>
             </div>
             <div class="clear" style="height:10px;"></div>
             <?php }}?>
+            
 			
+           	<div class="clear" style="height:10px;"></div>
+            <div class="formRow">
+                <div class="grid2">
+                    <label class="lbl fl" for="product_discount">สินค้าที่มีส่วนลด (ถ้ามี)</label>
+                </div>
+                <div class="grid1">
+                    <input type="text" id="product_discount" name="product_discount" placeholder="0" style="width:40px;" value="<?php echo $listEditProduct['product_discount'];?>"> %
+                </div>
+                <div class="grid5">
+                    <div class="txt_notify" style="margin-top:5px;">* กรุณากรอกส่วนลดเป็นเปอร์เซ็นต์ (%) เท่านั้น</div>
+                </div>
+            </div>
+           	<div class="clear"></div>
+			
+			<hr/>
+           	<div class="clear"></div>
+			
+			<?php /*?>				
             <div class="formRow">
                 <div class="grid2">
                     <label class="lbl fl" for="product_price">ราคา</label>
@@ -124,7 +159,8 @@
            	<div class="clear"></div>			
 			<hr/>
            	<div class="clear"></div>            
-            
+            <?php */?>
+			
             <div class="formRow">
                 <div class="grid11">
                     <fieldset style="margin-top:20px;">

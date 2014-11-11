@@ -1,5 +1,7 @@
 <?php require "inc/init.php"; 
-$redirect = "news1.php";
+$prev_page = (isset($_SESSION['prev_page'])) ? $_SESSION['prev_page'] : "home.php";
+$_SESSION['prev_page'] = "news1.php";
+
 if(!isset($_GET['id'])) echo '<script>window.location="home.php";</script>';
 else{
 $news_id = $_GET['id'];

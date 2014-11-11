@@ -98,7 +98,7 @@ $transfer_bank = (isset($_SESSION['order']['transfer_bank'])) ? $_SESSION['order
 	
 	<div class="row" id="boxTransfer">
 		<div class="large-2 columns">
-			<h2><?php echo lang('transfer');?></h2>
+			<h2><?php echo strtoupper(lang('transfer'));?></h2>
 		</div>
 		<div class="small-12 large-10 columns">
 			<div class="medium-2 columns">
@@ -143,7 +143,7 @@ $transfer_bank = (isset($_SESSION['order']['transfer_bank'])) ? $_SESSION['order
 	
 	<div class="row" id="boxPaypal" style="display:none;">
 		<div class="large-2 columns">
-			<h2><?php echo lang('paypal');?></h2>
+			<h2><?php echo strtoupper(lang('paypal'));?></h2>
 		</div>
 		<div class="small-12 large-10 columns">
 			<div class="medium-2 columns">

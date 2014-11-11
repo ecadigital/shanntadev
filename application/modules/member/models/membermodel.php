@@ -2,12 +2,12 @@
 class Membermodel extends CI_Model {
 	private $tbl_admin_cfg = 'admin_cfg';
 	private $tbl_member = 'member';
-	private $tbl_member_point = 'member_point';
 	private $tbl_member_occupation = 'member_occupation';
 	private $tbl_member_income = 'member_income';
 	private $tbl_province = 'province';
 	private $tbl_sp_order = 'sp_order';
 	private $tbl_sp_order_item = 'sp_order_item';
+	private $tbl_sp_order_confirm = 'sp_order_confirm';
 	private $tbl_team = "team";
 	private $tbl_main = 'main';
 	
@@ -41,7 +41,6 @@ class Membermodel extends CI_Model {
 	
 		$select = $this->db->select()
 				->from($this->tbl_member)
-				->where("$this->tbl_member.parent_id",0)
 				->order_by("$this->tbl_member.member_date_added",'desc')
 				->group_by("$this->tbl_member.member_id");
 				
@@ -70,7 +69,7 @@ class Membermodel extends CI_Model {
 		$result = $query->row_array();
 		
 		return $result;
-	}
+	}/*
 	public function addMember(){
 		
 		$val = $this->getValue();
@@ -142,143 +141,19 @@ class Membermodel extends CI_Model {
 			$this->db->update($this->tbl_member,$data);
 			return $val['member_id'];
 		}
-	}
+	}*/
 	public function deleteMember($id){
 		$this->db->where('member_id',$id);
 		$this->db->delete($this->tbl_member);
 		$this->db->where('member_id',$id);
 		$this->db->delete($this->tbl_member_point);
 	}
-	public function listParent(){
 	
-		$select = $this->db->select()
-				->from($this->tbl_member)
-				->where("parent_id",0)
-				->where("member_type",1)
-				->order_by("member_first_name",'asc')
-				->order_by("member_last_name",'asc');	
-		$query = $this->db->get();
-		$result = $query->result_array();
-		
-		return $result;
-	}
-	
-	
-	/*  TEAM
-	-------------------------------------------------------------------------------------------------------*/
-
-	public function listEditTeam($id){
-		
-		$select = $this->db->select()
-				->from($this->tbl_team)
-				->where("team_id",$id);		
-		$query = $this->db->get();
-		$result = $query->row_array();
-		
-		return $result;
-	}
-	public function countTeam($member_id){
-	
-		$select = $this->db->select()
-				->from($this->tbl_team)
-				->where("member_id",$member_id)
-				->order_by("team_name",'asc');	
-		$num = $this->db->count_all_results();
-		
-		return $num;
-	}
-	public function listTeam($member_id){
-	
-		$select = $this->db->select()
-				->from($this->tbl_member)
-				->where("parent_id",$member_id)
-				->order_by("member_first_name",'asc')
-				->order_by("member_last_name",'asc');	
-		$query = $this->db->get();
-		$result = $query->result_array();
-		
-		return $result;
-	}
-	public function listTeamOrder($team_id){
-	
-		$query = $this->db->select()
-				->from($this->tbl_sp_order_item)
-				->join($this->tbl_sp_order,"$this->tbl_sp_order.order_id=$this->tbl_sp_order_item.order_id","left")
-				->where("$this->tbl_sp_order_item.team_id",$team_id);
-		$query = $this->db->get();
-		$result = $query->result_array();
-		return $result;
-	}
-	public function addTeam(){
-		
-		$val = $this->getValue();
-		if($val['captcha']=='')
-		{
-			$member_id = $this->bflibs->getLastID($this->tbl_member,'member_id');
-			$date = date('Y-m-d H:i:s');
-			$member_publish = (isset($val['member_publish']))?$val['member_publish']:1;
-			$parent_id = (isset($val['parent_id'])) ? $val['parent_id'] : 0;
-			$parent_id = ($val['member_type']==0) ? $parent_id : 0;
-			
-			$data = array(
-					"member_id"=>$member_id,
-					"member_pass"=>base64_encode($val['member_password']),
-					"member_first_name"=>$val['member_first_name'],
-					"member_last_name"=>$val['member_last_name'],
-					"member_email"=>$val['member_email'],
-					"member_iden"=>$val['member_iden'],
-					"member_birth_day"=>$val['member_birth_day'],
-					"member_birth_month"=>$val['member_birth_month'],
-					"member_birth_year"=>$val['member_birth_year'],
-					"member_address"=>$val['member_address'],
-					"member_tel"=>$val['member_tel'],
-					"member_type"=>0,//$val['member_type'],
-					"parent_id"=>$parent_id,
-					"member_date_added"=>$date,
-					"member_publish"=>$member_publish
-			);
-			$this->db->insert($this->tbl_member,$data);			
-			return $member_id;
-		}
-	}
-	public function editTeam(){
-		
-		$val = $this->getValue();
-
-		if($val['captcha']=='')
-		{
-			$member_id = $val["member_id"];
-			$parent_id = (isset($val['parent_id'])) ? $val['parent_id'] : 0;
-			$parent_id = ($val['member_type']==0) ? $parent_id : 0;
-			
-			$data = array(
-					"member_first_name"=>$val['member_first_name'],
-					"member_last_name"=>$val['member_last_name'],
-					"member_iden"=>$val['member_iden'],
-					"member_birth_day"=>$val['member_birth_day'],
-					"member_birth_month"=>$val['member_birth_month'],
-					"member_birth_year"=>$val['member_birth_year'],
-					"member_address"=>$val['member_address'],
-					"member_tel"=>$val['member_tel'],
-					"member_discount"=>$val['member_discount'],
-					"member_type"=>$val['member_type'],
-					"parent_id"=>$parent_id
-			);
-			if($val["member_newpass"]!=''){
-				$data['member_pass'] = base64_encode($val["member_newpass"]);
-			}
-
-			$this->db->where('member_id',$member_id);
-			$this->db->update($this->tbl_member,$data);
-			return $val['member_id'];
-		}
-	}
 	public function listHistory($targetpage,$page,$limit,$sData="",$member_id=0){
 	
-		$select = $this->db->select(array("$this->tbl_sp_order.order_date","$this->tbl_sp_order.order_payment","$this->tbl_sp_order_item.*"))
-				->from($this->tbl_sp_order_item)
-				->join($this->tbl_sp_order,"$this->tbl_sp_order.order_id=$this->tbl_sp_order_item.order_id","left")
-				->where("$this->tbl_sp_order.member_id",$member_id);
+		$select = $this->db->select()
+				->from($this->tbl_sp_order)
+				->where("member_id",$member_id);
 				
 		if(!empty($sData)){
 			$sData = urlDecode($sData);
@@ -297,139 +172,7 @@ class Membermodel extends CI_Model {
 		return list($paginaion,$page_description,$result) = $this->bfpagination->do_pagination();
 	}
 	
-	/*  POINT
-	-------------------------------------------------------------------------------------------------------*/
-
-	public function listPoint($targetpage,$page,$limit,$sData="",$member_id="",$type=1,$beg='',$end=''){
-		if($type==1){
-			$select = $this->db->select()
-					->from($this->tbl_member_point)
-					->order_by("$this->tbl_member_point.member_point_date",'desc');
-					
-			if(!empty($sData)){
-				$sData = urlDecode($sData);
-				$where = "(($this->tbl_member_point.member_point_reason like '%".$sData."%'))";
-				$this->db->where($where);
-			}
-			if($member_id!=''&&$member_id!='0'){
-				$where = $this->db->where("member_id",$member_id);
-			}	
-			if($beg!=''){
-				$beg_date = $this->bflibs->dateToDb($beg,'date');
-				$where = $this->db->where("$this->tbl_member_point.member_point_date >=",$beg_date);
-			}
-			if($end!=''){
-				$end_date = $this->bflibs->dateToDb($end,'date');
-				$where = $this->db->where("$this->tbl_member_point.member_point_date <=",$end_date.' 23:59');
-			}
-			
-		}
-		else{
-			$select = $this->db->select()
-					->from($this->tbl_sp_order)
-					->where("member_id",$member_id)
-					->where("order_point_summary !=",0)
-					->order_by("order_date",'desc');
-		}
-		 /*else{
-			$select = $this->db->query("$this->tbl_member_point.* FROM $this->tbl_member_point 
-												ORDER BY $this->tbl_member_point.member_point_date DESC 
-												UNION 
-												$this->tbl_sp_order.* FROM $this->tbl_sp_order
-												WHERE $this->tbl_sp_order.order_point_summary!='0'
-												ORDER BY $this->tbl_sp_order.order_date DESC");
-		}*/
-		
-		$this->db->get();
-		$config['query'] = $this->db->last_query();
-		$config['targetpage'] = $targetpage;
-		$config['target'] = '#boxContent';
-		$config['limit'] = $limit;
-		$config['page'] = $page;
-		
-		$this->load->library('bfpagination', $config);
-		return list($paginaion,$page_description,$result) = $this->bfpagination->select_pagination();
-	}
-	public function addPoint(){
-		
-		$val = $this->getValue();
-		if($val['captcha']=='')
-		{
-			$member_point_id = $this->bflibs->getLastID($this->tbl_member_point,'member_point_id');
-			$member_id = $val['member_id'];
-			$date = date('Y-m-d H:i:s');
-			$data = array(
-					"member_point_id"=>$member_point_id,
-					"member_id"=>$member_id,
-					"member_point_type"=>$val['member_point_type'],
-					"member_point_reason"=>$val['member_point_reason'],
-					"member_point_val"=>$val['member_point_val'],
-					"member_point_date"=>$date
-			);
-			$this->db->insert($this->tbl_member_point,$data);	
-			
-			$old_point = $this->bflibs->getMemberPoint($member_id);
-			$new_point = ($val['member_point_type']==1) ? $old_point+$val['member_point_val'] : $old_point-$val['member_point_val'];
-			$this->bflibs->updateMemberPoint($member_id,$new_point);
-					
-			return $member_point_id;
-		}
-	}
-	public function deletePoint($id){	
-		
-		$select = $this->db->select()
-				->from($this->tbl_member_point)
-				->where("member_point_id",$id);
-		$query = $this->db->get();
-		$result = $query->row_array();
-		
-		if(!empty($result)){
-			$member_id=$result['member_id'];
-			$old_point = $this->bflibs->getMemberPoint($member_id);
-			// ทำตรงกันข้าม เพราะเป็นการเอาออกจากฐานข้อมูล //
-			$new_point = ($result['member_point_type']==1) ? $old_point-$result['member_point_val'] : $old_point+$result['member_point_val'];
-			$this->bflibs->updateMemberPoint($member_id,$new_point);
-		}
-		
-		$this->db->where('member_point_id',$id);
-		$this->db->delete($this->tbl_member_point);
-	}
-	public function listAllPoint($limit=10){
-		
-		$select = $this->db->select(array("$this->tbl_member_point.*","$this->tbl_member.member_first_name","$this->tbl_member.member_last_name"))
-				->from($this->tbl_member_point)
-				->join($this->tbl_member,"$this->tbl_member.member_id=$this->tbl_member_point.member_id","left")
-				->order_by("member_point_date",'desc')
-				->limit($limit);
-				
-		$query = $this->db->get();
-		$result = $query->result_array();
-		return $result;
-	}
-	public function sumPoint($type=1,$beg='',$end='',$member_id=''){
-		
-		$select = $this->db->select(array("SUM(member_point_val) AS sum_point"))
-				->from($this->tbl_member_point)
-				->where("member_point_type",$type);
-		if($beg!=''){
-			$beg_date = $this->bflibs->dateToDb($beg,'date');
-			$where = $this->db->where("$this->tbl_member_point.member_point_date >=",$beg_date);
-		}
-		if($end!=''){
-			$end_date = $this->bflibs->dateToDb($end,'date');
-			$where = $this->db->where("$this->tbl_member_point.member_point_date <=",$end_date.' 23:59');
-		}
-		if($member_id!=''&&$member_id!='0'){
-			$where = $this->db->where("$this->tbl_member_point.member_id",$member_id);
-		}
-		$this->db->order_by("member_point_date",'desc');
-				
-		$query = $this->db->get();
-		$result = $query->row_array();
-		return (empty($result)) ? 0 : $result['sum_point'];
-	}
 	
-
 	/*  SETTING
 	-------------------------------------------------------------------------------------------------------*/
 
@@ -481,6 +224,22 @@ class Membermodel extends CI_Model {
 		$result = $query->result_array();
 		return $result;
 	}
+	
+	
+	/* FOR CHART
+	-----------------------------------------------------------------------------------------------------------*/
+	
+	public function countMemberByMonth($monthyear){
+		
+		$select = $this->db->select(array("count(member_id) AS num_member"))
+				->from($this->tbl_member)
+				->where("member_date_added LIKE '".$monthyear."%' ");
+		$query = $this->db->get();
+		$result = $query->row_array();
+		return $result['num_member'];
+	}
+	
+	
 	
 	
 	/* SEND MAIL

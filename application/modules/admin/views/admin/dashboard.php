@@ -1,4 +1,4 @@
-<script>window.location="<?php echo DIR_ROOT?>product/backend/index";</script>
+<script>window.location="<?php echo DIR_ROOT?>main/backend/dashboard";</script>
 <?php /*?><?php 
 $admin= $this->session->userdata('admin');
 ?>

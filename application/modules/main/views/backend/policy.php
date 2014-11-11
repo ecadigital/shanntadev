@@ -2,11 +2,11 @@
 <script type="text/javascript" src="<?php echo DIR_PUBLIC?>js/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript" src="<?php echo DIR_PUBLIC?>js/tiny_mce/load.js"></script>
 
-<h3>หน้า Policy</h3>
+<h3>หน้าเงื่อนไขการใช้บริการ</h3>
 <div>
 	<a href="<?php echo DIR_ROOT?>admin/admin/index">หน้าแรก</a>&nbsp;&nbsp;>&nbsp;&nbsp;
 	จัดการหน้าอื่นๆ&nbsp;&nbsp;>&nbsp;&nbsp;
-	หน้า Policy
+	หน้าเงื่อนไขการใช้บริการ
 </div>
 
 <div id="showWarning" style="height:40px;"></div>
@@ -22,7 +22,7 @@
 			?>
 			<div class="formRow">
 				<div class="grid2">
-					<label class="lbl fl" for="main_policy[<?php echo $lang_id?>]">Policy <?php echo $lang_icon;?></label>
+					<label class="lbl fl" for="main_policy[<?php echo $lang_id?>]">ข้อความ <?php echo $lang_icon;?></label>
 				</div>
 				<div class="grid9">
                     <textarea id="main_policy[<?php echo $lang_id?>]" name="main_policy[<?php echo $lang_id?>]" class="mceEditor"><?php echo $listEditMain['main_policy'][$lang_id];?></textarea>

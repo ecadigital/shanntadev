@@ -298,7 +298,7 @@ class Collectionmodel extends CI_Model {
 												"$this->tbl_collection_categories.collection_categories_id",
 												"$this->tbl_collection_categories.collection_categories_parent_id",
 												"$this->tbl_collection_categories.collection_categories_home_path",
-												"$this->tbl_collection_categories.collection_categories_banner_path",
+												"$this->tbl_collection_categories_lang.collection_categories_banner_path",
 												"$this->tbl_collection_categories.collection_categories_publish",
 												"$this->tbl_collection_categories.collection_categories_seq",
 												"$this->tbl_collection_categories_lang.collection_categories_name"))
@@ -369,8 +369,7 @@ class Collectionmodel extends CI_Model {
 			$result['collection_categories_name'][$res['language_id']] 				= $res['collection_categories_name'];
 			$result['collection_categories_home_keyhead'][$res['language_id']] 		= $res['collection_categories_home_keyhead'];
 			$result['collection_categories_home_keymessage'][$res['language_id']] 		= $res['collection_categories_home_keymessage'];
-			$result['collection_categories_banner_keyhead'][$res['language_id']] 		= $res['collection_categories_banner_keyhead'];
-			$result['collection_categories_banner_keymessage'][$res['language_id']] 	= $res['collection_categories_banner_keymessage'];
+			$result['collection_categories_banner_path'][$res['language_id']] 		= $res['collection_categories_banner_path'];
 		}
 		return $result;
 	}
@@ -383,13 +382,7 @@ class Collectionmodel extends CI_Model {
 			$collection_categories_seq = $this->bflibs->getLastID($this->tbl_collection_categories,'collection_categories_seq');
 			$data = array("collection_categories_id"=>$collection_categories_id,
 					"collection_categories_parent_id"=>(isset($val['collection_categories_parent_id'])) ? $val['collection_categories_parent_id'] : 0,
-					//"collection_categories_name"=>$val['collection_categories_name'],
-					//"collection_categories_home_keyhead"=>$val['collection_categories_home_keyhead'],
-					//"collection_categories_home_keymessage"=>$val['collection_categories_home_keymessage'],
-					"collection_categories_home_position"=>$val['collection_categories_home_position'],
-					//"collection_categories_banner_keyhead"=>$val['collection_categories_banner_keyhead'],
-					//"collection_categories_banner_keymessage"=>$val['collection_categories_banner_keymessage'],
-					"collection_categories_banner_position"=>$val['collection_categories_banner_position'],
+					"collection_categories_home_path"=>'',
 					"collection_categories_publish"=>1,
 					"collection_categories_seq"=>$collection_categories_seq
 			);
@@ -401,9 +394,7 @@ class Collectionmodel extends CI_Model {
 					"language_id"=>$lang,
 					"collection_categories_name"=>$collection_categories_name,
 					"collection_categories_home_keyhead"=>$val['collection_categories_home_keyhead'][$lang],
-					"collection_categories_home_keymessage"=>htmlspecialchars($val['collection_categories_home_keymessage'][$lang], ENT_QUOTES),
-					"collection_categories_banner_keyhead"=>$val['collection_categories_banner_keyhead'][$lang],
-					"collection_categories_banner_keymessage"=>htmlspecialchars($val['collection_categories_banner_keymessage'][$lang], ENT_QUOTES)
+					"collection_categories_home_keymessage"=>htmlspecialchars($val['collection_categories_home_keymessage'][$lang], ENT_QUOTES)
 				);
 				$this->db->insert($this->tbl_collection_categories_lang,$dataLang);
 			}
@@ -417,14 +408,7 @@ class Collectionmodel extends CI_Model {
 		{
 			$collection_categories_id = $val['collection_categories_id'];
 			$data = array(
-					"collection_categories_parent_id"=>(isset($val['collection_categories_parent_id'])) ? $val['collection_categories_parent_id'] : 0,
-					//"collection_categories_name"=>$val['collection_categories_name'],
-					//"collection_categories_home_keyhead"=>$val['collection_categories_home_keyhead'],
-					//"collection_categories_home_keymessage"=>$val['collection_categories_home_keymessage'],
-					"collection_categories_home_position"=>$val['collection_categories_home_position'],
-					//"collection_categories_banner_keyhead"=>$val['collection_categories_banner_keyhead'],
-					//"collection_categories_banner_keymessage"=>$val['collection_categories_banner_keymessage'],
-					"collection_categories_banner_position"=>$val['collection_categories_banner_position']
+					"collection_categories_parent_id"=>(isset($val['collection_categories_parent_id'])) ? $val['collection_categories_parent_id'] : 0
 			);
 			
 			$this->db->where('collection_categories_id',$collection_categories_id);
@@ -434,9 +418,7 @@ class Collectionmodel extends CI_Model {
 				$dataLang = array(
 					"collection_categories_name"=>$collection_categories_name,
 					"collection_categories_home_keyhead"=>$val['collection_categories_home_keyhead'][$lang],
-					"collection_categories_home_keymessage"=>htmlspecialchars($val['collection_categories_home_keymessage'][$lang], ENT_QUOTES),
-					"collection_categories_banner_keyhead"=>$val['collection_categories_banner_keyhead'][$lang],
-					"collection_categories_banner_keymessage"=>htmlspecialchars($val['collection_categories_banner_keymessage'][$lang], ENT_QUOTES)
+					"collection_categories_home_keymessage"=>htmlspecialchars($val['collection_categories_home_keymessage'][$lang], ENT_QUOTES)
 				);
 				
 				$chkLang = $this->chkLangCategories($collection_categories_id,$lang);
@@ -519,133 +501,6 @@ class Collectionmodel extends CI_Model {
 	}
 
 	
-	/*  PROMOTION
-	-------------------------------------------------------------------------------------------------------*/
-
-	public function listAllCollection(){
-	
-		$select = $this->db->select()
-				->from($this->tbl_collection)
-				->order_by("collection_name",'asc');
-		$query = $this->db->get();
-		$result = $query->result_array();
-		return $result;
-	}
-	public function listPromotion($targetpage,$page,$limit,$sData="",$categories_id="",$pin=""){
-	
-		$select = $this->db->select(array("$this->tbl_collection_promotion.*","$this->tbl_collection.collection_name","$this->tbl_collection_categories.collection_categories_name"))
-				->from($this->tbl_collection_promotion)
-				->join($this->tbl_collection,"$this->tbl_collection.collection_id=$this->tbl_collection_promotion.collection_id","left")
-				->join($this->tbl_collection_categories,"$this->tbl_collection.collection_categories_id=$this->tbl_collection_categories.collection_categories_id")
-				->order_by("$this->tbl_collection_promotion.collection_promotion_pin",'desc')
-				->order_by("$this->tbl_collection_promotion.collection_promotion_seq",'desc')
-				->group_by("$this->tbl_collection_promotion.collection_promotion_id");
-				
-		if(!empty($sData)){
-			$sData = urlDecode($sData);
-			$where = "(($this->tbl_collection.collection_name like '%".$sData."%') or ($this->tbl_collection.collection_detail like '%".$sData."%') or ($this->tbl_collection_promotion.collection_promotion_name like '%".$sData."%'))";
-			$this->db->where($where);
-		}
-
-		if($categories_id!=''){
-			$this->db->where("$this->tbl_collection.collection_categories_id", $categories_id);
-		}
-		if($pin!=''){
-			$this->db->where("$this->tbl_collection_promotion.collection_promotion_pin",$pin);
-		}
-		
-		$this->db->get();
-		$config['query'] = $this->db->last_query();
-		$config['targetpage'] = $targetpage;
-		$config['target'] = '#boxContent';
-		$config['limit'] = $limit;
-		$config['page'] = $page;
-		
-		$this->load->library('bfpagination', $config);
-		return list($paginaion,$page_description,$result) = $this->bfpagination->do_pagination();
-	}
-	public function listEditPromotion($id){
-		
-		$select = $this->db->select()
-				->from($this->tbl_collection_promotion)
-				->where("collection_promotion_id",$id);		
-		$query = $this->db->get();
-		$result = $query->row_array();
-		return $result;
-	}
-	public function addPromotion(){
-		
-		$val = $this->getValue();
-		if($val['captcha']=='')
-		{
-			$collection_promotion_id = $this->bflibs->getLastID($this->tbl_collection_promotion,'collection_promotion_id');
-			$collection_promotion_seq = $this->bflibs->getLastID($this->tbl_collection_promotion,'collection_promotion_seq');
-			$date = date('Y-m-d H:i:s');
-			$collection_promotion_publish = (isset($val['collection_promotion_publish']))?$val['collection_promotion_publish']:0;
-			$collection_promotion_pin = (isset($val['collection_promotion_pin']))?$val['collection_promotion_pin']:0;
-			$data = array(
-					"collection_promotion_id"=>$collection_promotion_id,
-					"collection_id"=>$val['collection_id'],
-					"collection_promotion_name"=>$val['collection_promotion_name'],
-					"collection_price"=>$val['collection_price'],
-					"collection_discount"=>$val['collection_discount'],
-					"collection_promotion_date_added"=>$date,
-					"collection_promotion_last_modified"=>$date,
-					"collection_promotion_pin"=>$collection_promotion_pin,
-					"collection_promotion_publish"=>$collection_promotion_publish,
-					"collection_promotion_seq"=>$collection_promotion_seq
-			);
-			$this->db->insert($this->tbl_collection_promotion,$data);		
-			
-			$data = array(
-					"collection_price"=>$val['collection_price'],
-					"collection_discount"=>$val['collection_discount'],
-					"collection_last_modified"=>$date
-			);
-			$this->db->where('collection_id',$val['collection_id']);
-			$this->db->update($this->tbl_collection,$data);
-				
-			return $collection_promotion_id;
-		}
-	}
-	public function editPromotion(){
-		
-		$val = $this->getValue();
-
-		if($val['captcha']=='')
-		{
-			$collection_promotion_id = $val["collection_promotion_id"];
-			$date = date('Y-m-d H:i:s');
-			$collection_promotion_publish = (isset($val['collection_promotion_publish']))?$val['collection_promotion_publish']:0;
-			$collection_promotion_pin = (isset($val['collection_promotion_pin']))?$val['collection_promotion_pin']:0;
-			$data = array(
-					"collection_promotion_name"=>$val['collection_promotion_name'],
-					"collection_price"=>$val['collection_price'],
-					"collection_discount"=>$val['collection_discount'],
-					"collection_promotion_last_modified"=>$date,
-					"collection_promotion_publish"=>$collection_promotion_pin,
-					"collection_promotion_publish"=>$collection_promotion_publish
-			);
-
-			$this->db->where('collection_promotion_id',$collection_promotion_id);
-			$this->db->update($this->tbl_collection_promotion,$data);		
-			
-			$data = array(
-					"collection_price"=>$val['collection_price'],
-					"collection_discount"=>$val['collection_discount'],
-					"collection_last_modified"=>$date
-			);
-			$this->db->where('collection_id',$val['collection_id']);
-			$this->db->update($this->tbl_collection,$data);
-			
-			return $collection_promotion_id;
-		}
-	}
-	public function deletePromotion($id){
-		
-		$this->db->where('collection_promotion_id',$id);
-		$this->db->delete($this->tbl_collection_promotion);
-	}
 	
 	
 	
@@ -693,7 +548,7 @@ class Collectionmodel extends CI_Model {
 		if(!file_exists($temp)){mkdir($temp);}
 		//$path = 'public/upload/'.$module.'/temp/'.$this->ip.'/';
 		$dir_file = $temp.$this->ip.'/';
-		if(!file_exists($dir_file)){mkdir($dir_file);}
+		if(!file_exists($dir_file)){mkdir($dir_file,0755,true);}
 		
 		$config['upload_path'] = $dir_file;
 		$config['allowed_types'] = 'gif|jpg|png';
@@ -730,7 +585,7 @@ class Collectionmodel extends CI_Model {
 					$source = DIR_FILE.'public/upload/'.$this->request->getModuleName().'/temp/'.$this->ip.'/'.$file;
 	
 					copy($source, $__dest);
-					unlink($source);
+					//unlink($source);
 					if($this->imagesResize($__dest))$files[$key] = $this->updatePath('public/upload/'.$this->request->getModuleName().'/thumbnails/'.$file_name,$collection_id);
 
 					//copy($source, $__dest);
@@ -755,9 +610,11 @@ class Collectionmodel extends CI_Model {
 			$__dest = $dir_file.$file_name;
 			$source = DIR_FILE.$file;
 
+			echo $file.'---'.$collection_categories_id.'---'.$type;
+			
 			copy($source, $__dest);
 			if($this->imagesResize($__dest,'thumbnails'))$file = $this->updatePath_categories('public/upload/'.$this->request->getModuleName().'/thumbnails/'.$file_name,$collection_categories_id,$type);
-			unlink($source);
+			//unlink($source);
 		}
 	}
 	private function imagesResize($pathImages,$folder='thumbnails',$width=300,$height=300,$ratio=TRUE){
@@ -795,10 +652,28 @@ class Collectionmodel extends CI_Model {
 		return $collection_images_id;
 	}	
 	private function updatePath_categories($path,$collection_categories_id,$type){
-
-		$data = array("collection_categories_".$type."_path"=>$path);
-		$this->db->where('collection_categories_id',$collection_categories_id);
-		$this->db->update($this->tbl_collection_categories,$data);
+		echo $type;
+		if($type=='home'){
+			$data = array("collection_categories_".$type."_path"=>$path);
+			$this->db->where('collection_categories_id',$collection_categories_id);
+			$this->db->update($this->tbl_collection_categories,$data);
+			
+		}else{
+			$lang_id = $type;
+			$dataLang = array("collection_categories_banner_path"=>$path);
+			print_r($dataLang );
+			$chkLang = $this->chkLangCategories($collection_categories_id,$lang_id);
+			if($chkLang==0){
+				$dataLang["collection_categories_id"]=$collection_categories_id;
+				$dataLang["language_id"]=$lang_id;
+				$this->db->insert($this->tbl_collection_categories_lang,$dataLang);
+			}else{
+				$this->db->where("collection_categories_id",$collection_categories_id);
+				$this->db->where("language_id",$lang_id);
+				$this->db->update($this->tbl_collection_categories_lang,$dataLang);
+			}
+		}
+		
 		return $collection_categories_id;
 	}
 	

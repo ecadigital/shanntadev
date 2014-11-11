@@ -5,11 +5,10 @@ $this->model = $this->load->model('shoppingcart/Shoppingcartmodel');
 	<thead> 
 		<tr> 
 			<th align="center" width="7%"><?php echo lang('web_no');?></th>
-			<th align="center" width="8%"><?php echo lang('sp_code');?></th>
-            <th align="center"><?php echo lang('sp_member');?></th> 
-            <th align="center" width="10%"><?php echo lang('sp_date');?></th>
-            <th align="center" width="10%"><?php echo lang('sp_summary');?></th>
-            <th align="center" width="10%"><?php echo lang('sp_point_summary');?></th>
+			<th align="center" width="8%">รหัสการสั่งซื้อ</th>
+            <th align="center">ชื่อ</th> 
+            <th align="center" width="10%">วันที่สั่งซื้อ</th>
+            <th align="center" width="10%">เป็นเงิน</th>
             <th align="center" width="10%">สถานะ</th>
             <th align="center" width="12%">Tracking Number</th>
             <th align="center" width="50"><?php echo lang('web_tool');?></th>
@@ -38,7 +37,7 @@ $this->model = $this->load->model('shoppingcart/Shoppingcartmodel');
 			?>
 		<tr>
 			<td align="center"><?php echo ++$no;?></td>
-			<td align="center"><a href="<?php echo DIR_ROOT?>shoppingcart/backend/view_order/id/<?php echo $list['order_id'];?>">Order #<?php echo $list['order_id'];?></a></td>
+			<td align="center"><a href="<?php echo DIR_ROOT?>shoppingcart/backend/view_order/id/<?php echo $list['order_id'];?>"><?php echo str_pad($list['order_id'],6,0,STR_PAD_LEFT);?></a></td>
 			<td><?php echo $list['member_first_name']." ".$list['member_last_name'];?></td>
 			<td align="center"><?php echo $this->bflibs->timeString($list['order_date'],'date');?></td>
 			<td align="right">
@@ -53,19 +52,6 @@ $this->model = $this->load->model('shoppingcart/Shoppingcartmodel');
 					echo number_format($list['order_summary'],2);
 				}
 				?>
-            </td>
-			<td align="right">
-				<?php 		
-				if($list['order_payment']==1){
-					$summary = $list['order_point_summary'];
-					list($discount,$dis_type) = $this->model->getDiscount($list['order_discount']);
-					$summary = ($dis_type==1) ? $summary*(100-$list['order_discount'])/100 : $summary-$list['order_discount'];
-					echo '<div><strong>'.number_format($summary).'</strong></div>';
-					if($list['order_discount']!='' && $list['order_discount']!='%') echo '<div><i>ส่วนลด '.$list['order_discount'].'</i></div>';
-				}else{
-					echo number_format($list['order_point_summary']);
-				}
-                ?>
             </td>
 			<td align="center">
 				<select name="order_status" id="order_status" class="select_order" order-id="<?php echo $order_id;?>" 

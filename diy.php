@@ -1,4 +1,7 @@
-<?php require "inc/init.php"; 
+<?php require "inc/init.php";
+$prev_page = (isset($_SESSION['prev_page'])) ? $_SESSION['prev_page'] : "home.php";
+$_SESSION['prev_page'] = "diy.php";
+ 
 $jewely_id = (isset($_GET['id'])) ? $_GET['id'] : 'first';
 ?>
 <!DOCTYPE html>

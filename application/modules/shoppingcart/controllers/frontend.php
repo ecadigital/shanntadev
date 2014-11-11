@@ -38,6 +38,7 @@ class Frontend extends CI_Controller{
 			if(isset($data['member_city'])) $_SESSION['order']['member_city']=$data['member_city'];
 			if(isset($data['member_prephone'])) $_SESSION['order']['member_prephone']=$data['member_prephone'];
 			if(isset($data['member_phone'])) $_SESSION['order']['member_phone']=$data['member_phone'];
+			if(isset($data['member_email'])) $_SESSION['order']['member_email']=$data['member_email'];
 			if(isset($data['chk_accept'])) $_SESSION['order']['chk_accept']=$data['chk_accept'];
 			if(isset($data['chk_message'])) $_SESSION['order']['chk_message']=$data['chk_message'];
 			if(isset($data['member_message'])) $_SESSION['order']['member_message']=$data['member_message'];
@@ -159,6 +160,7 @@ class Frontend extends CI_Controller{
 		if($data = $this->input->post()){
 			$this->model->setValue($data);
 			$this->model->remove_cart();
+			echo $total_items = $this->model->total_items();
 		}
 	}
 	public function checkout()

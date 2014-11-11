@@ -216,6 +216,21 @@ class Faqmodel extends CI_Model {
 	}
 	
 	
+	public function listAllFaq($lang_id){
+		
+		$select = $this->db->select()
+				->from($this->tbl_faq)
+				->join($this->tbl_faq_lang,"$this->tbl_faq_lang.faq_id=$this->tbl_faq.faq_id","left")
+				->where("$this->tbl_faq.faq_publish",1)
+				->where("$this->tbl_faq_lang.language_id",$lang_id)
+				->order_by("$this->tbl_faq.faq_pin","desc")
+				->order_by("$this->tbl_faq.faq_seq","desc");
+		
+		$query = $this->db->get();
+		$result = $query->result_array();
+		
+		return $result;
+	}
 	
 
 }

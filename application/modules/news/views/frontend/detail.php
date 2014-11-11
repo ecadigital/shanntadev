@@ -64,7 +64,7 @@ if(!empty($randomNews)){
 			<div class="medium-6 columns rightContent">
 				<h1 style="font-weight:bold;color:#d8d2d5">'.date("d.m.Y",strtotime($news_date)).'</h1>
 				<h3>'.$news_name.'</h3>
-				<p>'.$this->bflibs->getSubStr(strip_tags(html_entity_decode($news_detail)),0,220).'</p>
+				<p>'.$this->bflibs->getSubStr(strip_tags(html_entity_decode($news_detail)),0,220).' '.lang('readmore').'>></p>
 			</div>
 		</a>
 	</div>';
